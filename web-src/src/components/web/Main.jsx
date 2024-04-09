@@ -1,0 +1,167 @@
+import React, { useEffect, useState } from "react";
+import MainContents from "./main/mainComponents/MainContents";
+import Header from "components/web/common/Header";
+import MainMainvisual from "components/web/main/mainComponents/MainMainvisual";
+import Footer from "components/web/common/Footer";
+import MainPopupModal from "./main/mainComponents/mainContentsComponents/modal/MainPopupModal";
+import { CommonErrModule } from "etc/lib/Common";
+import { useRecoilValue } from "recoil";
+import { successCode } from "etc/lib/resultCode";
+import apiPath from "etc/lib/path/apiPath";
+import {CommonRestAPI} from "etc/lib/CommonRestAPI";
+
+// ------------------- import End --------------------
+
+function Main() {
+    const err = CommonErrModule();
+
+    const [popupList, setPopupList] = useState([]);
+
+    // 브라우저 창 크기 변화를 상태로 관리
+    const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+    // 브라우저 창 크기 변화시 상태 업데이트 핸들러
+    const handleResize = () => {
+        setWindowSize(window.innerWidth);
+    };
+
+    useEffect(() => {
+        // getPopupList(1, 20, "");
+
+        window.addEventListener("resize", handleResize);
+
+        handleResize(); // 초기 렌더링 시 한번 실행
+
+        window.addEventListener("resize", handleResize); // 창 크기 변화 감지
+
+        return () => {
+            window.removeEventListener("resize", handleResize); // 컴포넌트 언마운트 시 리스너 제거
+        };
+    }, []);
+
+    // 팝업 리스트 가져오기
+    const getPopupList = (pageNum, pageSize, searchKeyword) => {
+        // /v1/_popups
+        // POST
+        // 팝업 정보 목록
+        const url = apiPath.api_admin_popups;
+        const data = {
+            pageNum: pageNum,
+            pageSize: pageSize,
+            searchKeyword: searchKeyword,
+        };
+
+        // 파라미터
+        const restParams = {
+            method: "post",
+            url: url,
+            data: data,
+            err: err,
+            callback: (res) => responsLogic(res),
+        };
+
+        CommonRestAPI(restParams);
+
+        const responsLogic = (res) => {
+            if (res.headers.resultCode === successCode.success) {
+                const resultInfo = res.data.resultInfo;
+
+                let renderPopupList = resultInfo.filter((popup) =>
+                    renderPopup(popup),
+                );
+
+                setPopupList(renderPopupList);
+            } else {
+                // 피드백 없음
+            }
+        };
+    };
+
+    // 팝업을 필터링하는 함수
+    const renderPopup = (popup) => {
+        const today = new Date();
+        const startDate = new Date(popup.start_date);
+        const endDate = new Date(popup.end_date);
+        const storageCheck = popupOpenTime(
+            popup.popup_idx,
+            popup.option_24_hours_yn,
+        );
+
+        // 노출여부, 시작일&종료일 기간체크, 24시간보지않기 기능 사용 중일 경우 로컬스토리지 기간체크
+        if (
+            popup.show_yn === "Y" &&
+            startDate <= today &&
+            endDate >= today &&
+            storageCheck
+        ) {
+            return popup;
+        } else {
+            return false;
+        }
+    };
+
+    // 팝업 닫기 함수
+    const closePopup = (popupIdx) => {
+        setPopupList((prevPopups) =>
+            prevPopups.map((popup) => {
+                if (popup.popup_idx === popupIdx) {
+                    return { ...popup, isOpen: false }; // 해당 팝업을 닫음
+                }
+                return popup;
+            }),
+        );
+    };
+
+    // 메인 팝업 시간
+    const popupOpenTime = (popupIdx, option24HoursYn) => {
+        const viewedTime = localStorage.getItem(`popup_viewed_${popupIdx}`);
+
+        // console.log(viewedTime);
+
+        if (option24HoursYn === "N" || !viewedTime) {
+            return true; // 저장된 시간이 없으면 팝업을 보여줌
+        } else {
+            const currentTime = new Date().getTime();
+            // 현재 시간과 저장된 시간을 비교하여 24시간이 지났는지 확인
+            return currentTime - parseInt(viewedTime, 10) > 24 * 60 * 60 * 1000;
+        }
+    };
+
+    return (
+        <>
+            {/*헤더*/}
+            <Header />
+
+            {/*메인비주얼*/}
+            <MainMainvisual />
+
+            {/*메인 컨텐츠*/}
+            <MainContents />
+
+            {/* 푸터 */}
+            <Footer />
+
+            {/* 팝업 렌더링 */}
+            {popupList.length &&
+                popupList.map(
+                    (popup) =>
+                        popup.isOpen !== false && (
+                            <MainPopupModal
+                                key={popup.popup_idx}
+                                popupIdx={popup.popup_idx}
+                                onClose={() => closePopup(popup.popup_idx)}
+                                width={popup.size_width}
+                                height={popup.size_height}
+                                top={popup.position_top}
+                                left={popup.position_left}
+                                scrollbars={popup.option_scroll_yn}
+                                windowSize={windowSize}
+                            />
+                        ),
+                )
+            }
+        </>
+    );
+}
+
+export default Main;
