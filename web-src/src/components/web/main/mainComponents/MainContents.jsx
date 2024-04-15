@@ -17,8 +17,6 @@ const MainContents = (props) => {
                 {/*section03*/}
                 <Section03 />
 
-                {/*하단배너*/}
-                <Banner />
             </div>
         </>
     );
