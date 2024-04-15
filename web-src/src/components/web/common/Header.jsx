@@ -97,10 +97,10 @@ function Header() {
                     <div className="">
                         <img src="img/web/main/company.png" alt="" />
                     </div>
-                    {/* 모바일 메뉴 // S */}
-                    <MobileNav />
-                    {/* 모바일메뉴 // E */}
                 </div>
+                  {/* 모바일 메뉴 // S */}
+                  <MobileNav />
+                    {/* 모바일메뉴 // E */}
                 <div className="submenu_bg"></div>
             </div>
         </>
