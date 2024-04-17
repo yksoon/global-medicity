@@ -22,6 +22,7 @@ body {margin:0 auto;}
 #gnb ul li .submenu {display: none; position:absolute; line-height:40px;  padding:20px 0;z-index: 999;left:0;width:100%;animation:menuDown 1s;}
 #gnb ul li .submenu a {display:block;color:#C7CEF5; font-size:17px;letter-spacing:-0.04em;}
 #gnb ul li .submenu a:hover, #gnb ul li .submenu a:focus {color:#fff;}
+
 @keyframes menuDown{
 	0% {
         opacity:0;
