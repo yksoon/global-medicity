@@ -1,4 +1,6 @@
 // 기본 url
+import {routerCategory} from "etc/lib/path/category";
+
 const base_url = "/";
 
 // 콜론, slash
@@ -15,76 +17,61 @@ const admin = "admin";
 
 // route
 const routerPath = {
-    // ---------------------- web -------------------------
+    // -----------------------------------------------
+    // |                  web                        |
+    // -----------------------------------------------
+
     // 메인
     // /
     web_main_url: `${base_url}`,
 
-    // 메인 팝업
-    // /popup/:id
-    web_popup_url: `${base_url}popup${slash}`,
+    // --------------------- infos ----------------------
+    // 인포 - 인사말
+    web_info_greet_url: `${base_url}${routerCategory.info}/welcome`,
 
-    // 프로그램
-    // /program
-    web_program_url: `${base_url}program`,
+    // 인포 - 회사소개
+    web_info_company_url: `${base_url}${routerCategory.info}/company`,
 
-    // 가이드라인
-    // /participation/guideline
-    web_participation_guideline_url: `${base_url}participation/guideline`,
+    // 인포 - 인증현황
+    web_info_certification_url: `${base_url}${routerCategory.info}/certification`,
 
-    // 사전등록
-    // /signup/signup
-    web_signup_signup_url: `${base_url}signup/signup`,
+    // 인포 - 파트너
+    web_info_partners_url: `${base_url}${routerCategory.info}/partners`,
 
-    // 사전등록 참가자 확인
-    // /signup/check_entry
-    web_signup_check_entry_url: `${base_url}signup/check-entry`,
 
-    // 사전등록 확인
-    // /signup/confirmation
-    web_signup_confirmation_url: `${base_url}signup/confirmation`,
+    // --------------------- K-MEDI ----------------------
+    // K-MEDI - 소개
+    web_kmedi_intro_url: `${base_url}${routerCategory.kmedi}/intro`,
 
-    // 아트버디 - 갤러리 리스트
-    // /artbuddy/gallery-list
-    web_artbuddy_gallery_list_url: `${base_url}artbuddy/gallery-list`,
+    // K-MEDI - APP
+    web_kmedi_app_url: `${base_url}${routerCategory.kmedi}/app`,
 
-    // 아트버디 - 아티스트 리스트
-    // /artbuddy/artist-list
-    web_artbuddy_artist_list_url: `${base_url}artbuddy/artist-list`,
 
-    // 아트버디 - 갤러리 상세
-    // /artbuddy/gallery
-    web_artbuddy_gallery_url: `${base_url}artbuddy/gallery${slash}`,
+    // --------------------- K-MEDI ----------------------
+    // 비즈니스 - 호텔
+    web_business_hotel_url: `${base_url}${routerCategory.business}/hotel`,
 
-    // 아트버디 - 아티스트 상세
-    // /artbuddy/artist/
-    web_artbuddy_artist_detail_url: `${base_url}artbuddy/artist${slash}`,
+    // 비즈니스 - tax
+    web_business_tax_url: `${base_url}${routerCategory.business}/tax`,
 
-    // 아트버디 - 소개
-    // /artbuddy/exhibition
-    web_artbuddy_exhibition_url: `${base_url}artbuddy/exhibition`,
+    // 비즈니스 - art
+    web_business_art_url: `${base_url}${routerCategory.business}/art`,
 
-    // 사전등록 - 인도네시아
-    // /local/signup
-    web_local_signup_url: `${base_url}local/signup`,
 
-    // 사전등록 참가자 확인 - 인도네시아
-    // /local/check_entry
-    web_local_check_entry_url: `${base_url}local/check-entry`,
+    // --------------------- MEDIA ----------------------
+    // 미디어 - 영상
+    web_media_video_url: `${base_url}${routerCategory.media}/video`,
 
-    // 사전등록 확인 - 인도네시아
-    // /local/confirmation
-    web_local_confirmation_url: `${base_url}local/confirmation`,
+    // 미디어 - 뉴스
+    web_media_news_url: `${base_url}${routerCategory.media}/news`,
 
-    // 가이드라인 - 인도네시아
-    // /local/guideline
-    web_local_guideline_url: `${base_url}local/guideline`,
+    // 미디어 - 공지
+    web_media_notice_url: `${base_url}${routerCategory.media}/notice`,
 
-    // 방명록
-    // /guest_book
-    web_guest_book_url: `${base_url}guest-book`,
 
-    // ---------------------- admin -------------------------
+    // -----------------------------------------------
+    // |                  admin                      |
+    // -----------------------------------------------
     // 메인
     // /admin
     admin_main_url: `${base_url + admin}`,

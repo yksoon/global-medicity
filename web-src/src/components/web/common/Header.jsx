@@ -41,7 +41,7 @@ function Header() {
                                     <Link to={routerPath.web_info_partners_url}>
                                     파트너
                                     </Link>
-                                    <Link to={routerPath.web_info_intro_url}>
+                                    <Link to="">
                                     회사소개서 다운로드 
                                     </Link>
                                 </div>
@@ -76,11 +76,7 @@ function Header() {
                                 </div>
                             </li>
                             <li>
-                                <Link
-                                    to={routerPath.web_media_video_url}
-                                >
-                                    MEDIA CENTER
-                                </Link>
+                                <Link to="">MEDIA CENTER</Link>
                                 <div className="submenu">
                                     <Link to={routerPath.web_media_video_url}>
                                         영상 콘텐츠
