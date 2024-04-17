@@ -86,15 +86,15 @@ label.checkbox {display:flex;width:30px;height:30px;border: 1px solid #bdbdbd;bo
 input[type="checkbox"]:checked + label.checkbox {background:#0047a0;border: 1px solid #0047a0;}
 input[type="checkbox"]:checked + label.checkbox svg {fill:#fff;}
 
-.content {padding:0 0 0 180px;}
-.con_area {padding:20px;}
-.title{padding:10px 20px;border-bottom: 1px solid #Ddd;}
-.title h3 {display:inline-block;font-size: 21px;font-weight: 700;}
-h3.title {font-size: 38px;font-weight: 700;}
-h3.h_title {font-size: 21px;font-weight: 700;border:none;margin:0 0 20px;}
-.title p {display:inline-block;font-size: 21px;font-weight: 500;color: #818181;margin: 0 0 0 30px;}
-.title_flex_wrap {display:flex;margin:0 0 10px; align-items: center; justify-content: space-between;}
-.title_flex_wrap > * {margin:0 !important;}
+.adm .content {padding:0 0 0 180px;}
+.adm .con_area {padding:20px;}
+.adm .title{padding:10px 20px;border-bottom: 1px solid #Ddd;}
+.adm .title h3 {display:inline-block;font-size: 21px;font-weight: 700;}
+.adm h3.title {font-size: 38px;font-weight: 700;}
+.adm h3.h_title {font-size: 21px;font-weight: 700;border:none;margin:0 0 20px;}
+.adm .title p {display:inline-block;font-size: 21px;font-weight: 500;color: #818181;margin: 0 0 0 30px;}
+.adm .title_flex_wrap {display:flex;margin:0 0 10px; align-items: center; justify-content: space-between;}
+.adm .title_flex_wrap > * {margin:0 !important;}
 
 .subtitle {font-size: 42px;font-weight: 700;}
 

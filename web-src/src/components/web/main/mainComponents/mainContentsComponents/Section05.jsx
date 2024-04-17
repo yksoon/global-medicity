@@ -3,16 +3,15 @@ import { Link } from "react-router-dom";
 import Arrow from "components/web/main/mainComponents/mainContentsComponents/Arrow";
 import routerPath from "etc/lib/path/routerPath";
 
-const Section03 = () => {
+const Section04 = () => {
     return (
         <>
             <div className="section03">
                 <div className="sec_in">
                    <div className="title">
-                        <h5>메디씨티의 새로운 소식을 전합니다.</h5>
+                        <h5>전세계 파트너들과 메디씨티가 함께합니다.</h5>
                         <div>
-                            <h3>highlight</h3>
-                            <Link><img src="img/web/main/arrow.png" alt="" /></Link>
+                            <h3>Partners</h3>
                         </div>
                    </div>
                    <ul className="notice">
@@ -59,4 +58,4 @@ const Section03 = () => {
     );
 };
 
-export default Section03;
+export default Section04;

@@ -6,6 +6,7 @@ import { CommonOpenUrl } from "etc/lib/Common";
 import routerPath from "etc/lib/path/routerPath";
 
 function Header() {
+
     return (
         <>
             <div id="header">
@@ -93,15 +94,15 @@ function Header() {
                                 </div>
                             </li>
                         </ul>
+                        <div className="submenu_bg"></div>
                     </div>
                     <div className="">
-                        <img src="img/web/main/company.png" alt="" />
+                        <img src="img/web/main/book.png" alt="" />
                     </div>
                 </div>
                   {/* 모바일 메뉴 // S */}
                   <MobileNav />
                     {/* 모바일메뉴 // E */}
-                <div className="submenu_bg"></div>
             </div>
         </>
     );

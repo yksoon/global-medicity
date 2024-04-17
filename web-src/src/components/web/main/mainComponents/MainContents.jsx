@@ -1,7 +1,8 @@
 import Section01 from "components/web/main/mainComponents/mainContentsComponents/Section01";
 import Section02 from "components/web/main/mainComponents/mainContentsComponents/Section02";
 import Section03 from "components/web/main/mainComponents/mainContentsComponents/Section03";
-import Banner from "components/web/main/mainComponents/mainContentsComponents/Banner";
+import Section04 from "components/web/main/mainComponents/mainContentsComponents/Section04";
+import Section05 from "components/web/main/mainComponents/mainContentsComponents/Section05";
 
 const MainContents = (props) => {
 
@@ -16,6 +17,12 @@ const MainContents = (props) => {
 
                 {/*section03*/}
                 <Section03 />
+
+                {/*section04*/}
+                <Section04 />
+
+                {/*section05*/}
+                <Section05 />
 
             </div>
         </>

@@ -1,49 +1,11 @@
 @charset "utf-8";
 
-
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 400;
-    font-style: normal;
-    src: url('/font_hi/Pretendard-Regular.woff')  format('woff');
-}
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 600;
-    font-style: bold;
-    src: url('/font_hi/Pretendard-Medium.woff')  format('woff');
-}
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 900;
-    font-style: bold;
-    src: url('/font_hi/Pretendard-Bold.woff')  format('woff');
-}
-
-@font-face {
-    font-family: 'raleway';
-    font-weight: 400;
-    font-style: normal;
-    src: url('/font_hi/Raleway-Regular_0.woff')  format('woff');
-}
-
-@font-face {
-    font-family: 'raleway';
-    font-weight: 600;
-    font-style: normal;
-    src: url('/font_hi/Raleway-SemiBold_0.woff')  format('woff');
-}
-@font-face {
-    font-family: 'raleway';
-    font-weight: 900;
-    font-style: bold;
-    src: url('/font_hi/Raleway-Bold_0.woff')  format('woff');
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
 
 /* */
 * {box-sizing: border-box;;}
-BODY {font-size:14px; color:#111; font-family: "raleway", 'Pretendard', Dotum, "돋움", Verdana, Arial, sans-serif;}
+img {max-width:100%;}
+BODY {font-size:16px; color:#111; font-family: "Noto Sans KR","Malgun Gothic" , Dotum, "돋움", Verdana, Arial, sans-serif;}
 header {margin:0; padding:0;}
 h5 {
     -webkit-margin-before: 0;
@@ -56,6 +18,7 @@ h5 {
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
     margin:0;
     padding:0;
+    letter-spacing: -0.02em;
 }
 
 html {
