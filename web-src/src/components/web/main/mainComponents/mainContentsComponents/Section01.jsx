@@ -8,7 +8,7 @@ import { successCode } from "etc/lib/resultCode";
 import { Skeleton } from "@mui/material";
 import { commaOfNumber } from "etc/lib/Pattern";
 import { Link } from "react-router-dom";
-import Arrow from "components/web/main/mainComponents/mainContentsComponents/Arrow";
+import Arrow from "components/web/common/Arrow";
 import routerPath from "etc/lib/path/routerPath";
 
 const Section01 = (props) => {

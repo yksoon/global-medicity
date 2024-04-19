@@ -57,10 +57,11 @@ function App() {
         if (ipInfo === "") {
             getIpInfo();
         } else {
-            getResultCode();
+            // socketCon()
+            // getResultCode();
             getCodes();
-            setInterval(getResultCode, 3600000);
-            setInterval(getCodes, 3600000);
+            // setInterval(getResultCode, 3600000);
+            // setInterval(getCodes, 3600000);
         }
     }, []);
 
@@ -235,28 +236,34 @@ function App() {
         return extractedData;
     };
 
-    const protocol = document.location.protocol
-    // 서버와의 WebSocket 연결
-    const socket = new WebSocket(`${protocol === "http:" ? "ws" : "wss"}://websocket.hicompint.com/moye_dev`);
+    /**
+     * web socket connection
+     */
+    const socketCon = () => {
+        const protocol = document.location.protocol
+        // 서버와의 WebSocket 연결
+        const socket = new WebSocket(`${protocol === "http:" ? "ws" : "wss"}://websocket.hicompint.com/moye_dev`);
 
-    socket.onopen = function() {
-        console.log('WebSocket connected');
-    };
+        socket.onopen = function() {
+            console.log('WebSocket connected');
+        };
 
-    socket.onclose = function() {
-        console.log('WebSocket disconnected');
-    };
+        socket.onclose = function() {
+            console.log('WebSocket disconnected');
+        };
 
-    // 서버로부터 데이터를 수신하는 함수
-    socket.onmessage = (event) => {
-        const message = JSON.parse(event.data);
-        console.log('Received message:', message);
-        // window.alert("안녕!");
+        // 서버로부터 데이터를 수신하는 함수
+        socket.onmessage = (event) => {
+            const message = JSON.parse(event.data);
+            console.log('Received message:', message);
+            // window.alert("안녕!");
 
-        const convertData = convertCodesData(message)
+            const convertData = convertCodesData(message)
 
-        setCodes(mergeData(codes, convertData))
-    };
+            setCodes(mergeData(codes, convertData))
+        };
+    }
+
 
     // 두 데이터를 비교하여 key가 같으면 value를 교체하고, 없으면 새로 추가하는 함수
     const mergeData = (data1, data2) => {

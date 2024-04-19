@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Arrow from "components/web/main/mainComponents/mainContentsComponents/Arrow";
+import Arrow from "components/web/common/Arrow";
 import routerPath from "etc/lib/path/routerPath";
 
 const Section02 = () => {

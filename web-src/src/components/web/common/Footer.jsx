@@ -35,9 +35,9 @@ function Footer() {
         <>
             {/* footer //S */}
             <div id="go_top">
-                <Link to="" onClick={goToTop}>
+                <a onClick={goToTop} style={{cursor: "pointer"}}>
                     <img src="img/common/go_top.png" alt="상단으로 이동" />
-                </Link>
+                </a>
             </div>
 
             <div id="footer">

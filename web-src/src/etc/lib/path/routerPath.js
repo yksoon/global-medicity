@@ -3,10 +3,6 @@ import {routerCategory} from "etc/lib/path/category";
 
 const base_url = "/";
 
-// 콜론, slash
-const colon = ":";
-const slash = "/";
-
 // const base_api_url = protocol + host + colon + port;
 // const base_api_url = process.env.REACT_APP_DB_HOST;
 // const base_api_url = "http://localhost:3005";
@@ -78,7 +74,7 @@ const routerPath = {
 
     // 로그인
     // /admin/signin
-    admin_signin_url: `${base_url + admin + slash}signin${slash}`,
+    admin_signin_url: `${base_url + admin}/signin`,
 };
 
 export default routerPath
