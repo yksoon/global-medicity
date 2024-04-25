@@ -96,7 +96,7 @@ body {margin:0 auto;}
 .section02 ul li h5 {font-size: 32px;font-family: 'Lexend';margin-bottom: 10px;}
 .section02 ul li p {font-size: 18px;color: #707070;line-height: 32px;word-break: keep-all;}
 
-/* section02 */
+/* section03 */
 .section03 {width:100%;padding: 140px 0;}
 .section03 .title {margin-bottom: 0;}
 .section03 ul li {display: flex;padding: 32px 0;align-items: center;border-bottom: 1px solid #ddd;}
@@ -106,33 +106,11 @@ body {margin:0 auto;}
 .section03 ul li p {font-size: 18px;color: #424242;word-break: keep-all;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .section03 .btn_main {margin-top: 0;}
 
-
-
-
-/* section03 */
-.section03 {width:100%;background:url('/img/web/main/sec02_bg.jpg') center center no-repeat; background-size: cover;}
-.section03 .hotel { position:relative; z-index:1; width:1520px; height:470px;margin:0 auto;padding:60px 0;display:flex;}
-.section03 .hotel .img {margin-right:50px;}
-.section03 .hotel .info {padding:40px 0 0 0;}
-.section03 .hotel .info h4 {font-size:25px; color:#a78acb;}
-.section03 .hotel .info h4:after {content:"";display:block; width:120px; height:1px; background-color:rgba(255,255,255,0.3);margin:10px 0 30px;}
-.section03 .hotel .info h3 {font-size:34px; color:#fff;line-height: 34px; margin:0 0 25px 0;;}
-.section03 .hotel .info p {font-size: 16px; line-height: 27px; color:#fff;;}
-.section03 .hotel .info .btns {display: flex;margin:30px 0 0 ;}
-.section03 .hotel .info .btns a {display:block; width:195px; height:50px; line-height: 50px; box-sizing: border-box; bordeR:1px solid #fff; 
-		padding:0 30px; font-size:16px; color:#fff; position:relative;margin:0 15px 0 0;
-		border-radius: 50px;
-		-webkit-border-radius: 50px;;
-		-moz-border-radius: 50px;
-	}
-.section03 .hotel .info .btns a img {position:absolute; top:17px; right:25px;
-	transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease; /* Firefox 4 */
-	-webkit-transition: all 0.3s ease; /* Safari and Chrome */
-	-o-transition: all 0.3s ease; /* Opera */
-}
-.section03 .hotel .info .btns a:hover img, .section03 .hotel .info .btns a:focus img{right:20px;}
-.section03 .hotelmap {height:420px;}
+/* section04 */
+.section04 .video {display:flex;gap:40px;}
+.section04 .video li {width: calc(( 100% - 80px ) /3);height:286px;}
+.section04 .video li a {display: block;}
+.section04 .video li img {object-fit: cover;width: 100%;height:100%;}
 
 
 /*footer*/

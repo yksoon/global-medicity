@@ -6,7 +6,7 @@ import routerPath from "etc/lib/path/routerPath";
 const Section04 = () => {
     return (
         <>
-            <div className="section03">
+            <div className="section05">
                 <div className="sec_in">
                    <div className="title">
                         <h5>전세계 파트너들과 메디씨티가 함께합니다.</h5>
