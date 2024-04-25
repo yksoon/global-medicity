@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Arrow from "components/web/common/Arrow";
 import routerPath from "etc/lib/path/routerPath";
 
-const Section04 = () => {
+const Section05 = () => {
     return (
         <>
             <div className="section05">
@@ -32,6 +32,13 @@ const Section04 = () => {
                         <li><Link><img src="/img/web/partner/partner15.png" alt="" /></Link></li>
                         <li><Link><img src="/img/web/partner/partner16.png" alt="" /></Link></li>
                         <li><Link><img src="/img/web/partner/partner17.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner18.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner19.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner20.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner21.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner22.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner23.png" alt="" /></Link></li>
+                        <li></li>
                    </ul>
                 </div>
             </div>
@@ -39,4 +46,4 @@ const Section04 = () => {
     );
 };
 
-export default Section04;
+export default Section05;

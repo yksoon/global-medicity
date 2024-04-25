@@ -142,7 +142,7 @@ function Main() {
             <Footer />
 
             {/* 팝업 렌더링 */}
-            {popupList.length &&
+            {popupList.length !== 0 &&
                 popupList.map(
                     (popup) =>
                         popup.isOpen !== false && (
