@@ -94,7 +94,6 @@ body {margin:0 auto;}
 .section02 ul li p {font-size: 18px;color: #707070;line-height: 32px;word-break: keep-all;}
 
 /* section03 */
-.section03 {width:100%;padding: 140px 0;}
 .section03 .title {margin-bottom: 0;}
 .section03 ul li {display: flex;padding: 36px 0;align-items: center;border-bottom: 1px solid #ddd;}
 .section03 ul li:last-child {border-bottom: 1px solid #ddd;padding-bottom: 42px;}
@@ -104,12 +103,13 @@ body {margin:0 auto;}
 .section03 .btn_main {margin-top: 0;}
 
 /* section04 */
+.section04 {width:100%;padding: 140px 0;}
 .section04 .video {display:flex;gap:40px;}
 .section04 .video li {width: calc(( 100% - 80px ) /3);height:286px;}
 .section04 .video li a {display: block;}
 .section04 .video li img {object-fit: cover;width: 100%;height:100%;}
 
-.section05 {padding: 140px 0;}
+.section05 {padding: 0 0 140px 0;}
 .section05 .title {margin-bottom: 0;}
 .section05 ul {display:flex;    flex-wrap: wrap;}
 .section05 ul li {width: calc( 100% / 6 );height:120px;border-left: 1px solid #e2e2e2;border-bottom: 1px solid #e2e2e2;}
