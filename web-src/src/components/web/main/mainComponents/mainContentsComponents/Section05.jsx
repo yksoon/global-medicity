@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import Arrow from "components/web/common/Arrow";
 import routerPath from "etc/lib/path/routerPath";
 
-const Section04 = () => {
+const Section05 = () => {
     return (
         <>
-            <div className="section03">
+            <div className="section05">
                 <div className="sec_in">
                    <div className="title">
                         <h5>전세계 파트너들과 메디씨티가 함께합니다.</h5>
@@ -15,42 +15,30 @@ const Section04 = () => {
                         </div>
                    </div>
                    <ul className="notice">
-                        <li>
-                            <div>
-                                <h5>글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범</h5>
-                                <p>
-                                    글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고...
-                                </p>
-                            </div>
-                            <Link to={routerPath.web_kmedi_intro_url} className="btn_main">VIEW MORE <Arrow /></Link>
-                        </li>
-                        <li>
-                            <div>
-                                <h5>글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범</h5>
-                                <p>
-                                    글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고...
-                                </p>
-                            </div>
-                            <Link to={routerPath.web_kmedi_intro_url} className="btn_main">VIEW MORE <Arrow /></Link>
-                        </li>
-                        <li>
-                            <div>
-                                <h5>글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범</h5>
-                                <p>
-                                    글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고...
-                                </p>
-                            </div>
-                            <Link to={routerPath.web_kmedi_intro_url} className="btn_main">VIEW MORE <Arrow /></Link>
-                        </li>
-                        <li>
-                            <div>
-                                <h5>글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범</h5>
-                                <p>
-                                    글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고...
-                                </p>
-                            </div>
-                            <Link to={routerPath.web_kmedi_intro_url} className="btn_main">VIEW MORE <Arrow /></Link>
-                        </li>
+                        <li><Link><img src="/img/web/partner/partner01.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner02.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner03.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner04.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner05.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner06.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner07.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner08.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner09.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner10.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner11.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner12.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner13.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner14.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner15.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner16.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner17.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner18.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner19.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner20.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner21.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner22.png" alt="" /></Link></li>
+                        <li><Link><img src="/img/web/partner/partner23.png" alt="" /></Link></li>
+                        <li></li>
                    </ul>
                 </div>
             </div>
@@ -58,4 +46,4 @@ const Section04 = () => {
     );
 };
 
-export default Section04;
+export default Section05;

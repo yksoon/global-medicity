@@ -15,36 +15,15 @@ const Section04 = () => {
                             <Link><img src="img/web/main/arrow.png" alt="" /></Link>
                         </div>
                    </div>
-                   <ul className="notice">
+                   <ul className="video">
                         <li>
-                            <a href=""><img src="" alt="" /></a>
+                            <Link><img src="/img/web/main/noimg.png" alt="" /></Link>
                         </li>
                         <li>
-                            <div>
-                                <h5>글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범</h5>
-                                <p>
-                                    글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고...
-                                </p>
-                            </div>
-                            <Link to={routerPath.web_kmedi_intro_url} className="btn_main">VIEW MORE <Arrow /></Link>
+                            <Link><img src="/img/web/main/noimg.png" alt="" /></Link>
                         </li>
                         <li>
-                            <div>
-                                <h5>글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범</h5>
-                                <p>
-                                    글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고...
-                                </p>
-                            </div>
-                            <Link to={routerPath.web_kmedi_intro_url} className="btn_main">VIEW MORE <Arrow /></Link>
-                        </li>
-                        <li>
-                            <div>
-                                <h5>글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범</h5>
-                                <p>
-                                    글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고...
-                                </p>
-                            </div>
-                            <Link to={routerPath.web_kmedi_intro_url} className="btn_main">VIEW MORE <Arrow /></Link>
+                            <Link><img src="/img/web/main/noimg.png" alt="" /></Link>
                         </li>
                    </ul>
                 </div>
