@@ -12,6 +12,8 @@ import {
     userTokenAdminAtom,
 } from "etc/lib/recoils/atoms";
 import {BarChart, LineChart, PieChart} from "@mui/x-charts";
+import imageCompression from "browser-image-compression";
+import {imageResizeOptions} from "etc/lib/static";
 
 // Alert (props)
 // isOpen = state 상태값
@@ -329,6 +331,25 @@ const CommonInputNumberPattern = (e) => {
     return e.target.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')
 }
 
+const CommonMakeThumbnailImage = async (file) => {
+    try {
+        const compressedFile = await imageCompression(file, imageResizeOptions);
+        const resizingFile = new File([compressedFile], file.name, {
+            type: file.type,
+        });
+        return resizingFile;
+    } catch (error) {
+        console.error(error.message);
+        throw error; // Propagate the error for handling at a higher level if needed
+    }
+};
+
+const CommonParseHTMLString = (htmlString) => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlString, "text/html");
+    return doc.body.textContent || "";
+};
+
 export {
     CommonConsole,
     CommonSpinner,
@@ -339,5 +360,7 @@ export {
     CommonPieChart,
     CommonBarChart,
     CommonCommaPattern,
-    CommonInputNumberPattern
+    CommonInputNumberPattern,
+    CommonMakeThumbnailImage,
+    CommonParseHTMLString,
 };
