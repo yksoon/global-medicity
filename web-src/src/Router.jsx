@@ -21,6 +21,7 @@ import BusinessArt from "components/web/business/art/BusinessArt";
 import MediaVideo from "components/web/media/video/MediaVideo";
 import MediaNews from "components/web/media/news/MediaNews";
 import MediaNotice from "components/web/media/notice/MediaNotice";
+import MediaNewsDetail from "components/web/media/news/MediaNewsDetail";
 
 
 // Router
@@ -101,6 +102,10 @@ const Router = () => {
                     {/* 미디어 - 뉴스 */}
                     {/* URL : /media/news */}
                     <Route path={routerPath.web_media_news_url} element={<MediaNews />} />
+
+                    {/* 미디어 - 뉴스 - 상세 */}
+                    {/* URL : /media/news/{boardIdx} */}
+                    <Route path={`${routerPath.web_media_news_detail_url}:boardIdx`} element={<MediaNewsDetail />} />
 
                     {/* 미디어 - 공지 */}
                     {/* URL : /media/notice */}

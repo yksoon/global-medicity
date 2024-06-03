@@ -61,6 +61,9 @@ const routerPath = {
     // 미디어 - 뉴스
     web_media_news_url: `${base_url}${routerCategory.media}/news`,
 
+    // 미디어 - 뉴스 - 상세
+    web_media_news_detail_url: `${base_url}${routerCategory.media}/news/`,
+
     // 미디어 - 공지
     web_media_notice_url: `${base_url}${routerCategory.media}/notice`,
 
