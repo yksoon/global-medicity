@@ -18,13 +18,13 @@ import {isSpinnerAtom} from "etc/lib/recoils/atoms";
 import apiPath from "etc/lib/path/apiPath";
 import {boardType} from "etc/lib/static";
 import {CommonRestAPI} from "etc/lib/CommonRestAPI";
-import {CommonConsole} from "etc/lib/Common";
+import {CommonConsole, CommonErrModule, CommonNotify} from "etc/lib/Common";
 import {successCode} from "etc/lib/resultCode";
 import CommonModal from "etc/lib/CommonModalMiddleware";
 
 // ------------------- import End --------------------
 
-const NoticeManageMain = (props) => {
+const NoticeBoardManage = (props) => {
     const { confirm } = useConfirm();
     const { alert } = useAlert();
     const err = CommonErrModule();
@@ -62,10 +62,10 @@ const NoticeManageMain = (props) => {
         // POST
         const url = apiPath.api_admin_boards;
         const data = {
-            page_num: pageNum,
-            page_size: pageSize,
-            search_keyword: searchKeyword,
-            board_type: boardType.notice, // 공지사항
+            pageNum: pageNum,
+            pageSize: pageSize,
+            searchKeyword: searchKeyword,
+            boardType: boardType.notice, // 공지사항
         };
 
         // 파라미터
@@ -82,18 +82,18 @@ const NoticeManageMain = (props) => {
 
         // 완료 로직
         const responsLogic = (res) => {
-            let result_code = res.headers.result_code;
+            let resultCode = res.headers.resultcode;
 
             // 성공
             if (
-                result_code === successCode.success ||
-                result_code === successCode.noData
+                resultCode === successCode.success ||
+                resultCode === successCode.noData
             ) {
-                let result_info = res.data.result_info;
-                let page_info = res.data.page_info;
+                let resultInfo = res.data.resultInfo;
+                let pageInfo = res.data.pageInfo;
 
-                setBoardList(result_info);
-                setPageInfo(page_info);
+                setBoardList(resultInfo);
+                setPageInfo(pageInfo);
 
                 setIsSpinner(false);
             } else {
@@ -152,7 +152,7 @@ const NoticeManageMain = (props) => {
         if (checked) {
             // 전체 선택 클릭 시 데이터의 모든 아이템(id)를 담은 배열로 checkItems 상태 업데이트
             const idArray = [];
-            boardList.forEach((el) => idArray.push(el.board_idx));
+            boardList.forEach((el) => idArray.push(el.boardIdx));
             setCheckItems(idArray);
         } else {
             // 전체 선택 해제 시 checkItems 를 빈 배열로 상태 업데이트
@@ -181,12 +181,12 @@ const NoticeManageMain = (props) => {
             callback: (res) => responsLogic(res),
         };
 
-        CommonRest(restParams);
+        CommonRestAPI(restParams);
 
         const responsLogic = (res) => {
-            if (res.headers.result_code === successCode.success) {
-                const result_info = res.data.result_info;
-                setModData(result_info);
+            if (res.headers.resultcode === successCode.success) {
+                const resultInfo = res.data.resultInfo;
+                setModData(resultInfo);
 
                 modBoard();
 
@@ -197,7 +197,7 @@ const NoticeManageMain = (props) => {
                 CommonNotify({
                     type: "alert",
                     hook: alert,
-                    message: res.headers.result_message_ko,
+                    message: res.headers.resultmessageko,
                 });
             }
         };
@@ -247,11 +247,11 @@ const NoticeManageMain = (props) => {
             callback: (res) => responsLogic(res),
         };
 
-        CommonRest(restParams);
+        CommonRestAPI(restParams);
 
         const responsLogic = (res) => {
-            const result_code = res.headers.result_code;
-            if (result_code === successCode.success) {
+            const resultCode = res.headers.resultcode;
+            if (resultCode === successCode.success) {
                 setIsSpinner(false);
 
                 CommonNotify({
@@ -282,11 +282,11 @@ const NoticeManageMain = (props) => {
     // 컬럼 세팅
     const columns = useMemo(() => [
         {
-            accessorKey: "board_idx",
+            accessorKey: "boardIdx",
             cell: (info) => (
                 <input
                     type="checkbox"
-                    name={`board_idx_${info.getValue()}`}
+                    name={`boardIdx_${info.getValue()}`}
                     id={info.getValue()}
                     value={info.getValue()}
                     onChange={(e) =>
@@ -312,36 +312,36 @@ const NoticeManageMain = (props) => {
             enableSorting: false,
         },
 
-        columnHelper.accessor((row) => row.subject_ko, {
-            id: "subject_ko",
+        columnHelper.accessor((row) => row.subjectKo, {
+            id: "subjectKo",
             cell: (info) => info.getValue(),
             header: "제목",
             sortingFn: "alphanumericCaseSensitive",
         }),
 
-        columnHelper.accessor((row) => row.content_ko, {
-            id: "content_ko",
+        columnHelper.accessor((row) => row.contentKo, {
+            id: "contentKo",
             cell: (info) => info.getValue(),
             header: "내용",
             sortingFn: "alphanumericCaseSensitive",
         }),
 
-        columnHelper.accessor((row) => row.show_yn, {
-            id: "show_yn",
+        columnHelper.accessor((row) => row.showYn, {
+            id: "showYn",
             cell: (info) => (info.getValue() === "Y" ? "노출" : "비노출"),
             header: "노출여부",
             sortingFn: "alphanumericCaseSensitive",
         }),
 
-        columnHelper.accessor((row) => row.reg_user_name_ko, {
-            id: "reg_user_name_ko",
+        columnHelper.accessor((row) => row.regUserNameKo, {
+            id: "regUserNameKo",
             cell: (info) => info.getValue(),
             header: "등록자",
             sortingFn: "alphanumericCaseSensitive",
         }),
 
-        columnHelper.accessor((row) => row.reg_dttm.split(" ")[0], {
-            id: "reg_dttm",
+        columnHelper.accessor((row) => row.regDttm.split(" ")[0], {
+            id: "regDttm",
             cell: (info) => info.getValue(),
             header: "등록일",
             sortingFn: "alphanumericCaseSensitive",
@@ -352,7 +352,7 @@ const NoticeManageMain = (props) => {
                 <Link
                     to=""
                     className="tablebtn"
-                    onClick={() => detailBoard(row.board_idx)}
+                    onClick={() => detailBoard(row.boardIdx)}
                 >
                     상세보기
                 </Link>
@@ -511,7 +511,7 @@ const NoticeManageMain = (props) => {
                             </tbody>
                         </table>
                     </div>
-                    {Object.keys(pageInfo).length !== 0 && (
+                    {pageInfo.total !== 0 && (
                         <div className="pagenation">
                             <Pagination
                                 count={pageInfo.pages}
@@ -537,4 +537,4 @@ const NoticeManageMain = (props) => {
     );
 };
 
-export default NoticeManageMain;
+export default NoticeBoardManage;

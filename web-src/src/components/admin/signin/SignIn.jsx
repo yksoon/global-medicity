@@ -85,17 +85,17 @@ const SignIn = () => {
         const url = apiPath.api_auth_signin;
         const data = {
             // signup_type: "000",
-            user_id: inputID.current.value,
-            user_pwd: inputPW.current.value,
-            admin_yn: "Y",
+            userId: inputID.current.value,
+            userPwd: inputPW.current.value,
+            adminYn: "Y",
         };
 
         // 처리 완료 후 로직
         const responsLogic = (res) => {
-            let result_code = res.headers.result_code;
+            let resultCode = res.headers.resultcode;
 
-            if (result_code === successCode.success) {
-                let user_info = res.data.result_info;
+            if (resultCode === successCode.success) {
+                let userInfo = res.data.resultInfo;
 
                 // 블랙리스트
                 let deleteKey = [
@@ -108,11 +108,11 @@ const SignIn = () => {
                 ];
 
                 for (let i = 0; i < deleteKey.length; i++) {
-                    delete user_info[deleteKey[i]];
+                    delete userInfo[deleteKey[i]];
                 }
 
-                setUserInfoAdmin(user_info);
-                setUserTokenAdmin(user_info.token);
+                setUserInfoAdmin(userInfo);
+                setUserTokenAdmin(userInfo.token);
 
                 setIsSpinner(false);
 
@@ -123,7 +123,7 @@ const SignIn = () => {
                 CommonNotify({
                     type: "alert",
                     hook: alert,
-                    message: res.headers.result_message_ko,
+                    message: res.headers.resultmessageko,
                 });
             }
         };
@@ -155,7 +155,7 @@ const SignIn = () => {
                         <div className="login">
                             <h1>
                                 <img
-                                    src="img/common/logo_admin.png"
+                                    src="img/main/logo.png"
                                     alt=""
                                     style={{ width: "210px" }}
                                 />

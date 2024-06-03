@@ -16,36 +16,36 @@ export default function Login(
     RestServer("post", url, data)
         .then(function (response) {
             // response
-            let user_info;
+            let userInfo;
 
-            let result_code = response.headers.result_code;
+            let resultCode = response.headers.resultCode;
 
-            if (result_code === successCode.success) {
-                user_info = response.data.result_info;
+            if (resultCode === successCode.success) {
+                userInfo = response.data.resultInfo;
 
                 // 블랙리스트 (추가한것은 제외)
                 let deleteKey = [
-                    "md_licenses_number",
-                    "signin_policy",
-                    "signin_policy_cd",
-                    "user_idx",
-                    "user_pwd",
-                    "user_role",
-                    "user_role_cd",
-                    "user_salt",
+                    "mdLicensesNumber",
+                    "signinPolicy",
+                    "signinPolicyCd",
+                    "userIdx",
+                    "userPwd",
+                    "userRole",
+                    "userRoleCd",
+                    "userSalt",
                 ];
 
                 for (let i = 0; i < deleteKey.length; i++) {
-                    delete user_info[deleteKey[i]];
+                    delete userInfo[deleteKey[i]];
                 }
 
                 // user_info
                 // dispatch(set_user_info(JSON.stringify(user_info)));
-                setUserInfo(user_info);
+                setUserInfo(userInfo);
 
                 // user_token
                 // dispatch(set_user_token(JSON.stringify(user_info)));
-                setUserToken(user_info.token);
+                setUserToken(userInfo.token);
 
                 // dispatch(
                 //     set_spinner({
@@ -55,7 +55,7 @@ export default function Login(
                 setIsSpinner(false);
 
                 window.location.replace(routerPath.web_main_url);
-            } else if (result_code === "1003") {
+            } else if (resultcode === "1003") {
                 CommonConsole("log", response);
 
                 CommonConsole("decLog", response);
@@ -64,7 +64,7 @@ export default function Login(
                 CommonNotify({
                     type: "alert",
                     hook: alert,
-                    message: response.headers.result_message_ko,
+                    message: response.headers.resultmessageko,
                 });
 
                 // dispatch(
@@ -83,8 +83,8 @@ export default function Login(
             CommonNotify({
                 type: "alert",
                 hook: alert,
-                message: error.response.headers.result_message_ko
-                    ? error.response.headers.result_message_ko
+                message: error.response.headers.resultmessageko
+                    ? error.response.headers.resultmessageko
                     : "잠시 후 다시 시도해주세요.",
             });
 
