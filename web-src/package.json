@@ -59,7 +59,7 @@
         "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz"
     },
     "scripts": {
-        "start": "vite --port 40001",
+        "start": "vite --port 40011",
         "build": "vite build --mode development",
         "prd": "vite build --mode production",
         "preview": "vite preview",
