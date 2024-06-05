@@ -24,7 +24,7 @@ import CommonModal from "etc/lib/CommonModalMiddleware";
 
 // ------------------- import End --------------------
 
-const NoticeBoardManage = (props) => {
+const ContentsBoardManage = (props) => {
     const { confirm } = useConfirm();
     const { alert } = useAlert();
     const err = CommonErrModule();
@@ -65,7 +65,7 @@ const NoticeBoardManage = (props) => {
             pageNum: pageNum,
             pageSize: pageSize,
             searchKeyword: searchKeyword,
-            boardType: boardType.notice, // 공지사항
+            boardType: boardType.etc, // 기타
         };
 
         // 파라미터
@@ -127,7 +127,7 @@ const NoticeBoardManage = (props) => {
             setIsOpen(false);
         };
     };
-    
+
     // 리스트 새로고침
     const handleNeedUpdate = () => {
         setModalTitle("");
@@ -164,7 +164,7 @@ const NoticeBoardManage = (props) => {
     const handleChange = (e, value) => {
         getBoardList(value, 10, searchKeyword.current.value);
     };
-    
+
     // 공지사항 정보 상세
     const detailBoard = (idx) => {
         setIsSpinner(true);
@@ -205,13 +205,13 @@ const NoticeBoardManage = (props) => {
 
     // 공지사항 등록 모달
     const regBoard = () => {
-        setModalTitle("공지사항 등록하기");
+        setModalTitle("컨텐츠 등록하기");
         setIsOpen(true);
     };
 
     // 공지사항 상세 모달
     const modBoard = () => {
-        setModalTitle("공지사항 상세보기");
+        setModalTitle("컨텐츠 상세보기");
         setIsOpen(true);
     };
 
@@ -220,16 +220,16 @@ const NoticeBoardManage = (props) => {
         //선택여부 확인
         checkItems.length === 0
             ? CommonNotify({
-                    type: "alert",
-                    hook: alert,
-                    message: "삭제할 항목을 선택해주세요",
-                })
+                type: "alert",
+                hook: alert,
+                message: "삭제할 항목을 선택해주세요",
+            })
             : CommonNotify({
-                    type: "confirm",
-                    hook: confirm,
-                    message: "선택된 항목을 삭제 하시겠습니까?",
-                    callback: () => removeBoard(),
-                });
+                type: "confirm",
+                hook: confirm,
+                message: "선택된 항목을 삭제 하시겠습니까?",
+                callback: () => removeBoard(),
+            });
     };
 
     const removeBoard = async () => {
@@ -313,6 +313,14 @@ const NoticeBoardManage = (props) => {
             colWidth: "3%",
         },
 
+        columnHelper.accessor((row) => row.subTitle, {
+            id: "subTitle",
+            cell: (info) => info.getValue(),
+            header: "구분",
+            sortingFn: "alphanumericCaseSensitive",
+            colWidth: "7%",
+        }),
+
         columnHelper.accessor((row) => row.subject, {
             id: "subject",
             cell: (info) => info.getValue(),
@@ -324,7 +332,7 @@ const NoticeBoardManage = (props) => {
         columnHelper.accessor((row) => row.content, {
             id: "content",
             cell: (info) =>
-                    CommonParseHTMLString(info.getValue()),
+                CommonParseHTMLString(info.getValue()),
             header: "내용",
             sortingFn: "alphanumericCaseSensitive",
             colWidth: "*",
@@ -391,7 +399,7 @@ const NoticeBoardManage = (props) => {
         <>
             <div className="content">
                 <div className="title">
-                    <h3>게시판 관리 - 공지사항</h3>
+                    <h3>게시판 관리 - 컨텐츠 관리</h3>
                 </div>
                 <div className="con_area">
                     {/*검색 바*/}
@@ -487,7 +495,7 @@ const NoticeBoardManage = (props) => {
                                         {row
                                             .getVisibleCells()
                                             .map((cell) => (
-                                                <td key={cell.id} 
+                                                <td key={cell.id}
                                                     style={{
                                                         whiteSpace: 'nowrap',
                                                         textOverflow: 'ellipsis', // 넘치는 텍스트에 ... 처리
@@ -539,7 +547,7 @@ const NoticeBoardManage = (props) => {
                 title={modalTitle}
                 width={"1000"}
                 handleModalClose={handleModalClose}
-                component={"NoticeBoardModal"}
+                component={"ContentsBoardModal"}
                 handleNeedUpdate={handleNeedUpdate}
                 modData={modData}
             />
@@ -547,4 +555,4 @@ const NoticeBoardManage = (props) => {
     );
 };
 
-export default NoticeBoardManage;
+export default ContentsBoardManage;

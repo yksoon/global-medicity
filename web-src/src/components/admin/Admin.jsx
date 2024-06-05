@@ -14,8 +14,20 @@ import routerPath from "etc/lib/path/routerPath";
 import apiPath from "etc/lib/path/apiPath";
 import {CommonRestAPI} from "etc/lib/CommonRestAPI";
 import NoticeBoardManage from "components/admin/board/notice/NoticeBoardManage";
+import {useLocation} from "react-router-dom";
+import ContentsBoardManage from "components/admin/board/contents/ContentsBoardManage";
 
 const Admin = () => {
+    // const location = useLocation();
+    //
+    // useEffect(() => {
+    //     const path = location.pathname;
+    //     // /admin
+    //     if (path === '/admin') {
+    //         import('etc/css/adm.css');
+    //     }
+    // }, [ location ])
+
     const err = CommonErrModule();
     const isSpinner = useRecoilValue(isSpinnerAtom);
     const [isRefresh, setIsRefresh] = useState(false);
@@ -142,6 +154,10 @@ const Admin = () => {
             // 게시판관리 - 공지사항
             case "noticeBoard":
                 return <NoticeBoardManage isRefresh={isRefresh} />;
+
+            // 게시판관리 - 컨텐츠
+            case "contentBoard":
+                return <ContentsBoardManage isRefresh={isRefresh} />;
 
             default:
                 return <NoticeBoardManage isRefresh={isRefresh} />;

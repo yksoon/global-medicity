@@ -19,6 +19,7 @@ import {
 import apiPath from "etc/lib/path/apiPath";
 import CommonModal from "etc/lib/CommonModalMiddleware";
 import {CommonRestAPI} from "etc/lib/CommonRestAPI";
+import routerPath from "etc/lib/path/routerPath";
 
 const SideNav = (props) => {
     // const dispatch = useDispatch();
@@ -106,14 +107,14 @@ const SideNav = (props) => {
         CommonRestAPI(restParams);
 
         const responsLogic = (res) => {
-            let result_code = res.headers.result_code;
-            let result_info = res.data.result_info;
+            let resultCode = res.headers.resultcode;
+            let resultInfo = res.data.resultInfo;
 
             // 성공
-            if (result_code === successCode.success) {
+            if (resultCode === successCode.success) {
                 setIsSpinner(false);
 
-                setModUserData(result_info);
+                setModUserData(resultInfo);
 
                 setModalTitle("회원수정");
                 setIsOpen(true);
@@ -127,7 +128,7 @@ const SideNav = (props) => {
                 CommonNotify({
                     type: "alert",
                     hook: alert,
-                    message: res.headers.result_message_ko,
+                    message: res.headers.resultmessageko,
                 });
             }
         };
@@ -156,9 +157,9 @@ const SideNav = (props) => {
 
         const responsLogic = (res) => {
             // response
-            let result_code = res.headers.result_code;
+            let resultCode = res.headers.resultcode;
 
-            if (result_code === successCode.success) {
+            if (resultCode === successCode.success) {
                 resetUserInfoAdmin();
                 resetUserTokenAdmin();
 
@@ -208,8 +209,8 @@ const SideNav = (props) => {
                         {/*// onClick={(e) => modUser(userInfoAdmin.user_idx)}*/}
                         {/*>*/}
                         <p>
-                            {userInfoAdmin && userInfoAdmin.user_name_ko}(
-                            {userInfoAdmin && userInfoAdmin.user_id})
+                            {userInfoAdmin && userInfoAdmin.userNameKo}(
+                            {userInfoAdmin && userInfoAdmin.userId})
                         </p>
                         {/*</Link>*/}
 

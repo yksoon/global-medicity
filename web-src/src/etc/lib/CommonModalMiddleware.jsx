@@ -1,6 +1,7 @@
 import { Modal } from "@mui/material";
 import { React } from "react";
-import NoticeBoardModalMain from "components/admin/board/notice/modal/NoticeBoardModalMain";
+import NoticeBoardModal from "components/admin/board/notice/modal/NoticeBoardModal";
+import ContentsBoardModal from "components/admin/board/contents/modal/ContentsBoardModal";
 
 const CommonModal = (props) => {
     const modalOption = {
@@ -35,9 +36,9 @@ const CommonModal = (props) => {
             //     );
 
             // 공지사항
-            case "NoticeBoardModalMain":
+            case "NoticeBoardModal":
                 return (
-                    <NoticeBoardModalMain
+                    <NoticeBoardModal
                         handleNeedUpdate={handleNeedUpdate}
                         handleNeedUpdateComment={handleNeedUpdateComment}
                         handleModalClose={modalOption.handleModalClose}
@@ -45,6 +46,16 @@ const CommonModal = (props) => {
                     />
                 );
 
+            // 컨텐츠
+            case "ContentsBoardModal":
+                return (
+                    <ContentsBoardModal
+                        handleNeedUpdate={handleNeedUpdate}
+                        handleNeedUpdateComment={handleNeedUpdateComment}
+                        handleModalClose={modalOption.handleModalClose}
+                        modData={props.modData}
+                    />
+                );
 
             default:
                 return;
@@ -59,7 +70,10 @@ const CommonModal = (props) => {
                 aria-describedby="modal-modal-description"
             >
                 <div className="modal_wrap" id="modal_wrap">
-                    <div className={`modal w${modalOption.width}`}>
+                    <div
+                        className={`modal`}
+                        style={{ width: `${modalOption.width}px` }}
+                    >
                         <div
                             className="modal_content form hotel"
                             id="hotelInsert"

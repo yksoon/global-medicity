@@ -18,6 +18,9 @@ import {
     Instance_file, Instance_multi, Instance_multi_file
 } from "etc/lib/Instance";
 import {CommonConsole, CommonNotify} from "etc/lib/Common";
+import {errorCode} from "etc/lib/resultCode";
+import tokenExpire from "etc/lib/tokenExpire";
+import {restTimeOut} from "etc/lib/static";
 
 const RestServer = (method, url, data, admin, file) => {
     switch (method) {
@@ -127,7 +130,7 @@ const CommonErrorCatch = async (
             CommonNotify({
                 type: "alert",
                 hook: alert,
-                message: error.response.headers.resultMessageEn,
+                message: error.response.headers.resultmessageen,
             });
         }
     } else {
@@ -135,7 +138,7 @@ const CommonErrorCatch = async (
     }
 
     // TODO: 타임아웃 전역 사용 가능하도록
-    const timeOut = 20000;
+    const timeOut = restTimeOut;
 
     // 타임아웃 (axios 타임아웃 걸릴경우)
     if (error.message === `timeout of ${timeOut}ms exceeded`) {

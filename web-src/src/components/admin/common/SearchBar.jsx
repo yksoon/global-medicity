@@ -18,14 +18,14 @@ const SearchBar = (props) => {
     return (
         <>
             <div className="adm_search">
-                <div>
+                <div className="search_box">
                     {/* <select name="" id="">
                                         <option value="">구분</option>
                                         <option value="">이름</option>
                                         <option value="">소속</option>
                                     </select> */}
                     <input type="text" className="input" onKeyDown={handleOnKeyPress} ref={searchKeyword} />
-                    <Link to="" className="subbtn off" onClick={doSearch}>
+                    <Link to="" className="subbtn off" onClick={doSearch} style={{marginLeft: "5px"}}>
                         검색
                     </Link>
                 </div>
