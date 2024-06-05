@@ -1,5 +1,8 @@
 import React from 'react';
 import Header from "components/web/common/header";
+import Footer from "components/web/common/footer";
+import Arrow from "components/web/common/Arrow";
+
 
 const MediaNews = () => {
     return (
@@ -21,18 +24,68 @@ const MediaNews = () => {
                             NEWS
                         </h3>
                     <div className="boxwrap" >
-                        <div className="box">
-                            <a href="">
-                                <span><img src="img/web/sub/news_test.jpg" alt="테스트"></img></span>
-                                <p className="name">제1회 메디씨티 쇼케이스 (인니) 현장스케치</p>
-                                <a href="" className="btn_main">VIEW MORE</a>
+                        {/*반복 시작*/}
+                        <figure>
+                            <a href="" className="box">
+                                <div className="imgwrap"><img src="img/web/sub/news_test.jpg" alt="테스트"></img></div>
+                                <div className="txtwrap">
+                                    <p className="name">제1회 메디씨티 쇼케이스 (인니) 현장스케치제1회 메디씨티 쇼케이스 (인니) 현장스케치제1회 메디씨티 쇼케이스 (인니) 현장스케치</p>
+                                    <a href="" className="btn_main">VIEW MORE  <Arrow /></a>
+                                </div>
                             </a>
-                        </div>
+                        </figure>
+                        {/*반복 끝*/}
+                        <figure>
+                            <a href="" className="box">
+                                <div className="imgwrap"><img src="img/web/sub/thumb03.jpg" alt="테스트"></img></div>
+                                <div className="txtwrap">
+                                    <p className="name">제1회 메디씨티 쇼케이스 (인니) 현장스케치</p>
+                                    <a href="" className="btn_main">VIEW MORE  <Arrow /></a>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="" className="box">
+                                <div className="imgwrap"><img src="img/web/sub/news_test.jpg" alt="테스트"></img></div>
+                                <div className="txtwrap">
+                                    <p className="name">제1회 메디씨티 쇼케이스 (인니) 현장스케치</p>
+                                    <a href="" className="btn_main">VIEW MORE  <Arrow /></a>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="" className="box">
+                                <div className="imgwrap"><img src="img/web/sub/news_test.jpg" alt="테스트"></img></div>
+                                <div className="txtwrap">
+                                    <p className="name">제1회 메디씨티 쇼케이스 (인니) 현장스케치</p>
+                                    <a href="" className="btn_main">VIEW MORE  <Arrow /></a>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="" className="box">
+                                <div className="imgwrap"><img src="img/web/sub/news_test.jpg" alt="테스트"></img></div>
+                                <div className="txtwrap">
+                                    <p className="name">제1회 메디씨티 쇼케이스 (인니) 현장스케치</p>
+                                    <a href="" className="btn_main">VIEW MORE  <Arrow /></a>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="" className="box">
+                                <div className="imgwrap"><img src="img/web/sub/news_test.jpg" alt="테스트"></img></div>
+                                <div className="txtwrap">
+                                    <p className="name">제1회 메디씨티 쇼케이스 (인니) 현장스케치</p>
+                                    <a href="" className="btn_main">VIEW MORE  <Arrow /></a>
+                                </div>
+                            </a>
+                        </figure>
+
                     </div>
                 </div>
             </div>
-
-            </>
+        <Footer /> 
+        </>
     );
 };
 

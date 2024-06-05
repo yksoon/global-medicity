@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from "components/web/common/header";
+import Footer from "components/web/common/footer";
 
 const InfoWelcome = () => {
     return (
@@ -36,16 +37,17 @@ const InfoWelcome = () => {
                                 </p>
                                 <div className="sign">
                                     <p>(주)메디씨티 CEO</p>
-                                    <img src="/web-src/public/img/web/sub/sign.png" alt="박성민" />
+                                    <img src="img/web/sub/sign.png" alt="박성민" />
                                 </div>
                             </div>
-                            <div><img src="/web-src/public/img/web/sub/greeting.png" alt="" /></div>
+                            <div><img src="img/web/sub/greeting.png" alt="" /></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            </>
+            <Footer /> 
+        </>
     );
 };
 
