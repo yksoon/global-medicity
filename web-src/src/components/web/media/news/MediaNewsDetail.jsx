@@ -37,7 +37,6 @@ const MediaNewsDetail = (props) => {
                             </tr>
                             <tr>
                                 <td colspan="3" className="filetd">
-                                    <p><img src="img/common/files.jpg" alt=""/> attachment</p>
                                     <ul>
                                         <li className="download_li">
                                             <a href="" className="attachment_parent">첨부파일 <img src="img/common/file.svg" alt=""/></a> 

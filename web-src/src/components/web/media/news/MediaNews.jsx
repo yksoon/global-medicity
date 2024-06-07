@@ -19,10 +19,17 @@ const MediaNews = () => {
             </div>
             <div id="con_area">
                 <div className="medicenter">
+                    <div className="top">
                         <h3 className="c_tit">
                             <span>메디씨티의 소식을 전합니다</span>
                             NEWS
                         </h3>
+                        <div className="tab">
+                            <a href="" className="on">전체보기</a>
+                            <a href="">영상콘텐츠</a>
+                            <a href="">NEWS</a>
+                        </div>
+                    </div>
                     <div className="boxwrap" >
                         {/*반복 시작*/}
                         <figure>

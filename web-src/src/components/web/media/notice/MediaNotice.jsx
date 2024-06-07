@@ -128,6 +128,7 @@ const MediaNotice = (props) => {
                         <span>공지사항</span>
                         NOTICE
                     </h3>
+                    <div className="list_wrap">
                     {/*반복 시작*/}
                     {boardList.length !== 0 &&
                         boardList.map((item) => (
@@ -148,7 +149,7 @@ const MediaNotice = (props) => {
                             </div>
                         ))}
                     {/*반복 끝*/}
-
+                    </div>
                     {Object.keys(pageInfo).length !== 0 &&
                         pageInfo.total !== 0 && (
                             <div className="pagenation">
