@@ -59,7 +59,7 @@ const NoticeBoardModal = (props) => {
      */
     const setDefaultValue = () => {
         refs.subject.current.value = modData.subject ?? "";
-        refs.subTitle.current.value = modData.subTitle ?? "";
+        // refs.subTitle.current.value = modData.subTitle ?? "";
         refs.showYn.current.value = modData.showYn ?? "";
 
         setFileList(modData.fileInfo);
@@ -117,7 +117,7 @@ const NoticeBoardModal = (props) => {
                     categoryType: "900",
                     boardIdx: method === "mod" ? modData.boardIdx : "",
                     subject: refs.subject.current.value,
-                    subTitle: refs.subTitle.current.value,
+                    // subTitle: refs.subTitle.current.value,
                     content: boardData,
                 };
 
@@ -460,16 +460,16 @@ const NoticeBoardModal = (props) => {
                                 />
                             </td>
                         </tr>
-                        <tr>
-                            <th>부제목</th>
-                            <td>
-                                <input
-                                    type="text"
-                                    className="input wp100"
-                                    ref={refs.subTitle}
-                                />
-                            </td>
-                        </tr>
+                        {/*<tr>*/}
+                        {/*    <th>부제목</th>*/}
+                        {/*    <td>*/}
+                        {/*        <input*/}
+                        {/*            type="text"*/}
+                        {/*            className="input wp100"*/}
+                        {/*            ref={refs.subTitle}*/}
+                        {/*        />*/}
+                        {/*    </td>*/}
+                        {/*</tr>*/}
                         <tr>
                             <th>
                                 내용 <span className="red">*</span>

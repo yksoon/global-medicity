@@ -91,7 +91,7 @@ const ContentsBoardModal = (props) => {
         //     modNotice.content.replaceAll("&lt;", "<").replaceAll("&gt;", ">")
         // );
 
-        editor?.clipboard.dangerouslyPasteHTML(1, content);
+        editor?.clipboard.dangerouslyPasteHTML(0, content);
         // setBoardData(content);
 
         modData.email && setUrlString(modData.email);

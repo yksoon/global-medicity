@@ -9,7 +9,7 @@ import {
     CommonErrModule,
     CommonParseHTMLString,
 } from "etc/lib/Common";
-import { useSetRecoilState } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import { isSpinnerAtom } from "etc/lib/recoils/atoms";
 import apiPath from "etc/lib/path/apiPath";
 import { boardType } from "etc/lib/static";
@@ -24,6 +24,8 @@ const MediaNotice = (props) => {
     const { alert } = useAlert();
     const err = CommonErrModule();
     const setIsSpinner = useSetRecoilState(isSpinnerAtom);
+
+    const isSpinner = useRecoilValue(isSpinnerAtom);
 
     /**
      * 리스트에 보여질 항목 갯수
@@ -129,26 +131,39 @@ const MediaNotice = (props) => {
                         NOTICE
                     </h3>
                     <div className="list_wrap">
-                    {/*반복 시작*/}
-                    {boardList.length !== 0 &&
-                        boardList.map((item) => (
-                            <div
-                                className="list_box"
-                                key={`noticeList_${item.boardIdx}`}
-                            >
-                                <div className="txt_wrap">
-                                    <h5>{item.subject}</h5>
-                                    <p>{CommonParseHTMLString(item.content)}</p>
-                                </div>
-                                <Link
-                                    to={`${routerPath.web_media_notice_detail_url}${item.boardIdx}`}
-                                    className="btn_main"
+                        {/*반복 시작*/}
+                        {boardList.length !== 0 ? (
+                            boardList.map((item) => (
+                                <div
+                                    className="list_box"
+                                    key={`noticeList_${item.boardIdx}`}
                                 >
-                                    VIEW MORE <Arrow />
-                                </Link>
+                                    <div className="txt_wrap">
+                                        <h5>{item.subject}</h5>
+                                        <p>
+                                            {CommonParseHTMLString(
+                                                item.content,
+                                            )}
+                                        </p>
+                                    </div>
+                                    <Link
+                                        to={`${routerPath.web_media_notice_detail_url}${item.boardIdx}`}
+                                        className="btn_main"
+                                    >
+                                        VIEW MORE <Arrow />
+                                    </Link>
+                                </div>
+                            ))
+                        ) : !isSpinner ? (
+                            <div className="list_box">
+                                <div className="txt_wrap">
+                                    <h5>등록된 공지사항이 없습니다.</h5>
+                                </div>
                             </div>
-                        ))}
-                    {/*반복 끝*/}
+                        ) : (
+                            <></>
+                        )}
+                        {/*반복 끝*/}
                     </div>
                     {Object.keys(pageInfo).length !== 0 &&
                         pageInfo.total !== 0 && (

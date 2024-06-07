@@ -6,7 +6,6 @@ import { CommonOpenUrl } from "etc/lib/Common";
 import routerPath from "etc/lib/path/routerPath";
 
 function Header() {
-
     return (
         <>
             <div id="header">
@@ -23,33 +22,29 @@ function Header() {
                     <div id="gnb">
                         <ul>
                             <li>
-                                <Link to="">
-                                    WE ARE
-                                </Link>
+                                <Link to="">WE ARE</Link>
                                 <div className="submenu">
-                                    <Link
-                                        to={routerPath.web_info_greet_url}
-                                    >
+                                    <Link to={routerPath.web_info_greet_url}>
                                         인사말
                                     </Link>
                                     <Link to={routerPath.web_info_company_url}>
                                         회사소개
                                     </Link>
-                                    <Link to={routerPath.web_info_certification_url}>
-                                    인증현황
+                                    <Link
+                                        to={
+                                            routerPath.web_info_certification_url
+                                        }
+                                    >
+                                        인증현황
                                     </Link>
                                     <Link to={routerPath.web_info_partners_url}>
-                                    파트너
+                                        파트너
                                     </Link>
-                                    <Link to="">
-                                    회사소개서 다운로드 
-                                    </Link>
+                                    <Link to="">회사소개서 다운로드</Link>
                                 </div>
                             </li>
                             <li>
-                                <Link to="">
-                                    K-MEDI
-                                </Link>
+                                <Link to="">K-MEDI</Link>
                                 <div className="submenu">
                                     <Link to={routerPath.web_kmedi_intro_url}>
                                         K-Medi 소개
@@ -63,14 +58,14 @@ function Header() {
                                 <Link to="">BUSINESS</Link>
                                 <div className="submenu">
                                     <Link
-                                        to={routerPath.web_business_hotel_url}>
+                                        to={routerPath.web_business_hotel_url}
+                                    >
                                         Hotel Service
                                     </Link>
                                     <Link to={routerPath.web_business_tax_url}>
                                         Tax/Accounting Consulting Service
                                     </Link>
-                                    <Link
-                                        to={routerPath.web_business_art_url}>
+                                    <Link to={routerPath.web_business_art_url}>
                                         Art Service
                                     </Link>
                                 </div>
@@ -78,11 +73,11 @@ function Header() {
                             <li>
                                 <Link to="">MEDIA CENTER</Link>
                                 <div className="submenu">
-                                    <Link to={routerPath.web_media_video_url}>
-                                        영상 콘텐츠
-                                    </Link>
+                                    {/*<Link to={routerPath.web_media_video_url}>*/}
+                                    {/*    영상 콘텐츠*/}
+                                    {/*</Link>*/}
                                     <Link to={routerPath.web_media_news_url}>
-                                        뉴스
+                                        뉴스 / 영상 콘텐츠
                                     </Link>
                                     <Link to={routerPath.web_media_notice_url}>
                                         공지사항
@@ -96,9 +91,9 @@ function Header() {
                         <img src="img/web/main/book.png" alt="" />
                     </div>
                 </div>
-                  {/* 모바일 메뉴 // S */}
-                  <MobileNav />
-                    {/* 모바일메뉴 // E */}
+                {/* 모바일 메뉴 // S */}
+                <MobileNav />
+                {/* 모바일메뉴 // E */}
             </div>
         </>
     );
