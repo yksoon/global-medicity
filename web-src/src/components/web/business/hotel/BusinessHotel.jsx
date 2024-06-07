@@ -9,7 +9,7 @@ const BusinessHotel = () => {
         <Header />
             <div id="subvisual">
                 <div className="sub_txt">
-                    <h2>MEDIA CENTER</h2>
+                    <h2>BUSINESS</h2>
                 </div>
                 <div id="leftmenu">
                     <a href="#sec01" className="active">Hotel Service</a>

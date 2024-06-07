@@ -198,9 +198,11 @@ body {margin:0 auto;}
 .sub_hostbox  span.logobox {margin:0 70px 0 0;}
 
 #con_area {max-width:1520px; margin:0 auto; padding:0 0 150px 0; min-height:500px;}
-#con_area.wide_conarea {width:100%; }
+#con_area.wide_conarea {width:100%; margin:0 auto;min-height:500px; }
 #con_area .c_tit {font-size:54px; font-weight: 500; color: #000;position:relative;padding:6px 0 0 8px;margin:0 0 40px 0; font-family: "Lexend";}
 #con_area .c_tit > span{font-size: 16px; display: block; font-weight: 400; color: #424448; font-family: "Noto Sans KR";}
+#con_area.wide_conarea .c_tit {font-size:54px; font-weight: 500; color: #000;position:relative;padding:6px 0 0 8px;margin:0 0 40px 0; font-family: "Lexend";}
+#con_area.wide_conarea .c_tit > span{font-size: 16px; display: block; font-weight: 400; color: #424448; font-family: "Noto Sans KR";}
 #con_area .c_tit .s_txt{font-size:20px;}
 
 p.normal{font-size: 20px; line-height: 1.7;}
@@ -209,6 +211,40 @@ p.normal{font-size: 20px; line-height: 1.7;}
 .weare{padding: 80px 0 0 0;}
 .weare .flx_box{display: flex;}
 
+
+/* K-MEDI */
+.kmedi {padding: 80px 0 150px 0;max-width: 1520px;margin: 0 auto;}
+.kmedi .one .top .c_tit {font-size:54px; font-weight: 500; color: #000;position:relative;padding:6px 0 0 8px;margin:0 0 40px 0;padding: 0;}
+.kmedi .one .top .c_tit > span{font-size: 16px; display: block; font-weight: 400; color: #424448; font-family: "Noto Sans KR";}
+.kmedi .one .cont h4 {font-size: 54px; color: #111; font-weight: 400;font-family: 'Lexend';}
+.kmedi .one .cont h5 {font-size: 24px; color: #424448; font-weight: 400; letter-spacing: -0.04em;line-height: 38px;margin: 0 0 35px;}
+.kmedi .one .cont {display: flex; gap: 40px;}
+.kmedi .one .cont > div {width: 50%;}
+.kmedi .one .cont .graybox {border: 1px solid #ddd;padding: 20px;display: flex;flex-direction: column; align-items: center;}
+.kmedi .one .cont .graybox span {display: inline-block; color: #fff; background-color: #002058; font-size: 16px; letter-spacing: -0.02em;padding: 10px 20px; border-radius: 50px;
+line-height: 16px;width: 40%;text-align: center;}
+.kmedi .one .cont .twograph {flex-direction: row;align-items: flex-end;}
+.kmedi .one .cont .twograph > div {text-align: center;}
+.kmedi .one .cont .twograph span {width: auto;}
+.kmedi_wide .two {background: url('/img/web/sub/kmedi_bg01.png') no-repeat top center; width: 100%; height: 945px;}
+.kmedi_wide .two .txt_wrap {max-width: 1520px;margin: 0 auto; background: url('/img/web/sub/kmedi_bg02.png') no-repeat right bottom;height: 950px;padding: 240px 0 0; }
+.kmedi_wide .two .txt_wrap h3 {font-family: 'Lexend';font-size: 106px; font-weight: 500;color:#fff;margin:0 0 20px;}
+.kmedi_wide .two .txt_wrap h3 span {display: block;font-size: 54px; font-weight: 400;line-height: 60px;}
+.kmedi_wide .two .txt_wrap p {color: #fff;font-size: 20px; letter-spacing: -0.02em;}
+.kmedi .three {max-width: 1520px;margin: 0 auto;}
+.kmedi .three .top .c_tit {font-size:54px; font-weight: 500; color: #000;position:relative;padding:6px 0 0 8px;margin:0 0 40px 0;font-family: "Lexend";padding: 0;}
+.kmedi .three .top .c_tit > span{font-size: 16px; display: block; font-weight: 400; color: #424448; font-family: "Noto Sans KR";}
+.kmedi .three .top p {font-size: 20px; letter-spacing: -0.02em; font-weight: 400;}
+.kmedi .three ul {display: flex;align-items: center;margin: 50px 0 0;}
+.kmedi .three ul li {width: 25%; border-right: 1px solid #ddd;padding: 20px 0 20px 35px;}
+.kmedi .three ul li:last-child {border-right: 0;}
+.kmedi .three ul li h5 {margin: 30px 0 15px; font-size: 23px; font-weight: 500; color: #111; letter-spacing: -0.02em;}
+.kmedi .three ul li h5 {font-size: 18px; font-weight: 400; color: #424448; letter-spacing: -0.02em;}
+.kmedi_wide .app {background-color: #F8F8F8; height: 965px;padding: 105px 0;}
+.kmedi_wide .app .top {background: url('/img/web/sub/kmedi_mokup.png') no-repeat right bottom;max-width: 1520px;margin: 0 auto;height: 100%;}
+.kmedi_wide .app .top .c_tit {font-size:54px; font-weight: 500; color: #000;position:relative;padding:6px 0 0 8px;margin:0 0 40px 0; line-height: 69px;letter-spacing: -0.04em;
+padding: 0;}
+.kmedi_wide .app .top .c_tit > span{font-size: 16px; display: block; font-weight: 400; color: #424448; font-family: "Noto Sans KR";}
 
 /* MEDIA CENTER */
 .medicenter {padding: 80px 0 0 0;}
@@ -220,7 +256,7 @@ p.normal{font-size: 20px; line-height: 1.7;}
 .medicenter .boxwrap figure{box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
-display: inline-block;margin: 0 0 40px;}
+display: inline-block;margin: 0 0 40px;column-width: 480px;}
 .medicenter .btn_main {color: #BDBDBD;border-bottom: 1px solid #BDBDBD;}
 .medicenter .btn_main:hover {color: #001FD9;border-bottom: 1px solid #001FD9;}
 .medicenter .btn_main svg {stroke: #BDBDBD;}
