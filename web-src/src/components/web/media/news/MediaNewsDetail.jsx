@@ -1,18 +1,19 @@
-import React from 'react';
+import React from "react";
 import Header from "components/web/common/header";
 import Footer from "components/web/common/footer";
-
 
 const MediaNewsDetail = (props) => {
     return (
         <>
-        <Header />
-        <div id="subvisual">
+            <Header />
+            <div id="subvisual">
                 <div className="sub_txt">
                     <h2>MEDIA CENTER</h2>
                 </div>
                 <div id="leftmenu">
-                    <a href="#sec01" className="active">NEWS</a>
+                    <a href="#sec01" className="active">
+                        NEWS
+                    </a>
                     <a href="#sec02">공지사항</a>
                 </div>
             </div>
@@ -26,53 +27,62 @@ const MediaNewsDetail = (props) => {
                         </colgroup>
                         <thead>
                             <tr>
-                                <th colspan="3">제목</th>
+                                <th colSpan="3">제목</th>
                             </tr>
                             <tr>
-                                <td colspan="3">
+                                <td colSpan="3">
                                     <ul>
                                         <li>2024-00-00 00:00:00</li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="3" className="filetd">
+                                <td colSpan="3" className="filetd">
                                     <ul>
                                         <li className="download_li">
-                                            <a href="" className="attachment_parent">첨부파일 <img src="img/common/file.svg" alt=""/></a> 
+                                            <a
+                                                href=""
+                                                className="attachment_parent"
+                                            >
+                                                첨부파일{" "}
+                                                <img
+                                                    src="img/common/file.svg"
+                                                    alt=""
+                                                />
+                                            </a>
                                         </li>
-                                    </ul>                 
+                                    </ul>
                                 </td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td colspan="3">
-                                  dfsdf
-                                </td>
+                                <td colSpan="3">dfsdf</td>
                             </tr>
-                            
                         </tbody>
                         <tfoot>
                             <tr>
                                 <td>Previous</td>
-                                <td colspan="2"></td>
+                                <td colSpan="2"></td>
                             </tr>
                             <tr>
                                 <td>Next</td>
-                                <td colspan="2"><a href=""></a></td>
+                                <td colSpan="2">
+                                    <a href=""></a>
+                                </td>
                             </tr>
                         </tfoot>
                     </table>
-                    <div class="board_btn_wrap">
-                        <div class="boardW_btn">
-                            <a href="" className="back_btn">List</a>
+                    <div className="board_btn_wrap">
+                        <div className="boardW_btn">
+                            <a href="" className="back_btn">
+                                List
+                            </a>
                         </div>
                     </div>
-               
                 </div>
             </div>
-        <Footer /> 
+            <Footer />
         </>
     );
 };
