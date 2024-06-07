@@ -40,7 +40,7 @@ const InfoWelcome = () => {
                                     <img src="img/web/sub/sign.png" alt="박성민" />
                                 </div>
                             </div>
-                            <div><img src="img/web/sub/greeting.png" alt="" /></div>
+                            <div><img src="img/web/sub/greeting_01.jpg" alt="" /></div>
                         </div>
                     </div>
                 </div>

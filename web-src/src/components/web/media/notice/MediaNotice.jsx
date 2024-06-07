@@ -7,7 +7,7 @@ const MediaNotice = () => {
     return (
         <>
         <Header />
-        <div id="subvisual">
+            <div id="subvisual">
                 <div className="sub_txt">
                     <h2>MEDIA CENTER</h2>
                 </div>

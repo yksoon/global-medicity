@@ -234,6 +234,21 @@ display: inline-block;margin: 0 0 40px;}
 .medicenter .boxwrap .box .imgwrap {height: auto;}
 .medicenter .boxwrap .box .imgwrap img {width: 100%;}
 
+/* BISINESS */
+.business {padding: 80px 0 0;}
+.business > div {margin: 0 0 200px;display: flex;justify-content: space-between;}
+
+#con_area .business .txt_wrap .top .c_tit {font-family: 'Lexend';margin: 0 0 5px;padding: 0;}
+.business .txt_wrap .top  {margin: 0 0 50px;}
+.business .txt_wrap .top .c_tit a {margin: 0 0 0 45px;}
+.business .txt_wrap .top p {color: #424448; font-size: 32px; font-weight: 700;letter-spacing: -0.02em;}
+.business .txt_wrap .line {padding: 40px 0; border-top: 1px solid #ddd;}
+.business .txt_wrap > div:last-child {border-bottom: 1px solid #ddd;}
+.business .txt_wrap .line h5 {font-family: 'Lexend';color: #111;font-size: 28px; font-weight: 400;letter-spacing: -0.02em;} 
+.business .txt_wrap .line p {color: #111; font-size: 18px;letter-spacing: -0.02em; }
+.business .art .txt_wrap  {text-align: right;}
+.business .art  .txt_wrap .top .c_tit a {margin: 0 45px 0 0;}
+.business .wine p {border: 0; font-size: 18px;font-weight: 400;letter-spacing: -0.02em;color: #111;line-height: 30px;}
 
 /* PROGRAM */
 .program .boxing {margin:0 0 60px 0;}
@@ -516,6 +531,47 @@ display: inline-block;margin: 0 0 40px;}
     word-wrap:break-word;
 }
 .notice .list_box a.btn_main {width: 18%;margin: 0;}
+
+
+/* table_viewpage (적용 : gallery view page) */
+table.board_Vtable{border-top:2px solid #666;}
+table.board_Vtable thead tr th{ letter-spacing:0.02em; padding:13px 20px; font-size:28px; font-weight:600; color:#333; border-bottom:1px dotted #eee; /* font-family:'sans-serif'; */}
+table.board_Vtable thead tr td{border-bottom:1px solid #eee; padding:10px 20px; text-align: center;font-weight: 500;}
+table.board_Vtable thead tr td ul:after{content:" "; display:block; clear:both;}
+table.board_Vtable thead tr td ul li{color:#999; padding-right:5px; font-size:16px; font-weight:500; text-align: right;}
+table.board_Vtable thead tr td ul li.imbar{color:#ccc;}
+table.board_Vtable thead tr td ul li img{vertical-align:text-top;}
+table.board_Vtable tbody{border-top:2px solid #eee;}
+table.board_Vtable tbody tr td{padding:20px; }
+table.board_Vtable tbody tr td div.board_content{min-height:300px; font-size:14px; font-weight:400; color:#555; /* font-family:'"Helvetica Neue", Helvetica, Arial, sans-serif'; */ word-break:break-all;}
+table.board_Vtable tbody tr td div.board_content img {max-width:100%; height:auto;}
+.board_Vtable thead tr td li.download_li{position:relative;}
+.board_Vtable thead tr td li.download_li > a{display:block; color:#999;}
+.board_Vtable thead tr td li.download_li > a img{vertical-align:text-top;}
+.attachment{position:absolute; top:25px; left:-19px; background:#fff; width:254px; padding:6px; border:1px solid #aaa;}
+.attachment ul{*zoom:1; margin-top:6px; position:relative;}
+.attachment ul:first-child{margin-top:0px;}
+.attachment ul:after{content:" "; display:block; clear:both;}
+.attachment ul li{ font-size:12px !important; font-weight:400; color:#444 !important; width:190px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height: 21px; height: 21px;}
+.attachment ul li img{padding-right:6px;}
+.attachment ul li a:hover{text-decoration:underline;}
+.attachment ul li span.attach_down{position:absolute; top:0; right:10px; font-size:11px !important; font-weight:400;}
+.attachment ul li span.attach_down a{color:#4bb9c0;}
+.attachment_parent {justify-content: flex-end;}
+.attachment_parent img {width: 20px;}
+.attachment div.xbtn{position:absolute; top:5px; right:5px; cursor:pointer;}
+
+/* table_viewpage 이전 글, 다음 글*/
+table.board_Vtable tfoot{border-top:2px solid #eee; border-bottom:2px solid #eee; }
+table.board_Vtable tfoot tr td:first-child{background:#f9f9f9; font-weight:600; font-size:16px;}
+table.board_Vtable tfoot tr td{padding:13px 20px; text-align:left; border-bottom:1px solid #eee; font-size:13px; font-weight:400; color:#555;}
+
+/* board - write 버튼 (등록 삭제 목록) */
+.board_btn_wrap{width:100%; position:relative; margin:30px 0; }
+.boardW_btn{*zoom:1; font-size:13px; font-weight:600; height:30px; line-height:30px; float:right;}
+.boardW_btn:after{content:" "; display:block; clear:both;}
+.boardW_btn a{display:block; float:left; background-color:#00148E; width:80px; border-radius:5px; text-align:center;display:block; color:#fff;}
+.boardW_btn a:hover{background-color:#f7f7f7; color:#333; border-radius:5px;}
 
 /* IE */
 select::-ms-expand { 
