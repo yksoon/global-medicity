@@ -8,14 +8,12 @@ import routerPath from "etc/lib/path/routerPath";
 import NotFoundPage from "NotFoundPage";
 import Admin from "components/admin/Admin";
 import SignIn from "components/admin/signin/SignIn";
-import MainPopupModal from "components/web/main/mainComponents/mainContentsComponents/modal/MainPopupModal";
 import InfoWelcome from "components/web/infos/welcome/InfoWelcome";
 import InfoCompany from "components/web/infos/company/InfoCompany";
 import InfoCertification from "components/web/infos/certification/InfoCertification";
 import InfoPartners from "components/web/infos/partners/InfoPartners";
 import KmediIntro from "components/web/kmedi/intro/KmediIntro";
 import BusinessHotel from "components/web/business/hotel/BusinessHotel";
-import MediaVideo from "components/web/media/video/MediaVideo";
 import MediaNews from "components/web/media/news/MediaNews";
 import MediaNotice from "components/web/media/notice/MediaNotice";
 import MediaNewsDetail from "components/web/media/news/MediaNewsDetail";
@@ -98,13 +96,6 @@ const Router = () => {
                     />
 
                     {/*--------------------- MEDIA ----------------------*/}
-                    {/* 미디어 - 영상 */}
-                    {/* URL : /media/video */}
-                    <Route
-                        path={routerPath.web_media_video_url}
-                        element={<MediaVideo />}
-                    />
-
                     {/* 미디어 - 뉴스 */}
                     {/* URL : /media/news */}
                     <Route
@@ -132,13 +123,6 @@ const Router = () => {
                         path={`${routerPath.web_media_notice_detail_url}:boardIdx`}
                         element={<MediaNoticeDetail />}
                     />
-
-                    {/*/!* 메인 팝업 *!/*/}
-                    {/*/!* URL : /popup/:id *!/*/}
-                    {/*<Route*/}
-                    {/*    path={routerPath.web_popup_url + ":id"}*/}
-                    {/*    element={<MainPopupModal />}*/}
-                    {/*/>*/}
 
                     {/* -------------------------------admin------------------------------- */}
                     {/* 메인 */}

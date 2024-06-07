@@ -43,9 +43,6 @@ const routerPath = {
     web_business_hotel_url: `${base_url}${routerCategory.business}/hotel`,
 
     // --------------------- MEDIA ----------------------
-    // 미디어 - 영상
-    web_media_video_url: `${base_url}${routerCategory.media}/video`,
-
     // 미디어 - 뉴스
     web_media_news_url: `${base_url}${routerCategory.media}/news`,
 

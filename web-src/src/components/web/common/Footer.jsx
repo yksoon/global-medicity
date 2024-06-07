@@ -46,16 +46,24 @@ function Footer() {
                         <img src="/img/web/main/logo.png" alt="" />
                         <ul>
                             <li>
-                                <Link>WE ARE</Link>
+                                <Link to={routerPath.web_info_greet_url}>
+                                    WE ARE
+                                </Link>
                             </li>
                             <li>
-                                <Link>K-MEDI</Link>
+                                <Link to={routerPath.web_kmedi_intro_url}>
+                                    K-MEDI
+                                </Link>
                             </li>
                             <li>
-                                <Link>BUSINESS</Link>
+                                <Link to={routerPath.web_business_hotel_url}>
+                                    BUSINESS
+                                </Link>
                             </li>
                             <li>
-                                <Link>MEDIA CENTER</Link>
+                                <Link to={routerPath.web_media_news_detail_url}>
+                                    MEDIA CENTER
+                                </Link>
                             </li>
                         </ul>
                     </div>
