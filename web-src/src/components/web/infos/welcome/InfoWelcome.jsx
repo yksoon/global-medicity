@@ -19,15 +19,15 @@ const InfoWelcome = () => {
                     <a href="#sec05">회사소개서 다운로드</a>
                 </div>
             </div>
-            <div id="con_area">
+            <div id="con_area.wide_conarea ">
                 <div className="weare">
-                        <h3 className="c_tit">
-                            <span>인사말</span>
-                            GREETINGS
-                        </h3>
                     <div className="boxing" id="sec01">
                         <div className="flx_box">
                             <div>
+                                <h3 className="c_tit">
+                                    <span>인사말</span>
+                                    GREETINGS
+                                </h3>
                                 <p className="normal">
                                     <h4>㈜메디씨티는</h4>
                                     환자와 의료진의 중심에서 글로벌 의료통합 플랫폼 서비스를 통해 새로운 혁신을 시작합니다. <br />
@@ -43,6 +43,20 @@ const InfoWelcome = () => {
                             <div><img src="img/web/sub/greeting_01.jpg" alt="" /></div>
                         </div>
                     </div>
+
+                    <div className="boxing" id="sec02">
+                        <div className="flx_box">
+                            <div>
+                                <h3 className="c_tit">
+                                    <span>회사소개</span>
+                                    What is Medi-City
+                                </h3>
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                   
                 </div>
             </div>
 

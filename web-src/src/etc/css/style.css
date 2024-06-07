@@ -208,8 +208,13 @@ body {margin:0 auto;}
 p.normal{font-size: 20px; line-height: 1.7;}
 
 /* WE ARE */
-.weare{padding: 80px 0 0 0;}
-.weare .flx_box{display: flex;}
+.weare .flx_box {display: flex;}
+.weare .c_tit {font-size:54px; font-weight: 500; color: #000;position:relative;padding:6px 0 0 8px;margin:0 0 40px 0; font-family: "Lexend";padding: 0;}
+.weare .c_tit > span{font-size: 16px; display: block; font-weight: 400; color: #424448; font-family: "Noto Sans KR";}
+.weare  #sec01 {max-width: 1720px; margin: 0 auto 0 200px;}
+.weare  #sec01 .flx_box > :first-child{padding: 80px 0 0 0;}
+.weare  #sec01 .sign {margin: 45px 0 0;}
+.weare  #sec01 .sign p {margin: 0 0 15px;}
 
 
 /* K-MEDI */
