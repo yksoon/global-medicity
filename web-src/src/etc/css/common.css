@@ -94,8 +94,6 @@ div.select input:focus {outline:-webkit-focus-ring-color auto 1px;    border: 1p
 }
 #go_top a {position:fixed; bottom:50px;right:40px;}
 
-#go_top {display: none;}
-
 .ql-editor {min-height: 450px;}
 
 .attachment_parent {
