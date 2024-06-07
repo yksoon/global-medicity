@@ -11,10 +11,10 @@ import ImageResize from "quill-image-resize";
 import apiPath from "etc/lib/path/apiPath";
 import { successCode } from "etc/lib/resultCode";
 import { Link } from "react-router-dom";
-import {CommonRestAPI} from "etc/lib/CommonRestAPI";
-import {boardType} from "etc/lib/static";
+import { CommonRestAPI } from "etc/lib/CommonRestAPI";
+import { boardType } from "etc/lib/static";
 
-Quill.register("modules/ImageResize", ImageResize);
+Quill.register("modules/imageResize", ImageResize);
 
 const NoticeBoardModal = (props) => {
     const { confirm } = useConfirm();
@@ -65,14 +65,12 @@ const NoticeBoardModal = (props) => {
         setFileList(modData.fileInfo);
 
         const editor = quillRef.current.getEditor();
-        const range = editor.getSelection();
+        // const range = editor.getSelection();
+        const range = quillRef.current?.getEditor().getSelection()?.index;
 
         const content = modData.content;
-        // console.log(
-        //     modNotice.content.replaceAll("&lt;", "<").replaceAll("&gt;", ">")
-        // );
 
-        editor?.clipboard.dangerouslyPasteHTML(1, content);
+        editor.clipboard.dangerouslyPasteHTML(0, content);
     };
 
     /**
@@ -88,8 +86,8 @@ const NoticeBoardModal = (props) => {
                     method === "reg"
                         ? "공지사항을 등록하시겠습니까?"
                         : method === "mod"
-                            ? "공지사항을 수정하시겠습니까?"
-                            : "",
+                        ? "공지사항을 수정하시겠습니까?"
+                        : "",
                 callback: () => doRegModBoard(),
             });
 
@@ -140,8 +138,8 @@ const NoticeBoardModal = (props) => {
                         method === "reg"
                             ? "post_multi"
                             : method === "mod"
-                                ? "put_multi"
-                                : "",
+                            ? "put_multi"
+                            : "",
                     url: url,
                     data: formData,
                     err: err,
@@ -163,8 +161,8 @@ const NoticeBoardModal = (props) => {
                                 method === "reg"
                                     ? "공지사항 등록이 완료 되었습니다"
                                     : method === "mod"
-                                        ? "공지사항 수정이 완료 되었습니다"
-                                        : "",
+                                    ? "공지사항 수정이 완료 되었습니다"
+                                    : "",
                             callback: () => handleNeedUpdate(),
                         });
                     } else {
@@ -227,7 +225,6 @@ const NoticeBoardModal = (props) => {
         if (refs.inputAttachmentFile.current.files.length) {
             refs.inputAttachmentFile.current.value = "";
         }
-        return;
     };
 
     /**
@@ -375,33 +372,41 @@ const NoticeBoardModal = (props) => {
                 },
             },
             clipboard: {
-                allowed: {
-                    tags: [
-                        "a",
-                        "b",
-                        "strong",
-                        "u",
-                        "s",
-                        "i",
-                        "p",
-                        "br",
-                        "ul",
-                        "ol",
-                        "li",
-                        "span",
-                    ],
-                    attributes: ["href", "rel", "target", "class"],
-                },
-                keepSelection: true,
-                substituteBlockElements: true,
-                magicPasteLinks: true,
-                hooks: {
-                    uponSanitizeElement(node, data, config) {
-                        console.log(node);
+                // allowed: {
+                //     tags: [
+                //         "a",
+                //         "b",
+                //         "strong",
+                //         "u",
+                //         "s",
+                //         "i",
+                //         "p",
+                //         "br",
+                //         "ul",
+                //         "ol",
+                //         "li",
+                //         "span",
+                //         "img",
+                //     ],
+                //     attributes: ["href", "rel", "target", "class"],
+                // },
+                // keepSelection: true,
+                // substituteBlockElements: true,
+                // magicPasteLinks: true,
+                // hooks: {
+                //     uponSanitizeElement(node, data, config) {
+                //         console.log(node);
+                //     },
+                // },
+                matchVisual: false,
+                sanitizeOptions: {
+                    allowedAttributes: {
+                        "*": ["style", "class", "id"],
+                        a: ["href", "name", "target"],
+                        img: ["src", "width"],
                     },
                 },
             },
-
             ImageResize: {
                 parchment: Quill.import("parchment"),
             },
@@ -427,114 +432,115 @@ const NoticeBoardModal = (props) => {
                 <table className="table_bb">
                     <Colgroup />
                     <tbody>
-                    <tr>
-                        <th>
-                            노출여부 <span className="red">*</span>
-                        </th>
-                        <td>
-                            <select
-                                name=""
-                                className="w180"
-                                ref={refs.showYn}
-                            >
-                                <option>- 선택 -</option>
-                                <option value="Y">노출</option>
-                                <option value="N">비노출</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            제목 <span className="red">*</span>
-                        </th>
-                        <td>
-                            <input
-                                type="text"
-                                className="input wp100"
-                                ref={refs.subject}
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>부제목</th>
-                        <td>
-                            <input
-                                type="text"
-                                className="input wp100"
-                                ref={refs.subTitle}
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            내용 <span className="red">*</span>
-                        </th>
-                        {/*<td>*/}
-                        {/*    <textarea*/}
-                        {/*        className="input wp100"*/}
-                        {/*        ref={refs.contentKo}*/}
-                        {/*    />*/}
-                        {/*</td>*/}
-
-                        <td>
-                            <div className="editor">
-                                <ReactQuill
-                                    ref={quillRef}
-                                    theme="snow"
-                                    value={boardData}
-                                    onChange={(e) => {
-                                        setBoardData(e);
-                                    }}
-                                    modules={quillModules}
-                                    formats={formats}
-                                />
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>파일</th>
-                        <td>
-                            <div
-                                style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center",
-                                }}
-                            >
-                                <input
-                                    type="file"
-                                    ref={refs.inputAttachmentFile}
-                                />
-                                <Link
-                                    to=""
-                                    className="subbtn off"
-                                    onClick={resetFileList}
+                        <tr>
+                            <th>
+                                노출여부 <span className="red">*</span>
+                            </th>
+                            <td>
+                                <select
+                                    name=""
+                                    className="w180"
+                                    ref={refs.showYn}
                                 >
-                                    초기화
-                                </Link>
-                            </div>
-                            <div>
-                                {fileList.length !== 0 &&
-                                    fileList.map((item, idx) => (
-                                        <div key={`fileList_${idx}`}>
-                                            <Link
-                                                to={`${apiPath.api_file}${item.filePathEnc}`}
-                                                className="yks_file_btn"
-                                            >
-                                                <img
-                                                    src="/img/common/file.svg"
-                                                    alt=""
-                                                    style={{
-                                                        width: "20px",
-                                                    }}
-                                                />
-                                                {item.fileNameOrg}
-                                            </Link>
-                                        </div>
-                                    ))}
-                            </div>
-                        </td>
-                    </tr>
+                                    <option>- 선택 -</option>
+                                    <option value="Y">노출</option>
+                                    <option value="N">비노출</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                제목 <span className="red">*</span>
+                            </th>
+                            <td>
+                                <input
+                                    type="text"
+                                    className="input wp100"
+                                    ref={refs.subject}
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>부제목</th>
+                            <td>
+                                <input
+                                    type="text"
+                                    className="input wp100"
+                                    ref={refs.subTitle}
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                내용 <span className="red">*</span>
+                            </th>
+                            {/*<td>*/}
+                            {/*    <textarea*/}
+                            {/*        className="input wp100"*/}
+                            {/*        ref={refs.contentKo}*/}
+                            {/*    />*/}
+                            {/*</td>*/}
+
+                            <td>
+                                <div className="editor">
+                                    <ReactQuill
+                                        ref={quillRef}
+                                        theme="snow"
+                                        value={boardData}
+                                        onChange={(e) => {
+                                            setBoardData(e);
+                                            // console.log(e);
+                                        }}
+                                        modules={quillModules}
+                                        formats={formats}
+                                    />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>파일</th>
+                            <td>
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                    }}
+                                >
+                                    <input
+                                        type="file"
+                                        ref={refs.inputAttachmentFile}
+                                    />
+                                    <Link
+                                        to=""
+                                        className="subbtn off"
+                                        onClick={resetFileList}
+                                    >
+                                        초기화
+                                    </Link>
+                                </div>
+                                <div>
+                                    {fileList.length !== 0 &&
+                                        fileList.map((item, idx) => (
+                                            <div key={`fileList_${idx}`}>
+                                                <Link
+                                                    to={`${apiPath.api_file}${item.filePathEnc}`}
+                                                    className="yks_file_btn"
+                                                >
+                                                    <img
+                                                        src="/img/common/file.svg"
+                                                        alt=""
+                                                        style={{
+                                                            width: "20px",
+                                                        }}
+                                                    />
+                                                    {item.fileNameOrg}
+                                                </Link>
+                                            </div>
+                                        ))}
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
 

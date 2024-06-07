@@ -1,5 +1,5 @@
 // 기본 url
-import {routerCategory} from "etc/lib/path/category";
+import { routerCategory } from "etc/lib/path/category";
 
 const base_url = "/";
 
@@ -34,14 +34,12 @@ const routerPath = {
     // 인포 - 파트너
     web_info_partners_url: `${base_url}${routerCategory.info}/partners`,
 
-
     // --------------------- K-MEDI ----------------------
     // K-MEDI - 소개
     web_kmedi_intro_url: `${base_url}${routerCategory.kmedi}/intro`,
 
     // K-MEDI - APP
     web_kmedi_app_url: `${base_url}${routerCategory.kmedi}/app`,
-
 
     // --------------------- K-MEDI ----------------------
     // 비즈니스 - 호텔
@@ -52,7 +50,6 @@ const routerPath = {
 
     // 비즈니스 - art
     web_business_art_url: `${base_url}${routerCategory.business}/art`,
-
 
     // --------------------- MEDIA ----------------------
     // 미디어 - 영상
@@ -67,6 +64,8 @@ const routerPath = {
     // 미디어 - 공지
     web_media_notice_url: `${base_url}${routerCategory.media}/notice`,
 
+    // 미디어 - 공지 - 상세
+    web_media_notice_detail_url: `${base_url}${routerCategory.media}/notice/`,
 
     // -----------------------------------------------
     // |                  admin                      |
@@ -80,4 +79,4 @@ const routerPath = {
     admin_signin_url: `${base_url + admin}/signin`,
 };
 
-export default routerPath
+export default routerPath;

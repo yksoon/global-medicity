@@ -92,6 +92,7 @@ const ContentsBoardModal = (props) => {
         // );
 
         editor?.clipboard.dangerouslyPasteHTML(1, content);
+        // setBoardData(content);
 
         modData.email && setUrlString(modData.email);
     };
@@ -255,7 +256,6 @@ const ContentsBoardModal = (props) => {
         if (refs.inputAttachmentFile.current.files.length) {
             refs.inputAttachmentFile.current.value = "";
         }
-        return;
     };
 
     /**

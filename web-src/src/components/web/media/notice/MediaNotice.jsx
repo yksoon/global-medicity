@@ -1,53 +1,168 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import Header from "components/web/common/header";
 import Footer from "components/web/common/footer";
 import Arrow from "components/web/common/Arrow";
+import useConfirm from "hook/useConfirm";
+import useAlert from "hook/useAlert";
+import {
+    CommonConsole,
+    CommonErrModule,
+    CommonParseHTMLString,
+} from "etc/lib/Common";
+import { useSetRecoilState } from "recoil";
+import { isSpinnerAtom } from "etc/lib/recoils/atoms";
+import apiPath from "etc/lib/path/apiPath";
+import { boardType } from "etc/lib/static";
+import { CommonRestAPI } from "etc/lib/CommonRestAPI";
+import { successCode } from "etc/lib/resultCode";
+import { Link } from "react-router-dom";
+import routerPath from "etc/lib/path/routerPath";
+import { Pagination } from "@mui/material";
 
-const MediaNotice = () => {
+const MediaNotice = (props) => {
+    const { confirm } = useConfirm();
+    const { alert } = useAlert();
+    const err = CommonErrModule();
+    const setIsSpinner = useSetRecoilState(isSpinnerAtom);
+
+    /**
+     * 리스트에 보여질 항목 갯수
+     * @type {number}
+     */
+    const pageSize = 8;
+
+    /**
+     * 리스트 state
+     */
+    const [boardList, setBoardList] = useState([]);
+    const [pageInfo, setPageInfo] = useState({});
+
+    useEffect(() => {
+        getBoardList(1, pageSize, "");
+    }, []);
+
+    /**
+     * 리스트 가져오기
+     * @param pageNum
+     * @param pageSize
+     * @param searchKeyword
+     */
+    const getBoardList = (pageNum, pageSize, searchKeyword) => {
+        setIsSpinner(true);
+
+        // /v1/_boards
+        // POST
+        const url = apiPath.api_admin_boards;
+        const data = {
+            pageNum: pageNum,
+            pageSize: pageSize,
+            searchKeyword: searchKeyword,
+            boardType: boardType.notice, // 공지사항
+        };
+
+        // 파라미터
+        const restParams = {
+            method: "post",
+            url: url,
+            data: data,
+            err: err,
+            callback: (res) => responsLogic(res),
+        };
+
+        CommonRestAPI(restParams);
+
+        // 완료 로직
+        const responsLogic = (res) => {
+            let resultCode = res.headers.resultcode;
+
+            // 성공
+            if (
+                resultCode === successCode.success ||
+                resultCode === successCode.noData
+            ) {
+                let resultInfo = res.data.resultInfo;
+                let pageInfo = res.data.pageInfo;
+
+                setBoardList(resultInfo);
+                setPageInfo(pageInfo);
+
+                setIsSpinner(false);
+            } else {
+                // 에러
+                CommonConsole("log", res);
+
+                setIsSpinner(false);
+            }
+        };
+    };
+
+    /**
+     * 페이지네이션 이동
+     * @param e
+     * @param value
+     */
+    const handleChange = (e, value) => {
+        getBoardList(value, pageSize, "");
+    };
+
     return (
         <>
-        <Header />
+            <Header />
             <div id="subvisual">
                 <div className="sub_txt">
                     <h2>MEDIA CENTER</h2>
                 </div>
                 <div id="leftmenu">
-                    <a href="#sec01">NEWS</a>
-                    <a href="#sec02" className="active">공지사항</a>
+                    <Link to={routerPath.web_media_news_url}>NEWS</Link>
+                    <Link
+                        to={routerPath.web_media_notice_url}
+                        className="active"
+                    >
+                        공지사항
+                    </Link>
                 </div>
             </div>
             <div id="con_area">
-               <div className="notice">
+                <div className="notice">
                     <h3 className="c_tit">
-                            <span>공지사항</span>
-                            NOTICE
+                        <span>공지사항</span>
+                        NOTICE
                     </h3>
                     {/*반복 시작*/}
-                    <div className="list_box">
-                        <div className="txt_wrap">
-                            <h5>글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범 글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범 글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범</h5>
-                            <p>글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고</p>
-                        </div>
-                        <a href="" className="btn_main">VIEW MORE  <Arrow /></a>
-                    </div>
+                    {boardList.length !== 0 &&
+                        boardList.map((item) => (
+                            <div
+                                className="list_box"
+                                key={`noticeList_${item.boardIdx}`}
+                            >
+                                <div className="txt_wrap">
+                                    <h5>{item.subject}</h5>
+                                    <p>{CommonParseHTMLString(item.content)}</p>
+                                </div>
+                                <Link
+                                    to={`${routerPath.web_media_notice_detail_url}${item.boardIdx}`}
+                                    className="btn_main"
+                                >
+                                    VIEW MORE <Arrow />
+                                </Link>
+                            </div>
+                        ))}
                     {/*반복 끝*/}
-                    <div className="list_box">
-                        <div className="txt_wrap">
-                            <h5>글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범 글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범 글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범</h5>
-                            <p>글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고</p>
-                        </div>
-                        <a href="" className="btn_main">VIEW MORE  <Arrow /></a>
-                    </div>
-                    <div className="list_box">
-                        <div className="txt_wrap">
-                            <h5>글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범 글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범 글로벌 의료통합 서비스 플랫폼 ‘메디씨티’ 출범</h5>
-                            <p>글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고글로벌 의료통합 서비스 플랫폼 기업 (주)메디씨티가 본격적인 행보를 나선다. (주)메디씨티가 강릉 세인트존스 호텔에서 지난 11일과 12일 양일간 ‘제1회 메디씨티데이’를 개최하고</p>
-                        </div>
-                        <a href="" className="btn_main">VIEW MORE  <Arrow /></a>
-                    </div>
-               </div>
+
+                    {Object.keys(pageInfo).length !== 0 &&
+                        pageInfo.total !== 0 && (
+                            <div className="pagenation">
+                                <Pagination
+                                    count={pageInfo.pages}
+                                    onChange={handleChange}
+                                    shape="rounded"
+                                    color="primary"
+                                />
+                            </div>
+                        )}
+                </div>
             </div>
-        <Footer /> 
+            <Footer />
         </>
     );
 };
