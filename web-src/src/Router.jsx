@@ -14,10 +14,7 @@ import InfoCompany from "components/web/infos/company/InfoCompany";
 import InfoCertification from "components/web/infos/certification/InfoCertification";
 import InfoPartners from "components/web/infos/partners/InfoPartners";
 import KmediIntro from "components/web/kmedi/intro/KmediIntro";
-import KmediApp from "components/web/kmedi/app/KmediApp";
 import BusinessHotel from "components/web/business/hotel/BusinessHotel";
-import BusinessTax from "components/web/business/tax/BusinessTax";
-import BusinessArt from "components/web/business/art/BusinessArt";
 import MediaVideo from "components/web/media/video/MediaVideo";
 import MediaNews from "components/web/media/news/MediaNews";
 import MediaNotice from "components/web/media/notice/MediaNotice";
@@ -92,33 +89,12 @@ const Router = () => {
                         element={<KmediIntro />}
                     />
 
-                    {/* K-MEDI - 앱 */}
-                    {/* URL : /kmedi/app */}
-                    <Route
-                        path={routerPath.web_kmedi_app_url}
-                        element={<KmediApp />}
-                    />
-
                     {/*--------------------- BUSINESS ----------------------*/}
                     {/* 비즈니스 - 호텔 */}
                     {/* URL : /business/hotel */}
                     <Route
                         path={routerPath.web_business_hotel_url}
                         element={<BusinessHotel />}
-                    />
-
-                    {/* 비즈니스 - tax */}
-                    {/* URL : /business/tax */}
-                    <Route
-                        path={routerPath.web_business_tax_url}
-                        element={<BusinessTax />}
-                    />
-
-                    {/* 비즈니스 - art */}
-                    {/* URL : /business/art */}
-                    <Route
-                        path={routerPath.web_business_art_url}
-                        element={<BusinessArt />}
                     />
 
                     {/*--------------------- MEDIA ----------------------*/}

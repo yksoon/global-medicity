@@ -57,7 +57,6 @@ const BusinessHotel = (props) => {
                     <Link
                         to=""
                         onClick={() => moveToSection("hotel")}
-                        // className="active"
                         className={sectionState === "hotel" && "active"}
                     >
                         Hotel Service

@@ -46,10 +46,16 @@ function Header() {
                             <li>
                                 <Link to="">K-MEDI</Link>
                                 <div className="submenu">
-                                    <Link to={routerPath.web_kmedi_intro_url}>
+                                    <Link
+                                        to={routerPath.web_kmedi_intro_url}
+                                        state={{ headerRoute: "intro" }}
+                                    >
                                         K-Medi 소개
                                     </Link>
-                                    <Link to={routerPath.web_kmedi_app_url}>
+                                    <Link
+                                        to={routerPath.web_kmedi_intro_url}
+                                        state={{ headerRoute: "app" }}
+                                    >
                                         K-Medi App
                                     </Link>
                                 </div>

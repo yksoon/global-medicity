@@ -38,18 +38,9 @@ const routerPath = {
     // K-MEDI - 소개
     web_kmedi_intro_url: `${base_url}${routerCategory.kmedi}/intro`,
 
-    // K-MEDI - APP
-    web_kmedi_app_url: `${base_url}${routerCategory.kmedi}/app`,
-
     // --------------------- K-MEDI ----------------------
     // 비즈니스 - 호텔
     web_business_hotel_url: `${base_url}${routerCategory.business}/hotel`,
-
-    // 비즈니스 - tax
-    web_business_tax_url: `${base_url}${routerCategory.business}/tax`,
-
-    // 비즈니스 - art
-    web_business_art_url: `${base_url}${routerCategory.business}/art`,
 
     // --------------------- MEDIA ----------------------
     // 미디어 - 영상
