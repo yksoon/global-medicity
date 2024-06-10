@@ -15,8 +15,11 @@ import apiPath from "etc/lib/path/apiPath";
 import { boardType } from "etc/lib/static";
 import { CommonRestAPI } from "etc/lib/CommonRestAPI";
 import { successCode } from "etc/lib/resultCode";
+import { useTranslation } from "react-i18next";
 
 const Section04 = (props) => {
+    const { t, i18n } = useTranslation();
+
     const { confirm } = useConfirm();
     const { alert } = useAlert();
     const err = CommonErrModule();
@@ -108,9 +111,9 @@ const Section04 = (props) => {
             <div className="section04">
                 <div className="sec_in">
                     <div className="title">
-                        <h5>메디씨티의 지난 활동을 기록합니다.</h5>
+                        <h5>{t("main.sec04.subtitle")}</h5>
                         <div>
-                            <h3>medi video</h3>
+                            <h3>{t("main.sec04.title")}</h3>
                             <Link to={routerPath.web_media_news_url}>
                                 <img src="img/web/main/arrow.png" alt="" />
                             </Link>

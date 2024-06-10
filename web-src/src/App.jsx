@@ -23,7 +23,7 @@ import {
 } from "etc/lib/recoils/atoms";
 import Aos from "aos";
 import { registration_idx } from "etc/lib/static";
-import {CommonNotify} from "etc/lib/Common";
+import { CommonNotify } from "etc/lib/Common";
 import { successCode } from "etc/lib/resultCode";
 import apiPath from "etc/lib/path/apiPath";
 
@@ -34,12 +34,12 @@ function App() {
     useEffect(() => {
         const path = location.pathname;
         // /admin
-        if (path === '/admin' || path === '/admin/signin') {
-            import('etc/css/adm.css');
+        if (path === "/admin" || path === "/admin/signin") {
+            import("etc/css/adm.css");
         } else {
-            import('etc/css/style.css');
+            import("etc/css/style.css");
         }
-    }, [ location ])
+    }, [location]);
 
     useEffect(() => {
         Aos.init();
@@ -61,7 +61,7 @@ function App() {
 
     const setResultCode = useSetRecoilState(resultCodeAtom);
     const setCodes = useSetRecoilState(codesAtom);
-    const codes = useRecoilValue(codesAtom)
+    const codes = useRecoilValue(codesAtom);
     const setCountryBank = useSetRecoilState(countryBankAtom);
 
     useEffect(() => {
@@ -171,9 +171,9 @@ function App() {
                 // dispatch(set_codes(JSON.stringify(response.data.result_info)));
                 // setCodes(response.data.result_info);
 
-                const codesObject = convertCodesData(response.data.resultInfo)
+                const codesObject = convertCodesData(response.data.resultInfo);
                 // console.log(codesObject)
-                setCodes(codesObject)
+                setCodes(codesObject);
 
                 // 추출할 코드 유형들
                 const targetCodeTypes = [
@@ -183,7 +183,10 @@ function App() {
                     "CURRENCY_TYPE",
                 ];
 
-                const targetCodes = extractDataByCodeTypes(response.data.resultInfo, targetCodeTypes)
+                const targetCodes = extractDataByCodeTypes(
+                    response.data.resultInfo,
+                    targetCodeTypes,
+                );
                 // console.log(targetCodes)
                 setCountryBank(targetCodes);
             })
@@ -203,8 +206,9 @@ function App() {
         const codeObjects = {};
 
         // 배열 데이터를 순회하며 코드 유형별로 데이터를 그룹화
-        dataArray.forEach(item => {
-            const { codeType, codeKey, codeName, codeValue, codeParentKey } = item;
+        dataArray.forEach((item) => {
+            const { codeType, codeKey, codeName, codeValue, codeParentKey } =
+                item;
 
             // 코드 유형이 이미 객체에 있는지 확인하고 없으면 빈 배열을 초기값으로 설정
             if (!codeObjects[codeType]) {
@@ -217,7 +221,7 @@ function App() {
                 codeKey,
                 codeName,
                 codeValue,
-                codeParentKey
+                codeParentKey,
             });
         });
 
@@ -238,7 +242,7 @@ function App() {
         const extractedData = {};
 
         // 주어진 코드 유형 배열을 순회하며 해당 코드 유형에 해당하는 데이터를 추출하여 새로운 객체에 추가
-        codeTypes.forEach(codeType => {
+        codeTypes.forEach((codeType) => {
             if (groupedData[codeType]) {
                 extractedData[codeType] = groupedData[codeType];
             }
@@ -251,30 +255,33 @@ function App() {
      * web socket connection
      */
     const socketCon = () => {
-        const protocol = document.location.protocol
+        const protocol = document.location.protocol;
         // 서버와의 WebSocket 연결
-        const socket = new WebSocket(`${protocol === "http:" ? "ws" : "wss"}://websocket.hicompint.com/moye_dev`);
+        const socket = new WebSocket(
+            `${
+                protocol === "http:" ? "ws" : "wss"
+            }://websocket.hicompint.com/moye_dev`,
+        );
 
-        socket.onopen = function() {
-            console.log('WebSocket connected');
+        socket.onopen = function () {
+            console.log("WebSocket connected");
         };
 
-        socket.onclose = function() {
-            console.log('WebSocket disconnected');
+        socket.onclose = function () {
+            console.log("WebSocket disconnected");
         };
 
         // 서버로부터 데이터를 수신하는 함수
         socket.onmessage = (event) => {
             const message = JSON.parse(event.data);
-            console.log('Received message:', message);
+            console.log("Received message:", message);
             // window.alert("안녕!");
 
-            const convertData = convertCodesData(message)
+            const convertData = convertCodesData(message);
 
-            setCodes(mergeData(codes, convertData))
+            setCodes(mergeData(codes, convertData));
         };
-    }
-
+    };
 
     // 두 데이터를 비교하여 key가 같으면 value를 교체하고, 없으면 새로 추가하는 함수
     const mergeData = (data1, data2) => {
@@ -282,12 +289,12 @@ function App() {
         const mergedData = {};
 
         // 첫 번째 데이터의 모든 항목을 복사하여 결과 객체에 추가
-        Object.keys(data1).forEach(key => {
+        Object.keys(data1).forEach((key) => {
             mergedData[key] = data1[key];
         });
 
         // 두 번째 데이터의 각 항목을 순회하면서 처리
-        Object.keys(data2).forEach(key => {
+        Object.keys(data2).forEach((key) => {
             // 결과 객체에 해당 key가 이미 있는지 확인
             if (mergedData[key]) {
                 // 이미 있는 경우, 해당 key의 값을 두 번째 데이터의 값으로 교체
