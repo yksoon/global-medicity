@@ -25,15 +25,6 @@ const routerPath = {
     // 인포 - 인사말
     web_info_greet_url: `${base_url}${routerCategory.info}/welcome`,
 
-    // 인포 - 회사소개
-    web_info_company_url: `${base_url}${routerCategory.info}/company`,
-
-    // 인포 - 인증현황
-    web_info_certification_url: `${base_url}${routerCategory.info}/certification`,
-
-    // 인포 - 파트너
-    web_info_partners_url: `${base_url}${routerCategory.info}/partners`,
-
     // --------------------- K-MEDI ----------------------
     // K-MEDI - 소개
     web_kmedi_intro_url: `${base_url}${routerCategory.kmedi}/intro`,

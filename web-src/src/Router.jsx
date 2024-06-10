@@ -9,9 +9,6 @@ import NotFoundPage from "NotFoundPage";
 import Admin from "components/admin/Admin";
 import SignIn from "components/admin/signin/SignIn";
 import InfoWelcome from "components/web/infos/welcome/InfoWelcome";
-import InfoCompany from "components/web/infos/company/InfoCompany";
-import InfoCertification from "components/web/infos/certification/InfoCertification";
-import InfoPartners from "components/web/infos/partners/InfoPartners";
 import KmediIntro from "components/web/kmedi/intro/KmediIntro";
 import BusinessHotel from "components/web/business/hotel/BusinessHotel";
 import MediaNews from "components/web/media/news/MediaNews";
@@ -56,27 +53,6 @@ const Router = () => {
                     <Route
                         path={routerPath.web_info_greet_url}
                         element={<InfoWelcome />}
-                    />
-
-                    {/* 인포 - 회사소개 */}
-                    {/* URL : /info/company */}
-                    <Route
-                        path={routerPath.web_info_company_url}
-                        element={<InfoCompany />}
-                    />
-
-                    {/* 인포 - 인증현황 */}
-                    {/* URL : /info/certification */}
-                    <Route
-                        path={routerPath.web_info_certification_url}
-                        element={<InfoCertification />}
-                    />
-
-                    {/* 인포 - 파트너 */}
-                    {/* URL : /info/partners */}
-                    <Route
-                        path={routerPath.web_info_partners_url}
-                        element={<InfoPartners />}
                     />
 
                     {/*--------------------- K-MEDI ----------------------*/}
