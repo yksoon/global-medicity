@@ -2,8 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import Header from "components/web/common/header";
 import Footer from "components/web/common/footer";
 import { Link, useLocation } from "react-router-dom";
+import { Trans, useTranslation } from "react-i18next";
+import LineBreak from "etc/lib/language/web/LineBreak";
 
 const InfoWelcome = (props) => {
+    const { t, i18n } = useTranslation();
+
     const refs = {
         subvisual: useRef(null),
         greetings: useRef(null),
@@ -57,7 +61,7 @@ const InfoWelcome = (props) => {
             <Header />
             <div id="subvisual" ref={refs.subvisual}>
                 <div className="sub_txt">
-                    <h2>WE ARE</h2>
+                    <h2>{t("weAre.subvisual.title")}</h2>
                 </div>
 
                 <div id="leftmenu">
@@ -66,30 +70,30 @@ const InfoWelcome = (props) => {
                         onClick={() => moveToSection("greetings")}
                         className={sectionState === "greetings" && "active"}
                     >
-                        인사말
+                        {t("weAre.subvisual.Greetings")}
                     </Link>
                     <Link
                         to=""
                         onClick={() => moveToSection("introduce")}
                         className={sectionState === "introduce" && "active"}
                     >
-                        회사소개
+                        {t("weAre.subvisual.About_Us")}
                     </Link>
                     <Link
                         to=""
                         onClick={() => moveToSection("certification")}
                         className={sectionState === "certification" && "active"}
                     >
-                        인증현황
+                        {t("weAre.subvisual.Certification_Status")}
                     </Link>
                     <Link
                         to=""
                         onClick={() => moveToSection("partners")}
                         className={sectionState === "partners" && "active"}
                     >
-                        파트너
+                        {t("weAre.subvisual.Partners")}
                     </Link>
-                    <Link to="">회사소개서 다운로드</Link>
+                    <Link to="">{t("weAre.subvisual.Download_Company")}</Link>
                 </div>
             </div>
             <div id="con_area.wide_conarea ">
@@ -98,30 +102,35 @@ const InfoWelcome = (props) => {
                         <div className="flx_box">
                             <div>
                                 <h3 className="c_tit">
-                                    <span>인사말</span>
-                                    GREETINGS
+                                    <span>
+                                        {t("weAre.greetings.Greetings")}
+                                    </span>
+                                    {t("weAre.greetings.Greetings_title")}
                                 </h3>
                                 <p className="normal">
-                                    <h4>㈜메디씨티는</h4>
-                                    환자와 의료진의 중심에서 글로벌 의료통합
-                                    플랫폼 서비스를 통해 새로운 혁신을
-                                    시작합니다. <br />
-                                    또한 우수한 K메디컬 기술을 해외에 널리
-                                    알리고 소통하는 장을 마련함으로써 지금도
-                                    높은 사망률로 어려움을 겪고 있는 주변
-                                    나라들에게 우수한 의료 정보의 전달과
-                                    온/오프라인 교육을 통해“생명을 살리는 장을
-                                    마련하겠다” 라는 사명감으로 의료분야의
-                                    집중적인 투자 및 육성을 진행하고 있습니다.{" "}
-                                    <br />
-                                    좋은 제품과 서비스를 제공하는데 그치지
-                                    않겠습니다. <br />전 임직원이 하나가 되어
-                                    끊임없이 도전하고 성장하며 고객의 가치를
-                                    최우선으로 여기는 NO.1 글로벌기업이
-                                    되겠습니다.
+                                    {LineBreak(
+                                        t("weAre.greetings.Greetings_content"),
+                                    )}
+                                    {/*<h4>㈜메디씨티는</h4>*/}
+                                    {/*환자와 의료진의 중심에서 글로벌 의료통합*/}
+                                    {/*플랫폼 서비스를 통해 새로운 혁신을*/}
+                                    {/*시작합니다. <br />*/}
+                                    {/*또한 우수한 K메디컬 기술을 해외에 널리*/}
+                                    {/*알리고 소통하는 장을 마련함으로써 지금도*/}
+                                    {/*높은 사망률로 어려움을 겪고 있는 주변*/}
+                                    {/*나라들에게 우수한 의료 정보의 전달과*/}
+                                    {/*온/오프라인 교육을 통해“생명을 살리는 장을*/}
+                                    {/*마련하겠다” 라는 사명감으로 의료분야의*/}
+                                    {/*집중적인 투자 및 육성을 진행하고 있습니다.{" "}*/}
+                                    {/*<br />*/}
+                                    {/*좋은 제품과 서비스를 제공하는데 그치지*/}
+                                    {/*않겠습니다. <br />전 임직원이 하나가 되어*/}
+                                    {/*끊임없이 도전하고 성장하며 고객의 가치를*/}
+                                    {/*최우선으로 여기는 NO.1 글로벌기업이*/}
+                                    {/*되겠습니다.*/}
                                 </p>
                                 <div className="sign">
-                                    <p>(주)메디씨티 CEO</p>
+                                    <p>{t("weAre.greetings.ltd")}</p>
                                     <img
                                         src="img/web/sub/sign.png"
                                         alt="박성민"
@@ -138,8 +147,8 @@ const InfoWelcome = (props) => {
                         <div className="layout">
                             <div>
                                 <h3 className="c_tit">
-                                    <span>회사소개</span>
-                                    What is Medi-City
+                                    <span>{t("weAre.aboutUs.About_Us")}</span>
+                                    {t("weAre.aboutUs.whatIs.title")}
                                 </h3>
                             </div>
                             <div className="box_wrap">
@@ -150,10 +159,11 @@ const InfoWelcome = (props) => {
                                             alt=""
                                         ></img>
                                     </p>
-                                    <h5>REWARD 시스템 서비스</h5>
+                                    <h5>{t("weAre.aboutUs.whatIs.reward")}</h5>
                                     <span>
-                                        의료전문 동영상 컨텐츠 플랫폼 서비스를
-                                        통한 REWARD 시스템 서비스를 제공합니다.
+                                        {t(
+                                            "weAre.aboutUs.whatIs.reward_content",
+                                        )}
                                     </span>
                                 </div>
                                 <div className="graybox">
@@ -163,10 +173,13 @@ const InfoWelcome = (props) => {
                                             alt=""
                                         ></img>
                                     </p>
-                                    <h5>MEMBERSHIP 서비스</h5>
+                                    <h5>
+                                        {t("weAre.aboutUs.whatIs.membership")}
+                                    </h5>
                                     <span>
-                                        의료인들만의 다양한 MEMBERSHIP 서비스를
-                                        제공합니다.
+                                        {t(
+                                            "weAre.aboutUs.whatIs.membership_content",
+                                        )}
                                     </span>
                                 </div>
                                 <div className="graybox">
@@ -176,10 +189,9 @@ const InfoWelcome = (props) => {
                                             alt=""
                                         ></img>
                                     </p>
-                                    <h5>MICE 및 교육연계 서비스</h5>
+                                    <h5>{t("weAre.aboutUs.whatIs.mice")}</h5>
                                     <span>
-                                        의료관련 학회 및 기관의 MICE 및 교육연계
-                                        서비스를 제공합니다.
+                                        {t("weAre.aboutUs.whatIs.mice_content")}
                                     </span>
                                 </div>
                                 <div className="graybox">
@@ -189,10 +201,9 @@ const InfoWelcome = (props) => {
                                             alt=""
                                         ></img>
                                     </p>
-                                    <h5>의료인들의 삶의 질 개선</h5>
+                                    <h5>{t("weAre.aboutUs.whatIs.life")}</h5>
                                     <span>
-                                        의료인들의 삶의 질 개선 방향을
-                                        연구합니다.
+                                        {t("weAre.aboutUs.whatIs.life_content")}
                                     </span>
                                 </div>
                             </div>
@@ -203,8 +214,8 @@ const InfoWelcome = (props) => {
                         <div className="layout">
                             <div>
                                 <h3 className="c_tit">
-                                    <span>회사소개</span>
-                                    Slogan
+                                    <span>{t("weAre.aboutUs.About_Us")}</span>
+                                    {t("weAre.aboutUs.slogan.title")}
                                 </h3>
                             </div>
                             <div className="txt">
@@ -212,10 +223,7 @@ const InfoWelcome = (props) => {
                                     src="img/web/sub/intro_txt.png"
                                     alt=""
                                 ></img>
-                                <p>
-                                    글로벌 메디컬 교육 플랫폼 서비스는
-                                    메디씨티가 함께합니다.
-                                </p>
+                                <p>{t("weAre.aboutUs.slogan.content")}</p>
                             </div>
                         </div>
                     </div>
@@ -224,18 +232,10 @@ const InfoWelcome = (props) => {
                         <div className="layout">
                             <div className="flx_box">
                                 <h3 className="c_tit">
-                                    <span>회사소개</span>
-                                    Management<br></br>
-                                    Philosophy
+                                    <span>{t("weAre.aboutUs.About_Us")}</span>
+                                    {t("weAre.aboutUs.management.title")}
                                 </h3>
-                                <p>
-                                    메디씨티는 의료기관, 학회, Webinar(웨비나),
-                                    MICE 서비스를 통해 4만여명의 의료인 데이터
-                                    베이스와 수술, 강의 영상을 보유하고 있으며
-                                    개원 컨설팅부터 홍보, 의료서비스 대상과의
-                                    연계, 제휴기관의 다양한 혜택을 메디씨티
-                                    회원들에게 제공합니다.
-                                </p>
+                                <p>{t("weAre.aboutUs.management.content")}</p>
                             </div>
                             <div className="img_wrap">
                                 <img
@@ -250,18 +250,25 @@ const InfoWelcome = (props) => {
                         <div className="layout">
                             <div className="flx_box">
                                 <h3 className="c_tit">
-                                    <span>회사소개</span>
-                                    Mission<br></br>& Vision<br></br>
+                                    <span>{t("weAre.aboutUs.About_Us")}</span>
+                                    {t("weAre.aboutUs.mission.title")}
                                 </h3>
                                 <ul>
                                     <li>
-                                        IT, MICE, MEDIA <span>융복합 실현</span>
-                                        을 통한 의료인, 고객 동반 성장 기여
+                                        <Trans
+                                            i18nKey={
+                                                "weAre.aboutUs.mission.content_1"
+                                            }
+                                            components={[<span></span>]}
+                                        />
                                     </li>
                                     <li>
-                                        국내 최고, 글로벌 확장을 통한{" "}
-                                        <span>의료통합 플랫폼 서비스</span>를
-                                        제공하는 기업 실현
+                                        <Trans
+                                            i18nKey={
+                                                "weAre.aboutUs.mission.content_2"
+                                            }
+                                            components={[<span></span>]}
+                                        />
                                     </li>
                                 </ul>
                             </div>
@@ -272,8 +279,8 @@ const InfoWelcome = (props) => {
                     <div className="boxing" id="sec06">
                         <div className="layout">
                             <h3 className="c_tit c_tit_kr">
-                                <span>회사소개</span>
-                                메디씨티가 걸어온 길
+                                <span>{t("weAre.aboutUs.About_Us")}</span>
+                                {t("weAre.aboutUs.roadmap.title")}
                             </h3>
                             <div className="first line">
                                 <div className="left">
@@ -284,13 +291,29 @@ const InfoWelcome = (props) => {
                                         ></img>
                                     </div>
                                     <h4>2006</h4>
-                                    <h5>Hicomp 설립</h5>
+                                    <h5>
+                                        {t("weAre.aboutUs.roadmap.2006.title")}
+                                    </h5>
                                     <p>
-                                        Web Service<br></br>
-                                        홈페이지제작<br></br>
-                                        소프트웨어 개발<br></br>
-                                        유지보수<br></br>
-                                        시스템 구축
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2006.content_1",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2006.content_2",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2006.content_3",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2006.content_4",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2006.content_5",
+                                        )}
                                     </p>
                                 </div>
                                 <div className="left">
@@ -301,13 +324,29 @@ const InfoWelcome = (props) => {
                                         ></img>
                                     </div>
                                     <h4>2013</h4>
-                                    <h5>Hicomp Int. 사명변경</h5>
+                                    <h5>
+                                        {t("weAre.aboutUs.roadmap.2013.title")}
+                                    </h5>
                                     <p>
-                                        All-in-one Service<br></br>
-                                        Premium PCO<br></br>
-                                        자체 인쇄,출판<br></br>
-                                        Online/Offline 컨설팅<br></br>
-                                        시스템 분석 설계
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2013.content_1",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2013.content_2",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2013.content_3",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2013.content_4",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2013.content_5",
+                                        )}
                                     </p>
                                 </div>
                                 <div className="left">

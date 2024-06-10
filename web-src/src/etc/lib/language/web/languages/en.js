@@ -85,6 +85,78 @@ const en = {
                     "Medicity sincerely wishes for patients worldwide to become healthier \nthrough better medical services by spreading \nawareness of South Korea's medical technology.",
             },
         },
+        weAre: {
+            subvisual: {
+                title: "WE ARE",
+                Greetings: "Greetings",
+                About_Us: "About Us",
+                Certification_Status: "Certification Status",
+                Partners: "Partners",
+                Download_Company: "Download Company Introduction Document",
+            },
+            greetings: {
+                Greetings: "Greetings",
+                Greetings_title: "GREETINGS",
+                Greetings_content:
+                    "Medi-City Co., Ltd. is\ninitiating a new wave of innovation through a global medical integration platform service at the core of patients and medical professionals.\nFurthermore, by creating a platform to widely promote and communicate outstanding K-medical technology overseas, we are currently focusing on\nintensive investment and fostering in the medical field with a mission to establish a place for saving lives by delivering exceptional medical information and providing online and offline education to neighboring countries still facing high mortality rates.\nWe will not settle for just offering excellent products and services.\nWe aim to become the number one global company where all employees unite as one, continuously challenging, growing, and prioritizing customer value.",
+                ltd: "Medi-City Co., Ltd CEO",
+            },
+            aboutUs: {
+                About_Us: "About Us",
+                whatIs: {
+                    title: "What is Medi-City",
+                    reward: "REWARD System Service",
+                    reward_content:
+                        "We provide REWARD system service through medical professional video content platform service.",
+                    membership: "MEMBERSHIP Service",
+                    membership_content:
+                        "We provide a variety of MEMBERSHIP services only for medical personnel.",
+                    mice: "MICE and educational services",
+                    mice_content:
+                        "We provide MICE and educational services of medical associations and institutions.",
+                    life: "Improving the quality of life of medical personnel",
+                    life_content:
+                        "We study the way to improve the quality of life of medical personnel.",
+                },
+                slogan: {
+                    title: "Slogan",
+                    content:
+                        "Global Medical Education Services Platform Together With Medi-City",
+                },
+                management: {
+                    title: "Management\n\nPhilosophy\n\n",
+                    content:
+                        "MediCity provides a database of over 40,000 healthcare professionals and holds surgical and lecture videos through medical institutions, associations, webinars, and MICE services. It offers services ranging from outpatient consulting, promotion, coordination with healthcare service recipients, to various benefits from partner institutions to MediCity members.",
+                },
+                mission: {
+                    title: "Mission\n\n& Vision\n\n",
+                    content_1:
+                        "Contribute to mutual growth of medical personnel and customers through the <0>realization of</0> IT, MICE, and MEDIA convergence",
+                    content_2:
+                        "Realization of companies providing <0>medical integration platform services</0> through the nation's best and global expansion",
+                },
+                roadmap: {
+                    title: "MEDI CITY Roadmap",
+
+                    2006: {
+                        title: "Hicomp establishment",
+                        content_1: "Web Service",
+                        content_2: "Homepage Creation",
+                        content_3: "Software Development",
+                        content_4: "Maintenance",
+                        content_5: "System Building",
+                    },
+                    2013: {
+                        title: "Hicomp Int. company mission change",
+                        content_1: "All-in-one Service",
+                        content_2: "Premium PCO",
+                        content_3: "Self-Printing, Publishing",
+                        content_4: "Online/Offline Consultation",
+                        content_5: "System analysis design",
+                    },
+                },
+            },
+        },
     },
 };
 

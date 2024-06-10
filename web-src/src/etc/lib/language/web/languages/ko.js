@@ -84,6 +84,76 @@ const ko = {
                     "메디씨티는 한국의 의료기술을 세계에 알림으로써\n전세계의 많은 환자들이 보다 좋은 의료서비스를 통해\n건강해지기를 진심으로 기원합니다.",
             },
         },
+        weAre: {
+            subvisual: {
+                title: "WE ARE",
+                Greetings: "인사말",
+                About_Us: "회사소개",
+                Certification_Status: "인증현황",
+                Partners: "파트너",
+                Download_Company: "회사소개서 다운로드",
+            },
+            greetings: {
+                Greetings: "인사말",
+                Greetings_title: "GREETINGS",
+                Greetings_content:
+                    "㈜메디씨티는\n환자와 의료진의 중심에서 글로벌 의료통합 플랫폼 서비스를 통해 새로운 혁신을 시작합니다.\n또한 우수한 K메디컬 기술을 해외에 널리 알리고 소통하는 장을 마련함으로써 지금도 높은 사망률로 어려움을 겪고 있는 주변 나라들에게 우수한 의료 정보의 전달과 온/오프라인 교육을 통해“생명을 살리는 장을 마련하겠다” 라는 사명감으로 의료분야의 집중적인 투자 및 육성을 진행하고 있습니다.\n좋은 제품과 서비스를 제공하는데 그치지 않겠습니다.\n전 임직원이 하나가 되어 끊임없이 도전하고 성장하며 고객의 가치를 최우선으로 여기는 NO.1 글로벌기업이 되겠습니다.",
+                ltd: "(주)메디씨티 CEO",
+            },
+            aboutUs: {
+                About_Us: "회사소개",
+                whatIs: {
+                    title: "What is Medi-City",
+                    reward: "REWARD 시스템 서비스",
+                    reward_content:
+                        "의료전문 동영상 컨텐츠 플랫폼 서비스를 통한 REWARD 시스템 서비스를 제공합니다.",
+                    membership: "MEMBERSHIP 서비스",
+                    membership_content:
+                        "의료인들만의 다양한 MEMBERSHIP 서비스를 제공합니다.",
+                    mice: "MICE 및 교육연계 서비스",
+                    mice_content:
+                        "의료관련 학회 및 기관의 MICE 및 교육연계 서비스를 제공합니다.",
+                    life: "의료인들의 삶의 질 개선",
+                    life_content: "의료인들의 삶의 질 개선 방향을 연구합니다.",
+                },
+                slogan: {
+                    title: "Slogan",
+                    content:
+                        "글로벌 메디컬 교육 플랫폼 서비스는 메디씨티가 함께합니다.",
+                },
+                management: {
+                    title: "Management\n\nPhilosophy\n\n",
+                    content:
+                        "메디씨티는 의료기관, 학회, Webinar(웨비나), MICE 서비스를 통해 4만여명의 의료인 데이터 베이스와 수술, 강의 영상을 보유하고 있으며 개원 컨설팅부터 홍보, 의료서비스 대상과의 연계, 제휴기관의 다양한 혜택을 메디씨티 회원들에게 제공합니다.",
+                },
+                mission: {
+                    title: "Mission\n\n& Vision\n\n",
+                    content_1:
+                        "IT, MICE, MEDIA <0>융복합 실현</0>을 통한 의료인, 고객 동반 성장 기여",
+                    content_2:
+                        "국내 최고, 글로벌 확장을 통한 <0>의료통합 플랫폼 서비스</0>를 제공하는 기업 실현",
+                },
+                roadmap: {
+                    title: "메디씨티가 걸어온 길",
+                    2006: {
+                        title: "Hicomp 설립",
+                        content_1: "Web Service",
+                        content_2: "홈페이지제작",
+                        content_3: "소프트웨어 개발",
+                        content_4: "유지보수",
+                        content_5: "시스템 구축",
+                    },
+                    2013: {
+                        title: "Hicomp Int. 사명변경",
+                        content_1: "All-in-one Service",
+                        content_2: "Premium PCO",
+                        content_3: "자체 인쇄,출판",
+                        content_4: "Online/Offline 컨설팅",
+                        content_5: "시스템 분석 설계",
+                    },
+                },
+            },
+        },
     },
 };
 
