@@ -1,5 +1,5 @@
 // 기본 url
-import {routerCategory} from "etc/lib/path/category";
+import { routerCategory } from "etc/lib/path/category";
 
 const base_url = "/";
 
@@ -25,45 +25,26 @@ const routerPath = {
     // 인포 - 인사말
     web_info_greet_url: `${base_url}${routerCategory.info}/welcome`,
 
-    // 인포 - 회사소개
-    web_info_company_url: `${base_url}${routerCategory.info}/company`,
-
-    // 인포 - 인증현황
-    web_info_certification_url: `${base_url}${routerCategory.info}/certification`,
-
-    // 인포 - 파트너
-    web_info_partners_url: `${base_url}${routerCategory.info}/partners`,
-
-
     // --------------------- K-MEDI ----------------------
     // K-MEDI - 소개
     web_kmedi_intro_url: `${base_url}${routerCategory.kmedi}/intro`,
-
-    // K-MEDI - APP
-    web_kmedi_app_url: `${base_url}${routerCategory.kmedi}/app`,
-
 
     // --------------------- K-MEDI ----------------------
     // 비즈니스 - 호텔
     web_business_hotel_url: `${base_url}${routerCategory.business}/hotel`,
 
-    // 비즈니스 - tax
-    web_business_tax_url: `${base_url}${routerCategory.business}/tax`,
-
-    // 비즈니스 - art
-    web_business_art_url: `${base_url}${routerCategory.business}/art`,
-
-
     // --------------------- MEDIA ----------------------
-    // 미디어 - 영상
-    web_media_video_url: `${base_url}${routerCategory.media}/video`,
-
     // 미디어 - 뉴스
     web_media_news_url: `${base_url}${routerCategory.media}/news`,
+
+    // 미디어 - 뉴스 - 상세
+    web_media_news_detail_url: `${base_url}${routerCategory.media}/news/`,
 
     // 미디어 - 공지
     web_media_notice_url: `${base_url}${routerCategory.media}/notice`,
 
+    // 미디어 - 공지 - 상세
+    web_media_notice_detail_url: `${base_url}${routerCategory.media}/notice/`,
 
     // -----------------------------------------------
     // |                  admin                      |
@@ -77,4 +58,4 @@ const routerPath = {
     admin_signin_url: `${base_url + admin}/signin`,
 };
 
-export default routerPath
+export default routerPath;

@@ -7,7 +7,7 @@ let token;
 const timeOut = 300000;
 
 // Header Prefix
-const prefix = "Showcase";
+const prefix = import.meta.env.VITE_API_TOKEN_PREFIX
 
 /*
     REST CONNECTION 시 Request 를 가로채서

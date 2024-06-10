@@ -29,6 +29,18 @@ import apiPath from "etc/lib/path/apiPath";
 
 let currentPath = "";
 function App() {
+    const location = useLocation();
+
+    useEffect(() => {
+        const path = location.pathname;
+        // /admin
+        if (path === '/admin' || path === '/admin/signin') {
+            import('etc/css/adm.css');
+        } else {
+            import('etc/css/style.css');
+        }
+    }, [ location ])
+
     useEffect(() => {
         Aos.init();
     });
@@ -39,7 +51,6 @@ function App() {
     // const setIpInfo = useSetRecoilState(ipInfoAtom);
 
     const navigate = useNavigate();
-    const location = useLocation();
 
     const resetUserInfo = useResetRecoilState(userInfoAtom);
     const resetUserToken = useResetRecoilState(userTokenAtom);

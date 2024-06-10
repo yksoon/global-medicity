@@ -13,8 +13,21 @@ import {
 import routerPath from "etc/lib/path/routerPath";
 import apiPath from "etc/lib/path/apiPath";
 import {CommonRestAPI} from "etc/lib/CommonRestAPI";
+import NoticeBoardManage from "components/admin/board/notice/NoticeBoardManage";
+import {useLocation} from "react-router-dom";
+import ContentsBoardManage from "components/admin/board/contents/ContentsBoardManage";
 
 const Admin = () => {
+    // const location = useLocation();
+    //
+    // useEffect(() => {
+    //     const path = location.pathname;
+    //     // /admin
+    //     if (path === '/admin') {
+    //         import('etc/css/adm.css');
+    //     }
+    // }, [ location ])
+
     const err = CommonErrModule();
     const isSpinner = useRecoilValue(isSpinnerAtom);
     const [isRefresh, setIsRefresh] = useState(false);
@@ -57,11 +70,11 @@ const Admin = () => {
         CommonRestAPI(restParams);
 
         const responsLogic = (res) => {
-            const result_code = res.headers.result_code;
+            const resultCode = res.headers.resultcode;
             let resData = [];
 
-            if (result_code === successCode.success) {
-                resData = res.data.result_info;
+            if (resultCode === successCode.success) {
+                resData = res.data.resultInfo;
 
                 createMenuList(resData);
             }
@@ -77,14 +90,14 @@ const Admin = () => {
         menuData.map((item) => {
             let menuOnce = {};
 
-            menuOnce["title"] = item.menu_name_ko;
-            menuOnce["page"] = item.menu_path ? item.menu_path : "";
+            menuOnce["title"] = item.menuNameKo;
+            menuOnce["page"] = item.menuPath ? item.menuPath : "";
             menuOnce["child"] = [];
-            menuOnce["menu_code"] = Number(item.menu_code);
+            menuOnce["menuCode"] = Number(item.menuCode);
 
-            if (item.menu_depth === 0) {
+            if (item.menuDepth === 0) {
                 depth1.push(menuOnce);
-            } else if (item.menu_depth === 1) {
+            } else if (item.menuDepth === 1) {
                 depth2.push(menuOnce);
             } else {
                 depth3.push(menuOnce);
@@ -95,11 +108,11 @@ const Admin = () => {
         depth2.map((item2) => {
             depth3.map((item3) => {
                 if (
-                    item3.menu_code > item2.menu_code &&
-                    item3.menu_code < item2.menu_code + 100
+                    item3.menuCode > item2.menuCode &&
+                    item3.menuCode < item2.menuCode + 100
                 ) {
                     depth2
-                        .find((e) => e.menu_code === item2.menu_code)
+                        .find((e) => e.menuCode === item2.menuCode)
                         .child.push(item3);
                 }
 
@@ -112,11 +125,11 @@ const Admin = () => {
         depth1.map((item1) => {
             depth2.map((item2) => {
                 if (
-                    item2.menu_code > item1.menu_code &&
-                    item2.menu_code < item1.menu_code + 1000
+                    item2.menuCode > item1.menuCode &&
+                    item2.menuCode < item1.menuCode + 1000
                 ) {
                     depth1
-                        .find((e) => e.menu_code === item1.menu_code)
+                        .find((e) => e.menuCode === item1.menuCode)
                         .child.push(item2);
                 }
 
@@ -138,45 +151,16 @@ const Admin = () => {
     // 렌더링 페이지
     const renderPage = (page) => {
         switch (page) {
-            
-            // // 사전등록관리 - 사전등록
-            // case "registrationMng":
-            //     return <RegistraionManageMain isRefresh={isRefresh} />;
-            //
-            // // 사전등록관리 - 참가자관리
-            // case "entryMng":
-            //     return <EntryManageMain isRefresh={isRefresh} />;
-            //
             // 게시판관리 - 공지사항
             case "noticeBoard":
-                return <NoticeBoardMain isRefresh={isRefresh} />;
-            //
-            // // 게시판관리 - 상담문의
-            // case "consultingBoard":
-            //     return <ConsultingBoardMain isRefresh={isRefresh} />;
-            //
-            // // 게시판관리 - 방명록
-            // case "guestBookBoard":
-            //     return <GuestBookBoardMain isRefresh={isRefresh} />;
-            //
-            // // 게시판관리 - 영상갤러리
-            // case "movieBoard":
-            //     return <VideoBoardMain isRefresh={isRefresh} />;
-            //
-            // // 갤러리관리 - 아티스트
-            // case "artistMng":
-            //     return <ArtistManageMain isRefresh={isRefresh} />;
-            //
-            // // 갤러리관리 - 갤러리
-            // case "galleryMng":
-            //     return <GalleryMain isRefresh={isRefresh} />;
-            //
-            // // 팝업관리
-            // case "popupMng":
-            //     return <PopupManageMain isRefresh={isRefresh} />;
+                return <NoticeBoardManage isRefresh={isRefresh} />;
+
+            // 게시판관리 - 컨텐츠
+            case "contentBoard":
+                return <ContentsBoardManage isRefresh={isRefresh} />;
 
             default:
-                // return <EntryManageMain isRefresh={isRefresh} />;
+                return <NoticeBoardManage isRefresh={isRefresh} />;
         }
     };
     return (
