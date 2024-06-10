@@ -29,7 +29,7 @@ const InfoWelcome = (props) => {
 
         switch (componentRef) {
             case "greetings":
-                refs.greetings.current?.scrollIntoView({ behavior: "smooth" });
+                refs.subvisual.current?.scrollIntoView({ behavior: "smooth" });
                 break;
 
             case "introduce":

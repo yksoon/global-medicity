@@ -29,7 +29,7 @@ const BusinessHotel = (props) => {
 
         switch (componentRef) {
             case "hotel":
-                refs.hotel.current?.scrollIntoView({ behavior: "smooth" });
+                refs.subvisual.current?.scrollIntoView({ behavior: "smooth" });
                 break;
 
             case "art":

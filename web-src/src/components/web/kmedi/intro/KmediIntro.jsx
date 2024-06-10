@@ -28,7 +28,7 @@ const KmediIntro = (props) => {
 
         switch (componentRef) {
             case "intro":
-                refs.intro.current?.scrollIntoView({ behavior: "smooth" });
+                refs.subvisual.current?.scrollIntoView({ behavior: "smooth" });
                 break;
 
             case "app":
