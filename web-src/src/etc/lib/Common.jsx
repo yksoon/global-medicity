@@ -11,9 +11,9 @@ import {
     userInfoAdminAtom,
     userTokenAdminAtom,
 } from "etc/lib/recoils/atoms";
-import {BarChart, LineChart, PieChart} from "@mui/x-charts";
+import { BarChart, LineChart, PieChart } from "@mui/x-charts";
 import imageCompression from "browser-image-compression";
-import {imageResizeOptions} from "etc/lib/static";
+import { imageResizeOptions } from "etc/lib/static";
 
 // Alert (props)
 // isOpen = state 상태값
@@ -22,7 +22,6 @@ import {imageResizeOptions} from "etc/lib/static";
 // btn = 확인버튼
 // closeModal = 닫기 (state를 변경할 수 있는 handler)
 // data
-
 
 // -- 디버깅용 콘솔 --
 // 파라미터:
@@ -137,8 +136,6 @@ const CommonNotify = async (option) => {
             break;
     }
 };
-
-
 
 // 공용 날짜 체킹
 /* 
@@ -328,8 +325,8 @@ const CommonCommaPattern = (str, digit) => {
 };
 
 const CommonInputNumberPattern = (e) => {
-    return e.target.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')
-}
+    return e.target.value.replace(/[^0-9.]/g, "").replace(/(\..*)\./g, "$1");
+};
 
 const CommonMakeThumbnailImage = async (file) => {
     try {
@@ -350,6 +347,15 @@ const CommonParseHTMLString = (htmlString) => {
     return doc.body.textContent || "";
 };
 
+const CommonGetYoutubeThumbnailUrl = (url) => {
+    const regex =
+        /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:shorts\/|watch\?v=|embed\/|v\/|.+\?v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+    const matches = url.match(regex);
+    const videoId = matches ? matches[1] : null;
+
+    return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+};
+
 export {
     CommonConsole,
     CommonSpinner,
@@ -363,4 +369,5 @@ export {
     CommonInputNumberPattern,
     CommonMakeThumbnailImage,
     CommonParseHTMLString,
+    CommonGetYoutubeThumbnailUrl,
 };
