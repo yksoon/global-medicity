@@ -17,7 +17,7 @@ const KmediIntro = (props) => {
 
     const headerRoute = locationState?.headerRoute;
 
-    const [sectionState, setSectionState] = useState("hotel");
+    const [sectionState, setSectionState] = useState("");
 
     useEffect(() => {
         moveToSection(headerRoute);

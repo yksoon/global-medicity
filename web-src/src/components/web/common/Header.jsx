@@ -24,20 +24,28 @@ function Header() {
                             <li>
                                 <Link to="">WE ARE</Link>
                                 <div className="submenu">
-                                    <Link to={routerPath.web_info_greet_url}>
+                                    <Link
+                                        to={routerPath.web_info_greet_url}
+                                        state={{ headerRoute: "greetings" }}
+                                    >
                                         인사말
                                     </Link>
-                                    <Link to={routerPath.web_info_company_url}>
+                                    <Link
+                                        to={routerPath.web_info_greet_url}
+                                        state={{ headerRoute: "introduce" }}
+                                    >
                                         회사소개
                                     </Link>
                                     <Link
-                                        to={
-                                            routerPath.web_info_certification_url
-                                        }
+                                        to={routerPath.web_info_greet_url}
+                                        state={{ headerRoute: "certification" }}
                                     >
                                         인증현황
                                     </Link>
-                                    <Link to={routerPath.web_info_partners_url}>
+                                    <Link
+                                        to={routerPath.web_info_greet_url}
+                                        state={{ headerRoute: "partners" }}
+                                    >
                                         파트너
                                     </Link>
                                     <Link to="">회사소개서 다운로드</Link>
