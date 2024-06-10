@@ -46,22 +46,31 @@ function Footer() {
                         <img src="/img/web/main/logo.png" alt="" />
                         <ul>
                             <li>
-                                <Link to={routerPath.web_info_greet_url}>
+                                <Link
+                                    to={routerPath.web_info_greet_url}
+                                    state={{ headerRoute: "greetings" }}
+                                >
                                     WE ARE
                                 </Link>
                             </li>
                             <li>
-                                <Link to={routerPath.web_kmedi_intro_url}>
+                                <Link
+                                    to={routerPath.web_kmedi_intro_url}
+                                    state={{ headerRoute: "intro" }}
+                                >
                                     K-MEDI
                                 </Link>
                             </li>
                             <li>
-                                <Link to={routerPath.web_business_hotel_url}>
+                                <Link
+                                    to={routerPath.web_business_hotel_url}
+                                    state={{ headerRoute: "hotel" }}
+                                >
                                     BUSINESS
                                 </Link>
                             </li>
                             <li>
-                                <Link to={routerPath.web_media_news_detail_url}>
+                                <Link to={routerPath.web_media_news_url}>
                                     MEDIA CENTER
                                 </Link>
                             </li>
@@ -101,7 +110,7 @@ function Footer() {
                                 <img src="/img/web/main/f_insta.png" alt="" />
                             </a>
                             <a
-                                href="https://www.instagram.com/medicitykorea"
+                                href="https://www.youtube.com/@medi-city"
                                 target="_blank"
                             >
                                 <img src="/img/web/main/f_youtube.png" alt="" />
