@@ -107,7 +107,7 @@ const Section03 = () => {
                             </Link>
                         </div>
                     </div>
-                    <ul className="notice">
+                    <ul className="notice_list">
                         {boardList.length !== 0 &&
                             boardList.map((item, i) => (
                                 <li key={`main_news_${item.boardIdx}`}>

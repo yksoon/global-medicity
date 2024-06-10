@@ -95,12 +95,12 @@ body {margin:0 auto;}
 
 /* section03 */
 .section03 .title {margin-bottom: 0;}
-.section03 ul li {display: flex;padding: 36px 0;align-items: center;border-bottom: 1px solid #ddd;}
+.section03 ul li {display: flex;padding: 36px 0;align-items: center;border-bottom: 1px solid #ddd;justify-content: space-between;}
 .section03 ul li:last-child {border-bottom: 1px solid #ddd;padding-bottom: 42px;}
 .section03 ul li div.busi_txt {padding: 70px;text-align: center;}
 .section03 ul li h5 {font-size: 26px;margin-bottom: 10px;font-weight: 500;}
 .section03 ul li p {font-size: 18px;color: #424242;word-break: keep-all;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-.section03 .btn_main {margin-top: 0;}
+.section03 .btn_main {margin: 0;}
 
 /* section04 */
 .section04 {width:100%;padding: 140px 0;}
