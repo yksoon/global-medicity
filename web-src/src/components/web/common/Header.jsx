@@ -113,6 +113,11 @@ function Header() {
                         </ul>
                         <div className="submenu_bg"></div>
                     </div>
+                    <div className="lang">
+                        <a href="">KO</a>
+                        <a href="">EN</a>
+                        <a href="">ID</a>
+                    </div>
                     <div className="">
                         <img src="img/web/main/book.png" alt="" />
                     </div>
