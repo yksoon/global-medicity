@@ -21,7 +21,7 @@ const KmediIntro = (props) => {
 
     useEffect(() => {
         moveToSection(headerRoute);
-    }, []);
+    }, [location]);
 
     const moveToSection = (componentRef) => {
         setSectionState(componentRef);

@@ -22,7 +22,7 @@ const BusinessHotel = (props) => {
 
     useEffect(() => {
         moveToSection(headerRoute);
-    }, []);
+    }, [location]);
 
     const moveToSection = (componentRef) => {
         setSectionState(componentRef);

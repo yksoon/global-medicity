@@ -15,7 +15,7 @@ const lngs = {
     id: { nativeName: "ID" },
 };
 
-function Header() {
+function Header(props) {
     const { t, i18n } = useTranslation(); // 3. useTranslation hook 선언
 
     const [language, setLanguage] = useRecoilState(globalLanguageAtom);
@@ -40,7 +40,10 @@ function Header() {
                     <div id="gnb">
                         <ul>
                             <li>
-                                <Link to="">WE ARE</Link>
+                                <Link
+                                    to={routerPath.web_info_greet_url}
+                                    state={{ headerRoute: "greetings" }}
+                                >WE ARE</Link>
                                 <div className="submenu">
                                     <Link
                                         to={routerPath.web_info_greet_url}
@@ -51,6 +54,7 @@ function Header() {
                                     <Link
                                         to={routerPath.web_info_greet_url}
                                         state={{ headerRoute: "introduce" }}
+                                        // onClick={() => moveToSection("introduce")}
                                     >
                                         {t("header.weAre.aboutUs")}
                                     </Link>
@@ -72,7 +76,10 @@ function Header() {
                                 </div>
                             </li>
                             <li>
-                                <Link to="">K-MEDI</Link>
+                                <Link
+                                    to={routerPath.web_kmedi_intro_url}
+                                    state={{ headerRoute: "intro" }}
+                                >K-MEDI</Link>
                                 <div className="submenu">
                                     <Link
                                         to={routerPath.web_kmedi_intro_url}
@@ -89,7 +96,10 @@ function Header() {
                                 </div>
                             </li>
                             <li>
-                                <Link to="">BUSINESS</Link>
+                                <Link
+                                    to={routerPath.web_business_hotel_url}
+                                    state={{ headerRoute: "hotel" }}
+                                >BUSINESS</Link>
                                 <div className="submenu">
                                     <Link
                                         to={routerPath.web_business_hotel_url}
@@ -117,7 +127,7 @@ function Header() {
                                 </div>
                             </li>
                             <li>
-                                <Link to="">MEDIA CENTER</Link>
+                                <Link to={routerPath.web_media_news_url}>MEDIA CENTER</Link>
                                 <div className="submenu">
                                     {/*<Link to={routerPath.web_media_video_url}>*/}
                                     {/*    영상 콘텐츠*/}

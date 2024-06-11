@@ -26,7 +26,7 @@ const InfoWelcome = (props) => {
 
     useEffect(() => {
         moveToSection(headerRoute);
-    }, []);
+    }, [location]);
 
     const moveToSection = (componentRef) => {
         setSectionState(componentRef);
@@ -58,7 +58,7 @@ const InfoWelcome = (props) => {
 
     return (
         <>
-            <Header />
+            <Header moveToSection={moveToSection} />
             <div id="subvisual" ref={refs.subvisual}>
                 <div className="sub_txt">
                     <h2>{t("weAre.subvisual.title")}</h2>
