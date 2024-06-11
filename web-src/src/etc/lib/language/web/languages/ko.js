@@ -311,7 +311,49 @@ const ko = {
                 title: "Partners",
             }
         },
-
+        business: {
+            subvisual: "BUSINESS",
+            hotel: {
+                subtitle: "호텔서비스",
+                title: "Hotel Service",
+                subject: "휴식의 가치를 더하는 Private 힐링 숙박 서비스",
+                content_1: {
+                    title: "Room Special Service",
+                    content: "객실특가 서비스"
+                },
+                content_2: {
+                    title: "Supplementary Facilities",
+                    content: "부대시설할인"
+                },
+                content_3: {
+                    title: "Special Service",
+                    content: "(주)메디씨티 회원만의 특별서비스제공"
+                }
+            },
+            art: {
+                subtitle: "아트 서비스",
+                title: "Art Service",
+                subject: "고급스럽고 분위기 있는 공간 연출,<0></0>절세 혜택에 비용처리까지, 메디아트 서비스",
+                content_1: {
+                    title: "미술품 개인소장",
+                    content: "국내외 인기있는 작가들의 원화 작품을 개인 소장하여 시각적인 만과 삶의 품격을 높이세요."
+                },
+                content_2: {
+                    title: "미술품 재테크",
+                    content: "계약한 미술품을 통해 어떠한 재테크 플랫폼보다 안정적이면서 높은 수익률을 경험해 보세요."
+                },
+                content_3: {
+                    title: "미술품 구매/렌탈",
+                    content: "미술품 구매 또는 렌탈을 통해 강력한 법인, 개인 세금 절감 혜택을 누려보세요."
+                }
+            },
+            wine: {
+                subtitle: "빈티지 와인 프로모션",
+                title: "Wine Promotion",
+                subject: "몰도바(Moldova) 와인",
+                content: "㈜메디씨티는 회원들에게 국내에서 쉽게 접할 수 없는 몰도바의 특별한 와인을 제공합니다. <0></0>몰도바의 풍부한 와인 문화와 독특한 포도 품종이 반영된 이 희귀 와인들의 국내 유일 총판을 통한 공급을 제공하고 있으며, <0></0>메디씨티 회원 (Medi-People)만이 누릴 수 있는 Private하고 차별화된 경험을 제공합니다. <0></0>각 와인은 몰도바의 진정한 맛과 전통을 담고 있어, 와인 애호가들에게 놓칠 수 없는 기회를 제공합니다. <0></0>몰도바의 깊은 맛을 즐길 수 있는 본 서비스는 메디씨티 회원들에게만 드리는 특별한 혜택입니다."
+            }
+        }
     },
 };
 

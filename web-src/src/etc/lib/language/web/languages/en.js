@@ -314,7 +314,49 @@ const en = {
                 title: "Partners",
             }
         },
-
+        business: {
+            subvisual: "BUSINESS",
+            hotel: {
+                subtitle: "Hotel Service",
+                title: "Hotel Service",
+                subject: "Private healing accommodation service that adds the value of relaxation",
+                content_1: {
+                    title: "Room Special Service",
+                    content: "Room offers at special prices"
+                },
+                content_2: {
+                    title: "Supplementary Facilities",
+                    content: "Discount for suppementary facilities"
+                },
+                content_3: {
+                    title: "Special Service",
+                    content: "Exclusive Services for Member of Medi-City Co., Ltd"
+                }
+            },
+            art: {
+                subtitle: "Art Service",
+                title: "Art Service",
+                subject: "MEDI-ART Service, From creating a luxurious and <0></0>atmospheric space to tax-saving benefits until handling costs",
+                content_1: {
+                    title: "Personal art collection",
+                    content: "Collection of works by famous local and foreign artists to enhance your visual beauty and quality of life."
+                },
+                content_2: {
+                    title: "Art Investment",
+                    content: "Experience more stable and higher returns than any other financial platform through contracted artworks."
+                },
+                content_3: {
+                    title: "Purchase/Rent Artwork",
+                    content: "Experience the benefits of a strong corportation and personal tax saving from artwork purchases or rentals"
+                }
+            },
+            wine: {
+                subtitle: "Vintage Wine Promotion",
+                title: "Wine Promotion",
+                subject: "Moldova Wine",
+                content: "Medi-City Co., Ltd. offers its members special wines from Moldova that are not easily accessible in Korea. <0></0>It provides the supply through the nation's sole distributor of these rare wines that reflect Moldova's rich wine culture and unique grape varieties, <0></0>offering a Private and differentiated experience exclusive to Medi-People. <0></0>Each wine encapsulates the true taste and tradition of Moldova, providing wine enthusiasts with an opportunity not to be missed. <0></0>This service, where you can savor the deep flavors of Moldova, is a special benefit reserved only for Medi-City members."
+            }
+        }
     },
 };
 

@@ -311,7 +311,49 @@ const id = {
                 title: "Partners",
             }
         },
-
+        business: {
+            subvisual: "BISNIS",
+            hotel: {
+                subtitle: "Layanan Hotel",
+                title: "Layanan Hotel",
+                subject: "Layanan akomodasi healing pribadi yang menambah nilai relaksasi",
+                content_1: {
+                    title: "Layanan Ruang Khusus",
+                    content: "Penawaran kamar dengan harga khusus"
+                },
+                content_2: {
+                    title: "Fasilitas Tambahan",
+                    content: "Diskon untuk fasilitas tambahan"
+                },
+                content_3: {
+                    title: "Layanan Khusus",
+                    content: "Layanan ekslusif Untuk Anggota PT. Medi-City"
+                }
+            },
+            art: {
+                subtitle: "Layanan Seni",
+                title: "Layanan Seni",
+                subject: "Layanan MEDI-ART, Mulai dari menciptakan <0></0>ruangan yang mewah dan atmosfer, manfaat penghematan <0></0>pajak hingga biaya penanganan",
+                content_1: {
+                    title: "Koleksi seni pribadi",
+                    content: "Koleksi karya seniman terkenal dalam dan luar negeri untuk meningkatkan keindahan visual dan kualitas hidup Anda."
+                },
+                content_2: {
+                    title: "Investasi Karya Seni",
+                    content: "Rasakan keuntungan yang lebih stabil dan lebih tinggi dibandingkan platform keuangan lainnya melalui karya seni yang dikontrak."
+                },
+                content_3: {
+                    title: "Beli/Sewa Karya Seni",
+                    content: "Nikmati penghematan pajak perusahaan dan individu yang kuat melalui pembelian atau penyewaan karya seni"
+                }
+            },
+            wine: {
+                subtitle: "Promo Wine Vintage",
+                title: "Promo Wine",
+                subject: "Wine Moldova",
+                content: "PT. Medi-City menawarkan kepada anggotanya anggur khusus dari Moldova yang tidak mudah diakses di Korea. <0></0>Perusahaan ini menyediakan pasokan melalui distributor tunggal anggur langka yang mencerminkan budaya anggur Moldova yang kaya dan varietas anggur yang unik, <0></0>menawarkan pengalaman Pribadi dan berbeda yang eksklusif untuk Medi-People. <0></0>Setiap anggur merangkum cita rasa dan tradisi Moldova yang sebenarnya, memberikan kesempatan yang tidak boleh dilewatkan bagi para penggemar anggur. <0></0>Layanan yang memberikan kesempatan untuk dapat menikmati cita rasa Moldova yang mendalam adalah benefit khusus yang hanya diperuntukkan bagi anggota Medi-City."
+            }
+        }
     },
 };
 
