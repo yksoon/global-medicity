@@ -357,13 +357,27 @@ const InfoWelcome = (props) => {
                                         ></img>
                                     </div>
                                     <h4>2020</h4>
-                                    <h5>㈜Able 설립</h5>
+                                    <h5>{t("weAre.aboutUs.roadmap.2020.title")}</h5>
                                     <p>
-                                        Webinar 시스템 구축<br></br>
-                                        디자인 제작<br></br>
-                                        기획/관리 홍보<br></br>
-                                        전문 PCO 현장팀 운영<br></br>
-                                        온라인 개발팀 운영
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2020.content_1",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2020.content_2",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2020.content_3",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2020.content_4",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2020.content_5",
+                                        )}
                                     </p>
                                 </div>
                             </div>
@@ -376,11 +390,19 @@ const InfoWelcome = (props) => {
                                         ></img>
                                     </div>
                                     <h4>2023</h4>
-                                    <h5>㈜메디씨티 인도네시아 법인설립</h5>
+                                    <h5>{t("weAre.aboutUs.roadmap.2023.title")}</h5>
                                     <p>
-                                        K-MEDI 인니전용<br></br>
-                                        APP 개발<br></br>
-                                        문화교류 서비스
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2023.content_1",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2023.content_2",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2023.content_3",
+                                        )}
                                     </p>
                                 </div>
                                 <div className="right">
@@ -391,13 +413,27 @@ const InfoWelcome = (props) => {
                                         ></img>
                                     </div>
                                     <h4>2022</h4>
-                                    <h5>㈜메디씨티 설립</h5>
+                                    <h5>{t("weAre.aboutUs.roadmap.2022.title")}</h5>
                                     <p>
-                                        의료통합 플랫폼<br></br>
-                                        동영상 컨텐츠 제작<br></br>
-                                        멤버십 서비스<br></br>
-                                        Medi-Edu 서비스<br></br>
-                                        Medi-Tour 서비스
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2022.content_1",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2022.content_2",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2022.content_3",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2022.content_4",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2022.content_5",
+                                        )}
                                     </p>
                                 </div>
                             </div>
@@ -410,10 +446,15 @@ const InfoWelcome = (props) => {
                                         ></img>
                                     </div>
                                     <h4>2024</h4>
-                                    <h5>㈜메디씨티 강원 지사법인설립</h5>
+                                    <h5>{t("weAre.aboutUs.roadmap.2024.title")}</h5>
                                     <p>
-                                        국내 메디투어 운영<br></br>
-                                        강원지역 MICE 사업 추진
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2024.content_1",
+                                        )}
+                                        <br></br>
+                                        {t(
+                                            "weAre.aboutUs.roadmap.2024.content_2",
+                                        )}
                                     </p>
                                 </div>
                             </div>
@@ -423,81 +464,70 @@ const InfoWelcome = (props) => {
                     <div className="boxing" id="sec07">
                         <div className="layout">
                             <h3 className="c_tit c_tit_kr">
-                                <span>회사소개</span>
-                                History
+                                <span>{t("weAre.aboutUs.About_Us")}</span>
+                                {t("weAre.aboutUs.history.title")}
                             </h3>
                             <div className="history">
                                 <div className="historybox">
                                     <div className="month right">
                                         <div>
-                                            <p className="on">5월</p>
+                                            <p className="on">{t("weAre.aboutUs.history.2024.may.title")}</p>
                                             <ul>
                                                 <li>
-                                                    임피리얼 팰리스 서울 MOU
-                                                    체결
+                                                    {t("weAre.aboutUs.history.2024.may.content_1")}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>4월</p>
+                                            <p>{t("weAre.aboutUs.history.2024.april.title")}</p>
                                             <ul>
                                                 <li>
-                                                    (주)스카이인터내셔날 MOU
-                                                    체결
+                                                    {t("weAre.aboutUs.history.2024.april.content_1")}
                                                 </li>
                                                 <li>
-                                                    제주 해비치 호텔 & 리조트
-                                                    MOU 체결
+                                                    {t("weAre.aboutUs.history.2024.april.content_2")}
                                                 </li>
                                                 <li>
-                                                    RSUI ASTUTI 병원장 방한 및
-                                                    국립암센터 메디컬 투어
+                                                    {t("weAre.aboutUs.history.2024.april.content_3")}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>3월</p>
+                                            <p>{t("weAre.aboutUs.history.2024.march.title")}</p>
                                             <ul>
                                                 <li>
-                                                    AYANA MidplazaJakarta 체결
+                                                    {t("weAre.aboutUs.history.2024.march.content_1")}
                                                 </li>
                                                 <li>
-                                                    CMS Entertainment MOU 체결
+                                                    {t("weAre.aboutUs.history.2024.march.content_2")}
                                                 </li>
                                                 <li>
-                                                    RumahSakitUniversitas
-                                                    Indonesia MOU 체결
+                                                    {t("weAre.aboutUs.history.2024.march.content_3")}
                                                 </li>
                                                 <li>
-                                                    CheongdamKorean Aesthetic
-                                                    Clinic MOU 체결
+                                                    {t("weAre.aboutUs.history.2024.march.content_4")}
                                                 </li>
                                                 <li>
-                                                    PT. Cashtreefor Indonesia
-                                                    MOU 체결
+                                                    {t("weAre.aboutUs.history.2024.march.content_5")}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>2월</p>
+                                            <p>{t("weAre.aboutUs.history.2024.february.title")}</p>
                                             <ul>
                                                 <li>
-                                                    (주)아트버디 K-ART 전시회
-                                                    개최 (The Westin Jakarta)
+                                                    {t("weAre.aboutUs.history.2024.february.content_1")}
                                                 </li>
                                                 <li>
-                                                    제1회 PT. MEDI CITY
-                                                    INDONESIA Showcase (The
-                                                    Westin Jakarta)
+                                                    {t("weAre.aboutUs.history.2024.february.content_2")}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>1월</p>
+                                            <p>{t("weAre.aboutUs.history.2024.january.title")}</p>
                                             <ul>
                                                 <li>
-                                                    (주)메디씨티 상표등록
-                                                    (제40-2146903호)
+                                                    {t("weAre.aboutUs.history.2024.january.content_1")}
                                                 </li>
                                             </ul>
                                         </div>
@@ -524,76 +554,60 @@ const InfoWelcome = (props) => {
                                     </div>
                                     <div className="month right">
                                         <div>
-                                            <p>12월</p>
+                                            <p>{t("weAre.aboutUs.history.2023.12.title")}</p>
                                             <ul>
                                                 <li>
-                                                    올마이투어(allmytour) MOU
-                                                    체결
+                                                    {t("weAre.aboutUs.history.2023.12.content_1")}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>11월</p>
+                                            <p>{t("weAre.aboutUs.history.2023.11.title")}</p>
                                             <ul>
-                                                <li>(주)아트버디 MOU 체결</li>
+                                                <li>{t("weAre.aboutUs.history.2023.11.content_1")}</li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>10월</p>
+                                            <p>{t("weAre.aboutUs.history.2023.10.title")}</p>
                                             <ul>
                                                 <li>
-                                                    국회등록
-                                                    사)한국과학기술정책연구회
-                                                    이지선 의장 이사 등재
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <p>7월</p>
-                                            <ul>
-                                                <li>
-                                                    (주)메디씨티 K-Medi
-                                                    인도네시아 서비스 Test
-                                                    Version1.0 출시
-                                                </li>
-                                                <li>
-                                                    (주)메디씨티 강원 지사법인
-                                                    설립 (박종인 지사장)
+                                                    {t("weAre.aboutUs.history.2023.10.content_1")}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>6월</p>
+                                            <p>{t("weAre.aboutUs.history.2023.7.title")}</p>
                                             <ul>
                                                 <li>
-                                                    (주)메디씨티 Membership
-                                                    Service 베타 서비스 출시
+                                                    {t("weAre.aboutUs.history.2023.7.content_1")}
                                                 </li>
                                                 <li>
-                                                    iADH2024 International
-                                                    Conference Invited Speaker,
-                                                    UdijantTedjosasongko협약
+                                                    {t("weAre.aboutUs.history.2023.7.content_2")}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>5월</p>
+                                            <p>{t("weAre.aboutUs.history.2023.6.title")}</p>
                                             <ul>
                                                 <li>
-                                                    PT. MEDI CITY INDONESIA
-                                                    (인도네시아 해외법인 설립,
-                                                    박성민 법인장)
+                                                    {t("weAre.aboutUs.history.2023.6.content_1")}
                                                 </li>
                                                 <li>
-                                                    'K-Medi' 인도네시아 해외법인
-                                                    서비스 상표 등록
+                                                    {t("weAre.aboutUs.history.2023.6.content_2")}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>{t("weAre.aboutUs.history.2023.5.title")}</p>
+                                            <ul>
+                                                <li>
+                                                    {t("weAre.aboutUs.history.2023.5.content_1")}
                                                 </li>
                                                 <li>
-                                                    특허출원 제10-2023-0070316 :
-                                                    대상 수술의 정보에 기초하여
-                                                    리워드를 제공하는 컨텐츠
-                                                    제공 방법 및 이를 수행하는
-                                                    컨텐츠 제공 시스템
+                                                    {t("weAre.aboutUs.history.2023.5.content_2")}
+                                                </li>
+                                                <li>
+                                                    {t("weAre.aboutUs.history.2023.5.content_3")}
                                                 </li>
                                             </ul>
                                         </div>
@@ -602,68 +616,59 @@ const InfoWelcome = (props) => {
                                 <div className="historybox">
                                     <div className="month right">
                                         <div>
-                                            <p>10월</p>
+                                            <p>{t("weAre.aboutUs.history.2022.10.title")}</p>
                                             <ul>
-                                                <li>제이제이진옴므 MOU 체결</li>
+                                                <li>{t("weAre.aboutUs.history.2022.10.content_1")}</li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>9월</p>
+                                            <p>{t("weAre.aboutUs.history.2022.9.title")}</p>
                                             <ul>
                                                 <li>
-                                                    기술보호데스크 사업선정
-                                                    (경기도 테크노파크)
+                                                    {t("weAre.aboutUs.history.2022.9.content_1")}
                                                 </li>
                                                 <li>
-                                                    킨텍스바이케이트리호텔 MOU
-                                                    체결
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <p>7월</p>
-                                            <ul>
-                                                <li>
-                                                    에어마카오 인천공항 MOU 체결
-                                                </li>
-                                                <li>
-                                                    머큐어엠버서드호텔 울산 MOU
-                                                    체결
+                                                    {t("weAre.aboutUs.history.2022.9.content_2")}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>4월</p>
+                                            <p>{t("weAre.aboutUs.history.2022.7.title")}</p>
                                             <ul>
                                                 <li>
-                                                    (주)메디씨티 상표등록 출원
-                                                    (대한민국 특허청)
+                                                    {t("weAre.aboutUs.history.2022.7.content_1")}
                                                 </li>
-                                                <li>세인트존스호텔 MOU 체결</li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <p>3월</p>
-                                            <ul>
                                                 <li>
-                                                    ㈜메디씨티 공식 홈페이지
-                                                    오픈 Version1.0
-                                                    (medi-city.co.kr)
+                                                    {t("weAre.aboutUs.history.2022.7.content_2")}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>2월</p>
+                                            <p>{t("weAre.aboutUs.history.2022.4.title")}</p>
                                             <ul>
-                                                <li>㈜메디씨티 법인설립</li>
                                                 <li>
-                                                    제1회 Medi-City Day 개최 및
-                                                    출범식 (강릉 세인트존스호텔)
+                                                    {t("weAre.aboutUs.history.2022.4.content_1")}
+                                                </li>
+                                                <li>{t("weAre.aboutUs.history.2022.4.content_2")}</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>{t("weAre.aboutUs.history.2022.3.title")}</p>
+                                            <ul>
+                                                <li>
+                                                    {t("weAre.aboutUs.history.2022.3.content_1")}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>{t("weAre.aboutUs.history.2022.2.title")}</p>
+                                            <ul>
+                                                <li>{t("weAre.aboutUs.history.2022.2.content_1")}</li>
+                                                <li>
+                                                    {t("weAre.aboutUs.history.2022.2.content_2")}
                                                 </li>
                                                 <li>
-                                                    중소기업 등록
-                                                    ('중소기업기본법' 제2조 및
-                                                    '소상공인기본법' 제2조)
+                                                    {t("weAre.aboutUs.history.2022.2.content_3")}
                                                 </li>
                                             </ul>
                                         </div>
@@ -685,8 +690,8 @@ const InfoWelcome = (props) => {
                     <div className="boxing" id="sec08">
                         <div className="layout">
                             <h3 className="c_tit c_tit_kr">
-                                <span>회사소개</span>
-                                조직도
+                                <span>{t("weAre.aboutUs.About_Us")}</span>
+                                {t("weAre.aboutUs.organization.title")}
                             </h3>
                             <div>
                                 <img
@@ -700,25 +705,31 @@ const InfoWelcome = (props) => {
                     <div className="boxing" id="sec09">
                         <div className="layout">
                             <h3 className="c_tit">
-                                <span>회사소개</span>
-                                CI & BI
+                                <span>{t("weAre.aboutUs.About_Us")}</span>
+                                {t("weAre.aboutUs.CI.title")}
                             </h3>
                             <div className="top">
                                 <div className="flx_box">
-                                    <h4>Corporate Identity</h4>
+                                    <h4>{t("weAre.aboutUs.CI.corporate.title")}</h4>
                                     <p className="normal">
-                                        워드마크 디자인은 유연성과 단순함을
-                                        강조하고 있으며,{" "}
-                                        <span>
-                                            다양한 네트워크 (Medical, Media, IT,
-                                            Big Data)
-                                        </span>
-                                        를 융복합하여{" "}
-                                        <span>
-                                            세계 의료계 발전에 영향력이 있는
-                                            기업
-                                        </span>
-                                        이 되고자 하는 목표를 나타내고자 하였다.
+                                        {/*워드마크 디자인은 유연성과 단순함을*/}
+                                        {/*강조하고 있으며,{" "}*/}
+                                        {/*<span>*/}
+                                        {/*    다양한 네트워크 (Medical, Media, IT,*/}
+                                        {/*    Big Data)*/}
+                                        {/*</span>*/}
+                                        {/*를 융복합하여{" "}*/}
+                                        {/*<span>*/}
+                                        {/*    세계 의료계 발전에 영향력이 있는*/}
+                                        {/*    기업*/}
+                                        {/*</span>*/}
+                                        {/*이 되고자 하는 목표를 나타내고자 하였다.*/}
+                                        <Trans
+                                            i18nKey={
+                                                "weAre.aboutUs.CI.corporate.content"
+                                            }
+                                            components={[<span></span>]}
+                                        />
                                     </p>
                                 </div>
                             </div>
@@ -740,9 +751,7 @@ const InfoWelcome = (props) => {
                                             #5c903f
                                         </div>
                                         <span>
-                                            의료의 기본 색상인 그린, 생명과
-                                            자연, 평화의 의미로 그린을 가장
-                                            앞으로 배치하였습니다.
+                                            {t("weAre.aboutUs.CI.corporate.green")}
                                         </span>
                                     </div>
                                     <div className="orange color">
@@ -755,9 +764,7 @@ const InfoWelcome = (props) => {
                                             #f57e20
                                         </div>
                                         <span>
-                                            뜨겁지 않은 따뜻한 느낌으로 인류를
-                                            따뜻하게 품으려 ㈜메디씨티의 마음을
-                                            표현하였습니다.
+                                            {t("weAre.aboutUs.CI.corporate.orange")}
                                         </span>
                                     </div>
                                     <div className="pink color">
@@ -769,7 +776,7 @@ const InfoWelcome = (props) => {
                                             #f05157
                                         </div>
                                         <span>
-                                            ㈜메디씨티의 열정을 표현하였습니다.
+                                            {t("weAre.aboutUs.CI.corporate.red")}
                                         </span>
                                     </div>
                                     <div className="purple color">
@@ -782,11 +789,7 @@ const InfoWelcome = (props) => {
                                             #7a5184
                                         </div>
                                         <span>
-                                            빨강과 파랑의 반대되는 성향이
-                                            혼재되어 나타내는 색상, 파랑의
-                                            신뢰를 바탕으로 붉은색의 활기찬
-                                            에너지를 품은 ㈜메디씨티를
-                                            표현하였습니다.
+                                            {t("weAre.aboutUs.CI.corporate.purple")}
                                         </span>
                                     </div>
                                 </div>
@@ -795,19 +798,25 @@ const InfoWelcome = (props) => {
                             <div className="bi">
                                 <div className="top">
                                     <div className="flx_box">
-                                        <h4>Brand Identity</h4>
+                                        <h4>{t("weAre.aboutUs.CI.brand.title")}</h4>
                                         <p className="normal">
-                                            로고의 기본 컨셉은 세가지 시각적
-                                            형태의 의미를 부여한다.<br></br>
-                                            <span>
-                                                대한민국의 우수한 의료 기술 및
-                                                지식
-                                            </span>
-                                            을(문자 “K”), 해외 의료진에게 널리
-                                            알려, <span>인간존중의 이념</span>에
-                                            따라(좌측형상)<br></br>
-                                            <span>의료계 성장 방향</span>(우측
-                                            형상)을 형상화 하여 설명하였다
+                                            {/*로고의 기본 컨셉은 세가지 시각적*/}
+                                            {/*형태의 의미를 부여한다.<br></br>*/}
+                                            {/*<span>*/}
+                                            {/*    대한민국의 우수한 의료 기술 및*/}
+                                            {/*    지식*/}
+                                            {/*</span>*/}
+                                            {/*을(문자 “K”), 해외 의료진에게 널리*/}
+                                            {/*알려, <span>인간존중의 이념</span>에*/}
+                                            {/*따라(좌측형상)<br></br>*/}
+                                            {/*<span>의료계 성장 방향</span>(우측*/}
+                                            {/*형상)을 형상화 하여 설명하였다*/}
+                                            <Trans
+                                                i18nKey={
+                                                    "weAre.aboutUs.CI.brand.content"
+                                                }
+                                                components={[<br></br>, <span></span>]}
+                                            />
                                         </p>
                                     </div>
                                 </div>
@@ -828,7 +837,7 @@ const InfoWelcome = (props) => {
                                                 #FF0000
                                             </div>
                                             <span>
-                                                인도네시아 국기를 나타내는 레드
+                                                {t("weAre.aboutUs.CI.brand.red")}
                                             </span>
                                         </div>
                                         <div className="blue color">
@@ -840,7 +849,7 @@ const InfoWelcome = (props) => {
                                                 #0047A0
                                             </div>
                                             <span>
-                                                대한민국의 국기를 나타내는 블루
+                                                {t("weAre.aboutUs.CI.brand.blue")}
                                             </span>
                                         </div>
                                     </div>
@@ -852,8 +861,8 @@ const InfoWelcome = (props) => {
                     <div className="boxing" id="sec10" ref={refs.certification}>
                         <div className="layout">
                             <h3 className="c_tit">
-                                <span>인증현황</span>
-                                Certification status
+                                <span>{t("weAre.certification.subtitle")}</span>
+                                {t("weAre.certification.title")}
                             </h3>
                             <div className="box_wrap">
                                 <div className="certi">
@@ -861,63 +870,63 @@ const InfoWelcome = (props) => {
                                         src="img/web/sub/certi01.png"
                                         alt=""
                                     ></img>
-                                    <p>상표등록출원</p>
+                                    <p>{t("weAre.certification.content_1")}</p>
                                 </div>
                                 <div className="certi">
                                     <img
                                         src="img/web/sub/certi02.png"
                                         alt=""
                                     ></img>
-                                    <p>해외 특허 출원 (PCT)</p>
+                                    <p>{t("weAre.certification.content_2")}</p>
                                 </div>
                                 <div className="certi">
                                     <img
                                         src="img/web/sub/certi03.png"
                                         alt=""
                                     ></img>
-                                    <p>인니상표등록</p>
+                                    <p>{t("weAre.certification.content_3")}</p>
                                 </div>
                                 <div className="certi">
                                     <img
                                         src="img/web/sub/certi04.png"
                                         alt=""
                                     ></img>
-                                    <p>메디씨티 사업자등록증</p>
+                                    <p>{t("weAre.certification.content_4")}</p>
                                 </div>
                                 <div className="certi">
                                     <img
                                         src="img/web/sub/certi05.png"
                                         alt=""
                                     ></img>
-                                    <p>관광사업등록증</p>
+                                    <p>{t("weAre.certification.content_5")}</p>
                                 </div>
                                 <div className="certi">
                                     <img
                                         src="img/web/sub/certi06.png"
                                         alt=""
                                     ></img>
-                                    <p>외국인환자 유치업자 등록증</p>
+                                    <p>{t("weAre.certification.content_6")}</p>
                                 </div>
                                 <div className="certi">
                                     <img
                                         src="img/web/sub/certi07.png"
                                         alt=""
                                     ></img>
-                                    <p>중소기업 확인서</p>
+                                    <p>{t("weAre.certification.content_7")}</p>
                                 </div>
                                 <div className="certi">
                                     <img
                                         src="img/web/sub/certi08.png"
                                         alt=""
                                     ></img>
-                                    <p>인도네시아 법인 설립</p>
+                                    <p>{t("weAre.certification.content_8")}</p>
                                 </div>
                                 <div className="certi">
                                     <img
                                         src="img/web/sub/certi09.png"
                                         alt=""
                                     ></img>
-                                    <p>강원지사 사업자등록증</p>
+                                    <p>{t("weAre.certification.content_9")}</p>
                                 </div>
                             </div>
                         </div>
@@ -926,8 +935,8 @@ const InfoWelcome = (props) => {
                     <div className="boxing" id="sec11" ref={refs.partners}>
                         <div className="layout">
                             <h3 className="c_tit">
-                                <span>파트너</span>
-                                Partners
+                                <span>{t("weAre.partners.subtitle")}</span>
+                                {t("weAre.partners.title")}
                             </h3>
                             <ul className="partner">
                                 <li>

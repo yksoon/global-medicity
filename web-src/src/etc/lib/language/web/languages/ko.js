@@ -151,9 +151,167 @@ const ko = {
                         content_4: "Online/Offline 컨설팅",
                         content_5: "시스템 분석 설계",
                     },
+                    2020: {
+                        title: "㈜Able 설립",
+                        content_1: "Webinar 시스템 구축",
+                        content_2: "디자인 제작",
+                        content_3: "기획/관리 홍보",
+                        content_4: "전문 PCO 현장팀 운영",
+                        content_5: "온라인 개발팀 운영",
+                    },
+                    2023: {
+                        title: "㈜메디씨티 인도네시아 법인설립",
+                        content_1: "K-MEDI 인니전용",
+                        content_2: "APP 개발",
+                        content_3: "문화교류 서비스",
+                    },
+                    2022: {
+                        title: "㈜메디씨티 설립",
+                        content_1: "의료통합 플랫폼",
+                        content_2: "동영상 컨텐츠 제작",
+                        content_3: "멤버십 서비스",
+                        content_4: "Medi-Edu 서비스",
+                        content_5: "Medi-Tour 서비스",
+                    },
+                    2024: {
+                        title: "㈜메디씨티 강원 지사법인설립",
+                        content_1: "국내 메디투어 운영",
+                        content_2: "강원지역 MICE 사업 추진",
+                    },
+                },
+                history: {
+                    title: "History",
+                    2024: {
+                        may: {
+                            title: "5월",
+                            content_1: "임피리얼 팰리스 서울 MOU 체결",
+                        },
+                        april: {
+                            title: "4월",
+                            content_1: "(주)스카이인터내셔날 MOU 체결",
+                            content_2: "제주 해비치 호텔 & 리조트 MOU 체결",
+                            content_3: "RSUI ASTUTI 병원장 방한 및 국립암센터 메디컬 투어",
+                        },
+                        march: {
+                            title: "3월",
+                            content_1: "AYANA MidplazaJakarta 체결",
+                            content_2: "CMS Entertainment MOU 체결",
+                            content_3: "RumahSakitUniversitas Indonesia MOU 체결",
+                            content_4: "CheongdamKorean Aesthetic Clinic MOU 체결",
+                            content_5: "PT. Cashtreefor Indonesia MOU 체결",
+                        },
+                        february: {
+                            title: "2월",
+                            content_1: "(주)아트버디 K-ART 전시회 개최 (The Westin Jakarta)",
+                            content_2: "제1회 PT. MEDI CITY INDONESIA Showcase (The Westin Jakarta)",
+                        },
+                        january: {
+                            title: "1월",
+                            content_1: "(주)메디씨티 상표등록 (제40-2146903호)",
+                        },
+                    },
+                    2023: {
+                        12: {
+                            title: "12월",
+                            content_1: "올마이투어(allmytour) MOU 체결",
+                        },
+                        11: {
+                            title: "11월",
+                            content_1: "(주)아트버디 MOU 체결",
+                        },
+                        10: {
+                            title: "10월",
+                            content_1: "국회등록 사)한국과학기술정책연구회 이지선 의장 이사 등재",
+                        },
+                        7: {
+                            title: "7월",
+                            content_1: "(주)메디씨티 K-Medi 인도네시아 서비스 Test Version1.0 출시",
+                            content_2: "(주)메디씨티 강원 지사법인 설립 (박종인 지사장)",
+                        },
+                        6: {
+                            title: "6월",
+                            content_1: "(주)메디씨티 Membership Service 베타 서비스 출시",
+                            content_2: "iADH2024 International Conference Invited Speaker, UdijantTedjosasongko협약",
+                        },
+                        5: {
+                            title: "5월",
+                            content_1: "PT. MEDI CITY INDONESIA (인도네시아 해외법인 설립, 박성민 법인장)",
+                            content_2: "'K-Medi' 인도네시아 해외법인 서비스 상표 등록",
+                            content_3: "특허출원 제10-2023-0070316 : 대상 수술의 정보에 기초하여 리워드를 제공하는 컨텐츠 제공 방법 및 이를 수행하는 컨텐츠 제공 시스템",
+                        },
+                    },
+                    2022: {
+                        10: {
+                            title: "10월",
+                            content_1: "제이제이진옴므 MOU 체결",
+                        },
+                        9: {
+                            title: "9월",
+                            content_1: "기술보호데스크 사업선정 (경기도 테크노파크)",
+                            content_2: "킨텍스바이케이트리호텔 MOU 체결",
+                        },
+                        7: {
+                            title: "7월",
+                            content_1: "에어마카오 인천공항 MOU 체결",
+                            content_2: "머큐어엠버서드호텔 울산 MOU 체결",
+                        },
+                        4: {
+                            title: "4월",
+                            content_1: "(주)메디씨티 상표등록 출원 (대한민국 특허청)",
+                            content_2: "세인트존스호텔 MOU 체결",
+                        },
+                        3: {
+                            title: "3월",
+                            content_1: "㈜메디씨티 공식 홈페이지 오픈 Version1.0 (medi-city.co.kr)",
+                        },
+                        2: {
+                            title: "2월",
+                            content_1: "㈜메디씨티 법인설립",
+                            content_2: "제1회 Medi-City Day 개최 및 출범식 (강릉 세인트존스호텔)",
+                            content_3: "중소기업 등록 ('중소기업기본법' 제2조 및 '소상공인기본법' 제2조)",
+                        },
+                    },
+                },
+                organization: {
+                    title: "조직도",
+                },
+                CI: {
+                    title: "CI & BI",
+                    corporate: {
+                        title: "Corporate Identity",
+                        content: "워드마크 디자인은 유연성과 단순함을 강조하고 있으며, <0>다양한 네트워크 (Medical, Media, IT, Big Data)</0>를 융복합하여 <0>세계 의료계 발전에 영향력이 있는 기업</0>이 되고자 하는 목표를 나타내고자 하였다.",
+                        green: "의료의 기본 색상인 그린, 생명과 자연, 평화의 의미로 그린을 가장 앞으로 배치하였습니다.",
+                        orange: "뜨겁지 않은 따뜻한 느낌으로 인류를 따뜻하게 품으려 ㈜메디씨티의 마음을 표현하였습니다.",
+                        red: "㈜메디씨티의 열정을 표현하였습니다.",
+                        purple: "빨강과 파랑의 반대되는 성향이 혼재되어 나타내는 색상, 파랑의 신뢰를 바탕으로 붉은색의 활기찬 에너지를 품은 ㈜메디씨티를 표현하였습니다.",
+                    },
+                    brand: {
+                        title: "Brand Identity",
+                        content: "로고의 기본 컨셉은 세가지 시각적 형태의 의미를 부여한다.<0></0><1>대한민국의 우수한 의료 기술 및 지식</1>을(문자 “K”), 해외 의료진에게 널리 알려, <1>인간존중의 이념</1>에 따라(좌측형상)<0></0><1>의료계 성장 방향</1>(우측 형상)을 형상화 하여 설명하였다",
+                        red: "인도네시아 국기를 나타내는 레드",
+                        blue: "대한민국의 국기를 나타내는 블루",
+                    }
                 },
             },
+            certification: {
+                subtitle: "인증현황",
+                title: "Certification status",
+                content_1: "상표등록출원",
+                content_2: "해외 특허 출원 (PCT)",
+                content_3: "인니상표등록",
+                content_4: "메디씨티 사업자등록증",
+                content_5: "관광사업등록증",
+                content_6: "외국인환자 유치업자 등록증",
+                content_7: "중소기업 확인서",
+                content_8: "인도네시아 법인 설립",
+                content_9: "강원지사 사업자등록증",
+            },
+            partners: {
+                subtitle: "파트너",
+                title: "Partners",
+            }
         },
+
     },
 };
 

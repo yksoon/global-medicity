@@ -154,9 +154,167 @@ const en = {
                         content_4: "Online/Offline Consultation",
                         content_5: "System analysis design",
                     },
+                    2020: {
+                        title: "Able Co., Ltd Establishment",
+                        content_1: "Webinar system building ",
+                        content_2: "Design production",
+                        content_3: "Promotion of planning/management",
+                        content_4: "Operation of professional PCO field team",
+                        content_5: "Running an online development team",
+                    },
+                    2023: {
+                        title: "Establishment of Med-City Co., Ltd in Indonesia",
+                        content_1: "Develop K-MEDI",
+                        content_2: "APP for Indonesia",
+                        content_3: "Culture exchange service",
+                    },
+                    2022: {
+                        title: "Medi-City Co., Ltd Establishment",
+                        content_1: "Medical platform integration",
+                        content_2: "Video content creation",
+                        content_3: "Membership service",
+                        content_4: "Medi-Edu service",
+                        content_5: "Medi-Tour Service",
+                    },
+                    2024: {
+                        title: "Establishment of PT. Medi-City Gangwon branch",
+                        content_1: "Domestic Medi-Tour Operation",
+                        content_2: "Promoting MICE Project in Gangwon Area",
+                    },
+                },
+                history: {
+                    title: "History",
+                    2024: {
+                        may: {
+                            title: "May",
+                            content_1: "MOU Agreement with Imperial Palace Seoul",
+                        },
+                        april: {
+                            title: "April",
+                            content_1: "MOU Agreement with Sky International Co., Ltd",
+                            content_2: "MOU Agreement with Haevichi Hotel & Resort Jeju",
+                            content_3: "RSUI ASTUTI  Head Leader Medical Tour to National Cancer Center",
+                        },
+                        march: {
+                            title: "March",
+                            content_1: "Agreement with AYANA Midplaza Jakarta",
+                            content_2: "MOU Agreement with CMS Entertainment",
+                            content_3: "MOU Agreement with Rumah Sakit Universitas Indonesia",
+                            content_4: "MOU Agreement with Cheongdam Korean Aesthetic Clinic",
+                            content_5: "MOU Agreement with PT. Cashtree for Indonesia",
+                        },
+                        february: {
+                            title: "February",
+                            content_1: "Held Art Buddy Co., Ltd K-ART Exhibition (The Westin Jakarta)",
+                            content_2: "PT. MEDI CITY INDONESIA First Showcase (The Westin Jakarta)",
+                        },
+                        january: {
+                            title: "January",
+                            content_1: "Medi-City Co., Ltd Trademark Registration (No. 40-2146903)",
+                        },
+                    },
+                    2023: {
+                        12: {
+                            title: "December",
+                            content_1: "MOU Agreement with Allmytour",
+                        },
+                        11: {
+                            title: "November",
+                            content_1: "MOU Agreement with Art Buddy Co., Ltd",
+                        },
+                        10: {
+                            title: "October",
+                            content_1: "National Assembly Registration) Registered as Chairman Director Lee Ji-sun of the Korea Society for Science and Technology Policy Studies",
+                        },
+                        7: {
+                            title: "July",
+                            content_1: "Medi-City Co., Ltd Released K-Medi Indonesia Server Test Version1.0",
+                            content_2: "Establishment of Medi-City Co., Ltd Branch in Gangwon (Branch Manage Park Jong-in)",
+                        },
+                        6: {
+                            title: "June",
+                            content_1: "Medi-City Co., Ltd Membership Service beta service launched",
+                            content_2: "iADH2024 International Conference Invited Speaker, UdijantTedjosasongko Agreement",
+                        },
+                        5: {
+                            title: "May",
+                            content_1: "PT. MEDI CITY INDONESIA (established as an overseas subsidiary in Indonesia, President Park Sung-min)",
+                            content_2: "Trademark Registration for Indonesia Overseas Corporation K-Medi Service",
+                            content_3: "Patent Application No. 10-2023-0070316: A method of providing content and a content delivery system that offers rewards based on information about the subject surgery.",
+                        },
+                    },
+                    2022: {
+                        10: {
+                            title: "October",
+                            content_1: "MOU Agreement with J.JINHOMME",
+                        },
+                        9: {
+                            title: "September",
+                            content_1: "Technology Protection Desk project selection (Gyeonggi-do Techno Park)",
+                            content_2: "MOU Agreement with Kintex by K-Tree Hotel",
+                        },
+                        7: {
+                            title: "July",
+                            content_1: "MOU Agreement with Air Macao and Incheon Airport",
+                            content_2: "MOU Agreement with Mercury Ambassador Hotel in Ulsan",
+                        },
+                        4: {
+                            title: "April",
+                            content_1: "Medi-City Co., Ltd trademark registration application (South Korean Intellectual Property Office) ",
+                            content_2: "MOU Agreement with St. John's Hotel.",
+                        },
+                        3: {
+                            title: "March",
+                            content_1: "Medi-City Official Homepage Version1.0 Open (medi-city.co.kr)",
+                        },
+                        2: {
+                            title: "February",
+                            content_1: "Establishment of Medi-City Co., Ltd.",
+                            content_2: "Held the 1st Medi-City Day and the Launch Ceremony (Gangneung St. John's Hotel)",
+                            content_3: "Registration as a small and medium-sized enterprise (Article 2 of the Small and Medium-sized Enterprise Basic Act and Article 2 of the Small Business Basic Act)",
+                        },
+                    },
+                },
+                organization: {
+                    title: "Organization Chart",
+                },
+                CI: {
+                    title: "CI & BI",
+                    corporate: {
+                        title: "Corporate Identity",
+                        content: "The Wordmark design emphasizes flexibility and simplicity, aiming to represent the goal of becoming <0>an influential company in the development of the global medical industry</0> by integrating <0>various networks (Medical, Media, IT, Big Data)</0>.",
+                        green: "The color green, which symbolizes life, nature, and peace - the fundamental colors of medicine, is placed at the forefront.",
+                        orange: "Medi-City Co., Ltd.'s intention to embrace humanity with a warm feeling is expressed in a warm, not hot, manner.",
+                        red: "Expressing the passion of Medi-City Co., Ltd.",
+                        purple: "Medi-City Co., Ltd. is represented by a vibrant energy of red based on the trust of blue, a color that shows a mixture of opposing tendencies of red and blue.",
+                    },
+                    brand: {
+                        title: "Brand Identity",
+                        content: "The basic concept of the logo gives meaning to three visual forms.<0></0><1>The excellent medical technology and knowledge of South Korea</1> (letter \"K\") are widely known to overseas medical staff, <1>describing the ideology of human respect</1> (on the left)<0></0>and <1>the growth direction of the medical community</1> (on the right)",
+                        red: "Red to represent Indonesia's flag",
+                        blue: "Blue to represent South Korea's flag",
+                    }
                 },
             },
+            certification: {
+                subtitle: "Certification Status",
+                title: "Certification status",
+                content_1: "Application for trademark registration",
+                content_2: "Overseas Patent Application (PCT)",
+                content_3: "Indonesia Trademark Registration",
+                content_4: "Medi-City Business Registration Certificate",
+                content_5: "Tourism Business Registration Certificate",
+                content_6: "Registration Card for Attracting Foreign Patients",
+                content_7: "Small and Medium Enterprise Confirmation",
+                content_8: "Establishment of Indonesian Corporation",
+                content_9: "Gangwon Branch Business Registration Certificate",
+            },
+            partners: {
+                subtitle: "Partners",
+                title: "Partners",
+            }
         },
+
     },
 };
 
