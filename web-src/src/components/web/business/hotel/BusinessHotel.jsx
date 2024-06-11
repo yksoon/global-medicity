@@ -3,8 +3,11 @@ import Header from "components/web/common/header";
 import Footer from "components/web/common/footer";
 import { Link, useLocation } from "react-router-dom";
 import { useParams } from "react-router";
+import {Trans, useTranslation} from "react-i18next";
 
 const BusinessHotel = (props) => {
+    const { t, i18n } = useTranslation();
+
     const refs = {
         subvisual: useRef(null),
         hotel: useRef(null),
@@ -51,7 +54,7 @@ const BusinessHotel = (props) => {
             <Header />
             <div id="subvisual" ref={refs.subvisual}>
                 <div className="sub_txt">
-                    <h2>BUSINESS</h2>
+                    <h2>{t("business.subvisual")}</h2>
                 </div>
                 <div id="leftmenu">
                     <Link
@@ -59,21 +62,21 @@ const BusinessHotel = (props) => {
                         onClick={() => moveToSection("hotel")}
                         className={sectionState === "hotel" && "active"}
                     >
-                        Hotel Service
+                        {t("business.hotel.title")}
                     </Link>
                     <Link
                         to=""
                         onClick={() => moveToSection("art")}
                         className={sectionState === "art" && "active"}
                     >
-                        Art Service
+                        {t("business.art.title")}
                     </Link>
                     <Link
                         to=""
                         onClick={() => moveToSection("wine")}
                         className={sectionState === "wine" && "active"}
                     >
-                        Wine Promotion
+                        {t("business.wine.title")}
                     </Link>
                 </div>
             </div>
@@ -83,8 +86,8 @@ const BusinessHotel = (props) => {
                         <div className="txt_wrap">
                             <div className="top">
                                 <h3 className="c_tit">
-                                    <span>호텔서비스</span>
-                                    Hotel Service
+                                    <span>{t("business.hotel.subtitle")}</span>
+                                    {t("business.hotel.title")}
                                     <Link>
                                         <img
                                             src="img/web/sub/arrow.png"
@@ -93,21 +96,20 @@ const BusinessHotel = (props) => {
                                     </Link>
                                 </h3>
                                 <p>
-                                    휴식의 가치를 더하는 Private 힐링 숙박
-                                    서비스
+                                    {t("business.hotel.subject")}
                                 </p>
                             </div>
                             <div className="line">
-                                <h5>Room Special Service</h5>
-                                <p>객실특가 서비스</p>
+                                <h5>{t("business.hotel.content_1.title")}</h5>
+                                <p>{t("business.hotel.content_1.content")}</p>
                             </div>
                             <div className="line">
-                                <h5>Supplementary Facilities</h5>
-                                <p>부대시설할인 </p>
+                                <h5>{t("business.hotel.content_2.title")}</h5>
+                                <p>{t("business.hotel.content_2.content")}</p>
                             </div>
                             <div className="line">
-                                <h5>Special Service</h5>
-                                <p>(주)메디씨티 회원만의 특별서비스제공</p>
+                                <h5>{t("business.hotel.content_3.title")}</h5>
+                                <p>{t("business.hotel.content_3.content")}</p>
                             </div>
                         </div>
                         <div className="img_wrap">
@@ -122,41 +124,37 @@ const BusinessHotel = (props) => {
                         <div className="txt_wrap">
                             <div className="top">
                                 <h3 className="c_tit">
-                                    <span>아트 서비스</span>
+                                    <span>{t("business.art.subtitle")}</span>
                                     <Link>
                                         <img
                                             src="img/web/sub/arrow_left.png"
                                             alt=""
                                         />
                                     </Link>
-                                    Art Service
+                                    {t("business.art.title")}
                                 </h3>
                                 <p>
-                                    고급스럽고 분위기 있는 공간 연출,<br></br>
-                                    절세 혜택에 비용처리까지, 메디아트 서비스
+                                    <Trans
+                                        i18nKey={
+                                            "business.art.subject"
+                                        }
+                                        components={[<br></br>]}
+                                    />
+                                    {/*고급스럽고 분위기 있는 공간 연출,<br></br>*/}
+                                    {/*절세 혜택에 비용처리까지, 메디아트 서비스*/}
                                 </p>
                             </div>
                             <div className="line">
-                                <h5>미술품 개인소장</h5>
-                                <p>
-                                    국내외 인기있는 작가들의 원화 작품을 개인
-                                    소장하여 시각적인 만과 삶의 품격을 높이세요.
-                                </p>
+                                <h5>{t("business.art.content_1.title")}</h5>
+                                <p>{t("business.art.content_1.content")}</p>
                             </div>
                             <div className="line">
-                                <h5>미술품 재테크</h5>
-                                <p>
-                                    계약한 미술품을 통해 어떠한 재테크
-                                    플랫폼보다 안정적이면서 높은 수익률을 경험해
-                                    보세요.{" "}
-                                </p>
+                                <h5>{t("business.art.content_2.title")}</h5>
+                                <p>{t("business.art.content_2.content")}</p>
                             </div>
                             <div className="line">
-                                <h5>미술품 구매/렌탈</h5>
-                                <p>
-                                    미술품 구매 또는 렌탈을 통해 강력한 법인,
-                                    개인 세금 절감 혜택을 누려보세요.
-                                </p>
+                                <h5>{t("business.art.content_3.title")}</h5>
+                                <p>{t("business.art.content_3.content")}</p>
                             </div>
                         </div>
                     </div>
@@ -165,8 +163,8 @@ const BusinessHotel = (props) => {
                         <div className="txt_wrap">
                             <div className="top">
                                 <h3 className="c_tit">
-                                    <span>빈티지 와인 프로모션</span>
-                                    Wine Promotion
+                                    <span>{t("business.wine.subtitle")}</span>
+                                    {t("business.wine.title")}
                                     <Link>
                                         <img
                                             src="img/web/sub/arrow.png"
@@ -174,21 +172,27 @@ const BusinessHotel = (props) => {
                                         />
                                     </Link>
                                 </h3>
-                                <p>몰도바(Moldova) 와인</p>
+                                <p>{t("business.wine.subject")}</p>
                             </div>
                             <p>
-                                ㈜메디씨티는 회원들에게 국내에서 쉽게 접할 수
-                                없는 몰도바의 특별한 와인을 제공합니다.<br></br>
-                                몰도바의 풍부한 와인 문화와 독특한 포도 품종이
-                                반영된 이 희귀 와인들의 국내 유일 총판을 통한
-                                공급을 제공하고 있으며,<br></br>
-                                메디씨티 회원 (Medi-People)만이 누릴 수 있는
-                                Private하고 차별화된 경험을 제공합니다.<br></br>
-                                각 와인은 몰도바의 진정한 맛과 전통을 담고 있어,
-                                와인 애호가들에게 놓칠 수 없는 기회를
-                                제공합니다.<br></br>
-                                몰도바의 깊은 맛을 즐길 수 있는 본 서비스는
-                                메디씨티 회원들에게만 드리는 특별한 혜택입니다
+                                <Trans
+                                    i18nKey={
+                                        "business.wine.content"
+                                    }
+                                    components={[<br></br>]}
+                                />
+                                {/*㈜메디씨티는 회원들에게 국내에서 쉽게 접할 수*/}
+                                {/*없는 몰도바의 특별한 와인을 제공합니다.<br></br>*/}
+                                {/*몰도바의 풍부한 와인 문화와 독특한 포도 품종이*/}
+                                {/*반영된 이 희귀 와인들의 국내 유일 총판을 통한*/}
+                                {/*공급을 제공하고 있으며,<br></br>*/}
+                                {/*메디씨티 회원 (Medi-People)만이 누릴 수 있는*/}
+                                {/*Private하고 차별화된 경험을 제공합니다.<br></br>*/}
+                                {/*각 와인은 몰도바의 진정한 맛과 전통을 담고 있어,*/}
+                                {/*와인 애호가들에게 놓칠 수 없는 기회를*/}
+                                {/*제공합니다.<br></br>*/}
+                                {/*몰도바의 깊은 맛을 즐길 수 있는 본 서비스는*/}
+                                {/*메디씨티 회원들에게만 드리는 특별한 혜택입니다*/}
                             </p>
                         </div>
                         <div className="img_wrap">
