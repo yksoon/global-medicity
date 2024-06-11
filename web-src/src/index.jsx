@@ -8,6 +8,8 @@ import RecoilizeDebugger from "recoilize";
 // Bootstrap
 // import "common_old/css/bootstrap.min.css";
 
+import "etc/lib/language/web/i18n";
+
 import App from "App";
 
 import "etc/css/default.css";

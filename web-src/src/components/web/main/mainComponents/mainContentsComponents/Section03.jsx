@@ -15,8 +15,11 @@ import apiPath from "etc/lib/path/apiPath";
 import { boardType } from "etc/lib/static";
 import { CommonRestAPI } from "etc/lib/CommonRestAPI";
 import { successCode } from "etc/lib/resultCode";
+import { useTranslation } from "react-i18next";
 
 const Section03 = () => {
+    const { t, i18n } = useTranslation();
+
     const { confirm } = useConfirm();
     const { alert } = useAlert();
     const err = CommonErrModule();
@@ -99,9 +102,9 @@ const Section03 = () => {
             <div className="section03">
                 <div className="sec_in">
                     <div className="title">
-                        <h5>메디씨티의 새로운 소식을 전합니다.</h5>
+                        <h5>{t("main.sec03.subtitle")}</h5>
                         <div>
-                            <h3>highlight</h3>
+                            <h3>{t("main.sec03.title")}</h3>
                             <Link to={routerPath.web_media_news_url}>
                                 <img src="img/web/main/arrow.png" alt="" />
                             </Link>
@@ -123,7 +126,7 @@ const Section03 = () => {
                                         to={`${routerPath.web_media_news_detail_url}${item.boardIdx}`}
                                         className="btn_main"
                                     >
-                                        VIEW MORE <Arrow />
+                                        {t("main.common.VIEW_MORE")} <Arrow />
                                     </Link>
                                 </li>
                             ))}

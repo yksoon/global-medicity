@@ -5,8 +5,12 @@ import { isSpinnerAtom } from "etc/lib/recoils/atoms";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import routerPath from "etc/lib/path/routerPath";
+import { useTranslation } from "react-i18next";
+import LineBreak from "etc/lib/language/web/LineBreak";
 
 function Footer() {
+    const { t, i18n } = useTranslation();
+
     const isSpinner = useRecoilValue(isSpinnerAtom);
     const location = useLocation();
     useEffect(() => {
@@ -46,22 +50,31 @@ function Footer() {
                         <img src="/img/web/main/logo.png" alt="" />
                         <ul>
                             <li>
-                                <Link to={routerPath.web_info_greet_url}>
+                                <Link
+                                    to={routerPath.web_info_greet_url}
+                                    state={{ headerRoute: "greetings" }}
+                                >
                                     WE ARE
                                 </Link>
                             </li>
                             <li>
-                                <Link to={routerPath.web_kmedi_intro_url}>
+                                <Link
+                                    to={routerPath.web_kmedi_intro_url}
+                                    state={{ headerRoute: "intro" }}
+                                >
                                     K-MEDI
                                 </Link>
                             </li>
                             <li>
-                                <Link to={routerPath.web_business_hotel_url}>
+                                <Link
+                                    to={routerPath.web_business_hotel_url}
+                                    state={{ headerRoute: "hotel" }}
+                                >
                                     BUSINESS
                                 </Link>
                             </li>
                             <li>
-                                <Link to={routerPath.web_media_news_detail_url}>
+                                <Link to={routerPath.web_media_news_url}>
                                     MEDIA CENTER
                                 </Link>
                             </li>
@@ -72,23 +85,32 @@ function Footer() {
                             <table>
                                 <tbody>
                                     <tr>
-                                        <th>사업자</th>
-                                        <td>(주)메디씨티</td>
-                                    </tr>
-                                    <tr>
-                                        <th>대표자</th>
-                                        <td>박성민</td>
-                                    </tr>
-                                    <tr>
-                                        <th>사업자등록번호</th>
-                                        <td>588-86-02555</td>
-                                    </tr>
-                                    <tr>
-                                        <th>주소</th>
+                                        <th>{t("footer.buisnessman")}</th>
                                         <td>
-                                            경기도 고양시 일산동구 무궁화로
-                                            43-55, 302호
+                                            {t("footer.buisnessman_content")}
                                         </td>
+                                    </tr>
+                                    <tr>
+                                        <th>{t("footer.representative")}</th>
+                                        <td>
+                                            {t("footer.representative_content")}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            {t(
+                                                "footer.Company_Registration_Number",
+                                            )}
+                                        </th>
+                                        <td>
+                                            {t(
+                                                "footer.Company_Registration_Number_content",
+                                            )}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>{t("footer.address")}</th>
+                                        <td>{t("footer.address_content")}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -101,20 +123,14 @@ function Footer() {
                                 <img src="/img/web/main/f_insta.png" alt="" />
                             </a>
                             <a
-                                href="https://www.instagram.com/medicitykorea"
+                                href="https://www.youtube.com/@medi-city"
                                 target="_blank"
                             >
                                 <img src="/img/web/main/f_youtube.png" alt="" />
                             </a>
                         </div>
                     </address>
-                    <div className="copy">
-                        Copyright Medi-city. All rights reserved.
-                        <br />
-                        자사의 사이트에 게시된 모든 컨텐츠등 외 저작권은
-                        (주)메디씨티에게 있습니다. 자사의 사이트의 무단적인
-                        수집을 엄격히 금합니다.
-                    </div>
+                    <div className="copy">{LineBreak(t("footer.copy"))}</div>
                 </div>
             </div>
             {/* footer //E */}

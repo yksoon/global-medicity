@@ -4,8 +4,26 @@ import MobileNav from "./MobileNav";
 import { Link } from "react-router-dom";
 import { CommonOpenUrl } from "etc/lib/Common";
 import routerPath from "etc/lib/path/routerPath";
+import { useTranslation, Trans } from "react-i18next";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import { globalLanguageAtom } from "etc/lib/recoils/atoms"; // 1. react-i18next import
+
+const lngs = {
+    // 2. 언어 구분을 위한 lng 객체 생성
+    ko: { nativeName: "KO" },
+    en: { nativeName: "EN" },
+    id: { nativeName: "ID" },
+};
 
 function Header() {
+    const { t, i18n } = useTranslation(); // 3. useTranslation hook 선언
+
+    const [language, setLanguage] = useRecoilState(globalLanguageAtom);
+
+    const handleLanguage = (lng) => {
+        setLanguage(lng);
+    };
+
     return (
         <>
             <div id="header">
@@ -28,27 +46,29 @@ function Header() {
                                         to={routerPath.web_info_greet_url}
                                         state={{ headerRoute: "greetings" }}
                                     >
-                                        인사말
+                                        {t("header.weAre.greetings")}
                                     </Link>
                                     <Link
                                         to={routerPath.web_info_greet_url}
                                         state={{ headerRoute: "introduce" }}
                                     >
-                                        회사소개
+                                        {t("header.weAre.aboutUs")}
                                     </Link>
                                     <Link
                                         to={routerPath.web_info_greet_url}
                                         state={{ headerRoute: "certification" }}
                                     >
-                                        인증현황
+                                        {t("header.weAre.certification")}
                                     </Link>
                                     <Link
                                         to={routerPath.web_info_greet_url}
                                         state={{ headerRoute: "partners" }}
                                     >
-                                        파트너
+                                        {t("header.weAre.partner")}
                                     </Link>
-                                    <Link to="">회사소개서 다운로드</Link>
+                                    <Link to="">
+                                        {t("header.weAre.downloadCompany")}
+                                    </Link>
                                 </div>
                             </li>
                             <li>
@@ -75,19 +95,19 @@ function Header() {
                                         to={routerPath.web_business_hotel_url}
                                         state={{ headerRoute: "hotel" }}
                                     >
-                                        Hotel Service
+                                        {t("header.business.hotelService")}
                                     </Link>
                                     <Link
                                         to={routerPath.web_business_hotel_url}
                                         state={{ headerRoute: "art" }}
                                     >
-                                        Art Service
+                                        {t("header.business.artService")}
                                     </Link>
                                     <Link
                                         to={routerPath.web_business_hotel_url}
                                         state={{ headerRoute: "wine" }}
                                     >
-                                        Wine Service
+                                        {t("header.business.wineService")}
                                     </Link>
                                     {/*<Link to={routerPath.web_business_hotel_url}*/}
                                     {/*      state={{headerRoute: "wine"}}*/}
@@ -103,15 +123,37 @@ function Header() {
                                     {/*    영상 콘텐츠*/}
                                     {/*</Link>*/}
                                     <Link to={routerPath.web_media_news_url}>
-                                        뉴스 / 영상 콘텐츠
+                                        {t("header.mediaCenter.news")}
                                     </Link>
                                     <Link to={routerPath.web_media_notice_url}>
-                                        공지사항
+                                        {t("header.mediaCenter.notice")}
                                     </Link>
                                 </div>
                             </li>
                         </ul>
                         <div className="submenu_bg"></div>
+                    </div>
+                    <div className="lang">
+                        {/*<a href="" className="on">*/}
+                        {/*    KO*/}
+                        {/*</a>*/}
+                        {/*<a href="">EN</a>*/}
+                        {/*<a href="">ID</a>*/}
+                        {Object.keys(lngs).map((lng) => (
+                            <a
+                                style={{ cursor: "pointer" }}
+                                key={lng}
+                                className={
+                                    i18n.resolvedLanguage === lng ? "on" : ""
+                                }
+                                onClick={() => {
+                                    i18n.changeLanguage(lng);
+                                    handleLanguage(lng);
+                                }}
+                            >
+                                {lngs[lng].nativeName}
+                            </a>
+                        ))}
                     </div>
                     <div className="">
                         <img src="img/web/main/book.png" alt="" />

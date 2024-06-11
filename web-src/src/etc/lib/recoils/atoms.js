@@ -72,6 +72,13 @@ export const userTokenAtom = atom({
     effects_UNSTABLE: [persistAtom],
 });
 
+// 사용자 토큰
+export const globalLanguageAtom = atom({
+    key: "globalLanguage",
+    default: "",
+    effects_UNSTABLE: [persistAtom],
+});
+
 // ----session End----
 
 // 스피너
