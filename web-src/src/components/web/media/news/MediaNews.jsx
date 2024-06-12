@@ -13,8 +13,11 @@ import apiPath from "etc/lib/path/apiPath";
 import { boardType } from "etc/lib/static";
 import { CommonRestAPI } from "etc/lib/CommonRestAPI";
 import { successCode } from "etc/lib/resultCode";
+import { useTranslation } from "react-i18next";
 
 const MediaNews = (props) => {
+    const { t, i18n } = useTranslation();
+
     const { confirm } = useConfirm();
     const { alert } = useAlert();
     const err = CommonErrModule();
@@ -152,21 +155,23 @@ const MediaNews = (props) => {
             <Header />
             <div id="subvisual">
                 <div className="sub_txt">
-                    <h2>MEDIA CENTER</h2>
+                    <h2>{t("media.subvisual.title")}</h2>
                 </div>
                 <div id="leftmenu">
                     <Link to={routerPath.web_media_news_url} className="active">
-                        NEWS
+                        {t("media.subvisual.subtitle.news")}
                     </Link>
-                    <Link to={routerPath.web_media_notice_url}>공지사항</Link>
+                    <Link to={routerPath.web_media_notice_url}>
+                        {t("media.subvisual.subtitle.notice")}
+                    </Link>
                 </div>
             </div>
             <div id="con_area">
                 <div className="medicenter">
                     <div className="top">
                         <h3 className="c_tit">
-                            <span>메디씨티의 소식을 전합니다</span>
-                            NEWS
+                            <span>{t("media.news.subtitle")}</span>
+                            {t("media.news.title")}
                         </h3>
                         <div className="tab">
                             <Link
@@ -175,21 +180,21 @@ const MediaNews = (props) => {
                                 id="전체"
                                 className="on"
                             >
-                                전체보기
+                                {t("media.news.category.all")}
                             </Link>
                             <Link
                                 to=""
                                 onClick={() => handleCategory("영상")}
                                 id="영상"
                             >
-                                영상콘텐츠
+                                {t("media.news.category.video")}
                             </Link>
                             <Link
                                 to=""
                                 onClick={() => handleCategory("뉴스")}
                                 id="뉴스"
                             >
-                                NEWS
+                                {t("media.news.category.news")}
                             </Link>
                         </div>
                     </div>
@@ -221,7 +226,7 @@ const MediaNews = (props) => {
                                                 to={`${routerPath.web_media_news_detail_url}${item.boardIdx}`}
                                                 className="btn_main"
                                             >
-                                                VIEW MORE <Arrow />
+                                                {t("media.view_more")} <Arrow />
                                             </Link>
                                         </div>
                                     </div>
