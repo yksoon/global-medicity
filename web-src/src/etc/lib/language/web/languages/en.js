@@ -187,30 +187,40 @@ const en = {
                     2024: {
                         may: {
                             title: "May",
-                            content_1: "MOU Agreement with Imperial Palace Seoul",
+                            content_1:
+                                "MOU Agreement with Imperial Palace Seoul",
                         },
                         april: {
                             title: "April",
-                            content_1: "MOU Agreement with Sky International Co., Ltd",
-                            content_2: "MOU Agreement with Haevichi Hotel & Resort Jeju",
-                            content_3: "RSUI ASTUTI  Head Leader Medical Tour to National Cancer Center",
+                            content_1:
+                                "MOU Agreement with Sky International Co., Ltd",
+                            content_2:
+                                "MOU Agreement with Haevichi Hotel & Resort Jeju",
+                            content_3:
+                                "RSUI ASTUTI  Head Leader Medical Tour to National Cancer Center",
                         },
                         march: {
                             title: "March",
                             content_1: "Agreement with AYANA Midplaza Jakarta",
                             content_2: "MOU Agreement with CMS Entertainment",
-                            content_3: "MOU Agreement with Rumah Sakit Universitas Indonesia",
-                            content_4: "MOU Agreement with Cheongdam Korean Aesthetic Clinic",
-                            content_5: "MOU Agreement with PT. Cashtree for Indonesia",
+                            content_3:
+                                "MOU Agreement with Rumah Sakit Universitas Indonesia",
+                            content_4:
+                                "MOU Agreement with Cheongdam Korean Aesthetic Clinic",
+                            content_5:
+                                "MOU Agreement with PT. Cashtree for Indonesia",
                         },
                         february: {
                             title: "February",
-                            content_1: "Held Art Buddy Co., Ltd K-ART Exhibition (The Westin Jakarta)",
-                            content_2: "PT. MEDI CITY INDONESIA First Showcase (The Westin Jakarta)",
+                            content_1:
+                                "Held Art Buddy Co., Ltd K-ART Exhibition (The Westin Jakarta)",
+                            content_2:
+                                "PT. MEDI CITY INDONESIA First Showcase (The Westin Jakarta)",
                         },
                         january: {
                             title: "January",
-                            content_1: "Medi-City Co., Ltd Trademark Registration (No. 40-2146903)",
+                            content_1:
+                                "Medi-City Co., Ltd Trademark Registration (No. 40-2146903)",
                         },
                     },
                     2023: {
@@ -224,23 +234,31 @@ const en = {
                         },
                         10: {
                             title: "October",
-                            content_1: "National Assembly Registration) Registered as Chairman Director Lee Ji-sun of the Korea Society for Science and Technology Policy Studies",
+                            content_1:
+                                "National Assembly Registration) Registered as Chairman Director Lee Ji-sun of the Korea Society for Science and Technology Policy Studies",
                         },
                         7: {
                             title: "July",
-                            content_1: "Medi-City Co., Ltd Released K-Medi Indonesia Server Test Version1.0",
-                            content_2: "Establishment of Medi-City Co., Ltd Branch in Gangwon (Branch Manage Park Jong-in)",
+                            content_1:
+                                "Medi-City Co., Ltd Released K-Medi Indonesia Server Test Version1.0",
+                            content_2:
+                                "Establishment of Medi-City Co., Ltd Branch in Gangwon (Branch Manage Park Jong-in)",
                         },
                         6: {
                             title: "June",
-                            content_1: "Medi-City Co., Ltd Membership Service beta service launched",
-                            content_2: "iADH2024 International Conference Invited Speaker, UdijantTedjosasongko Agreement",
+                            content_1:
+                                "Medi-City Co., Ltd Membership Service beta service launched",
+                            content_2:
+                                "iADH2024 International Conference Invited Speaker, UdijantTedjosasongko Agreement",
                         },
                         5: {
                             title: "May",
-                            content_1: "PT. MEDI CITY INDONESIA (established as an overseas subsidiary in Indonesia, President Park Sung-min)",
-                            content_2: "Trademark Registration for Indonesia Overseas Corporation K-Medi Service",
-                            content_3: "Patent Application No. 10-2023-0070316: A method of providing content and a content delivery system that offers rewards based on information about the subject surgery.",
+                            content_1:
+                                "PT. MEDI CITY INDONESIA (established as an overseas subsidiary in Indonesia, President Park Sung-min)",
+                            content_2:
+                                "Trademark Registration for Indonesia Overseas Corporation K-Medi Service",
+                            content_3:
+                                "Patent Application No. 10-2023-0070316: A method of providing content and a content delivery system that offers rewards based on information about the subject surgery.",
                         },
                     },
                     2022: {
@@ -250,28 +268,36 @@ const en = {
                         },
                         9: {
                             title: "September",
-                            content_1: "Technology Protection Desk project selection (Gyeonggi-do Techno Park)",
-                            content_2: "MOU Agreement with Kintex by K-Tree Hotel",
+                            content_1:
+                                "Technology Protection Desk project selection (Gyeonggi-do Techno Park)",
+                            content_2:
+                                "MOU Agreement with Kintex by K-Tree Hotel",
                         },
                         7: {
                             title: "July",
-                            content_1: "MOU Agreement with Air Macao and Incheon Airport",
-                            content_2: "MOU Agreement with Mercury Ambassador Hotel in Ulsan",
+                            content_1:
+                                "MOU Agreement with Air Macao and Incheon Airport",
+                            content_2:
+                                "MOU Agreement with Mercury Ambassador Hotel in Ulsan",
                         },
                         4: {
                             title: "April",
-                            content_1: "Medi-City Co., Ltd trademark registration application (South Korean Intellectual Property Office) ",
+                            content_1:
+                                "Medi-City Co., Ltd trademark registration application (South Korean Intellectual Property Office) ",
                             content_2: "MOU Agreement with St. John's Hotel.",
                         },
                         3: {
                             title: "March",
-                            content_1: "Medi-City Official Homepage Version1.0 Open (medi-city.co.kr)",
+                            content_1:
+                                "Medi-City Official Homepage Version1.0 Open (medi-city.co.kr)",
                         },
                         2: {
                             title: "February",
                             content_1: "Establishment of Medi-City Co., Ltd.",
-                            content_2: "Held the 1st Medi-City Day and the Launch Ceremony (Gangneung St. John's Hotel)",
-                            content_3: "Registration as a small and medium-sized enterprise (Article 2 of the Small and Medium-sized Enterprise Basic Act and Article 2 of the Small Business Basic Act)",
+                            content_2:
+                                "Held the 1st Medi-City Day and the Launch Ceremony (Gangneung St. John's Hotel)",
+                            content_3:
+                                "Registration as a small and medium-sized enterprise (Article 2 of the Small and Medium-sized Enterprise Basic Act and Article 2 of the Small Business Basic Act)",
                         },
                     },
                 },
@@ -282,7 +308,8 @@ const en = {
                     title: "CI & BI",
                     corporate: {
                         title: "Corporate Identity",
-                        content: "The Wordmark design emphasizes flexibility and simplicity, aiming to represent the goal of becoming <0>an influential company in the development of the global medical industry</0> by integrating <0>various networks (Medical, Media, IT, Big Data)</0>.",
+                        content:
+                            "The Wordmark design emphasizes flexibility and simplicity, aiming to represent the goal of becoming <0>an influential company in the development of the global medical industry</0> by integrating <0>various networks (Medical, Media, IT, Big Data)</0>.",
                         green: "The color green, which symbolizes life, nature, and peace - the fundamental colors of medicine, is placed at the forefront.",
                         orange: "Medi-City Co., Ltd.'s intention to embrace humanity with a warm feeling is expressed in a warm, not hot, manner.",
                         red: "Expressing the passion of Medi-City Co., Ltd.",
@@ -290,10 +317,11 @@ const en = {
                     },
                     brand: {
                         title: "Brand Identity",
-                        content: "The basic concept of the logo gives meaning to three visual forms.<0></0><1>The excellent medical technology and knowledge of South Korea</1> (letter \"K\") are widely known to overseas medical staff, <1>describing the ideology of human respect</1> (on the left)<0></0>and <1>the growth direction of the medical community</1> (on the right)",
+                        content:
+                            'The basic concept of the logo gives meaning to three visual forms.<0></0><1>The excellent medical technology and knowledge of South Korea</1> (letter "K") are widely known to overseas medical staff, <1>describing the ideology of human respect</1> (on the left)<0></0>and <1>the growth direction of the medical community</1> (on the right)',
                         red: "Red to represent Indonesia's flag",
                         blue: "Blue to represent South Korea's flag",
-                    }
+                    },
                 },
             },
             certification: {
@@ -312,51 +340,137 @@ const en = {
             partners: {
                 subtitle: "Partners",
                 title: "Partners",
-            }
+            },
         },
         business: {
             subvisual: "BUSINESS",
             hotel: {
                 subtitle: "Hotel Service",
                 title: "Hotel Service",
-                subject: "Private healing accommodation service that adds the value of relaxation",
+                subject:
+                    "Private healing accommodation service that adds the value of relaxation",
                 content_1: {
                     title: "Room Special Service",
-                    content: "Room offers at special prices"
+                    content: "Room offers at special prices",
                 },
                 content_2: {
                     title: "Supplementary Facilities",
-                    content: "Discount for suppementary facilities"
+                    content: "Discount for suppementary facilities",
                 },
                 content_3: {
                     title: "Special Service",
-                    content: "Exclusive Services for Member of Medi-City Co., Ltd"
-                }
+                    content:
+                        "Exclusive Services for Member of Medi-City Co., Ltd",
+                },
             },
             art: {
                 subtitle: "Art Service",
                 title: "Art Service",
-                subject: "MEDI-ART Service, From creating a luxurious and <0></0>atmospheric space to tax-saving benefits until handling costs",
+                subject:
+                    "MEDI-ART Service, From creating a luxurious and <0></0>atmospheric space to tax-saving benefits until handling costs",
                 content_1: {
                     title: "Personal art collection",
-                    content: "Collection of works by famous local and foreign artists to enhance your visual beauty and quality of life."
+                    content:
+                        "Collection of works by famous local and foreign artists to enhance your visual beauty and quality of life.",
                 },
                 content_2: {
                     title: "Art Investment",
-                    content: "Experience more stable and higher returns than any other financial platform through contracted artworks."
+                    content:
+                        "Experience more stable and higher returns than any other financial platform through contracted artworks.",
                 },
                 content_3: {
                     title: "Purchase/Rent Artwork",
-                    content: "Experience the benefits of a strong corportation and personal tax saving from artwork purchases or rentals"
-                }
+                    content:
+                        "Experience the benefits of a strong corportation and personal tax saving from artwork purchases or rentals",
+                },
             },
             wine: {
                 subtitle: "Vintage Wine Promotion",
                 title: "Wine Promotion",
                 subject: "Moldova Wine",
-                content: "Medi-City Co., Ltd. offers its members special wines from Moldova that are not easily accessible in Korea. <0></0>It provides the supply through the nation's sole distributor of these rare wines that reflect Moldova's rich wine culture and unique grape varieties, <0></0>offering a Private and differentiated experience exclusive to Medi-People. <0></0>Each wine encapsulates the true taste and tradition of Moldova, providing wine enthusiasts with an opportunity not to be missed. <0></0>This service, where you can savor the deep flavors of Moldova, is a special benefit reserved only for Medi-City members."
-            }
-        }
+                content:
+                    "Medi-City Co., Ltd. offers its members special wines from Moldova that are not easily accessible in Korea. <0></0>It provides the supply through the nation's sole distributor of these rare wines that reflect Moldova's rich wine culture and unique grape varieties, <0></0>offering a Private and differentiated experience exclusive to Medi-People. <0></0>Each wine encapsulates the true taste and tradition of Moldova, providing wine enthusiasts with an opportunity not to be missed. <0></0>This service, where you can savor the deep flavors of Moldova, is a special benefit reserved only for Medi-City members.",
+            },
+        },
+        media: {
+            subvisual: {
+                title: "MEDIA CENTER",
+                subtitle: {
+                    news: "NEWS",
+                    notice: "NOTICE",
+                },
+            },
+            news: {
+                subtitle: "Sharing news from Medi-City",
+                title: "NEWS",
+                category: {
+                    all: "전체보기",
+                    video: "영상콘텐츠",
+                    news: "NEWS",
+                },
+            },
+            view_more: "VIEW MORE",
+        },
+        kmedi: {
+            subvisual: {
+                title: "K-MEDI",
+                subtitle: {
+                    intro: "K-MEDI Introduction",
+                    app: "K-MEDI APP",
+                },
+            },
+            intro: {
+                subtitle: "K-MEDI Introduction",
+                content_1: {
+                    title: "What was the reason behind establishing a corporate entity in Indonesia?",
+                    1: {
+                        content:
+                            "Out of Indonesia's population of approximately 270 million (as of 2022), <0></0>there are about 2.12 million doctors. The medical market in Indonesia has shown <1>rapid growth</1> ",
+                        btn_1: "Number of Doctors in Indonesia",
+                    },
+                    2: {
+                        content:
+                            "The hospital, medical, and dental services market in Indonesia <0></0>has been growing at an average annual rate of about 5% from 2014 to 2022.",
+                        btn_1: "Market size of hospital services in Indonesia",
+                        btn_2: "Number of Hospitals in Indonesia",
+                    },
+                },
+                content_2: {
+                    subtitle: "Leading Global Medical <0></0>Contents Platform",
+                    title: "K-Medi",
+                    content:
+                        "Starting with Indonesia, K-Medi aims to also expand to Vietnam, Phillipines, Malaysia, Singapore, India and Thailand.",
+                },
+                content_3: {
+                    title: "K-Medi APP Architecture",
+                    content:
+                        "Medical data utilization and copyright issues: No copyright regulations on digital assets (based on Article 2, Subparagraph 1 of the Personal Information Protection Act). <0></0>Distribution policy for rewards for hospital and content provider company revenue.",
+                    1: {
+                        title: "Content Discovery",
+                        content:
+                            "Content discovery such as conferences, lectures, and surgeries",
+                    },
+                    2: {
+                        title: "Video Editing",
+                        content: "Editing by fields, video editing in English",
+                    },
+                    3: {
+                        title: "Content Distribution",
+                        content: "B2B, B2C Ad Linkage",
+                    },
+                    4: {
+                        title: "Supplier Rewards",
+                        content:
+                            "Provided differently based on views, popularity, and Q&A participation;",
+                    },
+                },
+            },
+            app: {
+                subtitle: "K-MEDI APP",
+                title: "Providing copyright <0></0>protection and medical <0></0>professional OTT platform services.",
+                viewMore: "VIEW MORE",
+            },
+        },
     },
 };
 
