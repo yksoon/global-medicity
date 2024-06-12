@@ -190,20 +190,25 @@ const ko = {
                             title: "4월",
                             content_1: "(주)스카이인터내셔날 MOU 체결",
                             content_2: "제주 해비치 호텔 & 리조트 MOU 체결",
-                            content_3: "RSUI ASTUTI 병원장 방한 및 국립암센터 메디컬 투어",
+                            content_3:
+                                "RSUI ASTUTI 병원장 방한 및 국립암센터 메디컬 투어",
                         },
                         march: {
                             title: "3월",
                             content_1: "AYANA MidplazaJakarta 체결",
                             content_2: "CMS Entertainment MOU 체결",
-                            content_3: "RumahSakitUniversitas Indonesia MOU 체결",
-                            content_4: "CheongdamKorean Aesthetic Clinic MOU 체결",
+                            content_3:
+                                "RumahSakitUniversitas Indonesia MOU 체결",
+                            content_4:
+                                "CheongdamKorean Aesthetic Clinic MOU 체결",
                             content_5: "PT. Cashtreefor Indonesia MOU 체결",
                         },
                         february: {
                             title: "2월",
-                            content_1: "(주)아트버디 K-ART 전시회 개최 (The Westin Jakarta)",
-                            content_2: "제1회 PT. MEDI CITY INDONESIA Showcase (The Westin Jakarta)",
+                            content_1:
+                                "(주)아트버디 K-ART 전시회 개최 (The Westin Jakarta)",
+                            content_2:
+                                "제1회 PT. MEDI CITY INDONESIA Showcase (The Westin Jakarta)",
                         },
                         january: {
                             title: "1월",
@@ -221,23 +226,31 @@ const ko = {
                         },
                         10: {
                             title: "10월",
-                            content_1: "국회등록 사)한국과학기술정책연구회 이지선 의장 이사 등재",
+                            content_1:
+                                "국회등록 사)한국과학기술정책연구회 이지선 의장 이사 등재",
                         },
                         7: {
                             title: "7월",
-                            content_1: "(주)메디씨티 K-Medi 인도네시아 서비스 Test Version1.0 출시",
-                            content_2: "(주)메디씨티 강원 지사법인 설립 (박종인 지사장)",
+                            content_1:
+                                "(주)메디씨티 K-Medi 인도네시아 서비스 Test Version1.0 출시",
+                            content_2:
+                                "(주)메디씨티 강원 지사법인 설립 (박종인 지사장)",
                         },
                         6: {
                             title: "6월",
-                            content_1: "(주)메디씨티 Membership Service 베타 서비스 출시",
-                            content_2: "iADH2024 International Conference Invited Speaker, UdijantTedjosasongko협약",
+                            content_1:
+                                "(주)메디씨티 Membership Service 베타 서비스 출시",
+                            content_2:
+                                "iADH2024 International Conference Invited Speaker, UdijantTedjosasongko협약",
                         },
                         5: {
                             title: "5월",
-                            content_1: "PT. MEDI CITY INDONESIA (인도네시아 해외법인 설립, 박성민 법인장)",
-                            content_2: "'K-Medi' 인도네시아 해외법인 서비스 상표 등록",
-                            content_3: "특허출원 제10-2023-0070316 : 대상 수술의 정보에 기초하여 리워드를 제공하는 컨텐츠 제공 방법 및 이를 수행하는 컨텐츠 제공 시스템",
+                            content_1:
+                                "PT. MEDI CITY INDONESIA (인도네시아 해외법인 설립, 박성민 법인장)",
+                            content_2:
+                                "'K-Medi' 인도네시아 해외법인 서비스 상표 등록",
+                            content_3:
+                                "특허출원 제10-2023-0070316 : 대상 수술의 정보에 기초하여 리워드를 제공하는 컨텐츠 제공 방법 및 이를 수행하는 컨텐츠 제공 시스템",
                         },
                     },
                     2022: {
@@ -247,7 +260,8 @@ const ko = {
                         },
                         9: {
                             title: "9월",
-                            content_1: "기술보호데스크 사업선정 (경기도 테크노파크)",
+                            content_1:
+                                "기술보호데스크 사업선정 (경기도 테크노파크)",
                             content_2: "킨텍스바이케이트리호텔 MOU 체결",
                         },
                         7: {
@@ -257,18 +271,22 @@ const ko = {
                         },
                         4: {
                             title: "4월",
-                            content_1: "(주)메디씨티 상표등록 출원 (대한민국 특허청)",
+                            content_1:
+                                "(주)메디씨티 상표등록 출원 (대한민국 특허청)",
                             content_2: "세인트존스호텔 MOU 체결",
                         },
                         3: {
                             title: "3월",
-                            content_1: "㈜메디씨티 공식 홈페이지 오픈 Version1.0 (medi-city.co.kr)",
+                            content_1:
+                                "㈜메디씨티 공식 홈페이지 오픈 Version1.0 (medi-city.co.kr)",
                         },
                         2: {
                             title: "2월",
                             content_1: "㈜메디씨티 법인설립",
-                            content_2: "제1회 Medi-City Day 개최 및 출범식 (강릉 세인트존스호텔)",
-                            content_3: "중소기업 등록 ('중소기업기본법' 제2조 및 '소상공인기본법' 제2조)",
+                            content_2:
+                                "제1회 Medi-City Day 개최 및 출범식 (강릉 세인트존스호텔)",
+                            content_3:
+                                "중소기업 등록 ('중소기업기본법' 제2조 및 '소상공인기본법' 제2조)",
                         },
                     },
                 },
@@ -279,7 +297,8 @@ const ko = {
                     title: "CI & BI",
                     corporate: {
                         title: "Corporate Identity",
-                        content: "워드마크 디자인은 유연성과 단순함을 강조하고 있으며, <0>다양한 네트워크 (Medical, Media, IT, Big Data)</0>를 융복합하여 <0>세계 의료계 발전에 영향력이 있는 기업</0>이 되고자 하는 목표를 나타내고자 하였다.",
+                        content:
+                            "워드마크 디자인은 유연성과 단순함을 강조하고 있으며, <0>다양한 네트워크 (Medical, Media, IT, Big Data)</0>를 융복합하여 <0>세계 의료계 발전에 영향력이 있는 기업</0>이 되고자 하는 목표를 나타내고자 하였다.",
                         green: "의료의 기본 색상인 그린, 생명과 자연, 평화의 의미로 그린을 가장 앞으로 배치하였습니다.",
                         orange: "뜨겁지 않은 따뜻한 느낌으로 인류를 따뜻하게 품으려 ㈜메디씨티의 마음을 표현하였습니다.",
                         red: "㈜메디씨티의 열정을 표현하였습니다.",
@@ -287,10 +306,11 @@ const ko = {
                     },
                     brand: {
                         title: "Brand Identity",
-                        content: "로고의 기본 컨셉은 세가지 시각적 형태의 의미를 부여한다.<0></0><1>대한민국의 우수한 의료 기술 및 지식</1>을(문자 “K”), 해외 의료진에게 널리 알려, <1>인간존중의 이념</1>에 따라(좌측형상)<0></0><1>의료계 성장 방향</1>(우측 형상)을 형상화 하여 설명하였다",
+                        content:
+                            "로고의 기본 컨셉은 세가지 시각적 형태의 의미를 부여한다.<0></0><1>대한민국의 우수한 의료 기술 및 지식</1>을(문자 “K”), 해외 의료진에게 널리 알려, <1>인간존중의 이념</1>에 따라(좌측형상)<0></0><1>의료계 성장 방향</1>(우측 형상)을 형상화 하여 설명하였다",
                         red: "인도네시아 국기를 나타내는 레드",
                         blue: "대한민국의 국기를 나타내는 블루",
-                    }
+                    },
                 },
             },
             certification: {
@@ -309,7 +329,7 @@ const ko = {
             partners: {
                 subtitle: "파트너",
                 title: "Partners",
-            }
+            },
         },
         business: {
             subvisual: "BUSINESS",
@@ -319,41 +339,123 @@ const ko = {
                 subject: "휴식의 가치를 더하는 Private 힐링 숙박 서비스",
                 content_1: {
                     title: "Room Special Service",
-                    content: "객실특가 서비스"
+                    content: "객실특가 서비스",
                 },
                 content_2: {
                     title: "Supplementary Facilities",
-                    content: "부대시설할인"
+                    content: "부대시설할인",
                 },
                 content_3: {
                     title: "Special Service",
-                    content: "(주)메디씨티 회원만의 특별서비스제공"
-                }
+                    content: "(주)메디씨티 회원만의 특별서비스제공",
+                },
             },
             art: {
                 subtitle: "아트 서비스",
                 title: "Art Service",
-                subject: "고급스럽고 분위기 있는 공간 연출,<0></0>절세 혜택에 비용처리까지, 메디아트 서비스",
+                subject:
+                    "고급스럽고 분위기 있는 공간 연출,<0></0>절세 혜택에 비용처리까지, 메디아트 서비스",
                 content_1: {
                     title: "미술품 개인소장",
-                    content: "국내외 인기있는 작가들의 원화 작품을 개인 소장하여 시각적인 만과 삶의 품격을 높이세요."
+                    content:
+                        "국내외 인기있는 작가들의 원화 작품을 개인 소장하여 시각적인 만과 삶의 품격을 높이세요.",
                 },
                 content_2: {
                     title: "미술품 재테크",
-                    content: "계약한 미술품을 통해 어떠한 재테크 플랫폼보다 안정적이면서 높은 수익률을 경험해 보세요."
+                    content:
+                        "계약한 미술품을 통해 어떠한 재테크 플랫폼보다 안정적이면서 높은 수익률을 경험해 보세요.",
                 },
                 content_3: {
                     title: "미술품 구매/렌탈",
-                    content: "미술품 구매 또는 렌탈을 통해 강력한 법인, 개인 세금 절감 혜택을 누려보세요."
-                }
+                    content:
+                        "미술품 구매 또는 렌탈을 통해 강력한 법인, 개인 세금 절감 혜택을 누려보세요.",
+                },
             },
             wine: {
                 subtitle: "빈티지 와인 프로모션",
                 title: "Wine Promotion",
                 subject: "몰도바(Moldova) 와인",
-                content: "㈜메디씨티는 회원들에게 국내에서 쉽게 접할 수 없는 몰도바의 특별한 와인을 제공합니다. <0></0>몰도바의 풍부한 와인 문화와 독특한 포도 품종이 반영된 이 희귀 와인들의 국내 유일 총판을 통한 공급을 제공하고 있으며, <0></0>메디씨티 회원 (Medi-People)만이 누릴 수 있는 Private하고 차별화된 경험을 제공합니다. <0></0>각 와인은 몰도바의 진정한 맛과 전통을 담고 있어, 와인 애호가들에게 놓칠 수 없는 기회를 제공합니다. <0></0>몰도바의 깊은 맛을 즐길 수 있는 본 서비스는 메디씨티 회원들에게만 드리는 특별한 혜택입니다."
-            }
-        }
+                content:
+                    "㈜메디씨티는 회원들에게 국내에서 쉽게 접할 수 없는 몰도바의 특별한 와인을 제공합니다. <0></0>몰도바의 풍부한 와인 문화와 독특한 포도 품종이 반영된 이 희귀 와인들의 국내 유일 총판을 통한 공급을 제공하고 있으며, <0></0>메디씨티 회원 (Medi-People)만이 누릴 수 있는 Private하고 차별화된 경험을 제공합니다. <0></0>각 와인은 몰도바의 진정한 맛과 전통을 담고 있어, 와인 애호가들에게 놓칠 수 없는 기회를 제공합니다. <0></0>몰도바의 깊은 맛을 즐길 수 있는 본 서비스는 메디씨티 회원들에게만 드리는 특별한 혜택입니다.",
+            },
+        },
+        media: {
+            subvisual: {
+                title: "MEDIA CENTER",
+                subtitle: {
+                    news: "NEWS",
+                    notice: "공지사항",
+                },
+            },
+            news: {
+                subtitle: "메디씨티의 소식을 전합니다",
+                title: "NEWS",
+                category: {
+                    all: "전체보기",
+                    video: "영상콘텐츠",
+                    news: "NEWS",
+                },
+            },
+            view_more: "VIEW MORE",
+        },
+        kmedi: {
+            subvisual: {
+                title: "K-MEDI",
+                subtitle: {
+                    intro: "K-MEDI 소개",
+                    app: "K-MEDI APP",
+                },
+            },
+            intro: {
+                subtitle: "K-MEDI 소개",
+                content_1: {
+                    title: "인도네시아 법인 회사를 설립을 한 이유?",
+                    1: {
+                        content:
+                            "인도네시아 인구 약 2억7천만명 중 의사 수 <0></0>약 21만 2천만명 (2022년 기준) <1>의료시장의 급격한 성장세</1>",
+                        btn_1: "인도네시아 의사 수",
+                    },
+                    2: {
+                        content:
+                            "병원, 의료, 치과 서비스 시장은 <0></0>2014년부터 2022년까지 연평균 약5%씩 성장",
+                        btn_1: "인도네시아병원 서비스 시장 규모",
+                        btn_2: "인도네시아 병원 수",
+                    },
+                },
+                content_2: {
+                    subtitle: "Leading Global Medical <0></0>Contents Platform",
+                    title: "K-Medi",
+                    content:
+                        "K-Medi는 인도네시아를 시작으로 베트남, 필리핀, 말레이시아, 싱가폴, 인도, 태국을 목표로 하고 있습니다.",
+                },
+                content_3: {
+                    title: "K-Medi APP Architecture",
+                    content:
+                        "의료데이터 활용 및 저작권 문제 : 디지털 자산에 대한 저작권 귀속 규제 없음 (개인정보 보호법 제2조 제1호 근거) <0></0>병원 및 콘텐츠 공급자 회사 매출 수입에 대한 Reward 분배 정책",
+                    1: {
+                        title: "콘텐츠 발굴",
+                        content: "학회, 강의, 수술 등 콘텐츠발굴",
+                    },
+                    2: {
+                        title: "영상 편집",
+                        content: "분야별 편집, 영문화 영상편집",
+                    },
+                    3: {
+                        title: "인니 배포",
+                        content: "B2B, B2C 광고 연계",
+                    },
+                    4: {
+                        title: "공급자 Reward",
+                        content: "조회수, 인기도, Q&A참여도에 따라 차등 제공",
+                    },
+                },
+            },
+            app: {
+                subtitle: "K-MEDI APP",
+                title: "저작권자의 소유권 보장과 <0></0>의료전문 OTT 플랫폼 <0></0>서비스를 제공합니다.",
+                viewMore: "VIEW MORE",
+            },
+        },
     },
 };
 

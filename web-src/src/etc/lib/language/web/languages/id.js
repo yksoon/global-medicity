@@ -184,30 +184,42 @@ const id = {
                     2024: {
                         may: {
                             title: "Mei",
-                            content_1: "Penandatanganan MOU dengan Imperial Place Seoul",
+                            content_1:
+                                "Penandatanganan MOU dengan Imperial Place Seoul",
                         },
                         april: {
                             title: "April",
-                            content_1: "Penandatanganan MOU dengan PT. Sky International",
-                            content_2: "Penandatanganan MOU dengan Haevichi Hotel & Resort Jeju",
-                            content_3: "Kunjungan tour Pemimpin RSUI ASTUTI ke Pusat Kanker Nasional",
+                            content_1:
+                                "Penandatanganan MOU dengan PT. Sky International",
+                            content_2:
+                                "Penandatanganan MOU dengan Haevichi Hotel & Resort Jeju",
+                            content_3:
+                                "Kunjungan tour Pemimpin RSUI ASTUTI ke Pusat Kanker Nasional",
                         },
                         march: {
                             title: "Maret",
-                            content_1: "Pernandatanganan dengan AYANA Midplaza Jakarta",
-                            content_2: "Penandatanganan MOU dengan CMS Entertainment",
-                            content_3: "Penandatanganan MOU dengan Rumah Sakit Universitas Indonesia",
-                            content_4: "Penandatanganan MOU dengan Cheongdam Korean Aesthetic Clinic",
-                            content_5: "Penandatanganan MOU dengan PT. Cashtree for Indonesia",
+                            content_1:
+                                "Pernandatanganan dengan AYANA Midplaza Jakarta",
+                            content_2:
+                                "Penandatanganan MOU dengan CMS Entertainment",
+                            content_3:
+                                "Penandatanganan MOU dengan Rumah Sakit Universitas Indonesia",
+                            content_4:
+                                "Penandatanganan MOU dengan Cheongdam Korean Aesthetic Clinic",
+                            content_5:
+                                "Penandatanganan MOU dengan PT. Cashtree for Indonesia",
                         },
                         february: {
                             title: "Februari",
-                            content_1: "Menggelar Pameran K-Art PT. Art Buddy (The Westin Jakarta)",
-                            content_2: "Showcase Pertama PT. MEDI CITY INDONESIA (The Westin Jakarta)",
+                            content_1:
+                                "Menggelar Pameran K-Art PT. Art Buddy (The Westin Jakarta)",
+                            content_2:
+                                "Showcase Pertama PT. MEDI CITY INDONESIA (The Westin Jakarta)",
                         },
                         january: {
                             title: "Januari",
-                            content_1: "Registrasi Hak Paten PT. Medi-City (No. 40-214603)",
+                            content_1:
+                                "Registrasi Hak Paten PT. Medi-City (No. 40-214603)",
                         },
                     },
                     2023: {
@@ -217,27 +229,36 @@ const id = {
                         },
                         11: {
                             title: "November",
-                            content_1: "Penandatanganan MOU dengan PT. Art Buddy",
+                            content_1:
+                                "Penandatanganan MOU dengan PT. Art Buddy",
                         },
                         10: {
                             title: "Oktober",
-                            content_1: "Pendaftaran Majelis Nasional) Terdaftar sebagai Ketua Direktur Lee Ji-sun dari Masyarakat Studi Kebijakan Sains dan Teknologi Korea",
+                            content_1:
+                                "Pendaftaran Majelis Nasional) Terdaftar sebagai Ketua Direktur Lee Ji-sun dari Masyarakat Studi Kebijakan Sains dan Teknologi Korea",
                         },
                         7: {
                             title: "Juli",
-                            content_1: "PT. Medi-City Merilis Server Indonesia K-Medi Test Version1.0",
-                            content_2: "Pendirian Cabang PT. Medi-City di Gangwon (Manajer Cabang Park Jong-in)",
+                            content_1:
+                                "PT. Medi-City Merilis Server Indonesia K-Medi Test Version1.0",
+                            content_2:
+                                "Pendirian Cabang PT. Medi-City di Gangwon (Manajer Cabang Park Jong-in)",
                         },
                         6: {
                             title: "Juni",
-                            content_1: "Layanan beta Layanan Keanggotaan PT. Medi-City diluncurkan",
-                            content_2: "Pembicara Konferensi Internasional iADH2024, Perjanjian UdijantTedjosasongko",
+                            content_1:
+                                "Layanan beta Layanan Keanggotaan PT. Medi-City diluncurkan",
+                            content_2:
+                                "Pembicara Konferensi Internasional iADH2024, Perjanjian UdijantTedjosasongko",
                         },
                         5: {
                             title: "Mei",
-                            content_1: "PT. MEDI CITY INDONESIA (didirikan sebagai anak perusahaan di luar negeri di Indonesia, Presiden Park Sung-min)",
-                            content_2: "Pendaftaran Merek Dagang untuk Layanan K-Medi di Perusahaan Luar Negeri Indonesia",
-                            content_3: "Permohonan Paten No. 10-2023-0070316: Metode penyediaan konten dan sistem pengiriman konten yang menawarkan hadiah berdasarkan informasi tentang subjek pembedahan.",
+                            content_1:
+                                "PT. MEDI CITY INDONESIA (didirikan sebagai anak perusahaan di luar negeri di Indonesia, Presiden Park Sung-min)",
+                            content_2:
+                                "Pendaftaran Merek Dagang untuk Layanan K-Medi di Perusahaan Luar Negeri Indonesia",
+                            content_3:
+                                "Permohonan Paten No. 10-2023-0070316: Metode penyediaan konten dan sistem pengiriman konten yang menawarkan hadiah berdasarkan informasi tentang subjek pembedahan.",
                         },
                     },
                     2022: {
@@ -247,28 +268,37 @@ const id = {
                         },
                         9: {
                             title: "September",
-                            content_1: "Pemilihan proyek Meja Perlindungan Teknologi (Gyeonggi-do Techno Park)",
-                            content_2: "Perjanjian MOU dengan Kintex oleh K-Tree Hotel",
+                            content_1:
+                                "Pemilihan proyek Meja Perlindungan Teknologi (Gyeonggi-do Techno Park)",
+                            content_2:
+                                "Perjanjian MOU dengan Kintex oleh K-Tree Hotel",
                         },
                         7: {
                             title: "Juli",
-                            content_1: "Penandatanganan MOU dengan Air Macao dan Bandara Incheon",
-                            content_2: "Penandatanganan MOU dengan Mercury Ambassador Hotel di Ulsan",
+                            content_1:
+                                "Penandatanganan MOU dengan Air Macao dan Bandara Incheon",
+                            content_2:
+                                "Penandatanganan MOU dengan Mercury Ambassador Hotel di Ulsan",
                         },
                         4: {
                             title: "April",
-                            content_1: "Registrasi merek dagang PT. Medi-City (Kantor Kekayaan Intelektual Korea Selatan)",
-                            content_2: "Penandatanganan MOU dengan St. John's Hotel",
+                            content_1:
+                                "Registrasi merek dagang PT. Medi-City (Kantor Kekayaan Intelektual Korea Selatan)",
+                            content_2:
+                                "Penandatanganan MOU dengan St. John's Hotel",
                         },
                         3: {
                             title: "Maret",
-                            content_1: "Homepage Resmi Medi-City Versi1.0 Dibuka (medi-city.co.kr)",
+                            content_1:
+                                "Homepage Resmi Medi-City Versi1.0 Dibuka (medi-city.co.kr)",
                         },
                         2: {
                             title: "Februari",
                             content_1: "Pendirian PT. Medi-City",
-                            content_2: "Mengadakan Medi-City Day Ke-1 dan Upacara Peluncuran (Hotel Gangneung St. John)",
-                            content_3: "Pendaftaran sebagai usaha kecil dan menengah (Pasal 2 Undang-Undang Pokok Usaha Kecil dan Menengah dan Pasal 2 Undang-Undang Pokok Usaha Kecil)",
+                            content_2:
+                                "Mengadakan Medi-City Day Ke-1 dan Upacara Peluncuran (Hotel Gangneung St. John)",
+                            content_3:
+                                "Pendaftaran sebagai usaha kecil dan menengah (Pasal 2 Undang-Undang Pokok Usaha Kecil dan Menengah dan Pasal 2 Undang-Undang Pokok Usaha Kecil)",
                         },
                     },
                 },
@@ -279,7 +309,8 @@ const id = {
                     title: "CI & BI",
                     corporate: {
                         title: "Identitas Korporat",
-                        content: "Desain Wordmark mengedepankan fleksibilitas dan kesederhanaan, bertujuan untuk mewakili tujuan menjadi <0>perusahaan berpengaruh dalam perkembangan industri medis global</0> dengan mengintegrasikan <0>berbagai jaringan (Medis, Media, IT, Big Data)</0>.",
+                        content:
+                            "Desain Wordmark mengedepankan fleksibilitas dan kesederhanaan, bertujuan untuk mewakili tujuan menjadi <0>perusahaan berpengaruh dalam perkembangan industri medis global</0> dengan mengintegrasikan <0>berbagai jaringan (Medis, Media, IT, Big Data)</0>.",
                         green: "Warna hijau, yang melambangkan kehidupan, alam, dan kedamaian - warna dasar pengobatan, ditempatkan di garis depan.",
                         orange: "Niat PT. Medi-City untuk merangkul umat manusia dengan perasaan hangat diungkapkan dengan cara yang hangat, bukan panas.",
                         red: "Mengekspresikan semangat PT. Medi-City",
@@ -287,10 +318,11 @@ const id = {
                     },
                     brand: {
                         title: "Identitas Brand",
-                        content: "Konsep dasar logo memberikan makna pada tiga bentuk visual.<0></0><1>Teknologi dan pengetahuan medis unggulan Korea Selatan</1> (huruf \"K\") dikenal luas oleh staf medis luar negeri, menggambarkan <1>ideologi penghormatan terhadap kemanusiaan</1> (di sebelah kiri) <1>dan arah pertumbuhan komunitas medis</1> (di sebelah kanan)",
+                        content:
+                            'Konsep dasar logo memberikan makna pada tiga bentuk visual.<0></0><1>Teknologi dan pengetahuan medis unggulan Korea Selatan</1> (huruf "K") dikenal luas oleh staf medis luar negeri, menggambarkan <1>ideologi penghormatan terhadap kemanusiaan</1> (di sebelah kiri) <1>dan arah pertumbuhan komunitas medis</1> (di sebelah kanan)',
                         red: "Warna merah mewakili bendera Indonesia",
                         blue: "Warna biru mewakili bendera Korea Selatan",
-                    }
+                    },
                 },
             },
             certification: {
@@ -309,51 +341,137 @@ const id = {
             partners: {
                 subtitle: "Partners",
                 title: "Partners",
-            }
+            },
         },
         business: {
             subvisual: "BISNIS",
             hotel: {
                 subtitle: "Layanan Hotel",
                 title: "Layanan Hotel",
-                subject: "Layanan akomodasi healing pribadi yang menambah nilai relaksasi",
+                subject:
+                    "Layanan akomodasi healing pribadi yang menambah nilai relaksasi",
                 content_1: {
                     title: "Layanan Ruang Khusus",
-                    content: "Penawaran kamar dengan harga khusus"
+                    content: "Penawaran kamar dengan harga khusus",
                 },
                 content_2: {
                     title: "Fasilitas Tambahan",
-                    content: "Diskon untuk fasilitas tambahan"
+                    content: "Diskon untuk fasilitas tambahan",
                 },
                 content_3: {
                     title: "Layanan Khusus",
-                    content: "Layanan ekslusif Untuk Anggota PT. Medi-City"
-                }
+                    content: "Layanan ekslusif Untuk Anggota PT. Medi-City",
+                },
             },
             art: {
                 subtitle: "Layanan Seni",
                 title: "Layanan Seni",
-                subject: "Layanan MEDI-ART, Mulai dari menciptakan <0></0>ruangan yang mewah dan atmosfer, manfaat penghematan <0></0>pajak hingga biaya penanganan",
+                subject:
+                    "Layanan MEDI-ART, Mulai dari menciptakan <0></0>ruangan yang mewah dan atmosfer, manfaat penghematan <0></0>pajak hingga biaya penanganan",
                 content_1: {
                     title: "Koleksi seni pribadi",
-                    content: "Koleksi karya seniman terkenal dalam dan luar negeri untuk meningkatkan keindahan visual dan kualitas hidup Anda."
+                    content:
+                        "Koleksi karya seniman terkenal dalam dan luar negeri untuk meningkatkan keindahan visual dan kualitas hidup Anda.",
                 },
                 content_2: {
                     title: "Investasi Karya Seni",
-                    content: "Rasakan keuntungan yang lebih stabil dan lebih tinggi dibandingkan platform keuangan lainnya melalui karya seni yang dikontrak."
+                    content:
+                        "Rasakan keuntungan yang lebih stabil dan lebih tinggi dibandingkan platform keuangan lainnya melalui karya seni yang dikontrak.",
                 },
                 content_3: {
                     title: "Beli/Sewa Karya Seni",
-                    content: "Nikmati penghematan pajak perusahaan dan individu yang kuat melalui pembelian atau penyewaan karya seni"
-                }
+                    content:
+                        "Nikmati penghematan pajak perusahaan dan individu yang kuat melalui pembelian atau penyewaan karya seni",
+                },
             },
             wine: {
                 subtitle: "Promo Wine Vintage",
                 title: "Promo Wine",
                 subject: "Wine Moldova",
-                content: "PT. Medi-City menawarkan kepada anggotanya anggur khusus dari Moldova yang tidak mudah diakses di Korea. <0></0>Perusahaan ini menyediakan pasokan melalui distributor tunggal anggur langka yang mencerminkan budaya anggur Moldova yang kaya dan varietas anggur yang unik, <0></0>menawarkan pengalaman Pribadi dan berbeda yang eksklusif untuk Medi-People. <0></0>Setiap anggur merangkum cita rasa dan tradisi Moldova yang sebenarnya, memberikan kesempatan yang tidak boleh dilewatkan bagi para penggemar anggur. <0></0>Layanan yang memberikan kesempatan untuk dapat menikmati cita rasa Moldova yang mendalam adalah benefit khusus yang hanya diperuntukkan bagi anggota Medi-City."
-            }
-        }
+                content:
+                    "PT. Medi-City menawarkan kepada anggotanya anggur khusus dari Moldova yang tidak mudah diakses di Korea. <0></0>Perusahaan ini menyediakan pasokan melalui distributor tunggal anggur langka yang mencerminkan budaya anggur Moldova yang kaya dan varietas anggur yang unik, <0></0>menawarkan pengalaman Pribadi dan berbeda yang eksklusif untuk Medi-People. <0></0>Setiap anggur merangkum cita rasa dan tradisi Moldova yang sebenarnya, memberikan kesempatan yang tidak boleh dilewatkan bagi para penggemar anggur. <0></0>Layanan yang memberikan kesempatan untuk dapat menikmati cita rasa Moldova yang mendalam adalah benefit khusus yang hanya diperuntukkan bagi anggota Medi-City.",
+            },
+        },
+        media: {
+            subvisual: {
+                title: "MEDIA CENTER",
+                subtitle: {
+                    news: "BERITA",
+                    notice: "PEMBERITAHUAN",
+                },
+            },
+            news: {
+                subtitle: "Membagikan berita dari Medi-City",
+                title: "BERITA",
+                category: {
+                    all: "전체보기",
+                    video: "영상콘텐츠",
+                    news: "NEWS",
+                },
+            },
+            view_more: "LIHAT LEBIH LANJUT",
+        },
+        kmedi: {
+            subvisual: {
+                title: "K-MEDI",
+                subtitle: {
+                    intro: "Perkenalan K-MEDI",
+                    app: "APLIKASI K-MEDI",
+                },
+            },
+            intro: {
+                subtitle: "Perkenalan K-MEDI",
+                content_1: {
+                    title: "인도네시아 법인 회사를 설립을 한 이유?",
+                    1: {
+                        content:
+                            "인도네시아 인구 약 2억7천만명 중 의사 수 <0></0>약 21만 2천만명 (2022년 기준) <1>의료시장의 급격한 성장세</1>",
+                        btn_1: "Jumlah Dokter di Indonesia",
+                    },
+                    2: {
+                        content:
+                            "병원, 의료, 치과 서비스 시장은 <0></0>2014년부터 2022년까지 연평균 약5%씩 성장",
+                        btn_1: "인도네시아병원 서비스 시장 규모",
+                        btn_2: "Jumlah rumah sakit di Indonesia",
+                    },
+                },
+                content_2: {
+                    subtitle: "Leading Global Medical <0></0>Contents Platform",
+                    title: "K-Medi",
+                    content:
+                        "Mulai dari Indonesia, K-Medi berencana untuk ekspansi ke Vietnam, Filipina, Malaysia, Singapore, India dan Thailand.",
+                },
+                content_3: {
+                    title: "K-Medi APP Architecture",
+                    content:
+                        "의료데이터 활용 및 저작권 문제 : 디지털 자산에 대한 저작권 귀속 규제 없음 (개인정보 보호법 제2조 제1호 근거) <0></0>병원 및 콘텐츠 공급자 회사 매출 수입에 대한 Reward 분배 정책",
+                    1: {
+                        title: "Penemuan Konten",
+                        content:
+                            "Penemuan konten seperti konferensi, ceramah, dan operasi",
+                    },
+                    2: {
+                        title: "Penyuntingan video",
+                        content:
+                            "Mengedit berdasarkan bidang, mengedit video dalam bahasa Inggris",
+                    },
+                    3: {
+                        title: "Distribusi Konten",
+                        content: "B2B, Tautan Iklan B2C",
+                    },
+                    4: {
+                        title: "Hadiah Pemasok",
+                        content:
+                            "Disediakan secara berbeda berdasarkan penayangan, popularitas, dan partisipasi Tanya Jawab",
+                    },
+                },
+            },
+            app: {
+                subtitle: "APLIKASI K-MEDI",
+                title: "Memberikan perlindungan hak <0></0>cipta dan layanan platform OTT <0></0>profesional medis.",
+                viewMore: "LIHAT LEBIH LANJUT",
+            },
+        },
     },
 };
 
