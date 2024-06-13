@@ -248,6 +248,11 @@ function MobileNav() {
                         </li>
                     </ul>
                 </nav>
+                <h1 className="logo">
+                        <Link to={routerPath.web_main_url}>
+                            <img src="img/web/main/logo.png" alt="" />
+                        </Link>
+                    </h1>
                 {/*<div className="lang">*/}
                 {/*    {Object.keys(lngs).map((lng) => (*/}
                 {/*        <a*/}
