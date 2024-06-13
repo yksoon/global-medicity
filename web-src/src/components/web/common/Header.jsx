@@ -152,11 +152,6 @@ function Header(props) {
                         <div className="submenu_bg"></div>
                     </div>
                     <div className="lang">
-                        {/*<a href="" className="on">*/}
-                        {/*    KO*/}
-                        {/*</a>*/}
-                        {/*<a href="">EN</a>*/}
-                        {/*<a href="">ID</a>*/}
                         {Object.keys(lngs).map((lng) => (
                             <a
                                 style={{ cursor: "pointer" }}
@@ -173,7 +168,7 @@ function Header(props) {
                             </a>
                         ))}
                     </div>
-                    <div className="">
+                    <div className="book">
                         <img src="img/web/main/book.png" alt="" />
                     </div>
                 </div>

@@ -39,7 +39,7 @@ const id = {
             subtitle: "Platform Layanan Medikal Global No.1 ",
             title: "MEDI-CITY CORPORATION",
             content:
-                "MEDICITY memiliki database lebih dari 40.000 tenaga medis dan video operasi serta edukasi melalui lembaga medis, \nkomunitas akademis, webinar, dan layanan MICE, serta memberikan berbagai manfaat mulai dari konsultasi praktik medis hingga promosi, keterkaitan dengan target layanan medis, dan manfaat beragam dari institusi mitra kepada anggota MEDICITY",
+                "MEDICITY memiliki database lebih dari 40.000 tenaga medis dan video operasi serta edukasi melalui lembaga medis, <0></0>komunitas akademis, webinar, dan layanan MICE, serta memberikan berbagai manfaat mulai dari konsultasi praktik medis hingga promosi, keterkaitan dengan target layanan medis, dan manfaat beragam dari institusi mitra kepada anggota MEDICITY",
         },
         main: {
             common: {
@@ -99,7 +99,7 @@ const id = {
                 Greetings: "Greetings",
                 Greetings_title: "GREETINGS",
                 Greetings_content:
-                    "PT. Medi-City\nmemulai gelombang inovasi baru melalui layanan platform integrasi medis global yang berpusat pada pasien dan profesional medis.\nSelain itu, dengan menciptakan platform untuk secara luas mempromosikan dan mengkomunikasikan teknologi K-medis yang luar biasa\ndi luar negeri, kami saat ini berfokus pada investasi intensif dan pengembangan di bidang medis dengan misi untuk membangun tempat untuk menyelamatkan\nnyawa dengan memberikan informasi medis yang luar biasa dan menyediakan secara online dan pendidikan offline ke negara tetangga masih menghadapi angka kematian yang tinggi.\nKami tidak akan puas hanya dengan menawarkan produk dan layanan terbaik.\nKami bertujuan untuk menjadi perusahaan global nomor satu di mana seluruh karyawan bersatu, terus menantang, berkembang, dan memprioritaskan nilai pelanggan.",
+                    "PT. Medi-City<0></0>memulai gelombang inovasi baru melalui layanan platform integrasi medis global yang berpusat pada pasien dan profesional medis.<0></0>Selain itu, dengan menciptakan platform untuk secara luas mempromosikan dan mengkomunikasikan teknologi K-medis yang luar biasa<0></0>di luar negeri, kami saat ini berfokus pada investasi intensif dan pengembangan di bidang medis dengan misi untuk membangun tempat untuk menyelamatkan<0></0>nyawa dengan memberikan informasi medis yang luar biasa dan menyediakan secara online dan pendidikan offline ke negara tetangga masih menghadapi angka kematian yang tinggi.<0></0>Kami tidak akan puas hanya dengan menawarkan produk dan layanan terbaik.<0></0>Kami bertujuan untuk menjadi perusahaan global nomor satu di mana seluruh karyawan bersatu, terus menantang, berkembang, dan memprioritaskan nilai pelanggan.",
                 ltd: "CEO PT. Medi-City",
             },
             aboutUs: {

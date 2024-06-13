@@ -9,7 +9,7 @@ i18n.use(LanguageDetector) // 사용자 언어 탐지
     .use(initReactI18next) // i18n 객체를 react-18next에 전달
     .init({
         // for all options read: https://www.i18next.com/overview/configuration-options
-        debug: true,
+        debug: false,
         fallbackLng: "en",
         interpolation: {
             escapeValue: false,

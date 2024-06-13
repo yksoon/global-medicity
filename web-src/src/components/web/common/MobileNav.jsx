@@ -2,8 +2,26 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
 import routerPath from "etc/lib/path/routerPath";
+import { useTranslation } from "react-i18next";
+import { useRecoilState } from "recoil";
+import { globalLanguageAtom } from "etc/lib/recoils/atoms";
 
 function MobileNav() {
+    const { t, i18n } = useTranslation(); // 3. useTranslation hook 선언
+
+    const lngs = {
+        // 2. 언어 구분을 위한 lng 객체 생성
+        ko: { nativeName: "KO" },
+        en: { nativeName: "EN" },
+        id: { nativeName: "ID" },
+    };
+
+    const [language, setLanguage] = useRecoilState(globalLanguageAtom);
+
+    const handleLanguage = (lng) => {
+        setLanguage(lng);
+    };
+
     useEffect(() => {
         $("#nav").hide();
         $(".nav_2depth").hide();
@@ -45,17 +63,82 @@ function MobileNav() {
                 </div>
                 <nav>
                     <ul id="nav">
+                        <li style={{ display: "flex" }}>
+                            {Object.keys(lngs).map((lng) => (
+                                <a
+                                    style={{ cursor: "pointer" }}
+                                    key={lng}
+                                    className={
+                                        i18n.resolvedLanguage === lng
+                                            ? "on"
+                                            : ""
+                                    }
+                                    onClick={() => {
+                                        i18n.changeLanguage(lng);
+                                        handleLanguage(lng);
+                                    }}
+                                >
+                                    {lngs[lng].nativeName}
+                                </a>
+                            ))}
+                        </li>
                         <li>
                             <Link
-                                to={routerPath.web_program_url}
+                                // to={routerPath.web_info_greet_url}
+                                to=""
+                                // state={{ headerRoute: "greetings" }}
+                                onClick={(e) => {
+                                    menuDepth(e);
+                                    e.preventDefault();
+                                }}
                                 id="nav1"
-                                // onClick={(e) => {
-                                //     menuDepth(e);
-                                //     e.preventDefault();
-                                // }}
                             >
-                                PROGRAM
+                                WE ARE
                             </Link>
+                            <ul
+                                id="nav1_s"
+                                className="nav_2depth"
+                                style={{ display: "block" }}
+                            >
+                                <li>
+                                    <Link
+                                        to={routerPath.web_info_greet_url}
+                                        state={{ headerRoute: "greetings" }}
+                                    >
+                                        {t("header.weAre.greetings")}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        to={routerPath.web_info_greet_url}
+                                        state={{ headerRoute: "introduce" }}
+                                        // onClick={() => moveToSection("introduce")}
+                                    >
+                                        {t("header.weAre.aboutUs")}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        to={routerPath.web_info_greet_url}
+                                        state={{ headerRoute: "certification" }}
+                                    >
+                                        {t("header.weAre.certification")}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        to={routerPath.web_info_greet_url}
+                                        state={{ headerRoute: "partners" }}
+                                    >
+                                        {t("header.weAre.partner")}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="">
+                                        {t("header.weAre.downloadCompany")}
+                                    </Link>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <Link
@@ -66,7 +149,7 @@ function MobileNav() {
                                     e.preventDefault();
                                 }}
                             >
-                                Plastic & Aesthetic Clinics SIGN-UP
+                                K-MEDI
                             </Link>
                             <ul
                                 id="nav2_s"
@@ -75,65 +158,18 @@ function MobileNav() {
                             >
                                 <li>
                                     <Link
-                                        to={
-                                            routerPath.web_participation_guideline_url
-                                        }
+                                        to={routerPath.web_kmedi_intro_url}
+                                        state={{ headerRoute: "intro" }}
                                     >
-                                        Guideline
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to={routerPath.web_signup_signup_url}>
-                                        Online Sign-up
+                                        {t("header.kmedi.intro")}
                                     </Link>
                                 </li>
                                 <li>
                                     <Link
-                                        to={
-                                            routerPath.web_signup_check_entry_url
-                                        }
+                                        to={routerPath.web_kmedi_intro_url}
+                                        state={{ headerRoute: "app" }}
                                     >
-                                        Sign-up Confirmation
-                                    </Link>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <Link
-                                to=""
-                                id="nav4"
-                                onClick={(e) => {
-                                    menuDepth(e);
-                                    e.preventDefault();
-                                }}
-                            >
-                                Peserta Pameran
-                            </Link>
-                            <ul
-                                id="nav4_s"
-                                className="nav_2depth"
-                                style={{ display: "block" }}
-                            >
-                                <li>
-                                    <Link
-                                        to={routerPath.web_local_guideline_url}
-                                    >
-                                        Guideline
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to={routerPath.web_local_signup_url}>
-                                        Online Sign-up
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        to={
-                                            routerPath.web_local_check_entry_url
-                                        }
-                                    >
-                                        Sign-up Confirmation
+                                        {t("header.kmedi.app")}
                                     </Link>
                                 </li>
                             </ul>
@@ -148,7 +184,7 @@ function MobileNav() {
                                     e.preventDefault();
                                 }}
                             >
-                                Artbuddy, K-ART
+                                BUSINESS
                             </Link>
                             <ul
                                 id="nav3_s"
@@ -157,34 +193,32 @@ function MobileNav() {
                             >
                                 <li>
                                     <Link
-                                        to={
-                                            routerPath.web_artbuddy_exhibition_url
-                                        }
+                                        to={routerPath.web_business_hotel_url}
+                                        state={{ headerRoute: "hotel" }}
                                     >
-                                        K-ART Exhibition
+                                        {t("header.business.hotelService")}
                                     </Link>
                                 </li>
                                 <li>
                                     <Link
-                                        to={
-                                            routerPath.web_artbuddy_gallery_list_url
-                                        }
+                                        to={routerPath.web_business_hotel_url}
+                                        state={{ headerRoute: "art" }}
                                     >
-                                        Gallery
+                                        {t("header.business.artService")}
                                     </Link>
                                 </li>
                                 <li>
                                     <Link
-                                        to={
-                                            routerPath.web_artbuddy_artist_list_url
-                                        }
+                                        to={routerPath.web_business_hotel_url}
+                                        state={{ headerRoute: "wine" }}
                                     >
-                                        Artist
+                                        {t("header.business.wineService")}
                                     </Link>
                                 </li>
                             </ul>
                         </li>
-                        {/* <li>
+
+                        <li>
                             <Link
                                 to=""
                                 id="nav4"
@@ -193,7 +227,7 @@ function MobileNav() {
                                     e.preventDefault();
                                 }}
                             >
-                                Venue Information
+                                MEDIA CENTER
                             </Link>
                             <ul
                                 id="nav4_s"
@@ -201,15 +235,36 @@ function MobileNav() {
                                 style={{ display: "block" }}
                             >
                                 <li>
-                                    <Link to="#section03">Venue</Link>
+                                    <Link to={routerPath.web_media_news_url}>
+                                        {t("header.mediaCenter.news")}
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link to="">Booth Map</Link>
+                                    <Link to={routerPath.web_media_notice_url}>
+                                        {t("header.mediaCenter.notice")}
+                                    </Link>
                                 </li>
                             </ul>
-                        </li> */}
+                        </li>
                     </ul>
                 </nav>
+                {/*<div className="lang">*/}
+                {/*    {Object.keys(lngs).map((lng) => (*/}
+                {/*        <a*/}
+                {/*            style={{ cursor: "pointer" }}*/}
+                {/*            key={lng}*/}
+                {/*            className={*/}
+                {/*                i18n.resolvedLanguage === lng ? "on" : ""*/}
+                {/*            }*/}
+                {/*            onClick={() => {*/}
+                {/*                i18n.changeLanguage(lng);*/}
+                {/*                handleLanguage(lng);*/}
+                {/*            }}*/}
+                {/*        >*/}
+                {/*            {lngs[lng].nativeName}*/}
+                {/*        </a>*/}
+                {/*    ))}*/}
+                {/*</div>*/}
             </div>
             {/* 모바일메뉴 // E */}
         </>
