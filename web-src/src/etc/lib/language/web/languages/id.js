@@ -39,7 +39,7 @@ const id = {
             subtitle: "Platform Layanan Medikal Global No.1 ",
             title: "MEDI-CITY CORPORATION",
             content:
-                "MEDICITY memiliki database lebih dari 40.000 tenaga medis dan video operasi serta edukasi melalui lembaga medis, \nkomunitas akademis, webinar, dan layanan MICE, serta memberikan berbagai manfaat mulai dari konsultasi praktik medis hingga promosi, keterkaitan dengan target layanan medis, dan manfaat beragam dari institusi mitra kepada anggota MEDICITY",
+                "MEDICITY memiliki database lebih dari 40.000 tenaga medis dan video operasi serta edukasi melalui lembaga medis, <0></0>komunitas akademis, webinar, dan layanan MICE, serta memberikan berbagai manfaat mulai dari konsultasi praktik medis hingga promosi, keterkaitan dengan target layanan medis, dan manfaat beragam dari institusi mitra kepada anggota MEDICITY",
         },
         main: {
             common: {

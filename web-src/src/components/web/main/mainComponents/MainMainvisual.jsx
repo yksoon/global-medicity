@@ -1,6 +1,6 @@
 import { Skeleton } from "@mui/material";
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 const MainMainvisual = (props) => {
     const { t, i18n } = useTranslation(); // 3. useTranslation hook 선언
@@ -18,11 +18,10 @@ const MainMainvisual = (props) => {
                         {/*<br />*/}
                         {/*개원 컨설팅부터 홍보, 의료서비스 대상과의 연계,*/}
                         {/*제휴기관의 다양한 혜택을 메디씨티 회원들에게 제공합니다.*/}
-                        {t("mainvisual.content")
-                            .split("\n")
-                            .map((line, idx) => (
-                                <div key={idx}>{line}</div>
-                            ))}
+                        <Trans
+                            i18nKey={"mainvisual.content"}
+                            components={[<br></br>]}
+                        />
                     </p>
                 </div>
             </div>
