@@ -4,9 +4,13 @@ import Footer from "components/web/common/footer";
 import { Link, useLocation } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 import LineBreak from "etc/lib/language/web/LineBreak";
+import { globalLanguageAtom } from "etc/lib/recoils/atoms";
+import { useRecoilValue } from "recoil";
+import { CommonOpenUrl } from "etc/lib/Common";
 
 const InfoWelcome = (props) => {
     const { t, i18n } = useTranslation();
+    const lang = useRecoilValue(globalLanguageAtom);
 
     const refs = {
         subvisual: useRef(null),
@@ -68,28 +72,30 @@ const InfoWelcome = (props) => {
                     <Link
                         to=""
                         onClick={() => moveToSection("greetings")}
-                        className={sectionState === "greetings" && "active"}
+                        className={sectionState === "greetings" ? "active" : ""}
                     >
                         {t("weAre.subvisual.Greetings")}
                     </Link>
                     <Link
                         to=""
                         onClick={() => moveToSection("introduce")}
-                        className={sectionState === "introduce" && "active"}
+                        className={sectionState === "introduce" ? "active" : ""}
                     >
                         {t("weAre.subvisual.About_Us")}
                     </Link>
                     <Link
                         to=""
                         onClick={() => moveToSection("certification")}
-                        className={sectionState === "certification" && "active"}
+                        className={
+                            sectionState === "certification" ? "active" : ""
+                        }
                     >
                         {t("weAre.subvisual.Certification_Status")}
                     </Link>
                     <Link
                         to=""
                         onClick={() => moveToSection("partners")}
-                        className={sectionState === "partners" && "active"}
+                        className={sectionState === "partners" ? "active" : ""}
                     >
                         {t("weAre.subvisual.Partners")}
                     </Link>
@@ -220,7 +226,7 @@ const InfoWelcome = (props) => {
                             </div>
                             <div className="txt">
                                 <img
-                                    src="img/web/sub/intro_txt.png"
+                                    src={`img/web/sub/intro_txt_${lang}.png`}
                                     alt=""
                                 ></img>
                                 <p>{t("weAre.aboutUs.slogan.content")}</p>
@@ -239,7 +245,7 @@ const InfoWelcome = (props) => {
                             </div>
                             <div className="img_wrap">
                                 <img
-                                    src="img/web/sub/intro_graph.png"
+                                    src={`img/web/sub/intro_graph_${lang}.png`}
                                     alt=""
                                 ></img>
                             </div>
@@ -357,7 +363,9 @@ const InfoWelcome = (props) => {
                                         ></img>
                                     </div>
                                     <h4>2020</h4>
-                                    <h5>{t("weAre.aboutUs.roadmap.2020.title")}</h5>
+                                    <h5>
+                                        {t("weAre.aboutUs.roadmap.2020.title")}
+                                    </h5>
                                     <p>
                                         {t(
                                             "weAre.aboutUs.roadmap.2020.content_1",
@@ -390,7 +398,9 @@ const InfoWelcome = (props) => {
                                         ></img>
                                     </div>
                                     <h4>2023</h4>
-                                    <h5>{t("weAre.aboutUs.roadmap.2023.title")}</h5>
+                                    <h5>
+                                        {t("weAre.aboutUs.roadmap.2023.title")}
+                                    </h5>
                                     <p>
                                         {t(
                                             "weAre.aboutUs.roadmap.2023.content_1",
@@ -413,7 +423,9 @@ const InfoWelcome = (props) => {
                                         ></img>
                                     </div>
                                     <h4>2022</h4>
-                                    <h5>{t("weAre.aboutUs.roadmap.2022.title")}</h5>
+                                    <h5>
+                                        {t("weAre.aboutUs.roadmap.2022.title")}
+                                    </h5>
                                     <p>
                                         {t(
                                             "weAre.aboutUs.roadmap.2022.content_1",
@@ -446,7 +458,9 @@ const InfoWelcome = (props) => {
                                         ></img>
                                     </div>
                                     <h4>2024</h4>
-                                    <h5>{t("weAre.aboutUs.roadmap.2024.title")}</h5>
+                                    <h5>
+                                        {t("weAre.aboutUs.roadmap.2024.title")}
+                                    </h5>
                                     <p>
                                         {t(
                                             "weAre.aboutUs.roadmap.2024.content_1",
@@ -471,63 +485,107 @@ const InfoWelcome = (props) => {
                                 <div className="historybox">
                                     <div className="month right">
                                         <div>
-                                            <p className="on">{t("weAre.aboutUs.history.2024.may.title")}</p>
+                                            <p className="on">
+                                                {t(
+                                                    "weAre.aboutUs.history.2024.may.title",
+                                                )}
+                                            </p>
                                             <ul>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2024.may.content_1")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2024.may.content_1",
+                                                    )}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>{t("weAre.aboutUs.history.2024.april.title")}</p>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2024.april.title",
+                                                )}
+                                            </p>
                                             <ul>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2024.april.content_1")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2024.april.content_1",
+                                                    )}
                                                 </li>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2024.april.content_2")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2024.april.content_2",
+                                                    )}
                                                 </li>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2024.april.content_3")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2024.april.content_3",
+                                                    )}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>{t("weAre.aboutUs.history.2024.march.title")}</p>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2024.march.title",
+                                                )}
+                                            </p>
                                             <ul>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2024.march.content_1")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2024.march.content_1",
+                                                    )}
                                                 </li>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2024.march.content_2")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2024.march.content_2",
+                                                    )}
                                                 </li>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2024.march.content_3")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2024.march.content_3",
+                                                    )}
                                                 </li>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2024.march.content_4")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2024.march.content_4",
+                                                    )}
                                                 </li>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2024.march.content_5")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2024.march.content_5",
+                                                    )}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>{t("weAre.aboutUs.history.2024.february.title")}</p>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2024.february.title",
+                                                )}
+                                            </p>
                                             <ul>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2024.february.content_1")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2024.february.content_1",
+                                                    )}
                                                 </li>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2024.february.content_2")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2024.february.content_2",
+                                                    )}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>{t("weAre.aboutUs.history.2024.january.title")}</p>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2024.january.title",
+                                                )}
+                                            </p>
                                             <ul>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2024.january.content_1")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2024.january.content_1",
+                                                    )}
                                                 </li>
                                             </ul>
                                         </div>
@@ -554,60 +612,106 @@ const InfoWelcome = (props) => {
                                     </div>
                                     <div className="month right">
                                         <div>
-                                            <p>{t("weAre.aboutUs.history.2023.12.title")}</p>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2023.12.title",
+                                                )}
+                                            </p>
                                             <ul>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2023.12.content_1")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2023.12.content_1",
+                                                    )}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>{t("weAre.aboutUs.history.2023.11.title")}</p>
-                                            <ul>
-                                                <li>{t("weAre.aboutUs.history.2023.11.content_1")}</li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <p>{t("weAre.aboutUs.history.2023.10.title")}</p>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2023.11.title",
+                                                )}
+                                            </p>
                                             <ul>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2023.10.content_1")}
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <p>{t("weAre.aboutUs.history.2023.7.title")}</p>
-                                            <ul>
-                                                <li>
-                                                    {t("weAre.aboutUs.history.2023.7.content_1")}
-                                                </li>
-                                                <li>
-                                                    {t("weAre.aboutUs.history.2023.7.content_2")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2023.11.content_1",
+                                                    )}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>{t("weAre.aboutUs.history.2023.6.title")}</p>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2023.10.title",
+                                                )}
+                                            </p>
                                             <ul>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2023.6.content_1")}
-                                                </li>
-                                                <li>
-                                                    {t("weAre.aboutUs.history.2023.6.content_2")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2023.10.content_1",
+                                                    )}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>{t("weAre.aboutUs.history.2023.5.title")}</p>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2023.7.title",
+                                                )}
+                                            </p>
                                             <ul>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2023.5.content_1")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2023.7.content_1",
+                                                    )}
                                                 </li>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2023.5.content_2")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2023.7.content_2",
+                                                    )}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2023.6.title",
+                                                )}
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    {t(
+                                                        "weAre.aboutUs.history.2023.6.content_1",
+                                                    )}
                                                 </li>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2023.5.content_3")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2023.6.content_2",
+                                                    )}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2023.5.title",
+                                                )}
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    {t(
+                                                        "weAre.aboutUs.history.2023.5.content_1",
+                                                    )}
+                                                </li>
+                                                <li>
+                                                    {t(
+                                                        "weAre.aboutUs.history.2023.5.content_2",
+                                                    )}
+                                                </li>
+                                                <li>
+                                                    {t(
+                                                        "weAre.aboutUs.history.2023.5.content_3",
+                                                    )}
                                                 </li>
                                             </ul>
                                         </div>
@@ -616,59 +720,111 @@ const InfoWelcome = (props) => {
                                 <div className="historybox">
                                     <div className="month right">
                                         <div>
-                                            <p>{t("weAre.aboutUs.history.2022.10.title")}</p>
-                                            <ul>
-                                                <li>{t("weAre.aboutUs.history.2022.10.content_1")}</li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <p>{t("weAre.aboutUs.history.2022.9.title")}</p>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2022.10.title",
+                                                )}
+                                            </p>
                                             <ul>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2022.9.content_1")}
-                                                </li>
-                                                <li>
-                                                    {t("weAre.aboutUs.history.2022.9.content_2")}
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <p>{t("weAre.aboutUs.history.2022.7.title")}</p>
-                                            <ul>
-                                                <li>
-                                                    {t("weAre.aboutUs.history.2022.7.content_1")}
-                                                </li>
-                                                <li>
-                                                    {t("weAre.aboutUs.history.2022.7.content_2")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2022.10.content_1",
+                                                    )}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>{t("weAre.aboutUs.history.2022.4.title")}</p>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2022.9.title",
+                                                )}
+                                            </p>
                                             <ul>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2022.4.content_1")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2022.9.content_1",
+                                                    )}
                                                 </li>
-                                                <li>{t("weAre.aboutUs.history.2022.4.content_2")}</li>
+                                                <li>
+                                                    {t(
+                                                        "weAre.aboutUs.history.2022.9.content_2",
+                                                    )}
+                                                </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>{t("weAre.aboutUs.history.2022.3.title")}</p>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2022.7.title",
+                                                )}
+                                            </p>
                                             <ul>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2022.3.content_1")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2022.7.content_1",
+                                                    )}
+                                                </li>
+                                                <li>
+                                                    {t(
+                                                        "weAre.aboutUs.history.2022.7.content_2",
+                                                    )}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
-                                            <p>{t("weAre.aboutUs.history.2022.2.title")}</p>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2022.4.title",
+                                                )}
+                                            </p>
                                             <ul>
-                                                <li>{t("weAre.aboutUs.history.2022.2.content_1")}</li>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2022.2.content_2")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2022.4.content_1",
+                                                    )}
                                                 </li>
                                                 <li>
-                                                    {t("weAre.aboutUs.history.2022.2.content_3")}
+                                                    {t(
+                                                        "weAre.aboutUs.history.2022.4.content_2",
+                                                    )}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2022.3.title",
+                                                )}
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    {t(
+                                                        "weAre.aboutUs.history.2022.3.content_1",
+                                                    )}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                {t(
+                                                    "weAre.aboutUs.history.2022.2.title",
+                                                )}
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    {t(
+                                                        "weAre.aboutUs.history.2022.2.content_1",
+                                                    )}
+                                                </li>
+                                                <li>
+                                                    {t(
+                                                        "weAre.aboutUs.history.2022.2.content_2",
+                                                    )}
+                                                </li>
+                                                <li>
+                                                    {t(
+                                                        "weAre.aboutUs.history.2022.2.content_3",
+                                                    )}
                                                 </li>
                                             </ul>
                                         </div>
@@ -695,7 +851,7 @@ const InfoWelcome = (props) => {
                             </h3>
                             <div>
                                 <img
-                                    src="img/web/sub/organization.png"
+                                    src={`img/web/sub/organization_${lang}.png`}
                                     alt=""
                                 ></img>
                             </div>
@@ -710,7 +866,9 @@ const InfoWelcome = (props) => {
                             </h3>
                             <div className="top">
                                 <div className="flx_box">
-                                    <h4>{t("weAre.aboutUs.CI.corporate.title")}</h4>
+                                    <h4>
+                                        {t("weAre.aboutUs.CI.corporate.title")}
+                                    </h4>
                                     <p className="normal">
                                         {/*워드마크 디자인은 유연성과 단순함을*/}
                                         {/*강조하고 있으며,{" "}*/}
@@ -751,7 +909,9 @@ const InfoWelcome = (props) => {
                                             #5c903f
                                         </div>
                                         <span>
-                                            {t("weAre.aboutUs.CI.corporate.green")}
+                                            {t(
+                                                "weAre.aboutUs.CI.corporate.green",
+                                            )}
                                         </span>
                                     </div>
                                     <div className="orange color">
@@ -764,7 +924,9 @@ const InfoWelcome = (props) => {
                                             #f57e20
                                         </div>
                                         <span>
-                                            {t("weAre.aboutUs.CI.corporate.orange")}
+                                            {t(
+                                                "weAre.aboutUs.CI.corporate.orange",
+                                            )}
                                         </span>
                                     </div>
                                     <div className="pink color">
@@ -776,7 +938,9 @@ const InfoWelcome = (props) => {
                                             #f05157
                                         </div>
                                         <span>
-                                            {t("weAre.aboutUs.CI.corporate.red")}
+                                            {t(
+                                                "weAre.aboutUs.CI.corporate.red",
+                                            )}
                                         </span>
                                     </div>
                                     <div className="purple color">
@@ -789,7 +953,9 @@ const InfoWelcome = (props) => {
                                             #7a5184
                                         </div>
                                         <span>
-                                            {t("weAre.aboutUs.CI.corporate.purple")}
+                                            {t(
+                                                "weAre.aboutUs.CI.corporate.purple",
+                                            )}
                                         </span>
                                     </div>
                                 </div>
@@ -798,7 +964,9 @@ const InfoWelcome = (props) => {
                             <div className="bi">
                                 <div className="top">
                                     <div className="flx_box">
-                                        <h4>{t("weAre.aboutUs.CI.brand.title")}</h4>
+                                        <h4>
+                                            {t("weAre.aboutUs.CI.brand.title")}
+                                        </h4>
                                         <p className="normal">
                                             {/*로고의 기본 컨셉은 세가지 시각적*/}
                                             {/*형태의 의미를 부여한다.<br></br>*/}
@@ -815,7 +983,10 @@ const InfoWelcome = (props) => {
                                                 i18nKey={
                                                     "weAre.aboutUs.CI.brand.content"
                                                 }
-                                                components={[<br></br>, <span></span>]}
+                                                components={[
+                                                    <br></br>,
+                                                    <span></span>,
+                                                ]}
                                             />
                                         </p>
                                     </div>
@@ -837,7 +1008,9 @@ const InfoWelcome = (props) => {
                                                 #FF0000
                                             </div>
                                             <span>
-                                                {t("weAre.aboutUs.CI.brand.red")}
+                                                {t(
+                                                    "weAre.aboutUs.CI.brand.red",
+                                                )}
                                             </span>
                                         </div>
                                         <div className="blue color">
@@ -849,7 +1022,9 @@ const InfoWelcome = (props) => {
                                                 #0047A0
                                             </div>
                                             <span>
-                                                {t("weAre.aboutUs.CI.brand.blue")}
+                                                {t(
+                                                    "weAre.aboutUs.CI.brand.blue",
+                                                )}
                                             </span>
                                         </div>
                                     </div>
@@ -940,7 +1115,15 @@ const InfoWelcome = (props) => {
                             </h3>
                             <ul className="partner">
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://www.airmacau.com.mo",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner01.png"
                                             alt=""
@@ -948,7 +1131,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://www.ktreehotel.com/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner02.png"
                                             alt=""
@@ -956,7 +1147,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "http://www.jjinhomme.co.kr/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner03.png"
                                             alt=""
@@ -964,7 +1163,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "http://mercureulsan.com",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner04.png"
                                             alt=""
@@ -972,7 +1179,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://mjh.or.kr/main/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner05.png"
                                             alt=""
@@ -980,7 +1195,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://www.marriott.com/en-us/hotels/jktwi-the-westin-jakarta/overview/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner06.png"
                                             alt=""
@@ -988,7 +1211,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://all.accor.com/hotel/0533/index.ko.shtml",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner07.png"
                                             alt=""
@@ -996,7 +1227,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://www.themulia.com/jakarta/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner08.png"
                                             alt=""
@@ -1004,7 +1243,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://www.saeviteye.com/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner09.png"
                                             alt=""
@@ -1012,7 +1259,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://ncc.re.kr/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner10.png"
                                             alt=""
@@ -1020,7 +1275,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://www.glad-hotels.com/maisongladjeju/index.do",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner11.png"
                                             alt=""
@@ -1028,7 +1291,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "http://www.grace-hospital.com/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner12.png"
                                             alt=""
@@ -1036,7 +1307,12 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl("www.cashtree.id", e);
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner13.png"
                                             alt=""
@@ -1044,7 +1320,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "http://www.jnplaw.co.kr/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner14.png"
                                             alt=""
@@ -1052,7 +1336,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://www.nhimc.or.kr/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner15.png"
                                             alt=""
@@ -1060,7 +1352,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://www.artbuddy.co.kr/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner16.png"
                                             alt=""
@@ -1068,7 +1368,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://www.allmytour.com/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner17.png"
                                             alt=""
@@ -1076,7 +1384,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "www.mayfield.co.kr",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner18.png"
                                             alt=""
@@ -1084,7 +1400,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://www.instagram.com/cheongdam_kclinic",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner19.png"
                                             alt=""
@@ -1092,7 +1416,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "http://cmscompany.co.kr/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner20.png"
                                             alt=""
@@ -1100,7 +1432,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://www.rsui.com",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner21.png"
                                             alt=""
@@ -1108,7 +1448,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://www.ayana.com",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner22.png"
                                             alt=""
@@ -1116,7 +1464,15 @@ const InfoWelcome = (props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://gtdc.or.kr/",
+                                                e,
+                                            );
+                                        }}
+                                    >
                                         <img
                                             src="/img/web/partner/partner23.png"
                                             alt=""

@@ -200,7 +200,8 @@ const CommonCheckDate = async (
 
 // 공용 url 열기
 // 파라미터 : url(string)
-const CommonOpenUrl = (url) => {
+const CommonOpenUrl = (url, e) => {
+    e.preventDefault();
     window.open(url, "_blank", "noopener, noreferrer");
 };
 
