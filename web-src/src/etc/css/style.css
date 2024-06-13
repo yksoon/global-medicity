@@ -57,7 +57,7 @@ body {margin:0 auto;}
 .mobile_top {display:none;}
 .tops {display:none;}
 #nav {display:none;}
-#header .lang {display: none;}
+
 
 #mainvisual {position:relative;z-index:1; width:100%; height:100vh; background:url('/img/web/main/mainvisual.png') center 0 no-repeat;}
 #mainvisual .main_txt {max-width:1520px; margin:0 auto;position:relative; top:50%;transform: translate(0, -50%);}
@@ -805,6 +805,7 @@ select {
 		
 	body {min-width:280px;max-width: auto;}
 	#header  {height:65px; }
+	#header .lang {display: none;}
 	#header .book {display: none;}
 	#header_content {width:auto;height:65px;}
 	#header_content .logo {top:18px; left:20px;margin-left:0;position: absolute;z-index: 99999;}
