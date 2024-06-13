@@ -9,7 +9,10 @@ const ko = {
                 partner: "파트너",
                 downloadCompany: "회사소개서 다운로드",
             },
-            kmedi: {},
+            kmedi: {
+                intro: "K-MEDI 소개",
+                app: "K-MEDI APP",
+            },
             business: {
                 hotelService: "Hotel Service",
                 artService: "Art Service",
