@@ -173,7 +173,7 @@ function Header(props) {
                             </a>
                         ))}
                     </div>
-                    <div className="">
+                    <div className="book">
                         <img src="img/web/main/book.png" alt="" />
                     </div>
                 </div>
