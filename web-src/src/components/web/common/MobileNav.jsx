@@ -64,25 +64,23 @@ function MobileNav() {
                 <nav>
                     <ul id="nav">
                         <li style={{ display: "flex" }}>
-                            <div className="lang">
-                                {Object.keys(lngs).map((lng) => (
-                                    <a
-                                        style={{ cursor: "pointer" }}
-                                        key={lng}
-                                        className={
-                                            i18n.resolvedLanguage === lng
-                                                ? "on"
-                                                : ""
-                                        }
-                                        onClick={() => {
-                                            i18n.changeLanguage(lng);
-                                            handleLanguage(lng);
-                                        }}
-                                    >
-                                        {lngs[lng].nativeName}
-                                    </a>
-                                ))}
-                            </div>
+                            {Object.keys(lngs).map((lng) => (
+                                <a
+                                    style={{ cursor: "pointer" }}
+                                    key={lng}
+                                    className={
+                                        i18n.resolvedLanguage === lng
+                                            ? "on"
+                                            : ""
+                                    }
+                                    onClick={() => {
+                                        i18n.changeLanguage(lng);
+                                        handleLanguage(lng);
+                                    }}
+                                >
+                                    {lngs[lng].nativeName}
+                                </a>
+                            ))}
                         </li>
                         <li>
                             <Link

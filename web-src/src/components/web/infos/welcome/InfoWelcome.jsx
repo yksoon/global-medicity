@@ -114,9 +114,15 @@ const InfoWelcome = (props) => {
                                     {t("weAre.greetings.Greetings_title")}
                                 </h3>
                                 <p className="normal">
-                                    {LineBreak(
-                                        t("weAre.greetings.Greetings_content"),
-                                    )}
+                                    {/*{LineBreak(*/}
+                                    {/*    t("weAre.greetings.Greetings_content"),*/}
+                                    {/*)}*/}
+                                    <Trans
+                                        i18nKey={
+                                            "weAre.greetings.Greetings_content"
+                                        }
+                                        components={[<br></br>]}
+                                    />
                                     {/*<h4>㈜메디씨티는</h4>*/}
                                     {/*환자와 의료진의 중심에서 글로벌 의료통합*/}
                                     {/*플랫폼 서비스를 통해 새로운 혁신을*/}
