@@ -396,6 +396,11 @@ const ko = {
                     news: "NEWS",
                 },
             },
+            notice: {
+                subtitle: "공지사항",
+                title: "NOTICE",
+            },
+            no_data: "등록된 공지사항이 없습니다.",
             view_more: "VIEW MORE",
         },
         kmedi: {

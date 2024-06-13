@@ -404,11 +404,16 @@ const en = {
                 subtitle: "Sharing news from Medi-City",
                 title: "NEWS",
                 category: {
-                    all: "전체보기",
-                    video: "영상콘텐츠",
+                    all: "VIEW ALL",
+                    video: "VIDEO CONTENT",
                     news: "NEWS",
                 },
             },
+            notice: {
+                subtitle: "NOTICE",
+                title: "NOTICE",
+            },
+            no_data: "There are no registered announcements.",
             view_more: "VIEW MORE",
         },
         kmedi: {
