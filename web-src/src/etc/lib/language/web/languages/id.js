@@ -404,11 +404,16 @@ const id = {
                 subtitle: "Membagikan berita dari Medi-City",
                 title: "BERITA",
                 category: {
-                    all: "전체보기",
-                    video: "영상콘텐츠",
-                    news: "NEWS",
+                    all: "LIHAT SEMUA",
+                    video: "KONTEN VIDEO",
+                    news: "BERITA",
                 },
             },
+            notice: {
+                subtitle: "PEMBERITAHUAN",
+                title: "PEMBERITAHUAN",
+            },
+            no_data: "Tidak ada pengumuman terdaftar.",
             view_more: "LIHAT LEBIH LANJUT",
         },
         kmedi: {
@@ -422,29 +427,29 @@ const id = {
             intro: {
                 subtitle: "Perkenalan K-MEDI",
                 content_1: {
-                    title: "인도네시아 법인 회사를 설립을 한 이유?",
+                    title: "Alasan di balik pendirian entitas perusahaan di Indonesia?",
                     1: {
                         content:
-                            "인도네시아 인구 약 2억7천만명 중 의사 수 <0></0>약 21만 2천만명 (2022년 기준) <1>의료시장의 급격한 성장세</1>",
+                            "Jumlah dokter di Indonesia ada sekitar 21 juta dari jumlah penduduk Indonesia yang berjumlah sekitar 270 juta (per tahun 2022). <1>Pasar medis di Indonesia</1> telah menunjukkan pertumbuhan yang pesat.",
                         btn_1: "Jumlah Dokter di Indonesia",
                     },
                     2: {
                         content:
-                            "병원, 의료, 치과 서비스 시장은 <0></0>2014년부터 2022년까지 연평균 약5%씩 성장",
-                        btn_1: "인도네시아병원 서비스 시장 규모",
+                            "Pasar layanan rumah sakit, medis, dan gigi di Indonesia telah tumbuh dengan rata-rata sekitar 5% per tahun dari 2014 hingga 2022.",
+                        btn_1: "Ukuran Pasar Layanan Rumah Sakit Indonesia",
                         btn_2: "Jumlah rumah sakit di Indonesia",
                     },
                 },
                 content_2: {
-                    subtitle: "Leading Global Medical <0></0>Contents Platform",
+                    subtitle: "Platform Konten <0></0>Medis Global Terkemuka",
                     title: "K-Medi",
                     content:
                         "Mulai dari Indonesia, K-Medi berencana untuk ekspansi ke Vietnam, Filipina, Malaysia, Singapore, India dan Thailand.",
                 },
                 content_3: {
-                    title: "K-Medi APP Architecture",
+                    title: "Arsitektur APP K-Medi",
                     content:
-                        "의료데이터 활용 및 저작권 문제 : 디지털 자산에 대한 저작권 귀속 규제 없음 (개인정보 보호법 제2조 제1호 근거) <0></0>병원 및 콘텐츠 공급자 회사 매출 수입에 대한 Reward 분배 정책",
+                        "Pemanfaatan data medis dan masalah hak cipta: Tidak ada peraturan hak cipta atas aset digital (berdasarkan Pasal 2, Subparagraf 1 Undang-Undang Perlindungan Informasi Pribadi). Kebijakan distribusi untuk hadiah bagi pendapatan rumah sakit dan perusahaan penyedia konten.",
                     1: {
                         title: "Penemuan Konten",
                         content:

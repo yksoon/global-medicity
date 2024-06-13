@@ -18,8 +18,11 @@ import { successCode } from "etc/lib/resultCode";
 import { Link } from "react-router-dom";
 import routerPath from "etc/lib/path/routerPath";
 import { Pagination } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const MediaNotice = (props) => {
+    const { t, i18n } = useTranslation();
+
     const { confirm } = useConfirm();
     const { alert } = useAlert();
     const err = CommonErrModule();
@@ -115,20 +118,22 @@ const MediaNotice = (props) => {
                     <h2>MEDIA CENTER</h2>
                 </div>
                 <div id="leftmenu">
-                    <Link to={routerPath.web_media_news_url}>NEWS</Link>
+                    <Link to={routerPath.web_media_news_url}>
+                        {t("media.subvisual.subtitle.news")}
+                    </Link>
                     <Link
                         to={routerPath.web_media_notice_url}
                         className="active"
                     >
-                        공지사항
+                        {t("media.subvisual.subtitle.notice")}
                     </Link>
                 </div>
             </div>
             <div id="con_area">
                 <div className="notice">
                     <h3 className="c_tit">
-                        <span>공지사항</span>
-                        NOTICE
+                        <span>{t("media.notice.subtitle")}</span>
+                        {t("media.notice.title")}
                     </h3>
                     <div className="list_wrap">
                         {/*반복 시작*/}
@@ -150,14 +155,14 @@ const MediaNotice = (props) => {
                                         to={`${routerPath.web_media_notice_detail_url}${item.boardIdx}`}
                                         className="btn_main"
                                     >
-                                        VIEW MORE <Arrow />
+                                        {t("media.view_more")} <Arrow />
                                     </Link>
                                 </div>
                             ))
                         ) : !isSpinner ? (
                             <div className="list_box">
                                 <div className="txt_wrap">
-                                    <h5>등록된 공지사항이 없습니다.</h5>
+                                    <h5>{t("media.no_data")}</h5>
                                 </div>
                             </div>
                         ) : (
