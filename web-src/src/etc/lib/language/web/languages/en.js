@@ -9,7 +9,10 @@ const en = {
                 partner: "Partners",
                 downloadCompany: "Download Company Introduction Document",
             },
-            kmedi: {},
+            kmedi: {
+                intro: "K-MEDI Introduction",
+                app: "K-MEDI APP",
+            },
             business: {
                 hotelService: "Hotel Service",
                 artService: "Art Service",

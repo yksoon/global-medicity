@@ -9,7 +9,10 @@ const id = {
                 partner: "Partners",
                 downloadCompany: "Unduh Dokumen Pengenalan Perusahaan",
             },
-            kmedi: {},
+            kmedi: {
+                intro: "Perkenalan K-MEDI",
+                app: "APLIKASI K-MEDI",
+            },
             business: {
                 hotelService: "Layanan Hotel",
                 artService: "Layanan Art",

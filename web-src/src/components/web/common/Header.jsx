@@ -43,7 +43,9 @@ function Header(props) {
                                 <Link
                                     to={routerPath.web_info_greet_url}
                                     state={{ headerRoute: "greetings" }}
-                                >WE ARE</Link>
+                                >
+                                    WE ARE
+                                </Link>
                                 <div className="submenu">
                                     <Link
                                         to={routerPath.web_info_greet_url}
@@ -79,19 +81,21 @@ function Header(props) {
                                 <Link
                                     to={routerPath.web_kmedi_intro_url}
                                     state={{ headerRoute: "intro" }}
-                                >K-MEDI</Link>
+                                >
+                                    K-MEDI
+                                </Link>
                                 <div className="submenu">
                                     <Link
                                         to={routerPath.web_kmedi_intro_url}
                                         state={{ headerRoute: "intro" }}
                                     >
-                                        K-Medi 소개
+                                        {t("header.kmedi.intro")}
                                     </Link>
                                     <Link
                                         to={routerPath.web_kmedi_intro_url}
                                         state={{ headerRoute: "app" }}
                                     >
-                                        K-Medi App
+                                        {t("header.kmedi.app")}
                                     </Link>
                                 </div>
                             </li>
@@ -99,7 +103,9 @@ function Header(props) {
                                 <Link
                                     to={routerPath.web_business_hotel_url}
                                     state={{ headerRoute: "hotel" }}
-                                >BUSINESS</Link>
+                                >
+                                    BUSINESS
+                                </Link>
                                 <div className="submenu">
                                     <Link
                                         to={routerPath.web_business_hotel_url}
@@ -127,7 +133,9 @@ function Header(props) {
                                 </div>
                             </li>
                             <li>
-                                <Link to={routerPath.web_media_news_url}>MEDIA CENTER</Link>
+                                <Link to={routerPath.web_media_news_url}>
+                                    MEDIA CENTER
+                                </Link>
                                 <div className="submenu">
                                     {/*<Link to={routerPath.web_media_video_url}>*/}
                                     {/*    영상 콘텐츠*/}
