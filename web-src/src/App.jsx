@@ -33,6 +33,8 @@ function App() {
 
     useEffect(() => {
         const path = location.pathname;
+
+        console.log(path);
         // /admin
         if (path === "/admin" || path === "/admin/signin") {
             import("etc/css/adm.css");
