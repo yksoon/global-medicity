@@ -1,9 +1,8 @@
-
 import { CommonConsole, CommonNotify } from "etc/lib/Common";
 import { successCode } from "etc/lib/resultCode";
 import apiPath from "etc/lib/path/apiPath";
 import routerPath from "etc/lib/path/routerPath";
-import {RestServer} from "etc/lib/CommonRestAPI";
+import { RestServer } from "etc/lib/CommonRestAPI";
 
 const tokenExpire = (
     // dispatch,
@@ -34,7 +33,7 @@ const tokenExpire = (
     RestServer("post", url, data)
         .then(function (response) {
             // response
-            let result_code = response.headers.result_code;
+            let result_code = response.headers.resultcode;
 
             if (result_code === successCode.success) {
                 // localStorage.removeItem("userInfo");
@@ -77,7 +76,7 @@ const tokenExpire = (
             CommonNotify({
                 type: "alert",
                 hook: alert,
-                message: error.response.headers.result_message_ko,
+                message: error.response.headers.resultmessageko,
                 callback: () => goToSignIn(),
             });
 

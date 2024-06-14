@@ -6,6 +6,7 @@ const errorCode = {
     tokenExpired: "2001", // 토큰 만료
     tokenTamperWith: "2002", // 비정상 토큰
     invalidToken: "2003", // 비정상 토큰
+    unauthorized: 401, // 계정관련
 };
 
 const successCode = {
