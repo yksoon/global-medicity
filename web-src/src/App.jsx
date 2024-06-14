@@ -34,7 +34,12 @@ function App() {
     useEffect(() => {
         const loadCSS = async (path) => {
             try {
-                if (path === "/admin" || path === "/admin/signin") {
+                if (
+                    path === "/admin" ||
+                    path === "/admin/" ||
+                    path === "/admin/signin" ||
+                    path === "/admin/signin/"
+                ) {
                     await import("etc/css/adm.css");
                 } else {
                     await import("etc/css/style.css");

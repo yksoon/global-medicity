@@ -4,9 +4,13 @@ import Footer from "components/web/common/footer";
 import Arrow from "components/web/common/Arrow";
 import { Link, useLocation } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
+import useAlert from "hook/useAlert";
+import { CommonNotify } from "etc/lib/Common";
 
 const KmediIntro = (props) => {
     const { t, i18n } = useTranslation();
+
+    const { alert } = useAlert();
 
     const refs = {
         subvisual: useRef(null),
@@ -247,7 +251,19 @@ const KmediIntro = (props) => {
                                     components={[<br></br>]}
                                 />
                             </h3>
-                            <Link to={``} className="btn_main">
+                            <Link
+                                to=""
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    CommonNotify({
+                                        type: "alert",
+                                        hook: alert,
+                                        message: t("kmedi.app.comming_soon"),
+                                        callback: () => moveToSection("app"),
+                                    });
+                                }}
+                                className="btn_main"
+                            >
                                 {t("kmedi.app.viewMore")} <Arrow />
                             </Link>
                         </div>

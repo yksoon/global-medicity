@@ -99,7 +99,9 @@ const id = {
                 Greetings: "Greetings",
                 Greetings_title: "GREETINGS",
                 Greetings_content:
-                    "PT. Medi-City<0></0>memulai gelombang inovasi baru melalui layanan platform integrasi medis global yang berpusat pada pasien dan profesional medis.<0></0>Selain itu, dengan menciptakan platform untuk secara luas mempromosikan dan mengkomunikasikan teknologi K-medis yang luar biasa<0></0>di luar negeri, kami saat ini berfokus pada investasi intensif dan pengembangan di bidang medis dengan misi untuk membangun tempat untuk menyelamatkan<0></0>nyawa dengan memberikan informasi medis yang luar biasa dan menyediakan secara online dan pendidikan offline ke negara tetangga masih menghadapi angka kematian yang tinggi.<0></0>Kami tidak akan puas hanya dengan menawarkan produk dan layanan terbaik.<0></0>Kami bertujuan untuk menjadi perusahaan global nomor satu di mana seluruh karyawan bersatu, terus menantang, berkembang, dan memprioritaskan nilai pelanggan.",
+                    'MediCity Co., Ltd. <0></0>didedikasikan untuk mengubah bidang medis melalui "Platform Integrasi Medis Global" kami di garis depan inovasi.<0></0>Misi kami adalah untuk berbagi informasi luas di antara para profesional medis melalui layanan K-Medi dan membuka era baru keunggulan medis.<0></0><0></0>' +
+                    'Kami dengan bangga memperkenalkan K-Medi ke dunia, menyediakan platform di mana para profesional medis dapat berbagi, terhubung, dan berkolaborasi.<0></0>MediCity Co., Ltd. bertujuan untuk melampaui batas dan membawa teknologi medis dan layanan pendidikan medis Korea ke banyak negara di luar negeri di mana banyak nyawa masih hilang.<0></0>Sejalan dengan misi kami untuk "menyelamatkan nyawa," kami fokus pada investasi dan pengembangan industri medis.<0></0><0></0>' +
+                    "MediCity Co., Ltd. tidak akan berhenti hanya pada penyediaan konten luar biasa dan layanan yang beragam.<0></0>Setiap anggota tim kami berkomitmen untuk terus berusaha dan berkembang untuk berkontribusi pada kesehatan dan kesejahteraan global.<0></0>Kami juga bercita-cita menjadi perusahaan global terkemuka yang menghormati kehidupan dan meningkatkan kesejahteraan semua orang.",
                 ltd: "CEO PT. Medi-City",
             },
             aboutUs: {
@@ -478,6 +480,7 @@ const id = {
                 subtitle: "APLIKASI K-MEDI",
                 title: "Memberikan perlindungan hak <0></0>cipta dan layanan platform OTT <0></0>profesional medis.",
                 viewMore: "LIHAT LEBIH LANJUT",
+                comming_soon: "segera hadir",
             },
         },
     },

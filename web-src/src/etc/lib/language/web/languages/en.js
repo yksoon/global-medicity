@@ -101,7 +101,9 @@ const en = {
                 Greetings: "Greetings",
                 Greetings_title: "GREETINGS",
                 Greetings_content:
-                    "Medi-City Co., Ltd. is<0></0>initiating a new wave of innovation through a global medical integration platform service at the core of patients and medical professionals.<0></0>Furthermore, by creating a platform to widely promote and communicate outstanding K-medical technology overseas, we are currently focusing on<0></0>intensive investment and fostering in the medical field with a mission to establish a place for saving lives by delivering exceptional medical information and providing online and offline education to neighboring countries still facing high mortality rates.<0></0>We will not settle for just offering excellent products and services.<0></0>We aim to become the number one global company where all employees unite as one, continuously challenging, growing, and prioritizing customer value.",
+                    'MediCity Co., Ltd. <0></0>is dedicated to transforming the medical field through our "Global Medical Integration Platform" at the forefront of innovation.<0></0>Our mission is to share extensive information among medical professionals through the K-Medi service and usher in a new era of medical excellence.<0></0><0></0>' +
+                    'We proudly introduce K-Medi to the world, providing a platform where medical professionals can share, connect, and collaborate. MediCity Co., Ltd. aims to transcend borders and bring Korean medical technology and education services to many overseas countries where countless lives are still being lost.<0></0>In line with our mission to "save lives," we focus on investing in and nurturing the medical industry.<0></0><0></0>' +
+                    "MediCity Co., Ltd. will not stop at providing outstanding content and diverse services.<0></0>Every member of our team is committed to continuous effort and growth to contribute to global health and well-being. We also aspire to become the world's leading global company that respects life and enhances the welfare of all people.",
                 ltd: "Medi-City Co., Ltd CEO",
             },
             aboutUs: {
@@ -477,6 +479,7 @@ const en = {
                 subtitle: "K-MEDI APP",
                 title: "Providing copyright <0></0>protection and medical <0></0>professional OTT platform services.",
                 viewMore: "VIEW MORE",
+                comming_soon: "coming soon",
             },
         },
     },
