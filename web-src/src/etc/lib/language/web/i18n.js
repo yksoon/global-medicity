@@ -8,10 +8,10 @@ import id from "etc/lib/language/web/languages/id";
 // 사용자 언어 탐지 옵션 설정
 const languageDetectorOptions = {
     // 여기서 원하는 순서로 언어를 탐지하도록 설정할 수 있습니다.
-    // 예를 들어, 쿠키 -> 로컬 스토리지 -> 브라우저 언어 -> HTML lang 속성 순으로 탐지
+    // 예를 들어, 쿠키 -> 세션 스토리지 -> 브라우저 언어 -> HTML lang 속성 순으로 탐지
     order: [
         "cookie",
-        "localStorage",
+        "sessionStorage",
         "navigator",
         "htmlTag",
         "path",
@@ -20,9 +20,9 @@ const languageDetectorOptions = {
     // 쿠키 이름 설정
     lookupCookie: "i18next",
     // 로컬 스토리지 키 설정
-    lookupLocalStorage: "i18nextLng",
+    lookupSessionStorage: "i18nextLng",
     // 사용할 언어를 여기에 정의
-    caches: ["localStorage", "cookie"],
+    caches: ["sessionStorage", "cookie"],
 };
 
 i18n.use(LanguageDetector) // 사용자 언어 탐지

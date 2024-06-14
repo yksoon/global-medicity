@@ -72,7 +72,7 @@ export const userTokenAtom = atom({
     effects_UNSTABLE: [persistAtom],
 });
 
-// 사용자 토큰
+// 언어 기본 세팅
 export const globalLanguageAtom = atom({
     key: "globalLanguage",
     default: "",
