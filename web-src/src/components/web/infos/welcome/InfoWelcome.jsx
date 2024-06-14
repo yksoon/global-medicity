@@ -1501,7 +1501,6 @@ const InfoWelcome = (props) => {
                                         />
                                     </Link>
                                 </li>
-                                <li></li>
                             </ul>
                         </div>
                     </div>
