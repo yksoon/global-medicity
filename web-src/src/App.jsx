@@ -32,15 +32,19 @@ function App() {
     const location = useLocation();
 
     useEffect(() => {
-        const path = location.pathname;
+        const loadCSS = async (path) => {
+            try {
+                if (path === "/admin" || path === "/admin/signin") {
+                    await import("etc/css/adm.css");
+                } else {
+                    await import("etc/css/style.css");
+                }
+            } catch (error) {
+                console.error("Failed to load CSS", error);
+            }
+        };
 
-        console.log(path);
-        // /admin
-        if (path === "/admin" || path === "/admin/signin") {
-            import("etc/css/adm.css");
-        } else {
-            import("etc/css/style.css");
-        }
+        loadCSS(location.pathname);
     }, [location]);
 
     useEffect(() => {
