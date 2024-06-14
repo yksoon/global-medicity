@@ -14,13 +14,16 @@ import {
     Instance,
     Instance_admin,
     Instance_admin_file,
-    Instance_admin_file_multi, Instance_admin_multi,
-    Instance_file, Instance_multi, Instance_multi_file
+    Instance_admin_file_multi,
+    Instance_admin_multi,
+    Instance_file,
+    Instance_multi,
+    Instance_multi_file,
 } from "etc/lib/Instance";
-import {CommonConsole, CommonNotify} from "etc/lib/Common";
-import {errorCode} from "etc/lib/resultCode";
+import { CommonConsole, CommonNotify } from "etc/lib/Common";
+import { errorCode } from "etc/lib/resultCode";
 import tokenExpire from "etc/lib/tokenExpire";
-import {restTimeOut} from "etc/lib/static";
+import { restTimeOut } from "etc/lib/static";
 
 const RestServer = (method, url, data, admin, file) => {
     switch (method) {
@@ -38,8 +41,8 @@ const RestServer = (method, url, data, admin, file) => {
                         ? Instance_admin_file.post(url, data)
                         : Instance_admin.post(url, data)
                     : file === "Y"
-                        ? Instance_file(url, data)
-                        : Instance.post(url, data);
+                    ? Instance_file(url, data)
+                    : Instance.post(url, data);
             return retPost;
 
         case "put":
@@ -63,8 +66,8 @@ const RestServer = (method, url, data, admin, file) => {
                         ? Instance_admin_file_multi.post(url, data)
                         : Instance_admin_multi.post(url, data)
                     : file === "Y"
-                        ? Instance_multi_file.post(url, data)
-                        : Instance_multi.post(url, data);
+                    ? Instance_multi_file.post(url, data)
+                    : Instance_multi.post(url, data);
             return retMultiPost;
 
         case "put_multi":
@@ -109,11 +112,12 @@ const CommonErrorCatch = async (
         }
         // 비정상접근 or 비정상토큰
         else if (
-            error.response.headers.resultCode === errorCode.abnormalApproach || // 비정상 접근 - "9995"
-            error.response.headers.resultCode === errorCode.emptyToken || // 토큰이 없음 - "2000"
-            error.response.headers.resultCode === errorCode.tokenExpired || // 토큰 만료 - "2001"
-            error.response.headers.resultCode === errorCode.tokenTamperWith || // 올바른 토큰 아닐 시 - "2002"
-            error.response.headers.resultCode === errorCode.invalidToken // 올바른 토큰 아닐 시 - "2003"
+            // error.response.headers.resultCode === errorCode.abnormalApproach || // 비정상 접근 - "9995"
+            // error.response.headers.resultCode === errorCode.emptyToken || // 토큰이 없음 - "2000"
+            // error.response.headers.resultCode === errorCode.tokenExpired || // 토큰 만료 - "2001"
+            // error.response.headers.resultCode === errorCode.tokenTamperWith || // 올바른 토큰 아닐 시 - "2002"
+            // error.response.headers.resultCode === errorCode.invalidToken // 올바른 토큰 아닐 시 - "2003"
+            error.response.status === errorCode.unauthorized
         ) {
             tokenExpire(
                 // dispatch,
@@ -181,4 +185,4 @@ const CommonRestAPI = async (restParams = {}) => {
         });
 };
 
-export { RestServer, CommonRestAPI }
+export { RestServer, CommonRestAPI };
