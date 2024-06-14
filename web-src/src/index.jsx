@@ -19,6 +19,8 @@ import "etc/css/aos.css";
 // import "etc/css/adm.css";
 import ScrollToTop from "./ScrollToTop";
 import { StyledEngineProvider } from "@mui/material";
+import { useLocation } from "react-router";
+import { useEffect } from "react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const app = document.getElementById("app");
