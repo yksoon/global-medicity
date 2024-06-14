@@ -10,7 +10,7 @@ body {margin:0 auto;}
 #header .lang a {font-size: 18px; color: #C7CEF5;font-weight: 700;}
 #header .lang a:hover {color: #fff;}
 #header .lang a.on {color: #fff; border-bottom: 1px solid #fff;}
-
+#top_right .logo {display: none;}
 /* gnb */
 #gnb {z-index: 999;width: 100%;}
 #gnb ul {display:flex;justify-content: center;align-items: center;margin: 0 auto;text-align:center; align-items: center;}
@@ -408,7 +408,7 @@ display: inline-block;margin: 0 0 40px;column-width: 480px;}
 .business .txt_wrap .top p {color: #424448; font-size: 32px; font-weight: 700;letter-spacing: -0.02em;}
 .business .txt_wrap .line {padding: 40px 0; border-top: 1px solid #ddd;}
 .business .txt_wrap > div:last-child {border-bottom: 1px solid #ddd;}
-.business .txt_wrap .line h5 {font-family: 'Lexend';color: #111;font-size: 28px; font-weight: 400;letter-spacing: -0.02em;} 
+.business .txt_wrap .line h5 {color: #111;font-size: 28px; font-weight: 400;letter-spacing: -0.02em;} 
 .business .txt_wrap .line p {color: #111; font-size: 18px;letter-spacing: -0.02em; }
 .business .art .txt_wrap  {text-align: right;}
 .business .art  .txt_wrap .top .c_tit a {margin: 0 45px 0 0;}
@@ -808,8 +808,8 @@ select {
 	#header .lang {display: none;}
 	#header .book {display: none;}
 	#header_content {width:auto;height:65px;}
-	#header_content .logo {top:18px; left:20px;margin-left:0;position: absolute;z-index: 99999;}
-	#header_content .logo a{display:inline-block; width: 96px;}
+	#header_content .logo {display: none;}
+
 
 
 
@@ -822,7 +822,8 @@ select {
 
 
 	/* nav */
-	#top_right {display:block;float:right; position: absolute; right: 0;top: 0; width: 100%;padding: 25px;}
+	#top_right {display:block;float:right; position: absolute; right: 0;top: 0; width: 100%;}
+	#top_right .logo {top:12px; left:20px;margin-left:0;position: absolute;width: 120px;display: block;}
 	.allmenu { position:relative;}
 	#menu-icon2{
 	  position: relative;
@@ -833,6 +834,7 @@ select {
 	  cursor: pointer;
 	  position: absolute;
 	  right: 20px;
+	  top: 20px;
 	}
 	#menu-icon2 span{
 	  display: block;
@@ -880,8 +882,8 @@ select {
 	#mainvisual {position:relative;z-index:1; width:100%; height:400px; background:url('/img/web/main/mainvisual.png') center 0 no-repeat;background-size: cover;overflow: hidden;}
 	#mainvisual .main_txt {width:auto; top: 55% }
 	#mainvisual .main_txt h3 {font-size: 14px;}
-	#mainvisual .main_txt p {font-size:16px; line-height: 1.6;}
-	#mainvisual .main_txt h2 {font-size: 32px;}
+	#mainvisual .main_txt p {font-size:14px; line-height: 20px;}
+	#mainvisual .main_txt h2 {font-size: 28px;}
 
 
 	#mainvisual  .main_txt_in {width:auto;}
@@ -1231,11 +1233,9 @@ select {
 
 	@media screen and (max-width:375px) { 
 		#mainvisual{height:370px;}
-		#mainvisual .main_txt h3{font-size: 12px;;}
-		#mainvisual .main_txt .date {font-size:15px; line-height:20px;}
-		#mainvisual .main_txt .date .pink {font-size:16px;}
-		#mainvisual .main_txt .ob_img {bottom:30px;}
-		#mainvisual .main_txt .ob_img img {width:140px;}
+		#mainvisual .main_txt h2 {font-size: 24px;}
+		#mainvisual .main_txt h3 {font-size: 12px;}
+		#mainvisual .main_txt p {font-size: 12px;line-height: 16px;	}
 
 		.section01 h3 {font-size:20px;}
 		.section01 .txt{font-size: 12px;}
@@ -1244,15 +1244,6 @@ select {
 		.section01 .hostbox span.logobox img {    transform: scale(0.6);}
 		.section01 .overview li {font-size:13px;line-height:17px;}
 		.section01 .overview li span{height:25px; line-height: 25px; font-size:10px;}
-
-		.section01 .free .free_in {padding:5px 10px;}
-		.section01 .free .free_in .tit{top:-30px; left:-32px;}
-		.section01 .free .free_in .tit img{width:90px;}
-		.section01 .free .free_in h3{font-size:15px;padding:10px 0;}
-		.section01 .free .free_in ul li {height:auto;line-height:14px;font-size:13px;padding:10px  38px 10px 0;}
-		.section01 .free .free_in ul li .date {display:block;position:static;width:80px;margin:0 0 3px 0;}
-		.section01 .free .free_in ul li .icon {position:absolute; top:15px; right:0px;}
-		.section01 .free .free_in ul li .icon img{width:35px;}
 		.section02 .sec02_in a {font-size:17px;}
 
 		#subvisual .sub_txt_in > h4 {font-size:18px;}
