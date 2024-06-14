@@ -12,7 +12,7 @@ const { persistAtom } = recoilPersist({
 // 관리자 페이지
 export const pageAtom = atom({
     key: "page",
-    default: "registrationMng",
+    default: import.meta.env.VITE_ADMIN_DEFAULT_PAGE,
     effects_UNSTABLE: [persistAtom], // 세션에 저장하려면 해당 코드 추가
 });
 
