@@ -1485,6 +1485,22 @@ const InfoWelcome = (props) => {
                                         />
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link
+                                        to=""
+                                        onClick={(e) => {
+                                            CommonOpenUrl(
+                                                "https://ojuk.gtdc.or.kr/",
+                                                e,
+                                            );
+                                        }}
+                                    >
+                                        <img
+                                            src="/img/web/partner/partner24.jpg"
+                                            alt=""
+                                        />
+                                    </Link>
+                                </li>
                                 <li></li>
                             </ul>
                         </div>
