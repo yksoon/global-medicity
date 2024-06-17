@@ -99,9 +99,9 @@ const id = {
                 Greetings: "Greetings",
                 Greetings_title: "GREETINGS",
                 Greetings_content:
-                    'MediCity Co., Ltd. <0></0>didedikasikan untuk mengubah bidang medis melalui "Platform Integrasi Medis Global" kami di garis depan inovasi.<0></0>Misi kami adalah untuk berbagi informasi luas di antara para profesional medis melalui layanan K-Medi dan membuka era baru keunggulan medis.<0></0><0></0>' +
-                    'Kami dengan bangga memperkenalkan K-Medi ke dunia, menyediakan platform di mana para profesional medis dapat berbagi, terhubung, dan berkolaborasi.<0></0>MediCity Co., Ltd. bertujuan untuk melampaui batas dan membawa teknologi medis dan layanan pendidikan medis Korea ke banyak negara di luar negeri di mana banyak nyawa masih hilang.<0></0>Sejalan dengan misi kami untuk "menyelamatkan nyawa," kami fokus pada investasi dan pengembangan industri medis.<0></0><0></0>' +
-                    "MediCity Co., Ltd. tidak akan berhenti hanya pada penyediaan konten luar biasa dan layanan yang beragam.<0></0>Setiap anggota tim kami berkomitmen untuk terus berusaha dan berkembang untuk berkontribusi pada kesehatan dan kesejahteraan global.<0></0>Kami juga bercita-cita menjadi perusahaan global terkemuka yang menghormati kehidupan dan meningkatkan kesejahteraan semua orang.",
+                    "PT. Medicity <0></0>terdepan dalam inovasi dan berkomitmen dalam transformasi bidang medis melalui “platform integrasi medis global” Misi kami adalah memberikan informasi dari para ahli medis sebanyak mungkin melalui layanan K-Medi dan dengan  membuka era baru keunggulan medis.<0></0><0></0>" +
+                    "Kami dengan bangga memperkenalkan K-Medi kepada dunia, menyediakan tempat bagi para profesional kesehatan untuk berbagi, berkoneksi, dan berkolaborasi.<0></0>PT. Medicity bertujuan memperkenalkan teknologi medis Korea dan menyebarkan layanan edukasi kedokteran ke melintasi berbagai belahan negara di mana masih banyak nyawa yang belum terselamatkan.<0></0>Dengan misi kami untuk “Menyelamatkan Hidup” kami fokus pada investasi dan pengembangan industri layanan kesehatan.<0></0><0></0>" +
+                    "PT. Medicity tidak akan berhenti menyediakan konten terbaik dan beragam layanan.<0></0>Semua anggota akan berkontribusi terhadap kesehatan dan kesejahteraan global melalui upaya dan pertumbuhan yang berkelanjutan.<0></0>Impian Kami untuk menjadi perusahaan global terbaik di dunia untuk meningkatkan kehidupan dan kesejahteraan seluruh orang.",
                 ltd: "CEO PT. Medi-City",
             },
             aboutUs: {
@@ -449,7 +449,7 @@ const id = {
                     subtitle: "Platform Konten <0></0>Medis Global Terkemuka",
                     title: "K-Medi",
                     content:
-                        "Mulai dari Indonesia, K-Medi berencana untuk ekspansi ke Vietnam, Filipina, Malaysia, Singapore, India dan Thailand.",
+                        "Mulai dari Indonesia, K-Medi berencana untuk ekspansi ke Vietnam, Filipina, Malaysia, India dan Thailand.",
                 },
                 content_3: {
                     title: "Arsitektur APP K-Medi",

@@ -436,7 +436,7 @@ const ko = {
                     subtitle: "Leading Global Medical <0></0>Contents Platform",
                     title: "K-Medi",
                     content:
-                        "K-Medi는 인도네시아를 시작으로 베트남, 필리핀, 말레이시아, 싱가폴, 인도, 태국을 목표로 하고 있습니다.",
+                        "K-Medi는 인도네시아를 시작으로 베트남, 필리핀, 말레이시아, 인도, 태국을 목표로 하고 있습니다.",
                 },
                 content_3: {
                     title: "K-Medi APP Architecture",
