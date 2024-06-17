@@ -51,6 +51,9 @@ const KmediIntro = (props) => {
     return (
         <>
             <Header />
+            <>
+                <div></div>
+            </>
             <div id="subvisual" ref={refs.subvisual}>
                 <div className="sub_txt">
                     <h2>{t("kmedi.subvisual.title")}</h2>
