@@ -449,7 +449,7 @@ const en = {
                     subtitle: "Leading Global Medical <0></0>Contents Platform",
                     title: "K-Medi",
                     content:
-                        "Starting with Indonesia, K-Medi aims to also expand to Vietnam, Phillipines, Malaysia, Singapore, India and Thailand.",
+                        "Starting with Indonesia, K-Medi aims to also expand to Vietnam, Phillipines, Malaysia, India and Thailand.",
                 },
                 content_3: {
                     title: "K-Medi APP Architecture",
