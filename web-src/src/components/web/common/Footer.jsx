@@ -5,7 +5,7 @@ import { isSpinnerAtom } from "etc/lib/recoils/atoms";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import routerPath from "etc/lib/path/routerPath";
-import { useTranslation } from "react-i18next";
+import {Trans, useTranslation} from "react-i18next";
 import LineBreak from "etc/lib/language/web/LineBreak";
 
 function Footer() {
@@ -110,7 +110,15 @@ function Footer() {
                                     </tr>
                                     <tr>
                                         <th>{t("footer.address")}</th>
-                                        <td>{t("footer.address_content")}</td>
+                                        {/*<td>{t("footer.address_content")}</td>*/}
+                                        <td>
+                                            <Trans
+                                                i18nKey={
+                                                    "footer.address_content"
+                                                }
+                                                components={[<br></br>]}
+                                            />
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

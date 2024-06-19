@@ -32,7 +32,10 @@ const id = {
             representative_content: "Park Sung-min",
             Company_Registration_Number_content: "588-86-02555",
             address_content:
-                "43-55, Mugunghwa-ro, Ilsandong-gu, Goyang-si, Gyeonggi-do",
+                "Lt. 9. Gedung MIDPOINT PLACE. " +
+                "JI. H. Fachrudin No.26 9, RT.9/RW.5, Kp. Bali,<0></0>" +
+                "Kecamatan Tanah Abang, Kota Jakarta Pusat, " +
+                "Daerah Khusus Ibukota Jakarta 10250, Indonesia",
             copy: "Copyright Medicity. All rights reserved.\nHak cipta dari semua konten yang diposting di situs kami adalah milik PT. Medi-City. Pengumpulan tidak sah dari situs kami sangat dilarang.",
         },
         mainvisual: {
