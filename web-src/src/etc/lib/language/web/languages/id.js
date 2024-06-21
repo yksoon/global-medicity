@@ -7,7 +7,7 @@ const id = {
                 aboutUs: "Tentang Kami",
                 certification: "Status Sertifikasi",
                 partner: "Partners",
-                downloadCompany: "Unduh Dokumen Pengenalan Perusahaan",
+                downloadCompany: "Download Profil Perusahaan",
             },
             kmedi: {
                 intro: "Perkenalan K-MEDI",
@@ -96,7 +96,7 @@ const id = {
                 About_Us: "Tentang Kami",
                 Certification_Status: "Status Sertifikasi",
                 Partners: "Partners",
-                Download_Company: "Unduh Dokumen Pengenalan Perusahaan",
+                Download_Company: "Download Profil Perusahaan",
             },
             greetings: {
                 Greetings: "Greetings",
@@ -435,7 +435,7 @@ const id = {
             intro: {
                 subtitle: "Perkenalan K-MEDI",
                 content_1: {
-                    title: "Alasan di balik pendirian entitas perusahaan di Indonesia?",
+                    title: "Mengapa mendirikan entitas korporat di Indonesia?",
                     1: {
                         content:
                             "Jumlah dokter di Indonesia ada sekitar 21 juta dari jumlah penduduk Indonesia yang berjumlah sekitar 270 juta (per tahun 2022). <1>Pasar medis di Indonesia</1> telah menunjukkan pertumbuhan yang pesat.",
