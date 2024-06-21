@@ -7,6 +7,7 @@ const SearchBar = (props) => {
     const regBoard = props.regBoard;
     const downloadExcel = props.downloadExcel;
     const clickRemove = props.clickRemove;
+    const search = props.search;
 
     // 엔터키
     const handleOnKeyPress = (e) => {
@@ -18,17 +19,31 @@ const SearchBar = (props) => {
     return (
         <>
             <div className="adm_search">
-                <div className="search_box">
-                    {/* <select name="" id="">
+                {search ? (
+                    <div className="search_box">
+                        {/* <select name="" id="">
                                         <option value="">구분</option>
                                         <option value="">이름</option>
                                         <option value="">소속</option>
                                     </select> */}
-                    <input type="text" className="input" onKeyDown={handleOnKeyPress} ref={searchKeyword} />
-                    <Link to="" className="subbtn off" onClick={doSearch} style={{marginLeft: "5px"}}>
-                        검색
-                    </Link>
-                </div>
+                        <input
+                            type="text"
+                            className="input"
+                            onKeyDown={handleOnKeyPress}
+                            ref={searchKeyword}
+                        />
+                        <Link
+                            to=""
+                            className="subbtn off"
+                            onClick={doSearch}
+                            style={{ marginLeft: "5px" }}
+                        >
+                            검색
+                        </Link>
+                    </div>
+                ) : (
+                    <div className="search_box"></div>
+                )}
                 <div className="btn_box btn_right" style={{ margin: 0 }}>
                     {downloadExcel && (
                         <Link

@@ -311,7 +311,7 @@ const id = {
                     },
                 },
                 organization: {
-                    title: "Bagan Organisasi",
+                    title: "Struktur Organisasi",
                 },
                 CI: {
                     title: "CI & BI",
