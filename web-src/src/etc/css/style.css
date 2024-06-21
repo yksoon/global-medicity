@@ -23,8 +23,8 @@ body {margin:0 auto;}
 #gnb:hover .submenu  {display:block;}
 #gnb:hover .submenu_bg  {display:block;}
 .submenu_bg {display: none; background: #00148e;opacity: 0.8;height:300px;position: fixed;top:100px;left:0;z-index: -1;width: 100%;animation:menuDown2 1s;}
-#gnb ul li .submenu {display: none; position:absolute; line-height:40px;  padding:20px 0;z-index: 999;left:0;width:100%;animation:menuDown 1s;}
-#gnb ul li .submenu a {display:block;color:#C7CEF5; font-size:17px;letter-spacing:-0.04em;}
+#gnb ul li .submenu {display: none; position:absolute; line-height:24px; padding:20px 0;z-index: 999;left:0;width:100%;animation:menuDown 1s;}
+#gnb ul li .submenu a {display:block;color:#C7CEF5; font-size:17px;letter-spacing:-0.04em; margin:0 0 20px 0;}
 #gnb ul li .submenu a:hover, #gnb ul li .submenu a:focus {color:#fff;}
 
 
