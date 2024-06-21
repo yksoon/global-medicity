@@ -220,7 +220,10 @@ const MediaNews = (props) => {
 
                                         <div className="txtwrap">
                                             <p className="name">
-                                                {item.subject}
+                                                {item.subject.replaceAll(
+                                                    "&amp;",
+                                                    "&",
+                                                )}
                                             </p>
                                             <Link
                                                 to={`${routerPath.web_media_news_detail_url}${item.boardIdx}`}
