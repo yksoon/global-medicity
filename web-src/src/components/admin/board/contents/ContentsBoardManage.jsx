@@ -326,7 +326,7 @@ const ContentsBoardManage = (props) => {
 
         columnHelper.accessor((row) => row.subject, {
             id: "subject",
-            cell: (info) => info.getValue(),
+            cell: (info) => info.getValue().replaceAll("&amp;", "&"),
             header: "제목",
             sortingFn: "alphanumericCaseSensitive",
             colWidth: "25%",
