@@ -7,7 +7,7 @@ const en = {
                 aboutUs: "About Us",
                 certification: "Certification Status",
                 partner: "Partners",
-                downloadCompany: "Download Company Introduction Document",
+                downloadCompany: "Download Company Profile",
             },
             kmedi: {
                 intro: "K-MEDI Introduction",
@@ -95,7 +95,7 @@ const en = {
                 About_Us: "About Us",
                 Certification_Status: "Certification Status",
                 Partners: "Partners",
-                Download_Company: "Download Company Introduction Document",
+                Download_Company: "Download Company Profile",
             },
             greetings: {
                 Greetings: "Greetings",
@@ -432,7 +432,7 @@ const en = {
             intro: {
                 subtitle: "K-MEDI Introduction",
                 content_1: {
-                    title: "What was the reason behind establishing a corporate entity in Indonesia?",
+                    title: "Why establish a corporate entity in Indonesia?",
                     1: {
                         content:
                             "Out of Indonesia's population of approximately 270 million (as of 2022), <0></0>there are about 2.12 million doctors. The medical market in Indonesia has shown <1>rapid growth</1> ",
