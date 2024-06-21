@@ -115,7 +115,12 @@ const Section03 = () => {
                             boardList.map((item, i) => (
                                 <li key={`main_news_${item.boardIdx}`}>
                                     <div>
-                                        <h5>{item.subject}</h5>
+                                        <h5>
+                                            {item.subject.replaceAll(
+                                                "&amp;",
+                                                "&",
+                                            )}
+                                        </h5>
                                         <p>
                                             {CommonParseHTMLString(
                                                 item.content,

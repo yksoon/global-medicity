@@ -100,8 +100,9 @@ body {margin:0 auto;}
 
 /* section03 */
 .section03 .title {margin-bottom: 0;}
-.section03 ul li {display: flex;padding: 36px 0;align-items: center;border-bottom: 1px solid #ddd;justify-content: space-between;}
+.section03 ul li {display: flex;padding: 36px 0;align-items: center;border-bottom: 1px solid #ddd;justify-content: space-between;gap: 20px;}
 .section03 ul li:last-child {border-bottom: 1px solid #ddd;padding-bottom: 42px;}
+.section03 ul li > div {width: 89%;}
 .section03 ul li div.busi_txt {padding: 70px;text-align: center;}
 .section03 ul li h5 {font-size: 26px;margin-bottom: 10px;font-weight: 500;}
 .section03 ul li p {font-size: 18px;color: #424242;word-break: keep-all;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
@@ -795,6 +796,7 @@ select {
 	.section01 {padding: 90px 20px 120px;}
 	.section02 {padding: 140px 20px;}
 	.section03 {padding: 0 20px;}
+	.section03 .btn_main {width: auto;}
 	.section04 {padding: 140px 20px;}
 	.section05 {padding: 0 20px 140px ;}
 	.section06 .sec_in {padding: 0 20px;}
@@ -952,9 +954,10 @@ select {
 
 	/* section03 */
 	.section03  {padding: 110px 20px 30px;}
-	.section03 ul li {padding: 20px 0; justify-content: flex-start;width: 100%;flex-direction: column;align-items: flex-start;}
+	.section03 ul li {padding: 20px 0; justify-content: flex-start;width: 100%;flex-direction: column;align-items: flex-start; }
 	.section03 ul li:last-child {padding-bottom: 20px;}
 	.section03 ul li h5 {font-size: 20px;}
+
 
 	/* section04 */
 	.section04 {padding: 110px 20px 30px;}
