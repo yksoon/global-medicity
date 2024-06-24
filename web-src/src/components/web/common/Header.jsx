@@ -77,7 +77,7 @@ function Header(props) {
                                         to=""
                                         onClick={(e) =>
                                             CommonOpenUrl(
-                                                "/public/file/PT.MEDICITY_INDONESIA.pdf",
+                                                "/file/PT.MEDICITY_INDONESIA.pdf",
                                                 e,
                                             )
                                         }
