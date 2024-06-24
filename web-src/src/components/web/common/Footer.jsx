@@ -1,15 +1,33 @@
 import { CommonSpinner } from "etc/lib/Common";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { isSpinnerAtom } from "etc/lib/recoils/atoms";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import routerPath from "etc/lib/path/routerPath";
-import {Trans, useTranslation} from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import LineBreak from "etc/lib/language/web/LineBreak";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 function Footer() {
     const { t, i18n } = useTranslation();
+
+    const [selectedValue, setSelectedValue] = useState("korea");
+
+    const companySelect = [
+        {
+            key: "korea",
+            name: "본사",
+        },
+        {
+            key: "indonesia",
+            name: "인도네시아",
+        },
+        {
+            key: "gangwon",
+            name: "강원지사",
+        },
+    ];
 
     const isSpinner = useRecoilValue(isSpinnerAtom);
     const location = useLocation();
@@ -33,6 +51,10 @@ function Footer() {
 
     const goToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    const handleChange = (e) => {
+        setSelectedValue(e.target.value);
     };
 
     return (
@@ -84,6 +106,41 @@ function Footer() {
                         <div>
                             <table>
                                 <tbody>
+                                    <tr>
+                                        <td colSpan={2}>
+                                            <FormControl
+                                                fullWidth
+                                                sx={{ color: "white" }}
+                                                size={"small"}
+                                            >
+                                                <InputLabel
+                                                    id="demo-simple-select-label"
+                                                    sx={{ color: "white" }}
+                                                >
+                                                    Company
+                                                </InputLabel>
+                                                <Select
+                                                    labelId="demo-simple-select-label"
+                                                    id="demo-simple-select"
+                                                    value={selectedValue}
+                                                    label="Company"
+                                                    onChange={handleChange}
+                                                    sx={{ color: "white" }}
+                                                >
+                                                    {companySelect.map(
+                                                        (item) => (
+                                                            <MenuItem
+                                                                key={`footer_${item.key}`}
+                                                                value={item.key}
+                                                            >
+                                                                {item.name}
+                                                            </MenuItem>
+                                                        ),
+                                                    )}
+                                                </Select>
+                                            </FormControl>
+                                        </td>
+                                    </tr>
                                     <tr>
                                         <th>{t("footer.buisnessman")}</th>
                                         <td>
