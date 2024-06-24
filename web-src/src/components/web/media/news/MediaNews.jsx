@@ -212,44 +212,49 @@ const MediaNews = (props) => {
                                         // to={`${routerPath.web_media_news_detail_url}${item.boardIdx}`}
                                         className="box"
                                     >
-                                        {item.subTitle === "뉴스"
-                                            ? isHaveImg(item.content) && (
-                                                  <div className="imgwrap">
-                                                      <img
-                                                          src={isHaveImg(
-                                                              item.content,
-                                                          )}
-                                                          alt={item.subject}
-                                                      ></img>
-                                                  </div>
-                                              )
-                                            : CommonGetYoutubeThumbnailUrl(
-                                                  item.email,
-                                              ) && (
-                                                  <div className="imgwrap">
-                                                      <img
-                                                          src={CommonGetYoutubeThumbnailUrl(
-                                                              item.email,
-                                                          )}
-                                                          alt={item.subject}
-                                                      ></img>
-                                                  </div>
-                                              )}
+                                        <Link
+                                            to={`${routerPath.web_media_news_detail_url}${item.boardIdx}`}
+                                        >
+                                            {item.subTitle === "뉴스"
+                                                ? isHaveImg(item.content) && (
+                                                      <div className="imgwrap">
+                                                          <img
+                                                              src={isHaveImg(
+                                                                  item.content,
+                                                              )}
+                                                              alt={item.subject}
+                                                          ></img>
+                                                      </div>
+                                                  )
+                                                : CommonGetYoutubeThumbnailUrl(
+                                                      item.email,
+                                                  ) && (
+                                                      <div className="imgwrap">
+                                                          <img
+                                                              src={CommonGetYoutubeThumbnailUrl(
+                                                                  item.email,
+                                                              )}
+                                                              alt={item.subject}
+                                                          ></img>
+                                                      </div>
+                                                  )}
 
-                                        <div className="txtwrap">
-                                            <p className="name">
-                                                {item.subject.replaceAll(
-                                                    "&amp;",
-                                                    "&",
-                                                )}
-                                            </p>
-                                            <Link
-                                                to={`${routerPath.web_media_news_detail_url}${item.boardIdx}`}
-                                                className="btn_main"
-                                            >
-                                                {t("media.view_more")} <Arrow />
-                                            </Link>
-                                        </div>
+                                            <div className="txtwrap">
+                                                <p className="name">
+                                                    {item.subject.replaceAll(
+                                                        "&amp;",
+                                                        "&",
+                                                    )}
+                                                </p>
+                                                <Link
+                                                    to={`${routerPath.web_media_news_detail_url}${item.boardIdx}`}
+                                                    className="btn_main"
+                                                >
+                                                    {t("media.view_more")}{" "}
+                                                    <Arrow />
+                                                </Link>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </figure>
                             ))}

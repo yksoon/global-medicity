@@ -142,13 +142,19 @@ const MediaNewsDetail = (props) => {
                             <tbody>
                                 {boardInfo.subTitle === "영상" && (
                                     <tr>
-                                        <td colSpan="3">
+                                        <td
+                                            colSpan="3"
+                                            style={{
+                                                display: "flex",
+                                                justifyContent: "center",
+                                            }}
+                                        >
                                             <ReactPlayer
                                                 className="react-player"
                                                 id="content"
                                                 url={boardInfo.email}
-                                                // width="800px" // 플레이어 크기 (가로)
-                                                // height="500px" // 플레이어 크기 (세로)
+                                                width="80%" // 플레이어 크기 (가로)
+                                                height="700px" // 플레이어 크기 (세로)
                                                 playing={false} // 자동 재생 on
                                                 muted={true} // 뮤트
                                                 controls={true} // 플레이어 컨트롤 노출 여부
