@@ -13,6 +13,7 @@ import { successCode } from "etc/lib/resultCode";
 import { Link } from "react-router-dom";
 import { CommonRestAPI } from "etc/lib/CommonRestAPI";
 import { boardType } from "etc/lib/static";
+import { forEach } from "react-bootstrap/ElementChildren";
 
 Quill.register("modules/imageResize", ImageResize);
 
@@ -127,10 +128,20 @@ const NoticeBoardModal = (props) => {
                 }
 
                 // 파일 formData append
+                // fileArr = Array.from(refs.inputAttachmentFile.current.files);
+                // let len = fileArr.length;
+                // for (let i = 0; i < len; i++) {
+                //     formData.append("attachmentFile", fileArr[i]);
+                // }
+
                 fileArr = Array.from(refs.inputAttachmentFile.current.files);
                 let len = fileArr.length;
                 for (let i = 0; i < len; i++) {
-                    formData.append("attachmentFile", fileArr[i]);
+                    formData.append(
+                        `attachmentOrgFile[${i}].attachmentFile`,
+                        fileArr[i],
+                    );
+                    formData.append(`attachmentOrgFile[${i}].priority`, i);
                 }
 
                 const restParams = {
@@ -281,6 +292,43 @@ const NoticeBoardModal = (props) => {
             };
         };
     };
+
+    // 이미지 업로드 시 미리보기
+    const readURL = (input, imageType) => {
+        // console.log(input.files);
+
+        if (input.files.length > 5) {
+            CommonNotify({
+                type: "alert",
+                hook: alert,
+                message: "파일첨부는 5개까지 가능합니다.",
+            });
+
+            input.value = "";
+
+            return false;
+        } else {
+            for (let i = 0; i < input.files.length; i++) {
+                if (isNotFileImage(input.files[i])) {
+                    CommonNotify({
+                        type: "alert",
+                        hook: alert,
+                        message: "이미지 파일은 에디터 내에서 첨부 가능합니다.",
+                    });
+
+                    input.value = "";
+
+                    return false;
+                }
+            }
+        }
+    };
+
+    function isNotFileImage(file) {
+        if (file) {
+            return file && file["type"].split("/")[0] === "image";
+        }
+    }
 
     /**
      * 에디터 이미지 핸들러
@@ -510,6 +558,11 @@ const NoticeBoardModal = (props) => {
                                     <input
                                         type="file"
                                         ref={refs.inputAttachmentFile}
+                                        onChange={(e) =>
+                                            readURL(e.target, "origin")
+                                        }
+                                        id="inputAttachmentFile"
+                                        multiple
                                     />
                                     <Link
                                         to=""
