@@ -18,6 +18,7 @@ import { boardType } from "etc/lib/static";
 import { CommonRestAPI } from "etc/lib/CommonRestAPI";
 import { successCode } from "etc/lib/resultCode";
 import { useTranslation } from "react-i18next";
+import { Pagination } from "@mui/material";
 
 const MediaNews = (props) => {
     const { t, i18n } = useTranslation();
@@ -33,7 +34,7 @@ const MediaNews = (props) => {
      * 리스트에 보여질 항목 갯수
      * @type {number}
      */
-    const pageSize = 9;
+    const pageSize = 20;
 
     /**
      * 리스트 state
@@ -254,6 +255,18 @@ const MediaNews = (props) => {
                             ))}
                         {/*반복 끝*/}
                     </div>
+
+                    {Object.keys(pageInfo).length !== 0 &&
+                        pageInfo.total !== 0 && (
+                            <div className="pagenation">
+                                <Pagination
+                                    count={pageInfo.pages}
+                                    onChange={handleChange}
+                                    shape="rounded"
+                                    color="primary"
+                                />
+                            </div>
+                        )}
                 </div>
             </div>
             <Footer />

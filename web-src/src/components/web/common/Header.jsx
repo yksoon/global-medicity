@@ -73,17 +73,17 @@ function Header(props) {
                                     >
                                         {t("header.weAre.partner")}
                                     </Link>
-                                    <Link
-                                        to=""
-                                        onClick={(e) =>
-                                            CommonOpenUrl(
-                                                "/file/PT.MEDICITY_INDONESIA.pdf",
-                                                e,
-                                            )
-                                        }
-                                    >
-                                        {t("header.weAre.downloadCompany")}
-                                    </Link>
+                                    {/*<Link*/}
+                                    {/*    to=""*/}
+                                    {/*    onClick={(e) =>*/}
+                                    {/*        CommonOpenUrl(*/}
+                                    {/*            "/file/PT.MEDICITY_INDONESIA.pdf",*/}
+                                    {/*            e,*/}
+                                    {/*        )*/}
+                                    {/*    }*/}
+                                    {/*>*/}
+                                    {/*    {t("header.weAre.downloadCompany")}*/}
+                                    {/*</Link>*/}
                                 </div>
                             </li>
                             <li>

@@ -133,11 +133,11 @@ function MobileNav() {
                                         {t("header.weAre.partner")}
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link to="">
-                                        {t("header.weAre.downloadCompany")}
-                                    </Link>
-                                </li>
+                                {/*<li>*/}
+                                {/*    <Link to="">*/}
+                                {/*        {t("header.weAre.downloadCompany")}*/}
+                                {/*    </Link>*/}
+                                {/*</li>*/}
                             </ul>
                         </li>
                         <li>
@@ -249,10 +249,10 @@ function MobileNav() {
                     </ul>
                 </nav>
                 <h1 className="logo">
-                        <Link to={routerPath.web_main_url}>
-                            <img src="img/web/main/logo.png" alt="" />
-                        </Link>
-                    </h1>
+                    <Link to={routerPath.web_main_url}>
+                        <img src="img/web/main/logo.png" alt="" />
+                    </Link>
+                </h1>
                 {/*<div className="lang">*/}
                 {/*    {Object.keys(lngs).map((lng) => (*/}
                 {/*        <a*/}
