@@ -6,7 +6,8 @@ import { CommonOpenUrl } from "etc/lib/Common";
 import routerPath from "etc/lib/path/routerPath";
 import { useTranslation, Trans } from "react-i18next";
 import { useRecoilState, useSetRecoilState } from "recoil";
-import { globalLanguageAtom } from "etc/lib/recoils/atoms"; // 1. react-i18next import
+import { globalLanguageAtom } from "etc/lib/recoils/atoms";
+import apiPath from "etc/lib/path/apiPath"; // 1. react-i18next import
 
 const lngs = {
     // 2. 언어 구분을 위한 lng 객체 생성
@@ -72,7 +73,15 @@ function Header(props) {
                                     >
                                         {t("header.weAre.partner")}
                                     </Link>
-                                    <Link to="">
+                                    <Link
+                                        to=""
+                                        onClick={(e) =>
+                                            CommonOpenUrl(
+                                                "/public/file/PT.MEDICITY_INDONESIA.pdf",
+                                                e,
+                                            )
+                                        }
+                                    >
                                         {t("header.weAre.downloadCompany")}
                                     </Link>
                                 </div>
