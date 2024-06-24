@@ -103,10 +103,7 @@ const InfoWelcome = (props) => {
                     <Link
                         to=""
                         onClick={(e) =>
-                            CommonOpenUrl(
-                                "/public/file/PT.MEDICITY_INDONESIA.pdf",
-                                e,
-                            )
+                            CommonOpenUrl("/file/PT.MEDICITY_INDONESIA.pdf", e)
                         }
                     >
                         {t("weAre.subvisual.Download_Company")}
