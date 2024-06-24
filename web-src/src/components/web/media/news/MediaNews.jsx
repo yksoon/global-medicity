@@ -6,7 +6,11 @@ import { Link } from "react-router-dom";
 import routerPath from "etc/lib/path/routerPath";
 import useConfirm from "hook/useConfirm";
 import useAlert from "hook/useAlert";
-import { CommonConsole, CommonErrModule } from "etc/lib/Common";
+import {
+    CommonConsole,
+    CommonErrModule,
+    CommonGetYoutubeThumbnailUrl,
+} from "etc/lib/Common";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { isSpinnerAtom } from "etc/lib/recoils/atoms";
 import apiPath from "etc/lib/path/apiPath";
@@ -207,16 +211,29 @@ const MediaNews = (props) => {
                                         // to={`${routerPath.web_media_news_detail_url}${item.boardIdx}`}
                                         className="box"
                                     >
-                                        {isHaveImg(item.content) && (
-                                            <div className="imgwrap">
-                                                <img
-                                                    src={isHaveImg(
-                                                        item.content,
-                                                    )}
-                                                    alt={item.subject}
-                                                ></img>
-                                            </div>
-                                        )}
+                                        {item.subTitle === "뉴스"
+                                            ? isHaveImg(item.content) && (
+                                                  <div className="imgwrap">
+                                                      <img
+                                                          src={isHaveImg(
+                                                              item.content,
+                                                          )}
+                                                          alt={item.subject}
+                                                      ></img>
+                                                  </div>
+                                              )
+                                            : CommonGetYoutubeThumbnailUrl(
+                                                  item.email,
+                                              ) && (
+                                                  <div className="imgwrap">
+                                                      <img
+                                                          src={CommonGetYoutubeThumbnailUrl(
+                                                              item.email,
+                                                          )}
+                                                          alt={item.subject}
+                                                      ></img>
+                                                  </div>
+                                              )}
 
                                         <div className="txtwrap">
                                             <p className="name">
