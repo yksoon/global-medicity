@@ -100,14 +100,14 @@ const InfoWelcome = (props) => {
                     >
                         {t("weAre.subvisual.Partners")}
                     </Link>
-                    <Link
-                        to=""
-                        onClick={(e) =>
-                            CommonOpenUrl("/file/PT.MEDICITY_INDONESIA.pdf", e)
-                        }
-                    >
-                        {t("weAre.subvisual.Download_Company")}
-                    </Link>
+                    {/*<Link*/}
+                    {/*    to=""*/}
+                    {/*    onClick={(e) =>*/}
+                    {/*        CommonOpenUrl("/file/PT.MEDICITY_INDONESIA.pdf", e)*/}
+                    {/*    }*/}
+                    {/*>*/}
+                    {/*    {t("weAre.subvisual.Download_Company")}*/}
+                    {/*</Link>*/}
                 </div>
             </div>
             <div id="con_area.wide_conarea ">
