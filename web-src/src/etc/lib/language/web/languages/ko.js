@@ -147,13 +147,16 @@ const ko = {
                     mice: "MICE 및 교육연계 서비스",
                     mice_content:
                         "의료관련 학회 및 기관의 MICE 및 교육연계 서비스를 제공합니다.",
-                    life: "의료인들의 삶의 질 개선",
-                    life_content: "의료인들의 삶의 질 개선 방향을 연구합니다.",
+                    life: "의료교육시스템 서비스",
+                    life_content:
+                        "의료전문 동영상 컨텐츠 플랫폼 K-Medi를 통해 의료기술개발이 필요한 국가들에 한국 의료교육 서비스 전파",
                 },
                 slogan: {
                     title: "Slogan",
+                    contentTop:
+                        "의료교육 플랫폼을 서비스하는 가상의 의료 도시 Medi-City.",
                     content:
-                        "글로벌 메디컬 교육 플랫폼 서비스는 메디씨티가 함께합니다.",
+                        "생명존중, 건강한 미래로 뻗어가는 글로벌 기업이 되겠습니다.",
                 },
                 management: {
                     title: "Management\n\nPhilosophy\n\n",

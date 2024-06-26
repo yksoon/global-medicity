@@ -149,14 +149,16 @@ const en = {
                     mice: "MICE and educational services",
                     mice_content:
                         "We provide MICE and educational services of medical associations and institutions.",
-                    life: "Improving the quality of life of medical personnel",
+                    life: "Medical Education System Service",
                     life_content:
-                        "We study the way to improve the quality of life of medical personnel.",
+                        "Through the K-Medi platform, a specialized medical video content platform, we spread Korean medical education services to countries that need medical technology development.",
                 },
                 slogan: {
                     title: "Slogan",
+                    contentTop:
+                        "A virtual medical city providing a medical education platform, Medi-City.",
                     content:
-                        "Global Medical Education Services Platform Together With Medi-City",
+                        "We aim to be a global company that respects life and promotes a healthy future.",
                 },
                 management: {
                     title: "Management\n\nPhilosophy\n\n",

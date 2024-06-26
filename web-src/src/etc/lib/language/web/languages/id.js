@@ -147,14 +147,16 @@ const id = {
                     mice: "Layanan MICE dan edukasi",
                     mice_content:
                         "Kami menyediakan MICE dan layanan edukasi asosiasi dan institusi medis.",
-                    life: "Meningkatkan kualitas hidup tenaga medis",
+                    life: "Layanan Sistem Pendidikan Medis",
                     life_content:
-                        "Kami mempelajari cara untuk meningkatkan kualitas hidup tenaga medis.",
+                        "Melalui platform K-Medi, platform konten video medis khusus, kami menyebarkan layanan pendidikan medis Korea ke negara-negara yang membutuhkan pengembangan teknologi medis.",
                 },
                 slogan: {
                     title: "Slogan",
+                    contentTop:
+                        "Sebuah kota medis virtual yang menyediakan platform pendidikan medis, Medi-City.",
                     content:
-                        "Platform Layanan Edukasi Medis Global Bersama Medi-City",
+                        "Kami bertujuan untuk menjadi perusahaan global yang menghormati kehidupan dan mempromosikan masa depan yang sehat.",
                 },
                 management: {
                     title: "Filosofi\n\nManagement\n\n",

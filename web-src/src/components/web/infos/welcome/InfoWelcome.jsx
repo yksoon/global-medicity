@@ -241,10 +241,11 @@ const InfoWelcome = (props) => {
                                 </h3>
                             </div>
                             <div className="txt">
-                                <img
-                                    src={`img/web/sub/intro_txt_${lang}.png`}
-                                    alt=""
-                                ></img>
+                                {/*<img*/}
+                                {/*    src={`img/web/sub/intro_txt_${lang}.png`}*/}
+                                {/*    alt=""*/}
+                                {/*></img>*/}
+                                <p>{t("weAre.aboutUs.slogan.contentTop")}</p>
                                 <p>{t("weAre.aboutUs.slogan.content")}</p>
                             </div>
                         </div>
