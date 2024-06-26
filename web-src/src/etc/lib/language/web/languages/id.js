@@ -24,18 +24,45 @@ const id = {
             },
         },
         footer: {
-            buisnessman: "Perwakilan",
-            representative: "Nama pemilik",
-            Company_Registration_Number: "Nomor Registrasi Bisnis",
-            address: "Alamat",
-            buisnessman_content: "PT. Medi-City",
-            representative_content: "Park Sung-min",
-            Company_Registration_Number_content: "588-86-02555",
-            address_content:
-                "Lt. 9. Gedung MIDPOINT PLACE. " +
-                "JI. H. Fachrudin No.26 9, RT.9/RW.5, Kp. Bali,<0></0>" +
-                "Kecamatan Tanah Abang, Kota Jakarta Pusat, " +
-                "Daerah Khusus Ibukota Jakarta 10250, Indonesia",
+            selectBox: {
+                korea: "kantor pusat",
+                gangwon: "Cabang Gangwon",
+                indonesia: "Indonesia",
+            },
+            korea: {
+                buisnessman: "Perwakilan",
+                representative: "Nama pemilik",
+                Company_Registration_Number: "Nomor Registrasi Bisnis",
+                address: "Alamat",
+                buisnessman_content: "PT. Medi-City",
+                representative_content: "Park Sung-min",
+                Company_Registration_Number_content: "588-86-02555",
+                address_content:
+                    "43-55, Mugunghwa-ro, Ilsandong-gu, Goyang-si, Gyeonggi-do",
+            },
+            gangwon: {
+                buisnessman: "Perwakilan",
+                representative: "Nama pemilik",
+                Company_Registration_Number: "Nomor Registrasi Bisnis",
+                address: "Alamat",
+                buisnessman_content: "PT. Medi-City Gangwon",
+                representative_content: "Choi Hyun-young",
+                Company_Registration_Number_content: "363-86-03256",
+                address_content:
+                    "3rd Floor, Unit 15, 2165 Gyeonggang-ro, Gangneung-si, Gangwon-do",
+            },
+            indonesia: {
+                buisnessman: "Perwakilan",
+                representative: "Nama pemilik",
+                Company_Registration_Number: "Nomor Registrasi Bisnis",
+                address: "Alamat",
+                buisnessman_content: "PT. Medi City Indonesia",
+                representative_content: "Park Sung-min",
+                Company_Registration_Number_content: "2305230037834",
+                address_content:
+                    "Lt. 9. Gedung MIDPOINT PLACE. JI. H. Fachrudin No.26 9, RT.9/RW.5, Kp. Bali,<0></0>" +
+                    "Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10250, Indonesia",
+            },
             copy: "Copyright Medicity. All rights reserved.\nHak cipta dari semua konten yang diposting di situs kami adalah milik PT. Medi-City. Pengumpulan tidak sah dari situs kami sangat dilarang.",
         },
         mainvisual: {
@@ -438,7 +465,7 @@ const id = {
                     title: "Mengapa mendirikan entitas korporat di Indonesia?",
                     1: {
                         content:
-                            "Jumlah dokter di Indonesia ada sekitar 21 juta dari jumlah penduduk Indonesia yang berjumlah sekitar 270 juta (per tahun 2022). <1>Pasar medis di Indonesia</1> telah menunjukkan pertumbuhan yang pesat.",
+                            "Jumlah dokter di Indonesia ada sekitar 212 ribu dari jumlah penduduk Indonesia yang berjumlah sekitar 270 juta (per tahun 2022). <1>Pasar medis di Indonesia</1> telah menunjukkan pertumbuhan yang pesat.",
                         btn_1: "Jumlah Dokter di Indonesia",
                     },
                     2: {

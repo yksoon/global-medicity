@@ -1,7 +1,7 @@
 import { CommonSpinner } from "etc/lib/Common";
 import React, { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
-import { isSpinnerAtom } from "etc/lib/recoils/atoms";
+import { globalLanguageAtom, isSpinnerAtom } from "etc/lib/recoils/atoms";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import routerPath from "etc/lib/path/routerPath";
@@ -12,20 +12,30 @@ import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 function Footer() {
     const { t, i18n } = useTranslation();
 
-    const [selectedValue, setSelectedValue] = useState("korea");
+    const globalLanguage = useRecoilValue(globalLanguageAtom);
+
+    const [selectedValue, setSelectedValue] = useState(
+        globalLanguage === "id" ? "indonesia" : "korea",
+    );
+
+    useEffect(() => {
+        globalLanguage === "id"
+            ? setSelectedValue("indonesia")
+            : setSelectedValue("korea");
+    }, [globalLanguage]);
 
     const companySelect = [
         {
             key: "korea",
-            name: "본사",
+            name: t("footer.selectBox.korea"),
         },
         {
             key: "indonesia",
-            name: "인도네시아",
+            name: t("footer.selectBox.indonesia"),
         },
         {
             key: "gangwon",
-            name: "강원지사",
+            name: t("footer.selectBox.gangwon"),
         },
     ];
 
@@ -142,37 +152,51 @@ function Footer() {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>{t("footer.buisnessman")}</th>
+                                        <th>
+                                            {t(
+                                                `footer.${selectedValue}.buisnessman`,
+                                            )}
+                                        </th>
                                         <td>
-                                            {t("footer.buisnessman_content")}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>{t("footer.representative")}</th>
-                                        <td>
-                                            {t("footer.representative_content")}
+                                            {t(
+                                                `footer.${selectedValue}.buisnessman_content`,
+                                            )}
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>
                                             {t(
-                                                "footer.Company_Registration_Number",
+                                                `footer.${selectedValue}.representative`,
                                             )}
                                         </th>
                                         <td>
                                             {t(
-                                                "footer.Company_Registration_Number_content",
+                                                `footer.${selectedValue}.representative_content`,
                                             )}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>{t("footer.address")}</th>
+                                        <th>
+                                            {t(
+                                                `footer.${selectedValue}.Company_Registration_Number`,
+                                            )}
+                                        </th>
+                                        <td>
+                                            {t(
+                                                `footer.${selectedValue}.Company_Registration_Number_content`,
+                                            )}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            {t(
+                                                `footer.${selectedValue}.address`,
+                                            )}
+                                        </th>
                                         {/*<td>{t("footer.address_content")}</td>*/}
                                         <td>
                                             <Trans
-                                                i18nKey={
-                                                    "footer.address_content"
-                                                }
+                                                i18nKey={`footer.${selectedValue}.address_content`}
                                                 components={[<br></br>]}
                                             />
                                         </td>
