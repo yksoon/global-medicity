@@ -68,7 +68,7 @@ const MediaNews = (props) => {
     };
 
     useEffect(() => {
-        getBoardList(1, pageSize, categoryState);
+        getBoardList(1, pageSize, "", categoryState);
     }, [categoryState]);
 
     /**
@@ -77,7 +77,7 @@ const MediaNews = (props) => {
      * @param pageSize
      * @param searchKeyword
      */
-    const getBoardList = (pageNum, pageSize, searchKeyword) => {
+    const getBoardList = (pageNum, pageSize, searchKeyword, category) => {
         setIsSpinner(true);
 
         // /v1/_boards
@@ -88,6 +88,7 @@ const MediaNews = (props) => {
             pageSize: pageSize,
             searchKeyword: searchKeyword,
             boardType: boardType.etc, // 공지사항
+            boardCategory: category,
         };
 
         // 파라미터
@@ -132,7 +133,7 @@ const MediaNews = (props) => {
      * @param value
      */
     const handleChange = (e, value) => {
-        getBoardList(value, pageSize, categoryState);
+        getBoardList(value, pageSize, "", categoryState);
     };
 
     // const parser = new DOMParser();
