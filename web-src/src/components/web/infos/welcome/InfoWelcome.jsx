@@ -608,11 +608,61 @@ const InfoWelcome = (props) => {
                                     </div>
                                     <div className="year">
                                         <div className="num on">2024</div>
-                                        <div>
-                                            <img
-                                                src="img/web/sub/history_img01.png"
-                                                alt=""
-                                            ></img>
+                                        <div className="img_box">
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_01.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_02.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_03.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_04.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_05.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_06.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_07.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_08.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_09.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -268,6 +268,8 @@ position: absolute; right: -75px;top: 10px; }
 	gap: 15px;  flex-direction: row-reverse; border-right: 50px;}
 .weare #sec07 .historybox .month ul li::before {content: ""; display: inline-block; clear: both; width: 5px; height: 5px; background-color: #BDBDBD; }
 .weare #sec07 .historybox .year {border-left: 1px solid #BDBDBD;padding: 0 0 0 65px;width: 50%;}
+.weare #sec07 .historybox .year .img_box {display: flex; flex-wrap: wrap;}
+.weare #sec07 .historybox .year .img_box > div {width: calc(100% / 3);}
 .weare #sec07 .historybox .year .num {font-size: 106px; font-weight: 500;font-family: "Lexend";color: #707070;line-height: 32px;margin: 0 0 65px 0;}
 .weare #sec07 .historybox .year .num.on {color: #001FD9;}
 .weare #sec07 .historybox:nth-child(2n) .year {text-align: right; border-left: 0; padding: 0 65px 0 0;}
