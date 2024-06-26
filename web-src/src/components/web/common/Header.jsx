@@ -11,9 +11,9 @@ import apiPath from "etc/lib/path/apiPath"; // 1. react-i18next import
 
 const lngs = {
     // 2. 언어 구분을 위한 lng 객체 생성
-    ko: { nativeName: "KO" },
-    en: { nativeName: "EN" },
-    id: { nativeName: "ID" },
+    ko: { nativeName: "KO", className: "ko" },
+    en: { nativeName: "EN", className: "en" },
+    id: { nativeName: "ID", className: "id" },
 };
 
 function Header(props) {
@@ -165,21 +165,21 @@ function Header(props) {
                             <a
                                 style={{ cursor: "pointer" }}
                                 key={lng}
-                                className={
-                                    i18n.resolvedLanguage === lng ? "on" : ""
-                                }
+                                className={`${lngs[lng].className}${
+                                    i18n.resolvedLanguage === lng ? " on" : ""
+                                }`}
                                 onClick={() => {
                                     i18n.changeLanguage(lng);
                                     handleLanguage(lng);
                                 }}
                             >
-                                {lngs[lng].nativeName}
+                                <span>{lngs[lng].nativeName}</span>
                             </a>
                         ))}
                     </div>
-                    <div className="book">
-                        <img src="img/web/main/book.png" alt="" />
-                    </div>
+                    {/*<div className="book">*/}
+                    {/*    <img src="img/web/main/book.png" alt="" />*/}
+                    {/*</div>*/}
                 </div>
                 {/* 모바일 메뉴 // S */}
                 <MobileNav />

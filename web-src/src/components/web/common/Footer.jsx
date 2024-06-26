@@ -1,15 +1,43 @@
 import { CommonSpinner } from "etc/lib/Common";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
-import { isSpinnerAtom } from "etc/lib/recoils/atoms";
+import { globalLanguageAtom, isSpinnerAtom } from "etc/lib/recoils/atoms";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import routerPath from "etc/lib/path/routerPath";
-import {Trans, useTranslation} from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import LineBreak from "etc/lib/language/web/LineBreak";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 function Footer() {
     const { t, i18n } = useTranslation();
+
+    const globalLanguage = useRecoilValue(globalLanguageAtom);
+
+    const [selectedValue, setSelectedValue] = useState(
+        globalLanguage === "id" ? "indonesia" : "korea",
+    );
+
+    useEffect(() => {
+        globalLanguage === "id"
+            ? setSelectedValue("indonesia")
+            : setSelectedValue("korea");
+    }, [globalLanguage]);
+
+    const companySelect = [
+        {
+            key: "korea",
+            name: t("footer.selectBox.korea"),
+        },
+        {
+            key: "indonesia",
+            name: t("footer.selectBox.indonesia"),
+        },
+        {
+            key: "gangwon",
+            name: t("footer.selectBox.gangwon"),
+        },
+    ];
 
     const isSpinner = useRecoilValue(isSpinnerAtom);
     const location = useLocation();
@@ -33,6 +61,10 @@ function Footer() {
 
     const goToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    const handleChange = (e) => {
+        setSelectedValue(e.target.value);
     };
 
     return (
@@ -85,37 +117,86 @@ function Footer() {
                             <table>
                                 <tbody>
                                     <tr>
-                                        <th>{t("footer.buisnessman")}</th>
-                                        <td>
-                                            {t("footer.buisnessman_content")}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>{t("footer.representative")}</th>
-                                        <td>
-                                            {t("footer.representative_content")}
+                                        <td colSpan={2}>
+                                            <FormControl
+                                                fullWidth
+                                                sx={{ color: "white" }}
+                                                size={"small"}
+                                            >
+                                                {/*<InputLabel*/}
+                                                {/*    id="demo-simple-select-label"*/}
+                                                {/*    sx={{ color: "white" }}*/}
+                                                {/*>*/}
+                                                {/*    Company*/}
+                                                {/*</InputLabel>*/}
+                                                <Select
+                                                    labelId="demo-simple-select-label"
+                                                    id="demo-simple-select"
+                                                    value={selectedValue}
+                                                    // label="Company"
+                                                    onChange={handleChange}
+                                                    sx={{ color: "white" }}
+                                                >
+                                                    {companySelect.map(
+                                                        (item) => (
+                                                            <MenuItem
+                                                                key={`footer_${item.key}`}
+                                                                value={item.key}
+                                                            >
+                                                                {item.name}
+                                                            </MenuItem>
+                                                        ),
+                                                    )}
+                                                </Select>
+                                            </FormControl>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>
                                             {t(
-                                                "footer.Company_Registration_Number",
+                                                `footer.${selectedValue}.buisnessman`,
                                             )}
                                         </th>
                                         <td>
                                             {t(
-                                                "footer.Company_Registration_Number_content",
+                                                `footer.${selectedValue}.buisnessman_content`,
                                             )}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>{t("footer.address")}</th>
+                                        <th>
+                                            {t(
+                                                `footer.${selectedValue}.representative`,
+                                            )}
+                                        </th>
+                                        <td>
+                                            {t(
+                                                `footer.${selectedValue}.representative_content`,
+                                            )}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            {t(
+                                                `footer.${selectedValue}.Company_Registration_Number`,
+                                            )}
+                                        </th>
+                                        <td>
+                                            {t(
+                                                `footer.${selectedValue}.Company_Registration_Number_content`,
+                                            )}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            {t(
+                                                `footer.${selectedValue}.address`,
+                                            )}
+                                        </th>
                                         {/*<td>{t("footer.address_content")}</td>*/}
                                         <td>
                                             <Trans
-                                                i18nKey={
-                                                    "footer.address_content"
-                                                }
+                                                i18nKey={`footer.${selectedValue}.address_content`}
                                                 components={[<br></br>]}
                                             />
                                         </td>

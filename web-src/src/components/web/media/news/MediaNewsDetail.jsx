@@ -142,18 +142,12 @@ const MediaNewsDetail = (props) => {
                             <tbody>
                                 {boardInfo.subTitle === "영상" && (
                                     <tr>
-                                        <td
-                                            colSpan="3"
-                                            style={{
-                                                display: "flex",
-                                                justifyContent: "center",
-                                            }}
-                                        >
+                                        <td colSpan="3">
                                             <ReactPlayer
                                                 className="react-player"
                                                 id="content"
                                                 url={boardInfo.email}
-                                                width="80%" // 플레이어 크기 (가로)
+                                                width="100%" // 플레이어 크기 (가로)
                                                 height="700px" // 플레이어 크기 (세로)
                                                 playing={false} // 자동 재생 on
                                                 muted={true} // 뮤트
@@ -180,18 +174,42 @@ const MediaNewsDetail = (props) => {
                                 </tr>
                             </tbody>
                             {/*이전글/다음글 백엔드 안내려옴*/}
-                            {/*<tfoot>*/}
-                            {/*    <tr>*/}
-                            {/*        <td>Previous</td>*/}
-                            {/*        <td colSpan="2"></td>*/}
-                            {/*    </tr>*/}
-                            {/*    <tr>*/}
-                            {/*        <td>Next</td>*/}
-                            {/*        <td colSpan="2">*/}
-                            {/*            <a href=""></a>*/}
-                            {/*        </td>*/}
-                            {/*    </tr>*/}
-                            {/*</tfoot>*/}
+                            <tfoot>
+                                <tr>
+                                    <td>Previous</td>
+                                    <td colSpan="2">
+                                        {boardInfo.prevTitle ? (
+                                            <a
+                                                href={`${routerPath.web_media_news_detail_url}${boardInfo.prevIdx}`}
+                                            >
+                                                {boardInfo.prevTitle.replaceAll(
+                                                    "&amp;",
+                                                    "&",
+                                                )}
+                                            </a>
+                                        ) : (
+                                            "-"
+                                        )}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Next</td>
+                                    <td colSpan="2">
+                                        {boardInfo.nextTitle ? (
+                                            <a
+                                                href={`${routerPath.web_media_news_detail_url}${boardInfo.nextIdx}`}
+                                            >
+                                                {boardInfo.nextTitle.replaceAll(
+                                                    "&amp;",
+                                                    "&",
+                                                )}
+                                            </a>
+                                        ) : (
+                                            "-"
+                                        )}
+                                    </td>
+                                </tr>
+                            </tfoot>
                         </table>
                     )}
                     <div className="board_btn_wrap">

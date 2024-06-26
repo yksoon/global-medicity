@@ -24,14 +24,43 @@ const ko = {
             },
         },
         footer: {
-            buisnessman: "사업자",
-            representative: "대표자",
-            Company_Registration_Number: "사업자등록번호",
-            address: "주소",
-            buisnessman_content: "(주)메디씨티",
-            representative_content: "박성민",
-            Company_Registration_Number_content: "588-86-02555",
-            address_content: "경기도 고양시 일산동구 무궁화로 43-55, 302호",
+            selectBox: {
+                korea: "본사",
+                gangwon: "강원지사",
+                indonesia: "인도네시아",
+            },
+            korea: {
+                buisnessman: "사업자",
+                representative: "대표자",
+                Company_Registration_Number: "사업자등록번호",
+                address: "주소",
+                buisnessman_content: "(주)메디씨티",
+                representative_content: "박성민",
+                Company_Registration_Number_content: "588-86-02555",
+                address_content: "경기도 고양시 일산동구 무궁화로 43-55, 302호",
+            },
+            gangwon: {
+                buisnessman: "사업자",
+                representative: "대표자",
+                Company_Registration_Number: "사업자등록번호",
+                address: "주소",
+                buisnessman_content: "(주)메디씨티강원",
+                representative_content: "최현영",
+                Company_Registration_Number_content: "363-86-03256",
+                address_content: "강원도 강릉시 경강로 2165, 3층 15호",
+            },
+            indonesia: {
+                buisnessman: "사업자",
+                representative: "대표자",
+                Company_Registration_Number: "사업자등록번호",
+                address: "주소",
+                buisnessman_content: "PT. Medi City Indonesia",
+                representative_content: "박성민",
+                Company_Registration_Number_content: "2305230037834",
+                address_content:
+                    "Lt. 9. Gedung MIDPOINT PLACE. JI. H. Fachrudin No.26 9, RT.9/RW.5, Kp. Bali,<0></0>" +
+                    "Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10250, Indonesia",
+            },
             copy: "Copyright Medicity. All rights reserved.\n자사의 사이트에 게시된 모든 컨텐츠등 외 저작권은 (주)메디씨티에게 있습니다. 자사의 사이트의 무단적인 수집을 엄격히 금합니다.",
         },
         mainvisual: {
@@ -118,13 +147,16 @@ const ko = {
                     mice: "MICE 및 교육연계 서비스",
                     mice_content:
                         "의료관련 학회 및 기관의 MICE 및 교육연계 서비스를 제공합니다.",
-                    life: "의료인들의 삶의 질 개선",
-                    life_content: "의료인들의 삶의 질 개선 방향을 연구합니다.",
+                    life: "의료교육시스템 서비스",
+                    life_content:
+                        "의료전문 동영상 컨텐츠 플랫폼 K-Medi를 통해 의료기술개발이 필요한 국가들에 한국 의료교육 서비스 전파",
                 },
                 slogan: {
                     title: "Slogan",
+                    contentTop:
+                        "의료교육 플랫폼을 서비스하는 가상의 의료 도시 Medi-City.",
                     content:
-                        "글로벌 메디컬 교육 플랫폼 서비스는 메디씨티가 함께합니다.",
+                        "생명존중, 건강한 미래로 뻗어가는 글로벌 기업이 되겠습니다.",
                 },
                 management: {
                     title: "Management\n\nPhilosophy\n\n",
@@ -407,6 +439,7 @@ const ko = {
             },
             no_data: "등록된 공지사항이 없습니다.",
             view_more: "VIEW MORE",
+            search: "검색",
         },
         kmedi: {
             subvisual: {

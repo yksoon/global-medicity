@@ -113,52 +113,54 @@ const InfoWelcome = (props) => {
             <div id="con_area.wide_conarea ">
                 <div className="weare">
                     <div className="boxing" id="sec01" ref={refs.greetings}>
-                        <div className="flx_box">
-                            <div>
-                                <h3 className="c_tit">
-                                    <span>
-                                        {t("weAre.greetings.Greetings")}
-                                    </span>
-                                    {t("weAre.greetings.Greetings_title")}
-                                </h3>
-                                <p className="normal">
-                                    {/*{LineBreak(*/}
-                                    {/*    t("weAre.greetings.Greetings_content"),*/}
-                                    {/*)}*/}
-                                    <Trans
-                                        i18nKey={
-                                            "weAre.greetings.Greetings_content"
-                                        }
-                                        components={[<br></br>]}
-                                    />
-                                    {/*<h4>㈜메디씨티는</h4>*/}
-                                    {/*환자와 의료진의 중심에서 글로벌 의료통합*/}
-                                    {/*플랫폼 서비스를 통해 새로운 혁신을*/}
-                                    {/*시작합니다. <br />*/}
-                                    {/*또한 우수한 K메디컬 기술을 해외에 널리*/}
-                                    {/*알리고 소통하는 장을 마련함으로써 지금도*/}
-                                    {/*높은 사망률로 어려움을 겪고 있는 주변*/}
-                                    {/*나라들에게 우수한 의료 정보의 전달과*/}
-                                    {/*온/오프라인 교육을 통해“생명을 살리는 장을*/}
-                                    {/*마련하겠다” 라는 사명감으로 의료분야의*/}
-                                    {/*집중적인 투자 및 육성을 진행하고 있습니다.{" "}*/}
-                                    {/*<br />*/}
-                                    {/*좋은 제품과 서비스를 제공하는데 그치지*/}
-                                    {/*않겠습니다. <br />전 임직원이 하나가 되어*/}
-                                    {/*끊임없이 도전하고 성장하며 고객의 가치를*/}
-                                    {/*최우선으로 여기는 NO.1 글로벌기업이*/}
-                                    {/*되겠습니다.*/}
-                                </p>
-                                <div className="sign">
-                                    <p>{t("weAre.greetings.ltd")}</p>
-                                    <img
-                                        src="img/web/sub/sign.png"
-                                        alt="박성민"
-                                    />
+                        <div className="layout">
+                            <div className="flx_box">
+                                <div>
+                                    <h3 className="c_tit">
+                                        <span>
+                                            {t("weAre.greetings.Greetings")}
+                                        </span>
+                                        {t("weAre.greetings.Greetings_title")}
+                                    </h3>
+                                    <p className="normal">
+                                        {/*{LineBreak(*/}
+                                        {/*    t("weAre.greetings.Greetings_content"),*/}
+                                        {/*)}*/}
+                                        <Trans
+                                            i18nKey={
+                                                "weAre.greetings.Greetings_content"
+                                            }
+                                            components={[<br></br>]}
+                                        />
+                                        {/*<h4>㈜메디씨티는</h4>*/}
+                                        {/*환자와 의료진의 중심에서 글로벌 의료통합*/}
+                                        {/*플랫폼 서비스를 통해 새로운 혁신을*/}
+                                        {/*시작합니다. <br />*/}
+                                        {/*또한 우수한 K메디컬 기술을 해외에 널리*/}
+                                        {/*알리고 소통하는 장을 마련함으로써 지금도*/}
+                                        {/*높은 사망률로 어려움을 겪고 있는 주변*/}
+                                        {/*나라들에게 우수한 의료 정보의 전달과*/}
+                                        {/*온/오프라인 교육을 통해“생명을 살리는 장을*/}
+                                        {/*마련하겠다” 라는 사명감으로 의료분야의*/}
+                                        {/*집중적인 투자 및 육성을 진행하고 있습니다.{" "}*/}
+                                        {/*<br />*/}
+                                        {/*좋은 제품과 서비스를 제공하는데 그치지*/}
+                                        {/*않겠습니다. <br />전 임직원이 하나가 되어*/}
+                                        {/*끊임없이 도전하고 성장하며 고객의 가치를*/}
+                                        {/*최우선으로 여기는 NO.1 글로벌기업이*/}
+                                        {/*되겠습니다.*/}
+                                    </p>
+                                    <div className="sign">
+                                        <p>{t("weAre.greetings.ltd")}</p>
+                                        <img
+                                            src="img/web/sub/sign.png"
+                                            alt="박성민"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <img src="img/web/sub/greeting_01.jpg" alt="" />
+                                {/* <div>
+                                    <img src="img/web/sub/logo_top.png" alt=""></img>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -239,11 +241,12 @@ const InfoWelcome = (props) => {
                                 </h3>
                             </div>
                             <div className="txt">
-                                <img
-                                    src={`img/web/sub/intro_txt_${lang}.png`}
-                                    alt=""
-                                ></img>
-                                <p>{t("weAre.aboutUs.slogan.content")}</p>
+                                {/*<img*/}
+                                {/*    src={`img/web/sub/intro_txt_${lang}.png`}*/}
+                                {/*    alt=""*/}
+                                {/*></img>*/}
+                                <p>{t("weAre.aboutUs.slogan.contentTop")}</p>
+                                <span>{t("weAre.aboutUs.slogan.content")}</span>
                             </div>
                         </div>
                     </div>
@@ -606,22 +609,122 @@ const InfoWelcome = (props) => {
                                     </div>
                                     <div className="year">
                                         <div className="num on">2024</div>
-                                        <div>
-                                            <img
-                                                src="img/web/sub/history_img01.png"
-                                                alt=""
-                                            ></img>
+                                        <div className="img_box">
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_01.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_02.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_03.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_04.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_05.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_06.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_07.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_08.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2024_09.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="historybox">
                                     <div className="year">
                                         <div className="num">2023</div>
-                                        <div>
-                                            <img
-                                                src="img/web/sub/history_img02.png"
-                                                alt=""
-                                            ></img>
+                                        <div className="img_box">
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_01.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_02.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_03.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_04.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_05.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_06.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_07.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_08.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_09.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="month right">
@@ -845,11 +948,61 @@ const InfoWelcome = (props) => {
                                     </div>
                                     <div className="year">
                                         <div className="num on">2022</div>
-                                        <div>
-                                            <img
-                                                src="img/web/sub/history_img03.png"
-                                                alt=""
-                                            ></img>
+                                        <div className="img_box">
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_01.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_02.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_03.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_04.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_05.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_06.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_07.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_08.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_09.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

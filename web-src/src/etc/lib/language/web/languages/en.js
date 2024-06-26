@@ -24,15 +24,45 @@ const en = {
             },
         },
         footer: {
-            buisnessman: "Registrated business",
-            representative: "Owner's name",
-            Company_Registration_Number: "Business Registration Number",
-            address: "Address",
-            buisnessman_content: "Medi-City Co., Ltd.",
-            representative_content: "Park Sung-min",
-            Company_Registration_Number_content: "588-86-02555",
-            address_content:
-                "43-55, Mugunghwa-ro, Ilsandong-gu, Goyang-si, Gyeonggi-do",
+            selectBox: {
+                korea: "Head Office",
+                gangwon: "Gangwon Office",
+                indonesia: "Indonesia",
+            },
+            korea: {
+                buisnessman: "Registrated business",
+                representative: "Owner's name",
+                Company_Registration_Number: "Business Registration Number",
+                address: "Address",
+                buisnessman_content: "Medi-City Co., Ltd.",
+                representative_content: "Park Sung-min",
+                Company_Registration_Number_content: "588-86-02555",
+                address_content:
+                    "43-55, Mugunghwa-ro, Ilsandong-gu, Goyang-si, Gyeonggi-do",
+            },
+            gangwon: {
+                buisnessman: "Registrated business",
+                representative: "Owner's name",
+                Company_Registration_Number: "Business Registration Number",
+                address: "Address",
+                buisnessman_content: "Medi-City Gangwon Co., Ltd.",
+                representative_content: "Choi Hyun-young",
+                Company_Registration_Number_content: "363-86-03256",
+                address_content:
+                    "3rd Floor, Unit 15, 2165 Gyeonggang-ro, Gangneung-si, Gangwon-do",
+            },
+            indonesia: {
+                buisnessman: "Registrated business",
+                representative: "Owner's name",
+                Company_Registration_Number: "Business Registration Number",
+                address: "Address",
+                buisnessman_content: "PT. Medi City Indonesia",
+                representative_content: "Park Sung-min",
+                Company_Registration_Number_content: "2305230037834",
+                address_content:
+                    "9th Floor, MIDPOINT PLACE Building, JI. H. Fachrudin No.26 9, RT.9/RW.5, Kp. Bali,<0></0>" +
+                    "Tanah Abang District, Central Jakarta City, Jakarta 10250, Indonesia",
+            },
             copy: "Copyright Medicity. All rights reserved.\nThe copyrights of all content posted on our site belong to Medi-City Co., Ltd. Unauthorized collection of our site is strictly prohibited.",
         },
         mainvisual: {
@@ -119,14 +149,16 @@ const en = {
                     mice: "MICE and educational services",
                     mice_content:
                         "We provide MICE and educational services of medical associations and institutions.",
-                    life: "Improving the quality of life of medical personnel",
+                    life: "Medical Education System Service",
                     life_content:
-                        "We study the way to improve the quality of life of medical personnel.",
+                        "Through the K-Medi platform, a specialized medical video content platform, we spread Korean medical education services to countries that need medical technology development.",
                 },
                 slogan: {
                     title: "Slogan",
+                    contentTop:
+                        "A virtual medical city providing a medical education platform, Medi-City.",
                     content:
-                        "Global Medical Education Services Platform Together With Medi-City",
+                        "We aim to be a global company that respects life and promotes a healthy future.",
                 },
                 management: {
                     title: "Management\n\nPhilosophy\n\n",
@@ -420,6 +452,7 @@ const en = {
             },
             no_data: "There are no registered announcements.",
             view_more: "VIEW MORE",
+            search: "search",
         },
         kmedi: {
             subvisual: {
@@ -435,7 +468,7 @@ const en = {
                     title: "Why establish a corporate entity in Indonesia?",
                     1: {
                         content:
-                            "Out of Indonesia's population of approximately 270 million (as of 2022), <0></0>there are about 2.12 million doctors. The medical market in Indonesia has shown <1>rapid growth</1> ",
+                            "Out of Indonesia's population of approximately 270 million (as of 2022), <0></0>there are about 212 thousand doctors. The medical market in Indonesia has shown <1>rapid growth</1> ",
                         btn_1: "Number of Doctors in Indonesia",
                     },
                     2: {
