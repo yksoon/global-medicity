@@ -452,6 +452,7 @@ const id = {
             },
             no_data: "Tidak ada pengumuman terdaftar.",
             view_more: "LIHAT LEBIH LANJUT",
+            search: "mencari",
         },
         kmedi: {
             subvisual: {

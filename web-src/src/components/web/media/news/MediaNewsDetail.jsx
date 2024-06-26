@@ -142,10 +142,7 @@ const MediaNewsDetail = (props) => {
                             <tbody>
                                 {boardInfo.subTitle === "영상" && (
                                     <tr>
-                                        <td
-                                            colSpan="3"
-                                        
-                                        >
+                                        <td colSpan="3">
                                             <ReactPlayer
                                                 className="react-player"
                                                 id="content"
@@ -178,16 +175,40 @@ const MediaNewsDetail = (props) => {
                             </tbody>
                             {/*이전글/다음글 백엔드 안내려옴*/}
                             <tfoot>
-                               <tr>
-                                   <td>Previous</td>
-                                   <td colSpan="2"></td>
-                               </tr>
-                               <tr>
-                                   <td>Next</td>
-                                   <td colSpan="2">
-                                       <a href=""></a>
-                                   </td>
-                               </tr>
+                                <tr>
+                                    <td>Previous</td>
+                                    <td colSpan="2">
+                                        {boardInfo.prevTitle ? (
+                                            <a
+                                                href={`${routerPath.web_media_news_detail_url}${boardInfo.prevIdx}`}
+                                            >
+                                                {boardInfo.prevTitle.replaceAll(
+                                                    "&amp;",
+                                                    "&",
+                                                )}
+                                            </a>
+                                        ) : (
+                                            "-"
+                                        )}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Next</td>
+                                    <td colSpan="2">
+                                        {boardInfo.nextTitle ? (
+                                            <a
+                                                href={`${routerPath.web_media_news_detail_url}${boardInfo.nextIdx}`}
+                                            >
+                                                {boardInfo.nextTitle.replaceAll(
+                                                    "&amp;",
+                                                    "&",
+                                                )}
+                                            </a>
+                                        ) : (
+                                            "-"
+                                        )}
+                                    </td>
+                                </tr>
                             </tfoot>
                         </table>
                     )}

@@ -439,6 +439,7 @@ const ko = {
             },
             no_data: "등록된 공지사항이 없습니다.",
             view_more: "VIEW MORE",
+            search: "검색",
         },
         kmedi: {
             subvisual: {

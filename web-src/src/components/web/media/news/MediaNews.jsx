@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "components/web/common/header";
 import Footer from "components/web/common/footer";
 import Arrow from "components/web/common/Arrow";
@@ -36,12 +36,15 @@ const MediaNews = (props) => {
      */
     const pageSize = 20;
 
+    const searchInput = useRef(null);
+
     /**
      * 리스트 state
      */
     const [boardList, setBoardList] = useState([]);
     const [pageInfo, setPageInfo] = useState({});
     const [categoryState, setCategoryState] = useState("");
+    const [searchKeyword, setSearchKeyword] = useState("");
 
     const handleCategory = (category) => {
         setCategoryState(category);
@@ -68,7 +71,7 @@ const MediaNews = (props) => {
     };
 
     useEffect(() => {
-        getBoardList(1, pageSize, "", categoryState);
+        getBoardList(1, pageSize, searchKeyword, categoryState);
     }, [categoryState]);
 
     /**
@@ -133,7 +136,7 @@ const MediaNews = (props) => {
      * @param value
      */
     const handleChange = (e, value) => {
-        getBoardList(value, pageSize, "", categoryState);
+        getBoardList(value, pageSize, searchKeyword, categoryState);
     };
 
     // const parser = new DOMParser();
@@ -154,6 +157,13 @@ const MediaNews = (props) => {
         const firstImage = doc.querySelector("img")?.src;
 
         return firstImage;
+    };
+
+    const doSearch = () => {
+        const inputValue = searchInput.current.value;
+        setSearchKeyword(inputValue);
+
+        getBoardList(1, pageSize, inputValue, categoryState);
     };
 
     return (
@@ -178,9 +188,8 @@ const MediaNews = (props) => {
                         <h3 className="c_tit">
                             <span>{t("media.news.subtitle")}</span>
                             {t("media.news.title")}
-                        </h3>                    
+                        </h3>
                         <div className="tab">
-                           
                             <Link
                                 to=""
                                 onClick={() => handleCategory("")}
@@ -206,9 +215,19 @@ const MediaNews = (props) => {
                         </div>
                     </div>
                     <div className="search">
-                                <input></input>
-                                <button type="button" class="btn">검색</button>
-                            </div>
+                        <input
+                            type="text"
+                            defaultValue={searchKeyword}
+                            ref={searchInput}
+                        />
+                        <button
+                            type="button"
+                            className="btn"
+                            onClick={doSearch}
+                        >
+                            {t("media.search")}
+                        </button>
+                    </div>
                     <div className="boxwrap">
                         {/*반복 시작*/}
                         {boardList.length !== 0 &&

@@ -123,17 +123,17 @@ function Footer() {
                                                 sx={{ color: "white" }}
                                                 size={"small"}
                                             >
-                                                <InputLabel
-                                                    id="demo-simple-select-label"
-                                                    sx={{ color: "white" }}
-                                                >
-                                                    Company
-                                                </InputLabel>
+                                                {/*<InputLabel*/}
+                                                {/*    id="demo-simple-select-label"*/}
+                                                {/*    sx={{ color: "white" }}*/}
+                                                {/*>*/}
+                                                {/*    Company*/}
+                                                {/*</InputLabel>*/}
                                                 <Select
                                                     labelId="demo-simple-select-label"
                                                     id="demo-simple-select"
                                                     value={selectedValue}
-                                                    label="Company"
+                                                    // label="Company"
                                                     onChange={handleChange}
                                                     sx={{ color: "white" }}
                                                 >

@@ -165,9 +165,9 @@ function Header(props) {
                             <a
                                 style={{ cursor: "pointer" }}
                                 key={lng}
-                                className={
-                                    `${lngs[lng].className}${i18n.resolvedLanguage === lng ? " on" : ""}`
-                                }
+                                className={`${lngs[lng].className}${
+                                    i18n.resolvedLanguage === lng ? " on" : ""
+                                }`}
                                 onClick={() => {
                                     i18n.changeLanguage(lng);
                                     handleLanguage(lng);
@@ -177,9 +177,9 @@ function Header(props) {
                             </a>
                         ))}
                     </div>
-                    <div className="book">
-                        <img src="img/web/main/book.png" alt="" />
-                    </div>
+                    {/*<div className="book">*/}
+                    {/*    <img src="img/web/main/book.png" alt="" />*/}
+                    {/*</div>*/}
                 </div>
                 {/* 모바일 메뉴 // S */}
                 <MobileNav />

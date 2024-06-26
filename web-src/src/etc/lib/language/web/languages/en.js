@@ -452,6 +452,7 @@ const en = {
             },
             no_data: "There are no registered announcements.",
             view_more: "VIEW MORE",
+            search: "search",
         },
         kmedi: {
             subvisual: {
