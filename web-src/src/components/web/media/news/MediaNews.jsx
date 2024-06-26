@@ -178,8 +178,9 @@ const MediaNews = (props) => {
                         <h3 className="c_tit">
                             <span>{t("media.news.subtitle")}</span>
                             {t("media.news.title")}
-                        </h3>
+                        </h3>                    
                         <div className="tab">
+                           
                             <Link
                                 to=""
                                 onClick={() => handleCategory("")}
@@ -204,6 +205,10 @@ const MediaNews = (props) => {
                             </Link>
                         </div>
                     </div>
+                    <div className="search">
+                                <input></input>
+                                <button type="button" class="btn">검색</button>
+                            </div>
                     <div className="boxwrap">
                         {/*반복 시작*/}
                         {boardList.length !== 0 &&

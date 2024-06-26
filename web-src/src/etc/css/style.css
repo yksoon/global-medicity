@@ -362,20 +362,25 @@ padding: 0;}
 .kmedi_wide .app .top .c_tit > span{font-size: 16px; display: block; font-weight: 400; color: #424448; font-family: "Noto Sans KR";}
 
 /* MEDIA CENTER */
+#con_area .medicenter .c_tit {margin: 0;}
 .medicenter {padding: 80px 0 0 0;}
 .medicenter .top {display: flex;align-items: flex-end;justify-content: space-between;}
-.medicenter .top .tab {margin: 0px 0 50px 0; gap: 20px; display: flex;}
-.medicenter .top .tab a {color: #9E9E9E; font-size: 20px; font-weight: 600;}
-.medicenter .top .tab a:hover {color: #001FD9;font-weight: 600;text-decoration: underline;}
-.medicenter .top .tab a.on {color: #001FD9;font-weight: 700;text-decoration: underline;}
+.medicenter .top .tab {gap: 20px; display: flex; align-items: center;}
+.medicenter .top .tab a {color: #001FD9;border:1px solid #001FD9; font-size: 20px; font-weight: 600; padding: 10px;}
+.medicenter .top .tab a:hover {background: #001FD9;color: #fff;font-weight: 600;}
+.medicenter .top .tab a.on {background: #001FD9;color: #fff;font-weight: 700;}
+.medicenter .search {margin: 20px 0 0; display: flex;align-items: center; justify-content: flex-end;}
+.medicenter .search input {height: 40px;outline: none;font-size: 18px;}
+.medicenter .search .btn {height: 40px; background: #001FD9;color: #fff; border: none;margin: 0 0 0 10px;padding: 0 10px; cursor: pointer;}
+.medicenter .boxwrap {margin: 50px 0 0;}
 .medicenter .boxwrap figure{box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 display: inline-block;margin: 0 0 40px;column-width: 480px;}
 .medicenter .btn_main {color: #BDBDBD;border-bottom: 1px solid #BDBDBD;}
-.medicenter .btn_main:hover {color: #001FD9;border-bottom: 1px solid #001FD9;}
+.medicenter .boxwrap a:hover .btn_main {color: #001FD9;border-bottom: 1px solid #001FD9;}
 .medicenter .btn_main svg {stroke: #BDBDBD;}
-.medicenter .btn_main:hover svg {stroke: #001FD9;}
+.medicenter .boxwrap a:hover svg {stroke: #001FD9;}
 .medicenter .boxwrap {column-gap: 40px; column-width: 480px;}
 .medicenter .boxwrap .box .arrow {color: #BDBDBD;}
 .medicenter .boxwrap .box span {display: block;}
@@ -411,6 +416,7 @@ display: inline-block;margin: 0 0 40px;column-width: 480px;}
     word-wrap:break-word;
 }
 .notice .list_box a.btn_main {margin: 0;}
+.notice .ql-editor {text-align: center; font-size: 16px;line-height: 28px;}
 
 /* BISINESS */
 .business {padding: 80px 0 0;}
