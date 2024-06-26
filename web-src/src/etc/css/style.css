@@ -220,8 +220,8 @@ p.normal{font-size: 20px; line-height: 1.7;}
 .weare .c_tit > span{font-size: 16px; display: block; font-weight: 400; color: #424448; font-family: "Noto Sans KR";}
 .weare .c_tit_kr {font-family: "Noto Sans KR";}
 .weare .img_wrap {text-align: center;}
-.weare #sec01 {max-width: 1720px; margin: 0 auto 0 200px;}
-.weare #sec01 .flx_box > :first-child{padding: 80px 0 0 0;}
+.weare #sec01 .flx_box {padding: 80px 0 0 0;}
+.weare #sec01 .flx_box > div {background: url('/img/web/sub/logo_top.png') no-repeat right top;  }
 .weare #sec01 .sign {margin: 45px 0 0;}
 .weare #sec01 .sign p {margin: 0 0 15px;}
 .weare #sec02  {padding: 175px 0;}
@@ -801,6 +801,7 @@ select {
 	.section05 {padding: 0 20px 140px ;}
 	.section06 .sec_in {padding: 0 20px;}
 
+	.weare #sec01 .flx_box > div {background: url('/img/web/sub/logo_top.png') no-repeat right bottom; padding: 0 0 50px 0; }
 	.weare #sec02 {padding: 175px 20px;}
 	.weare #sec02 .box_wrap .graybox {height: 500px;}
 	.weare .layout {padding: 0 20px;}
@@ -1019,6 +1020,7 @@ select {
    .weare .c_tit {margin: 0 0 20px;}
    .weare #sec01 {margin: 0; padding: 0 20px;}
    .weare #sec01 .sign {margin: 30px 0 50px;}
+   .weare #sec01 .flx_box > div {padding: 0 0 150px 0;}
    .weare .flx_box { display: flex;flex-direction: column;}
    .weare .c_tit {font-size: 26px;}
    .weare #sec02 {padding: 120px 20px 120px;}
@@ -1251,6 +1253,7 @@ select {
 
 
 	@media screen and (max-width:375px) { 
+		.weare #sec01 .flx_box > div {background-size: 100%;}
 		#mainvisual{height:370px;}
 		#mainvisual .main_txt h2 {font-size: 24px;}
 		#mainvisual .main_txt h3 {font-size: 12px;}
