@@ -246,7 +246,7 @@ const InfoWelcome = (props) => {
                                 {/*    alt=""*/}
                                 {/*></img>*/}
                                 <p>{t("weAre.aboutUs.slogan.contentTop")}</p>
-                                <p>{t("weAre.aboutUs.slogan.content")}</p>
+                                <span>{t("weAre.aboutUs.slogan.content")}</span>
                             </div>
                         </div>
                     </div>
@@ -670,11 +670,61 @@ const InfoWelcome = (props) => {
                                 <div className="historybox">
                                     <div className="year">
                                         <div className="num">2023</div>
-                                        <div>
-                                            <img
-                                                src="img/web/sub/history_img02.png"
-                                                alt=""
-                                            ></img>
+                                        <div className="img_box">
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_01.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_02.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_03.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_04.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_05.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_06.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_07.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_08.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2023_09.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="month right">
@@ -898,11 +948,61 @@ const InfoWelcome = (props) => {
                                     </div>
                                     <div className="year">
                                         <div className="num on">2022</div>
-                                        <div>
-                                            <img
-                                                src="img/web/sub/history_img03.png"
-                                                alt=""
-                                            ></img>
+                                        <div className="img_box">
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_01.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_02.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_03.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_04.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_05.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_06.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_07.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_08.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
+                                            <div>
+                                                <img
+                                                    src="img/web/sub/2022_09.jpg"
+                                                    alt=""
+                                                ></img>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

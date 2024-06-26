@@ -261,6 +261,16 @@ const Partners = () => {
                         <img src="/img/web/partner/partner24.jpg" alt="" />
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        to=""
+                        onClick={(e) => {
+                            CommonOpenUrl("/", e);
+                        }}
+                    >
+                        <img src="/img/web/partner/partner25.jpg" alt="" />
+                    </Link>
+                </li>
             </ul>
         </>
     );

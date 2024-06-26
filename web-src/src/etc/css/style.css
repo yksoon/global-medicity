@@ -226,13 +226,14 @@ p.normal{font-size: 20px; line-height: 1.7;}
 .weare #sec01 .sign p {margin: 0 0 15px;}
 .weare #sec02  {padding: 175px 0;}
 .weare #sec02 .box_wrap {display: flex; gap: 30px;}
-.weare #sec02 .box_wrap .graybox {border: 1px solid #ddd; height: 375px; padding: 50px 25px 0; width: calc((100% - 90px) / 4);display: flex;flex-direction: column;
+.weare #sec02 .box_wrap .graybox {border: 1px solid #ddd; padding: 50px 25px 25px; width: calc((100% - 90px) / 4);display: flex;flex-direction: column;
 	justify-content: flex-start;}
 .weare #sec02 .box_wrap .graybox h5 {font-size: 28px; font-weight: 700; color:#424448 ; letter-spacing: -0.02em;margin: 10px 0 15px;}
 .weare #sec02 .box_wrap .graybox span{font-size: 20px; font-weight: 400; color: #424448;letter-spacing: -0.02em; display: block;}
 .weare #sec03 {background: url('/img/web/sub/intro_bg01.png') no-repeat center; background-size: cover; padding: 105px 0 230px;}
 .weare #sec03 .txt {text-align: center;margin: 65px 0 0;}
-.weare #sec03 .txt p {font-size: 20px; font-weight: 400; letter-spacing: -0.02em; margin: 35px 0 0;color: #424448;}
+.weare #sec03 .txt p {font-size: 38px; font-weight: 700; letter-spacing: -0.02em; margin: 35px 0 20px;color: #424448;}
+.weare #sec03 .txt span {font-size: 28px;}
 .weare #sec04 .flx_box {display: flex; align-items: flex-start;gap: 115px;margin: 145px 0 0;}
 .weare #sec04 .flx_box p{margin: 40px 0 0;}
 .weare #sec05 .flx_box {align-items: center;gap: 105px;}
@@ -269,7 +270,8 @@ position: absolute; right: -75px;top: 10px; }
 .weare #sec07 .historybox .month ul li::before {content: ""; display: inline-block; clear: both; width: 5px; height: 5px; background-color: #BDBDBD; }
 .weare #sec07 .historybox .year {border-left: 1px solid #BDBDBD;padding: 0 0 0 65px;width: 50%;}
 .weare #sec07 .historybox .year .img_box {display: flex; flex-wrap: wrap;}
-.weare #sec07 .historybox .year .img_box > div {width: calc(100% / 3);}
+.weare #sec07 .historybox .year .img_box > div {width: calc(100% / 3); }
+.weare #sec07 .historybox .year .img_box > div img {object-fit: cover; width: 100%; height: 100%;}
 .weare #sec07 .historybox .year .num {font-size: 106px; font-weight: 500;font-family: "Lexend";color: #707070;line-height: 32px;margin: 0 0 65px 0;}
 .weare #sec07 .historybox .year .num.on {color: #001FD9;}
 .weare #sec07 .historybox:nth-child(2n) .year {text-align: right; border-left: 0; padding: 0 65px 0 0;}
@@ -805,7 +807,8 @@ select {
 
 	.weare #sec01 .flx_box > div {background: url('/img/web/sub/logo_top.png') no-repeat right bottom; padding: 0 0 50px 0; }
 	.weare #sec02 {padding: 175px 20px;}
-	.weare #sec02 .box_wrap .graybox {height: 500px;}
+	.weare #sec02 .box_wrap {flex-direction: column;}
+	.weare #sec02 .box_wrap .graybox {width: 100%;padding: 20px;}
 	.weare .layout {padding: 0 20px;}
 
 	.kmedi {padding: 80px 20px 150px;}
@@ -1027,12 +1030,12 @@ select {
    .weare .c_tit {font-size: 26px;}
    .weare #sec02 {padding: 120px 20px 120px;}
    .weare #sec02 .box_wrap {flex-direction: column;}
-   .weare #sec02 .box_wrap .graybox {width: 100%;height: auto;padding: 20px;}
    .weare #sec02 .box_wrap .graybox h5 {font-size: 20px;}
    .weare #sec02 .box_wrap .graybox span {font-size: 16px;}
    .weare #sec03 {padding: 50px 20px 80px;}
    .weare #sec03 .txt {margin: 30px 0 0;}
-   .weare #sec03 .txt p {font-size: 18px; margin: 20px 0 0;}
+   .weare #sec03 .txt p {font-size: 22px; margin: 20px 0 10px;}
+   .weare #sec03 .txt span { font-size: 16px;}
    .weare #sec04 {padding: 0 20px;}
    .weare #sec04 .flx_box {gap: 0;margin: 110px 0 0;}
    .weare #sec04 .flx_box p {margin: 0 0 20px;}
