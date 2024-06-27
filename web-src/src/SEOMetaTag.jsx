@@ -39,11 +39,6 @@ const SEOMetaTag = (props) => {
                         content="MediCity memberikan berbagai layanan yang untuk dokter, perawat, dan semua tenaga medis professional. Bergabunglah dengan MediCity untuk memberikan layanan kesehatan secara profesional."
                     />
                 )}
-                <meta property="og:image" content="img/common/og_img.jpg" />
-                <meta property="og:image:width" content="800" />
-                <meta property="og:image:height" content="400" />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="template" />
             </Helmet>
         </>
     );
