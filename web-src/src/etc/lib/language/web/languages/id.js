@@ -96,7 +96,10 @@ const id = {
                 Medi_Art_Service: "Layanan Medi-Art",
                 Medi_Art_Service_content:
                     "Kami memberikan konsultasi bersama para ahli untuk membantu anggota MediCity  menghemat pajak dari koleksi seni pribadi, pembelian dan penyewaan produk investasi.",
-            },
+                    Wine_Promotion: "Promosi Anggur",
+                    Wine_Promotion_content:
+                        "PT. Medi-City menawarkan anggotanya anggur spesial dari Moldova. Anggur ini, yang mencerminkan rasa dan tradisional dari Moldova, Diberikan kesempatan khusus untuk anggota Medi-City yang juga pecinta anggur."
+                },
             sec03: {
                 subtitle: "Info terbaru MEDI-CITY",
                 title: "HIGHLIGHT",

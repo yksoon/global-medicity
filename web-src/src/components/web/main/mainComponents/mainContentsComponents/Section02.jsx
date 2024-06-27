@@ -96,6 +96,22 @@ const Section02 = () => {
                                 </Link>
                             </div>
                         </li>
+                        <li>
+                            <div>
+                                <img src="img/web/main/sec02_05.png" alt="" />
+                            </div>
+                            <div className="busi_txt">
+                                <h5>{t("main.sec02.Wine_Promotion")}</h5>
+                                <p>{t("main.sec02.Wine_Promotion_content")}</p>
+                                <Link
+                                    to={routerPath.web_business_hotel_url}
+                                    state={{ headerRoute: "wine" }}
+                                    className="btn_main"
+                                >
+                                    {t("main.common.VIEW_MORE")} <Arrow />
+                                </Link>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
