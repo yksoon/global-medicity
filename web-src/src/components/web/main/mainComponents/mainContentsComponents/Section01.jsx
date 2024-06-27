@@ -10,7 +10,7 @@ import { commaOfNumber } from "etc/lib/Pattern";
 import { Link } from "react-router-dom";
 import Arrow from "components/web/common/Arrow";
 import routerPath from "etc/lib/path/routerPath";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import LineBreak from "etc/lib/language/web/LineBreak";
 
 const Section01 = (props) => {
@@ -22,12 +22,10 @@ const Section01 = (props) => {
                 <div className="sec_in">
                     <h5>{t("main.sec01.ABOUT_US")}</h5>
                     <p>
-                        {/*{t("main.sec01.content")*/}
-                        {/*    .split("\n")*/}
-                        {/*    .map((line, idx) => (*/}
-                        {/*        <div key={idx}>{line}</div>*/}
-                        {/*    ))}*/}
-                        {LineBreak(t("main.sec01.content"))}
+                        <Trans
+                            i18nKey={"main.sec01.content"}
+                            components={[<br></br>]}
+                        />
                     </p>
                     <h3>{t("main.sec01.what_is_MEDI_CITY")}</h3>
                     <Link

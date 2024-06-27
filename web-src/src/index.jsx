@@ -21,6 +21,7 @@ import ScrollToTop from "./ScrollToTop";
 import { StyledEngineProvider } from "@mui/material";
 import { useLocation } from "react-router";
 import { useEffect } from "react";
+import { HelmetProvider } from "react-helmet-async";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const app = document.getElementById("app");
@@ -49,7 +50,9 @@ root.render(
             <ScrollToTop />
             <RecoilizeDebugger root={app} />
             <StyledEngineProvider injectFirst>
-                <App />
+                <HelmetProvider>
+                    <App />
+                </HelmetProvider>
             </StyledEngineProvider>
         </RecoilRoot>
     </BrowserRouter>,

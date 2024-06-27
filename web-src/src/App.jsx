@@ -16,6 +16,7 @@ import {
 import {
     codesAtom,
     countryBankAtom,
+    globalLanguageAtom,
     ipInfoAtom,
     resultCodeAtom,
     userInfoAtom,
@@ -26,10 +27,16 @@ import { registration_idx } from "etc/lib/static";
 import { CommonNotify } from "etc/lib/Common";
 import { successCode } from "etc/lib/resultCode";
 import apiPath from "etc/lib/path/apiPath";
+import { Helmet } from "react-helmet-async";
+import SEOMetaTag from "SEOMetaTag";
 
 let currentPath = "";
 function App() {
     const location = useLocation();
+
+    const globalLanguage = useRecoilValue(globalLanguageAtom);
+
+    // console.log(globalLanguage);
 
     useEffect(() => {
         const loadCSS = async (path) => {
@@ -321,6 +328,8 @@ function App() {
 
     return (
         <>
+            {/*Meta Tag*/}
+            <SEOMetaTag globalLanguage={globalLanguage} />
             <div className="wrapper">
                 <ConfirmContextProvider>
                     <AlertContextProvider>

@@ -78,7 +78,7 @@ const id = {
             sec01: {
                 ABOUT_US: "TENTANG KAMI",
                 content:
-                    "MEDICITY memiliki database lebih dari 40.000 tenaga medis dan video operasi serta edukasi melalui lembaga medis, \nkomunitas akademis, webinar, dan layanan MICE, serta memberikan berbagai manfaat mulai dari konsultasi praktik medis hingga promosi, keterkaitan dengan target layanan medis, dan manfaat beragam dari institusi mitra kepada anggota MEDICITY",
+                    "MEDICITY memiliki database lebih dari 40.000 tenaga medis dan video operasi serta edukasi melalui lembaga medis,<0></0>komunitas akademis, webinar, dan layanan MICE, serta memberikan berbagai manfaat mulai dari konsultasi praktik medis hingga promosi, keterkaitan dengan target layanan medis, dan manfaat beragam dari institusi mitra kepada anggota MEDICITY",
                 what_is_MEDI_CITY: "Apa itu MEDI-CITY",
             },
             sec02: {
@@ -96,10 +96,10 @@ const id = {
                 Medi_Art_Service: "Layanan Medi-Art",
                 Medi_Art_Service_content:
                     "Kami memberikan konsultasi bersama para ahli untuk membantu anggota MediCity  menghemat pajak dari koleksi seni pribadi, pembelian dan penyewaan produk investasi.",
-                    Wine_Promotion: "Promosi Anggur",
-                    Wine_Promotion_content:
-                        "PT. Medi-City menawarkan anggotanya anggur spesial dari Moldova. Anggur ini, yang mencerminkan rasa dan tradisional dari Moldova, Diberikan kesempatan khusus untuk anggota Medi-City yang juga pecinta anggur."
-                },
+                Wine_Promotion: "Promosi Anggur",
+                Wine_Promotion_content:
+                    "PT. Medi-City menawarkan anggotanya anggur spesial dari Moldova. Anggur ini, yang mencerminkan rasa dan tradisional dari Moldova, Diberikan kesempatan khusus untuk anggota Medi-City yang juga pecinta anggur.",
+            },
             sec03: {
                 subtitle: "Info terbaru MEDI-CITY",
                 title: "HIGHLIGHT",
@@ -116,7 +116,7 @@ const id = {
                 subtitle: "MEDI-CITY Menuju dunia global",
                 title: "RESPECT FOR LIFE",
                 content:
-                    "Medicity berharap dengan memperkenalkan teknologi medis Korea ke seluruh dunia, \nbanyak pasien di seluruh dunia dapat menjadi lebih sehat melalui \nlayanan medis yang lebih baik.",
+                    "Medicity berharap dengan memperkenalkan teknologi medis Korea ke seluruh dunia,<0></0>banyak pasien di seluruh dunia dapat menjadi lebih sehat melalui<0></0>layanan medis yang lebih baik.",
             },
         },
         weAre: {

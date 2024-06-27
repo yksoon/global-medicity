@@ -78,7 +78,7 @@ const en = {
             sec01: {
                 ABOUT_US: "ABOUT US",
                 content:
-                    "MEDICITY has a database of over 40,000 medical personnel and video about operations as well as education through medical institutions, academic communities, webinars, and MICE services, and provides a range of benefits ranging from medical practice consulting to promotions, links to medical service targets, and medical services. \nand the diverse benefits of partner institutions to members of MEDICITY",
+                    "MEDICITY has a database of over 40,000 medical personnel and video about operations as well as education through medical institutions, academic communities, webinars, and MICE services, and provides a range of benefits ranging from medical practice consulting to promotions, links to medical service targets, and medical services.<0></0>and the diverse benefits of partner institutions to members of MEDICITY",
                 what_is_MEDI_CITY: "What is MEDI-CITY",
             },
             sec02: {
@@ -98,7 +98,7 @@ const en = {
                     "We provide consultation with experts to help MediCity members save tax from private art collections, purchases and rentals of investment products.",
                 Wine_Promotion: "Wine Promotion",
                 Wine_Promotion_content:
-                    "Medi-City Co., Ltd. offers its members special wines from Moldova. These wines, which embody the true taste and tradition of Moldova, provide a unique opportunity for wine enthusiasts. Enjoy this exclusive benefit available only to Medi-City members."
+                    "Medi-City Co., Ltd. offers its members special wines from Moldova. These wines, which embody the true taste and tradition of Moldova, provide a unique opportunity for wine enthusiasts. Enjoy this exclusive benefit available only to Medi-City members.",
             },
             sec03: {
                 subtitle: "MEDI-CITY new announcement",
@@ -118,7 +118,7 @@ const en = {
                     "MEDI-CITY is aiming for the world / going towards the world",
                 title: "RESPECT FOR LIFE",
                 content:
-                    "Medicity sincerely wishes for patients worldwide to become healthier \nthrough better medical services by spreading \nawareness of South Korea's medical technology.",
+                    "Medicity sincerely wishes for patients worldwide to become healthier<0></0>through better medical services by spreading<0></0>awareness of South Korea's medical technology.",
             },
         },
         weAre: {
