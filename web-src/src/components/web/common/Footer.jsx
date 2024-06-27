@@ -7,7 +7,13 @@ import { useLocation } from "react-router";
 import routerPath from "etc/lib/path/routerPath";
 import { Trans, useTranslation } from "react-i18next";
 import LineBreak from "etc/lib/language/web/LineBreak";
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import {
+    FormControl,
+    InputLabel,
+    makeStyles,
+    MenuItem,
+    Select,
+} from "@mui/material";
 
 function Footer() {
     const { t, i18n } = useTranslation();
@@ -135,7 +141,28 @@ function Footer() {
                                                     value={selectedValue}
                                                     // label="Company"
                                                     onChange={handleChange}
-                                                    sx={{ color: "white", border: "1px solid #fff" }}
+                                                    sx={{
+                                                        color: "white",
+                                                        border: "1px solid #fff",
+                                                        ".MuiOutlinedInput-notchedOutline":
+                                                            {
+                                                                borderColor:
+                                                                    "rgba(228, 219, 233, 0.25)",
+                                                            },
+                                                        "&.Mui-focused .MuiOutlinedInput-notchedOutline":
+                                                            {
+                                                                borderColor:
+                                                                    "rgba(228, 219, 233, 0.25)",
+                                                            },
+                                                        "&:hover .MuiOutlinedInput-notchedOutline":
+                                                            {
+                                                                borderColor:
+                                                                    "rgba(228, 219, 233, 0.25)",
+                                                            },
+                                                        ".MuiSvgIcon-root ": {
+                                                            fill: "white !important",
+                                                        },
+                                                    }}
                                                 >
                                                     {companySelect.map(
                                                         (item) => (
