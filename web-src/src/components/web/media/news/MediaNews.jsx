@@ -213,40 +213,15 @@ const MediaNews = (props) => {
                             id="전체"
                             className="on"
                         >
-                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="19" viewBox="0 0 19 19">
-                            <defs>
-                                <clipPath id="clip-path">
-                                <rect id="사각형_273" data-name="사각형 273" width="19" height="19" transform="translate(0 -0.5)" fill="none" stroke="#888" stroke-width="1"/>
-                                </clipPath>
-                            </defs>
-                            <g id="그룹_346" data-name="그룹 346" transform="translate(0 0.5)">
-                                <g id="그룹_345" data-name="그룹 345" clip-path="url(#clip-path)">
-                                <path id="패스_2209" data-name="패스 2209" d="M18.379,19.379H1.561A1.562,1.562,0,0,1,0,17.818V1.561A1.562,1.562,0,0,1,1.561,0H18.939a1,1,0,0,1,1,1V17.818A1.562,1.562,0,0,1,18.379,19.379ZM2,17.379H17.939V2H2Z" transform="translate(-0.439 -0.439)" fill="#888"/>
-                                <path id="선_82" data-name="선 82" d="M18,1H0V-1H18Z" transform="translate(1 6.5)" fill="#888"/>
-                                <path id="선_83" data-name="선 83" d="M18,1H0V-1H18Z" transform="translate(1 12.5)" fill="#888"/>
-                                <path id="선_84" data-name="선 84" d="M1,17H-1V0H1Z" transform="translate(7 1.5)" fill="#888"/>
-                                </g>
-                            </g>
-                            </svg>
-                            {t("media.news.category.all")}
+                           {/* <img src="img/web/sub/all2.svg" alt=""></img>  */}
+                           {t("media.news.category.all")}
                         </Link>
                         <Link
                             to=""
                             onClick={() => handleCategory("영상")}
                             id="영상"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="17" viewBox="0 0 23 17">
-                            <defs>
-                                <clipPath id="clip-path">
-                                <rect id="사각형_275" data-name="사각형 275" width="30" height="17" transform="translate(0 -0.11)" fill="none" stroke="#888" stroke-width="1"/>
-                                </clipPath>
-                            </defs>
-                            <g id="그룹_349" data-name="그룹 349" transform="translate(0 0.099)">
-                                <g id="그룹_348" data-name="그룹 348" transform="translate(0 0.011)" clip-path="url(#clip-path)">
-                                <path id="패스_2210" data-name="패스 2210" d="M1,0H17.252a1,1,0,0,1,1,1v1.95L21.409,1.6a1,1,0,0,1,1.394.919v11.7a1,1,0,0,1-1.394.919l-3.157-1.353V16.6a1,1,0,0,1-1,1H1a1,1,0,0,1-1-1V1A1,1,0,0,1,1,0ZM16.252,2H2V15.6H16.252V12.268a1,1,0,0,1,1.394-.919L20.8,12.7V4.033L17.646,5.386a1,1,0,0,1-1.394-.919Z" transform="translate(-0.35 -0.362)" fill="#888"/>
-                                </g>
-                            </g>
-                            </svg>
+                            {/* <img src="img/web/sub/media.svg" alt=""></img> */}
                             {t("media.news.category.video")}
                         </Link>
                         <Link
@@ -254,25 +229,7 @@ const MediaNews = (props) => {
                             onClick={() => handleCategory("뉴스")}
                             id="뉴스"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="그룹_352" data-name="그룹 352" width="24" height="20" viewBox="0 0 24 20">
-                            <defs>
-                                <clipPath id="clip-path">
-                                <rect id="사각형_277" data-name="사각형 277" width="24" height="20" fill="none" stroke="#888" stroke-width="1"/>
-                                </clipPath>
-                            </defs>
-                            <g id="그룹_351" data-name="그룹 351" clip-path="url(#clip-path)">
-                                <path id="패스_2211" data-name="패스 2211" d="M1,0h9.223A3.041,3.041,0,0,1,13.25,3.048v16.7a1,1,0,0,1-2,0A1.039,1.039,0,0,0,10.223,18.7H1a1,1,0,0,1-1-1V1A1,1,0,0,1,1,0ZM11.25,16.883V3.048A1.039,1.039,0,0,0,10.223,2H2V16.7h8.223A3,3,0,0,1,11.25,16.883Z" transform="translate(-0.375 -0.571)" fill="#888"/>
-                                <path id="패스_2212" data-name="패스 2212" d="M21.027,0H30.25a1,1,0,0,1,1,1V17.7a1,1,0,0,1-1,1H21.027A1.039,1.039,0,0,0,20,19.75a1,1,0,0,1-2,0V3.048A3.041,3.041,0,0,1,21.027,0ZM29.25,2H21.027A1.039,1.039,0,0,0,20,3.048V16.883a3,3,0,0,1,1.027-.181H29.25Z" transform="translate(-7.125 -0.571)" fill="#888"/>
-                                <path id="선_85" data-name="선 85" d="M6.184,1H0V-1H6.184Z" transform="translate(3.196 4.239)" fill="#888"/>
-                                <path id="선_86" data-name="선 86" d="M6.184,1H0V-1H6.184Z" transform="translate(3.196 7.246)" fill="#888"/>
-                                <path id="선_87" data-name="선 87" d="M6.184,1H0V-1H6.184Z" transform="translate(3.196 10.253)" fill="#888"/>
-                                <path id="선_88" data-name="선 88" d="M6.184,1H0V-1H6.184Z" transform="translate(3.196 13.261)" fill="#888"/>
-                                <path id="선_89" data-name="선 89" d="M6.184,1H0V-1H6.184Z" transform="translate(14.37 4.239)" fill="#888"/>
-                                <path id="선_90" data-name="선 90" d="M6.184,1H0V-1H6.184Z" transform="translate(14.37 7.246)" fill="#888"/>
-                                <path id="선_91" data-name="선 91" d="M6.184,1H0V-1H6.184Z" transform="translate(14.37 10.253)" fill="#888"/>
-                                <path id="선_92" data-name="선 92" d="M6.184,1H0V-1H6.184Z" transform="translate(14.37 13.261)" fill="#888"/>
-                            </g>
-                            </svg>
+                            {/* <img src="img/web/sub/news.svg" alt=""></img> */}
                             {t("media.news.category.news")}
                         </Link>
                     </div>
