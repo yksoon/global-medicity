@@ -120,7 +120,7 @@ function Footer() {
                                         <td colSpan={2}>
                                             <FormControl
                                                 fullWidth
-                                                sx={{ color: "white" }}
+                                                sx={{ margin: "0 10px 15px 0" }}
                                                 size={"small"}
                                             >
                                                 {/*<InputLabel*/}
@@ -135,7 +135,7 @@ function Footer() {
                                                     value={selectedValue}
                                                     // label="Company"
                                                     onChange={handleChange}
-                                                    sx={{ color: "white" }}
+                                                    sx={{ color: "white", border: "1px solid #fff" }}
                                                 >
                                                     {companySelect.map(
                                                         (item) => (

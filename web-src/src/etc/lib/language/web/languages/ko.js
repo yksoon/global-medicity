@@ -96,6 +96,9 @@ const ko = {
                 Medi_Art_Service: "Medi-Art Service",
                 Medi_Art_Service_content:
                     "㈜메디씨티 회원들에게 가치 있는 미술품을 개인 소장, 구매를 통한 재테크, 렌탈을 통한 세금 절세 혜택을 누릴 수 있게 전문가와 상담을 도와드립니다.",
+                Wine_Promotion: "Wine Promotion",
+                Wine_Promotion_content:
+                    "㈜메디씨티는 회원들에게 몰도바의 특별한 와인을 제공합니다. 몰도바의 진정한 맛과 전통을 담은 이 와인은 와인 애호가들에게 특별한 기회를 제공합니다. 메디씨티 회원들에게만 제공되는 특별한 혜택을 누려보세요."
             },
             sec03: {
                 subtitle: "메디씨티의 새로운 소식을 전합니다.",

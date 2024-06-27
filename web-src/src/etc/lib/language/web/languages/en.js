@@ -96,6 +96,9 @@ const en = {
                 Medi_Art_Service: "Medi-Art Service",
                 Medi_Art_Service_content:
                     "We provide consultation with experts to help MediCity members save tax from private art collections, purchases and rentals of investment products.",
+                Wine_Promotion: "Wine Promotion",
+                Wine_Promotion_content:
+                    "Medi-City Co., Ltd. offers its members special wines from Moldova. These wines, which embody the true taste and tradition of Moldova, provide a unique opportunity for wine enthusiasts. Enjoy this exclusive benefit available only to Medi-City members."
             },
             sec03: {
                 subtitle: "MEDI-CITY new announcement",
