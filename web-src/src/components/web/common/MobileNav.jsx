@@ -61,7 +61,7 @@ function MobileNav() {
                     <span></span>
                     <span className="short"></span>
                 </div>
-                <nav>
+                <nav className="nav">
                     <ul id="nav">
                         <li style={{ display: "flex" }}>
                             {Object.keys(lngs).map((lng) => (

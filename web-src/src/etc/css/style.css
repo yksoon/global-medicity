@@ -915,7 +915,7 @@ select {
 	  left:0;
 	}
 
-	nav {display: block; position:absolute; top:65px; right:0; width:100%; text-align:left; z-index:1100;}
+	.nav {display: block; position:absolute; top:65px; right:0; width:100%; text-align:left; z-index:1100;}
 	#nav {display:block;
 		background:#002058}
 	#nav li {position:relative;  border-bottom: 1px solid#fff;}
@@ -1143,8 +1143,15 @@ select {
 	/* MEDIA CENTER */
 	.medicenter .top {flex-direction: column;align-items: flex-start;}
 	#con_area .medicenter .c_tit {font-size: 26px;}
+	.medicenter .search_wrap {width: 100%;}
+	.medicenter .search {padding: 5px 15px;justify-content: space-between;}
+	.medicenter .search input {height: 27px; width: 80%;}
+	.medicenter .top {margin: 0 0 20px;padding: 0 0 15px;}
+	.medicenter .tab {flex-direction: column;gap: 8px;}
+	.medicenter .tab a {font-size: 14px;width: 100%;justify-content: center;}
 	.medicenter .boxwrap figure {width: 100%;}
-
+	.medicenter .boxwrap .box .txtwrap {padding: 20px;}
+	.medicenter .boxwrap .box .txtwrap p.name {font-size: 20px;line-height: 26px;}
 
 
 	/* Online Sign-up */
