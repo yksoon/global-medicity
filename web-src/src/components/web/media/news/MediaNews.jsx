@@ -189,45 +189,51 @@ const MediaNews = (props) => {
                             <span>{t("media.news.subtitle")}</span>
                             {t("media.news.title")}
                         </h3>
-                        <div className="tab">
-                            <Link
-                                to=""
-                                onClick={() => handleCategory("")}
-                                id="전체"
-                                className="on"
-                            >
-                                {t("media.news.category.all")}
-                            </Link>
-                            <Link
-                                to=""
-                                onClick={() => handleCategory("영상")}
-                                id="영상"
-                            >
-                                {t("media.news.category.video")}
-                            </Link>
-                            <Link
-                                to=""
-                                onClick={() => handleCategory("뉴스")}
-                                id="뉴스"
-                            >
-                                {t("media.news.category.news")}
-                            </Link>
+                        <div className="search_wrap">
+                            <div className="search">
+                                <input
+                                    type="text"
+                                    defaultValue={searchKeyword}
+                                    ref={searchInput}
+                                />
+                                <button
+                                    type="button"
+                                    className="btn"
+                                    onClick={doSearch}
+                                >
+                                    {t("media.search")}
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div className="search">
-                        <input
-                            type="text"
-                            defaultValue={searchKeyword}
-                            ref={searchInput}
-                        />
-                        <button
-                            type="button"
-                            className="btn"
-                            onClick={doSearch}
+                    <div className="tab">
+                        <Link
+                            to=""
+                            onClick={() => handleCategory("")}
+                            id="전체"
+                            className="on"
                         >
-                            {t("media.search")}
-                        </button>
+                           {/* <img src="img/web/sub/all2.svg" alt=""></img>  */}
+                           {t("media.news.category.all")}
+                        </Link>
+                        <Link
+                            to=""
+                            onClick={() => handleCategory("영상")}
+                            id="영상"
+                        >
+                            {/* <img src="img/web/sub/media.svg" alt=""></img> */}
+                            {t("media.news.category.video")}
+                        </Link>
+                        <Link
+                            to=""
+                            onClick={() => handleCategory("뉴스")}
+                            id="뉴스"
+                        >
+                            {/* <img src="img/web/sub/news.svg" alt=""></img> */}
+                            {t("media.news.category.news")}
+                        </Link>
                     </div>
+                   
                     <div className="boxwrap">
                         {/*반복 시작*/}
                         {boardList.length !== 0 &&

@@ -365,20 +365,27 @@ padding: 0;}
 #con_area .medicenter .c_tit {margin: 0;}
 .medicenter {padding: 80px 20px 0;}
 .medicenter .top {display: flex;align-items: flex-end;justify-content: space-between;}
-.medicenter .top .tab {gap: 20px; display: flex; align-items: center;}
-.medicenter .top .tab a {color: #001FD9;border:1px solid #001FD9; font-size: 20px; font-weight: 600; padding: 10px;}
-.medicenter .top .tab a:hover {background: #001FD9;color: #fff;font-weight: 600;}
-.medicenter .top .tab a.on {background: #001FD9;color: #fff;font-weight: 700;}
-.medicenter .search {margin: 20px 0 0; display: flex;align-items: center; justify-content: flex-end;}
-.medicenter .search input {height: 40px;outline: none;font-size: 18px;}
-.medicenter .search .btn {height: 40px; background: #001FD9;color: #fff; border: none;margin: 0 0 0 10px;padding: 0 10px; cursor: pointer;}
-.medicenter .boxwrap {margin: 50px 0 0;}
+.medicenter .tab { display: flex; align-items: center;gap: 15px;}
+.medicenter .tab a {color: #999; font-size: 18px; font-weight: 600; border: 1px solid #888; border-radius: 50px;padding: 10px 30px; display: flex; align-items: center;}
+.medicenter .tab a:hover {font-weight: 600;color: #fff; background: #001FD9;border: 1px solid #001FD9;}
+.medicenter .tab a:hover svg g path {fill: #fff;}
+.medicenter .tab a {background: #fff;font-weight: 700;color: #888;border: 1px solid #888;}
+.medicenter .tab a svg{margin: 0 10px 0 0;}
+.medicenter .tab a.on {font-weight: 600;color: #fff; background: #001FD9;border: 1px solid #001FD9;}
+.medicenter .tab a.on svg g path {fill: #fff;}
+.medicenter .top {border-bottom: 1px solid #ddd; margin: 0 0 45px; padding: 0 0 25px;}
+.medicenter .top_wrap {display: flex; align-items: flex-end; gap: 30px;}
+.medicenter .search {margin: 20px 0 0; display: flex;align-items: center; justify-content: flex-end; border: 1px solid #ddd; border-radius: 50px;padding: 10px 25px;}
+.medicenter .search input {height: 27px;outline: none;font-size: 18px; width: 310px; border: 0;}
+.medicenter .search .btn {height: 20px; width: 20px;background: #001FD9;color: #001FD9; border: none;margin: 0 0 0 10px;cursor: pointer;
+background: url('/img/web/sub/search.png') no-repeat left center;font-size:0;background-size: cover;}
+.medicenter .boxwrap {margin: 25px 0 0;}
 .medicenter .boxwrap figure{box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 display: inline-block;margin: 0 0 40px;column-width: 480px;}
 .medicenter .btn_main {color: #BDBDBD;border-bottom: 1px solid #BDBDBD;}
-.medicenter .boxwrap a:hover .btn_main {color: #001FD9;border-bottom: 1px solid #001FD9;}
+.medicenter .boxwrap a:hover .btn_main {color: hsl(231, 100%, 43%);border-bottom: 1px solid #001FD9;}
 .medicenter .btn_main svg {stroke: #BDBDBD;}
 .medicenter .boxwrap a:hover svg {stroke: #001FD9;}
 .medicenter .boxwrap {column-gap: 40px; column-width: 480px;}
@@ -416,7 +423,7 @@ display: inline-block;margin: 0 0 40px;column-width: 480px;}
     word-wrap:break-word;
 }
 .notice .list_box a.btn_main {margin: 0;}
-.notice .ql-editor {text-align: center; font-size: 16px;line-height: 28px;}
+.notice .ql-editor {text-align: left; font-size: 16px;line-height: 28px;word-break: break-all;}
 
 /* BISINESS */
 .business {padding: 80px 20px 0;}
