@@ -225,6 +225,8 @@ const MediaNewsDetail = (props) => {
                 </div>
             </div>
 
+            <></>
+
             <Footer />
         </>
     );
