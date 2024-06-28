@@ -154,7 +154,7 @@ const en = {
                         "We provide MICE and educational services of medical associations and institutions.",
                     life: "Medical Education System Service",
                     life_content:
-                        "Through the K-Medi platform, a specialized medical video content platform, we spread Korean medical education services to countries that need medical technology development.",
+                        "We provide Korean medical education services to countries that need medical technology development through the K-Medi platform, a specialized medical video content platform.",
                 },
                 slogan: {
                     title: "Slogan",

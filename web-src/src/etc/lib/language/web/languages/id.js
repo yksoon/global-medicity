@@ -152,7 +152,7 @@ const id = {
                         "Kami menyediakan MICE dan layanan edukasi asosiasi dan institusi medis.",
                     life: "Layanan Sistem Pendidikan Medis",
                     life_content:
-                        "Melalui platform K-Medi, platform konten video medis khusus, kami menyebarkan layanan pendidikan medis Korea ke negara-negara yang membutuhkan pengembangan teknologi medis.",
+                        "Kami menyediakan layanan edukasi medis Korea ke berbagai negara yang membutuhkan  melalui platform konten video ahli medis K-MEDI.",
                 },
                 slogan: {
                     title: "Slogan",
