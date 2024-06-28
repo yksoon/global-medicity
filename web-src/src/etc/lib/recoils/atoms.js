@@ -79,6 +79,13 @@ export const globalLanguageAtom = atom({
     effects_UNSTABLE: [persistAtom],
 });
 
+// 게시판 카테고리
+export const boardCategoryAtom = atom({
+    key: "boardCategory",
+    default: "",
+    effects_UNSTABLE: [persistAtom],
+});
+
 // ----session End----
 
 // 스피너
