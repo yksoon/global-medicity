@@ -380,19 +380,20 @@ padding: 0;}
 .medicenter .search input {height: 27px;outline: none;font-size: 18px; width: 310px; border: 0;}
 .medicenter .search .btn {height: 20px; width: 20px;background: #001FD9;color: #001FD9; border: none;margin: 0 0 0 10px;cursor: pointer;
 background: url('/img/web/sub/search.png') no-repeat left center;font-size:0;background-size: cover;}
-.medicenter .boxwrap {margin: 25px 0 0;}
+.medicenter .boxwrap {margin: 25px 0 0;display: flex;flex-wrap: wrap;}
 .medicenter .boxwrap figure{box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
-display: inline-block;margin: 0 0 40px;column-width: 480px;}
-.medicenter .btn_main {color: #BDBDBD;border-bottom: 1px solid #BDBDBD;}
+display: inline-block;margin: 0 0 40px;column-width: 480px;    width: calc((100% - 80px) / 3);}
+.medicenter .btn_main {color: #BDBDBD;border-bottom: 1px solid #BDBDBD;position: absolute;bottom: 50px; left:40px
+	;}
 .medicenter .boxwrap a:hover .btn_main {color: hsl(231, 100%, 43%);border-bottom: 1px solid #001FD9;}
 .medicenter .btn_main svg {stroke: #BDBDBD;}
 .medicenter .boxwrap a:hover svg {stroke: #001FD9;}
 .medicenter .boxwrap {column-gap: 40px; column-width: 480px;}
 .medicenter .boxwrap .box .arrow {color: #BDBDBD;}
 .medicenter .boxwrap .box span {display: block;}
-.medicenter .boxwrap .box .txtwrap {padding: 30px 40px 50px;}
+.medicenter .boxwrap .box .txtwrap {padding: 30px 40px 50px;height: 220px;position: relative;}
 .medicenter .boxwrap .box .txtwrap p.name {font-size: 24px; font-weight: 700; color: #424448; letter-spacing: -0.02em;line-height: 38px;  overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -400,8 +401,8 @@ display: inline-block;margin: 0 0 40px;column-width: 480px;}
 	-webkit-box-orient: vertical;
     word-wrap:break-word; 
 }
-.medicenter .boxwrap .box .imgwrap {height: auto;}
-.medicenter .boxwrap .box .imgwrap img {width: 100%;}
+.medicenter .boxwrap .box .imgwrap {height: 360px;}
+.medicenter .boxwrap .box .imgwrap img {width: 100%;height: 100%; object-fit: cover;}
 
 /* NOTICE */
 .notice {padding: 80px 0 0 0;}
@@ -1151,9 +1152,11 @@ select {
 	.medicenter .tab {flex-direction: column;gap: 8px;}
 	.medicenter .tab a {font-size: 14px;width: 100%;justify-content: center;}
 	.medicenter .boxwrap figure {width: 100%;}
-	.medicenter .boxwrap .box .txtwrap {padding: 20px;}
+	.medicenter .boxwrap .box .imgwrap  {height: auto;}
+	.medicenter .boxwrap .box .imgwrap img {height: auto;}
+	.medicenter .boxwrap .box .txtwrap {padding: 20px;height: auto;}
 	.medicenter .boxwrap .box .txtwrap p.name {font-size: 20px;line-height: 26px;}
-
+	.medicenter .btn_main  {position: static;}
 
 	/* Online Sign-up */
 	.signup .boxing .r_noti{font-size:12px;}
