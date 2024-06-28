@@ -212,7 +212,7 @@ body {margin:0 auto;}
 }
 .sub_hostbox  span.logobox {margin:0 70px 0 0;}
 
-#con_area {max-width:1520px; margin:0 auto; padding:0 0 150px 0; min-height:500px;}
+#con_area {max-width:1560px; margin:0 auto; padding:0 0 150px 0; min-height:500px;}
 #con_area.wide_conarea {width:100%; margin:0 auto;min-height:500px; }
 #con_area .c_tit {font-size:54px; font-weight: 500; color: #000;position:relative;padding:6px 0 0 8px;margin:0 0 40px 0; font-family: "Lexend";}
 #con_area .c_tit > span{font-size: 16px; display: block; font-weight: 400; color: #424448; font-family: "Noto Sans KR";}
@@ -224,7 +224,7 @@ p.normal{font-size: 20px; line-height: 1.7;}
 
 /* WE ARE */
 .weare .flx_box {display: flex;}
-.weare .layout {max-width:1520px; margin:0 auto; padding: 0 20px;}
+.weare .layout {max-width:1560px; margin:0 auto; padding: 0 20px;}
 .weare .c_tit {font-size:54px; font-weight: 700; color: #000;position:relative;padding:6px 0 0 8px;margin:0 0 40px 0; font-family: "Lexend";padding: 0;}
 .weare .c_tit > span{font-size: 16px; display: block; font-weight: 400; color: #424448; font-family: "Noto Sans KR";}
 .weare .c_tit_kr {font-family: "Noto Sans KR";}
@@ -328,7 +328,7 @@ position: absolute; right: -75px;top: 10px; }
 
 
 /* K-MEDI */ 
-.kmedi {padding: 80px 20px 150px;max-width: 1520px;margin: 0 auto;}
+.kmedi {padding: 80px 20px 150px;max-width: 1560px;margin: 0 auto;}
 .kmedi .one .top .c_tit {font-size:54px; font-weight: 500; color: #000;position:relative;padding:6px 0 0 8px;margin:0 0 40px 0;padding: 0;}
 .kmedi .one .top .c_tit > span{font-size: 16px; display: block; font-weight: 400; color: #424448; font-family: "Noto Sans KR";}
 .kmedi .one .cont h4 {font-size: 54px; color: #111; font-weight: 400;font-family: 'Lexend';}
@@ -342,7 +342,7 @@ line-height: 16px;width: 40%;text-align: center;}
 .kmedi .one .cont .twograph > div {text-align: center;}
 .kmedi .one .cont .twograph span {width: auto;}
 .kmedi_wide .two {background: url('/img/web/sub/kmedi_bg01.png') no-repeat top center; width: 100%; height: 945px;}
-.kmedi_wide .two .txt_wrap {max-width: 1520px;margin: 0 auto; background: url('/img/web/sub/kmedi_bg02.png') no-repeat right bottom;height: 950px;padding: 240px 20px 0; }
+.kmedi_wide .two .txt_wrap {max-width: 1560px;margin: 0 auto; background: url('/img/web/sub/kmedi_bg02.png') no-repeat right bottom;height: 950px;padding: 240px 20px 0; }
 .kmedi_wide .two .txt_wrap h3 {font-family: 'Lexend';font-size: 106px; font-weight: 500;color:#001FD9;margin:0 0 20px;}
 .kmedi_wide .two .txt_wrap h3 span {display: block;font-size: 54px; font-weight: 400;line-height: 60px; color: #111;}
 .kmedi_wide .two .txt_wrap p {color: #001FD9;font-size: 20px; letter-spacing: -0.02em;}
@@ -366,13 +366,14 @@ padding: 0;}
 .medicenter {padding: 80px 20px 0;}
 .medicenter .top {display: flex;align-items: flex-end;justify-content: space-between;}
 .medicenter .tab { display: flex; align-items: center;gap: 15px;}
-.medicenter .tab a {color: #999; font-size: 18px; font-weight: 600; border: 1px solid #888; border-radius: 50px;padding: 10px 30px; display: flex; align-items: center;}
+.medicenter .tab a {color: #999; font-size: 18px; font-weight: 600; border: 1px solid #888; border-radius: 50px;padding: 10px 30px; display: flex; align-items: center;line-height: 18px;}
 .medicenter .tab a:hover {font-weight: 600;color: #fff; background: #001FD9;border: 1px solid #001FD9;}
 .medicenter .tab a:hover svg g path {fill: #fff;}
 .medicenter .tab a {background: #fff;font-weight: 700;color: #888;border: 1px solid #888;}
 .medicenter .tab a svg{margin: 0 10px 0 0;}
 .medicenter .tab a.on {font-weight: 600;color: #fff; background: #001FD9;border: 1px solid #001FD9;}
 .medicenter .tab a.on svg g path {fill: #fff;}
+.medicenter .tab a img {margin: 0 10px 0 0;}
 .medicenter .top {border-bottom: 1px solid #ddd; margin: 0 0 45px; padding: 0 0 25px;}
 .medicenter .top_wrap {display: flex; align-items: flex-end; gap: 30px;}
 .medicenter .search {margin: 20px 0 0; display: flex;align-items: center; justify-content: flex-end; border: 1px solid #ddd; border-radius: 50px;padding: 10px 25px;}
