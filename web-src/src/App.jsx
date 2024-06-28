@@ -14,6 +14,7 @@ import {
     useSetRecoilState,
 } from "recoil";
 import {
+    boardCategoryAtom,
     codesAtom,
     countryBankAtom,
     globalLanguageAtom,
@@ -35,6 +36,7 @@ function App() {
     const location = useLocation();
 
     const globalLanguage = useRecoilValue(globalLanguageAtom);
+    const setBoardCategory = useSetRecoilState(boardCategoryAtom);
 
     // console.log(globalLanguage);
 
@@ -57,6 +59,11 @@ function App() {
         };
 
         loadCSS(location.pathname);
+
+        console.log(location.pathname);
+        if (!location.pathname.includes("/media/news")) {
+            setBoardCategory("");
+        }
     }, [location]);
 
     useEffect(() => {
