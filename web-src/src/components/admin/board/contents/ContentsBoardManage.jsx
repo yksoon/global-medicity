@@ -549,7 +549,7 @@ const ContentsBoardManage = (props) => {
             <CommonModal
                 isOpen={isOpen}
                 title={modalTitle}
-                width={"1000"}
+                width={"1400"}
                 handleModalClose={handleModalClose}
                 component={"ContentsBoardModal"}
                 handleNeedUpdate={handleNeedUpdate}

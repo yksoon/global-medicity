@@ -541,7 +541,7 @@ const NoticeBoardManage = (props) => {
             <CommonModal
                 isOpen={isOpen}
                 title={modalTitle}
-                width={"1000"}
+                width={"1400"}
                 handleModalClose={handleModalClose}
                 component={"NoticeBoardModal"}
                 handleNeedUpdate={handleNeedUpdate}

@@ -402,12 +402,14 @@ const NoticeBoardModal = (props) => {
                 container: [
                     [{ header: [1, 2, false] }],
                     ["bold", "italic", "underline", "strike", "blockquote"],
+                    [{ size: ["small", false, "large", "huge"] }], // 글자 크기 옵션 추가
                     [
                         { list: "ordered" },
                         { list: "bullet" },
                         { indent: "-1" },
                         { indent: "+1" },
                     ],
+                    [{ align: [] }], // 텍스트 정렬 옵션
                     // ["link"],
                     ["image"],
                     [{ color: [] }, { background: [] }],
@@ -420,32 +422,32 @@ const NoticeBoardModal = (props) => {
                 },
             },
             clipboard: {
-                // allowed: {
-                //     tags: [
-                //         "a",
-                //         "b",
-                //         "strong",
-                //         "u",
-                //         "s",
-                //         "i",
-                //         "p",
-                //         "br",
-                //         "ul",
-                //         "ol",
-                //         "li",
-                //         "span",
-                //         "img",
-                //     ],
-                //     attributes: ["href", "rel", "target", "class"],
-                // },
-                // keepSelection: true,
-                // substituteBlockElements: true,
-                // magicPasteLinks: true,
-                // hooks: {
-                //     uponSanitizeElement(node, data, config) {
-                //         console.log(node);
-                //     },
-                // },
+                allowed: {
+                    tags: [
+                        "a",
+                        "b",
+                        "strong",
+                        "u",
+                        "s",
+                        "i",
+                        "p",
+                        "br",
+                        "ul",
+                        "ol",
+                        "li",
+                        "span",
+                        "img",
+                    ],
+                    attributes: ["href", "rel", "target", "class"],
+                },
+                keepSelection: true,
+                substituteBlockElements: true,
+                magicPasteLinks: true,
+                hooks: {
+                    uponSanitizeElement(node, data, config) {
+                        console.log(node);
+                    },
+                },
                 matchVisual: false,
                 sanitizeOptions: {
                     allowedAttributes: {
@@ -472,6 +474,8 @@ const NoticeBoardModal = (props) => {
         "color",
         "background",
         "link",
+        "align",
+        "size",
     ];
 
     return (

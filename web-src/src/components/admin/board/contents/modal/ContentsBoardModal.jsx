@@ -441,12 +441,14 @@ const ContentsBoardModal = (props) => {
                 container: [
                     [{ header: [1, 2, false] }],
                     ["bold", "italic", "underline", "strike", "blockquote"],
+                    [{ size: ["small", false, "large", "huge"] }], // 글자 크기 옵션 추가
                     [
                         { list: "ordered" },
                         { list: "bullet" },
                         { indent: "-1" },
                         { indent: "+1" },
                     ],
+                    [{ align: [] }], // 텍스트 정렬 옵션
                     // ["link"],
                     ["image"],
                     [{ color: [] }, { background: [] }],
@@ -503,6 +505,8 @@ const ContentsBoardModal = (props) => {
         "color",
         "background",
         "link",
+        "align",
+        "size",
     ];
 
     return (
