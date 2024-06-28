@@ -166,6 +166,18 @@ const MediaNews = (props) => {
         getBoardList(1, pageSize, inputValue, categoryState);
     };
 
+
+    const mouseover = (e, src) => {
+
+        e.target.children[0].src = src
+    }
+
+    const mouseleave = (e, src) => {
+
+        e.target.children[0].src = src
+    }
+    
+
     return (
         <>
             <Header />
@@ -212,24 +224,34 @@ const MediaNews = (props) => {
                             onClick={() => handleCategory("")}
                             id="전체"
                             className="on"
+                            onMouseOver={categoryState !== "" ? (e) => mouseover(e, "img/web/sub/all_wh.svg") : null} 
+                            onMouseLeave={categoryState !== "" ? (e) => mouseleave(e, "img/web/sub/all.svg") : null}
                         >
-                           {/* <img src="img/web/sub/all2.svg" alt=""></img>  */}
+                           
+                           <img src={categoryState === "" ? "img/web/sub/all_wh.svg" : "img/web/sub/all.svg"} alt=""></img> 
+                           {/* <img src="img/web/sub/media.svg" alt=""></img>  */}
                            {t("media.news.category.all")}
                         </Link>
                         <Link
                             to=""
                             onClick={() => handleCategory("영상")}
                             id="영상"
+                            onMouseOver={categoryState !== "영상" ? (e) => mouseover(e, "img/web/sub/media_wh.svg") : null} 
+                            onMouseLeave={categoryState !== "영상" ? (e) => mouseleave(e, "img/web/sub/media.svg") : null}
                         >
-                            {/* <img src="img/web/sub/media.svg" alt=""></img> */}
+                          
+                          <img src={categoryState === "영상" ? "img/web/sub/media_wh.svg" : "img/web/sub/media.svg"} alt=""></img>
                             {t("media.news.category.video")}
                         </Link>
                         <Link
                             to=""
                             onClick={() => handleCategory("뉴스")}
                             id="뉴스"
+                            onMouseOver={categoryState !== "뉴스" ? (e) => mouseover(e, "img/web/sub/news_wh.svg") : null} 
+                            onMouseLeave={categoryState !== "뉴스" ? (e) => mouseleave(e, "img/web/sub/news.svg") : null}
                         >
-                            {/* <img src="img/web/sub/news.svg" alt=""></img> */}
+                        
+                            <img src={categoryState === "뉴스" ? "img/web/sub/news_wh.svg" : "img/web/sub/news.svg"} alt=""></img>
                             {t("media.news.category.news")}
                         </Link>
                     </div>
