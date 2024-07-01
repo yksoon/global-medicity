@@ -57,8 +57,9 @@ const Section03 = () => {
         const data = {
             pageNum: pageNum,
             pageSize: pageSize,
-            searchKeyword: searchKeyword,
+            searchKeyword: "",
             boardType: boardType.etc, // 공지사항
+            boardCategory: categoryState,
         };
 
         // 파라미터
