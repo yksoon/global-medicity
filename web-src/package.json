@@ -71,7 +71,8 @@
         "prd": "vite build --mode production",
         "preview": "vite preview",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "sitemap": "babel-node ./sitemapGenerate.js"
     },
     "eslintConfig": {
         "extends": [
@@ -90,5 +91,9 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "@babel/node": "^7.24.7",
+        "prettier": "^3.3.2"
     }
 }
