@@ -42,17 +42,37 @@ function App() {
     const setBoardCategory = useSetRecoilState(boardCategoryAtom);
 
     useEffect(() => {
-        const lng = navigator.language;
+        const lng = navigator.language || navigator.userLanguage;
+
+        const languages =
+            navigator.languages && navigator.languages.length
+                ? navigator.languages
+                : [navigator.language];
 
         let defaultLanguage;
 
-        if (lng === "ko" || lng === "id" || lng === "en") {
-            defaultLanguage = lng;
-        } else {
-            defaultLanguage = "en";
+        // if (lng === "ko" || lng === "id" || lng === "en") {
+        //     defaultLanguage = lng;
+        // } else {
+        //     defaultLanguage = "en";
+        // }
+
+        // 선호하는 언어 배열을 순회하여 지원되는 언어를 찾음
+        for (const lang of languages) {
+            if (
+                lang.startsWith("ko") ||
+                lang.startsWith("id") ||
+                lang.startsWith("en")
+            ) {
+                defaultLanguage = lang;
+                break;
+            }
         }
 
-        console.log(defaultLanguage);
+        // 지원되는 언어가 없으면 기본 언어로 영어를 설정
+        if (!defaultLanguage) {
+            defaultLanguage = "en";
+        }
 
         i18n.changeLanguage(defaultLanguage);
         setGlobalLanguage(defaultLanguage);
