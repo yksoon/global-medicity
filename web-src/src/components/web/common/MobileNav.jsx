@@ -16,11 +16,11 @@ function MobileNav() {
         id: { nativeName: "ID" },
     };
 
-    const [language, setLanguage] = useRecoilState(globalLanguageAtom);
-
-    const handleLanguage = (lng) => {
-        setLanguage(lng);
-    };
+    // const [language, setLanguage] = useRecoilState(globalLanguageAtom);
+    //
+    // const handleLanguage = (lng) => {
+    //     setLanguage(lng);
+    // };
 
     useEffect(() => {
         $("#nav").hide();
@@ -75,7 +75,7 @@ function MobileNav() {
                                     }
                                     onClick={() => {
                                         i18n.changeLanguage(lng);
-                                        handleLanguage(lng);
+                                        // handleLanguage(lng);
                                     }}
                                 >
                                     {lngs[lng].nativeName}

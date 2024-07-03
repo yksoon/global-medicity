@@ -19,12 +19,6 @@ const lngs = {
 function Header(props) {
     const { t, i18n } = useTranslation(); // 3. useTranslation hook 선언
 
-    const [language, setLanguage] = useRecoilState(globalLanguageAtom);
-
-    const handleLanguage = (lng) => {
-        setLanguage(lng);
-    };
-
     return (
         <>
             <div id="header">
@@ -170,7 +164,7 @@ function Header(props) {
                                 }`}
                                 onClick={() => {
                                     i18n.changeLanguage(lng);
-                                    handleLanguage(lng);
+                                    // handleLanguage(lng);
                                 }}
                             >
                                 <span>{lngs[lng].nativeName}</span>
