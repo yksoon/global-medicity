@@ -3,7 +3,7 @@ import Header from "components/web/common/header";
 import Footer from "components/web/common/footer";
 import { Link, useLocation } from "react-router-dom";
 import { useParams } from "react-router";
-import {Trans, useTranslation} from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 const BusinessHotel = (props) => {
     const { t, i18n } = useTranslation();
@@ -60,21 +60,21 @@ const BusinessHotel = (props) => {
                     <Link
                         to=""
                         onClick={() => moveToSection("hotel")}
-                        className={sectionState === "hotel" && "active"}
+                        className={sectionState === "hotel" ? "active" : ""}
                     >
                         {t("business.hotel.title")}
                     </Link>
                     <Link
                         to=""
                         onClick={() => moveToSection("art")}
-                        className={sectionState === "art" && "active"}
+                        className={sectionState === "art" ? "active" : ""}
                     >
                         {t("business.art.title")}
                     </Link>
                     <Link
                         to=""
                         onClick={() => moveToSection("wine")}
-                        className={sectionState === "wine" && "active"}
+                        className={sectionState === "wine" ? "active" : ""}
                     >
                         {t("business.wine.title")}
                     </Link>
@@ -95,9 +95,7 @@ const BusinessHotel = (props) => {
                                         />
                                     </Link>
                                 </h3>
-                                <p>
-                                    {t("business.hotel.subject")}
-                                </p>
+                                <p>{t("business.hotel.subject")}</p>
                             </div>
                             <div className="line">
                                 <h5>{t("business.hotel.content_1.title")}</h5>
@@ -135,9 +133,7 @@ const BusinessHotel = (props) => {
                                 </h3>
                                 <p>
                                     <Trans
-                                        i18nKey={
-                                            "business.art.subject"
-                                        }
+                                        i18nKey={"business.art.subject"}
                                         components={[<br></br>]}
                                     />
                                     {/*고급스럽고 분위기 있는 공간 연출,<br></br>*/}
@@ -176,9 +172,7 @@ const BusinessHotel = (props) => {
                             </div>
                             <p>
                                 <Trans
-                                    i18nKey={
-                                        "business.wine.content"
-                                    }
+                                    i18nKey={"business.wine.content"}
                                     components={[<br></br>]}
                                 />
                                 {/*㈜메디씨티는 회원들에게 국내에서 쉽게 접할 수*/}

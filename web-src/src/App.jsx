@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { RestServer } from "etc/lib/CommonRestAPI";
 import axios from "axios";
 import Router from "Router";
@@ -30,15 +30,33 @@ import { successCode } from "etc/lib/resultCode";
 import apiPath from "etc/lib/path/apiPath";
 import { Helmet } from "react-helmet-async";
 import SEOMetaTag from "SEOMetaTag";
+import i18n from "i18next";
+import { Backdrop, CircularProgress } from "@mui/material";
 
 let currentPath = "";
 function App() {
     const location = useLocation();
 
-    const globalLanguage = useRecoilValue(globalLanguageAtom);
+    const [globalLanguage, setGlobalLanguage] =
+        useRecoilState(globalLanguageAtom);
     const setBoardCategory = useSetRecoilState(boardCategoryAtom);
 
-    // console.log(globalLanguage);
+    useEffect(() => {
+        const handleLanguageChange = (lng) => {
+            // console.log("Language changed to:", lng);
+            // 언어 변경 시 수행할 작업 추가
+            setGlobalLanguage(lng);
+        };
+
+        i18n.on("languageChanged", handleLanguageChange);
+
+        // cleanup function to remove the listener
+        return () => {
+            i18n.off("languageChanged", handleLanguageChange);
+        };
+    }, []);
+
+    const [isLoadCss, setIsLoadCss] = useState(false);
 
     useEffect(() => {
         const loadCSS = async (path) => {
@@ -50,8 +68,12 @@ function App() {
                     path === "/admin/signin/"
                 ) {
                     await import("etc/css/adm.css");
+
+                    setIsLoadCss(true);
                 } else {
                     await import("etc/css/style.css");
+
+                    setIsLoadCss(true);
                 }
             } catch (error) {
                 console.error("Failed to load CSS", error);
@@ -60,7 +82,6 @@ function App() {
 
         loadCSS(location.pathname);
 
-        console.log(location.pathname);
         if (!location.pathname.includes("/media/news")) {
             setBoardCategory("");
         }
@@ -95,7 +116,7 @@ function App() {
         } else {
             // socketCon()
             // getResultCode();
-            getCodes();
+            // getCodes();
             // setInterval(getResultCode, 3600000);
             // setInterval(getCodes, 3600000);
         }
@@ -143,10 +164,10 @@ function App() {
                 sessionStorage.setItem("ipInfo", ip);
 
                 // console.log("@@@@@@@@@@@", ip);
-                getResultCode();
-                getCodes();
-                setInterval(getResultCode, 3600000);
-                setInterval(getCodes, 3600000);
+                // getResultCode();
+                // getCodes();
+                // setInterval(getResultCode, 3600000);
+                // setInterval(getCodes, 3600000);
 
                 // callback(ip);
                 // dispatch(set_ip_info(ip));
@@ -279,75 +300,89 @@ function App() {
     /**
      * web socket connection
      */
-    const socketCon = () => {
-        const protocol = document.location.protocol;
-        // 서버와의 WebSocket 연결
-        const socket = new WebSocket(
-            `${
-                protocol === "http:" ? "ws" : "wss"
-            }://websocket.hicompint.com/moye_dev`,
-        );
+    // const socketCon = () => {
+    //     const protocol = document.location.protocol;
+    //     // 서버와의 WebSocket 연결
+    //     const socket = new WebSocket(
+    //         `${
+    //             protocol === "http:" ? "ws" : "wss"
+    //         }://websocket.hicompint.com/moye_dev`,
+    //     );
+    //
+    //     socket.onopen = function () {
+    //         console.log("WebSocket connected");
+    //     };
+    //
+    //     socket.onclose = function () {
+    //         console.log("WebSocket disconnected");
+    //     };
+    //
+    //     // 서버로부터 데이터를 수신하는 함수
+    //     socket.onmessage = (event) => {
+    //         const message = JSON.parse(event.data);
+    //         console.log("Received message:", message);
+    //         // window.alert("안녕!");
+    //
+    //         const convertData = convertCodesData(message);
+    //
+    //         setCodes(mergeData(codes, convertData));
+    //     };
+    // };
 
-        socket.onopen = function () {
-            console.log("WebSocket connected");
-        };
-
-        socket.onclose = function () {
-            console.log("WebSocket disconnected");
-        };
-
-        // 서버로부터 데이터를 수신하는 함수
-        socket.onmessage = (event) => {
-            const message = JSON.parse(event.data);
-            console.log("Received message:", message);
-            // window.alert("안녕!");
-
-            const convertData = convertCodesData(message);
-
-            setCodes(mergeData(codes, convertData));
-        };
-    };
-
-    // 두 데이터를 비교하여 key가 같으면 value를 교체하고, 없으면 새로 추가하는 함수
-    const mergeData = (data1, data2) => {
-        // 결과를 담을 객체
-        const mergedData = {};
-
-        // 첫 번째 데이터의 모든 항목을 복사하여 결과 객체에 추가
-        Object.keys(data1).forEach((key) => {
-            mergedData[key] = data1[key];
-        });
-
-        // 두 번째 데이터의 각 항목을 순회하면서 처리
-        Object.keys(data2).forEach((key) => {
-            // 결과 객체에 해당 key가 이미 있는지 확인
-            if (mergedData[key]) {
-                // 이미 있는 경우, 해당 key의 값을 두 번째 데이터의 값으로 교체
-                mergedData[key] = data2[key];
-            } else {
-                // 없는 경우, 새로운 key를 추가하고 값으로 빈 배열을 할당
-                mergedData[key] = data2[key];
-            }
-        });
-
-        return mergedData;
-    };
+    // // 두 데이터를 비교하여 key가 같으면 value를 교체하고, 없으면 새로 추가하는 함수
+    // const mergeData = (data1, data2) => {
+    //     // 결과를 담을 객체
+    //     const mergedData = {};
+    //
+    //     // 첫 번째 데이터의 모든 항목을 복사하여 결과 객체에 추가
+    //     Object.keys(data1).forEach((key) => {
+    //         mergedData[key] = data1[key];
+    //     });
+    //
+    //     // 두 번째 데이터의 각 항목을 순회하면서 처리
+    //     Object.keys(data2).forEach((key) => {
+    //         // 결과 객체에 해당 key가 이미 있는지 확인
+    //         if (mergedData[key]) {
+    //             // 이미 있는 경우, 해당 key의 값을 두 번째 데이터의 값으로 교체
+    //             mergedData[key] = data2[key];
+    //         } else {
+    //             // 없는 경우, 새로운 key를 추가하고 값으로 빈 배열을 할당
+    //             mergedData[key] = data2[key];
+    //         }
+    //     });
+    //
+    //     return mergedData;
+    // };
 
     return (
         <>
             {/*Meta Tag*/}
-            <SEOMetaTag globalLanguage={globalLanguage} />
-            <div className="wrapper">
-                <ConfirmContextProvider>
-                    <AlertContextProvider>
-                        <Router />
-                        <AlertModal />
-                        <ConfirmModal />
-                    </AlertContextProvider>
-                </ConfirmContextProvider>
-                {/* {isSpinner && <CommonSpinner />} */}
-            </div>
-            {/* <div>{spinnerOption.isLoading && <CommonSpinner />}</div> */}
+            {!isLoadCss ? (
+                <Backdrop
+                    sx={{
+                        color: "#fff",
+                        zIndex: (theme) => theme.zIndex.drawer + 1,
+                    }}
+                    open={true}
+                >
+                    <CircularProgress color="inherit" />
+                </Backdrop>
+            ) : (
+                <>
+                    <SEOMetaTag globalLanguage={globalLanguage} />
+                    <div className="wrapper">
+                        <ConfirmContextProvider>
+                            <AlertContextProvider>
+                                <Router />
+                                <AlertModal />
+                                <ConfirmModal />
+                            </AlertContextProvider>
+                        </ConfirmContextProvider>
+                        {/* {isSpinner && <CommonSpinner />} */}
+                    </div>
+                    {/* <div>{spinnerOption.isLoading && <CommonSpinner />}</div> */}
+                </>
+            )}
         </>
     );
 }

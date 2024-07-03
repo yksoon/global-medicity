@@ -49,7 +49,7 @@ const Section04 = (props) => {
      * @param searchKeyword
      */
     const getBoardList = (pageNum, pageSize, searchKeyword) => {
-        setIsSpinner(true);
+        // setIsSpinner(true);
 
         // /v1/_boards
         // POST
@@ -88,12 +88,12 @@ const Section04 = (props) => {
                 setBoardList(resultInfo);
                 setPageInfo(pageInfo);
 
-                setIsSpinner(false);
+                // setIsSpinner(false);
             } else {
                 // 에러
                 CommonConsole("log", res);
 
-                setIsSpinner(false);
+                // setIsSpinner(false);
             }
         };
     };

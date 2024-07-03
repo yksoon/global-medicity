@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Backdrop, CircularProgress } from "@mui/material";
 import routerPath from "etc/lib/path/routerPath";
 
@@ -15,28 +15,30 @@ import MediaNews from "components/web/media/news/MediaNews";
 import MediaNotice from "components/web/media/notice/MediaNotice";
 import MediaNewsDetail from "components/web/media/news/MediaNewsDetail";
 import MediaNoticeDetail from "components/web/media/notice/MediaNoticeDetail";
+import Main from "components/web/Main";
+import { useLocation } from "react-router";
 
 // Router
 const Router = () => {
     // 레이지 로딩 추가
-    const Main = React.lazy(() => import("components/web/Main"));
+    // const Main = React.lazy(() => import("components/web/Main"));
 
     // 페이지 url 라우팅 추가 필요시 아래에 추가하세요
     return (
         <>
             {/* Route 밖에 Suspense로 감싼다 */}
             <Suspense
-                fallback={
-                    <Backdrop
-                        sx={{
-                            color: "#fff",
-                            zIndex: (theme) => theme.zIndex.drawer + 1,
-                        }}
-                        open={true}
-                    >
-                        <CircularProgress color="inherit" />
-                    </Backdrop>
-                }
+            // fallback={
+            //         <Backdrop
+            //             sx={{
+            //                 color: "#fff",
+            //                 zIndex: (theme) => theme.zIndex.drawer + 1,
+            //             }}
+            //             open={true}
+            //         >
+            //             <CircularProgress color="inherit" />
+            //         </Backdrop>
+            // }
             >
                 <Routes>
                     {/* /link를 입력하면 LinkPage 오픈 */}
