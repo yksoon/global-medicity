@@ -75,7 +75,7 @@ export const userTokenAtom = atom({
 // 언어 기본 세팅
 export const globalLanguageAtom = atom({
     key: "globalLanguage",
-    default: "",
+    default: "en",
     effects_UNSTABLE: [persistAtom],
 });
 

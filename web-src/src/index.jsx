@@ -46,15 +46,16 @@ Create by 𝒀𝑲𝑺𝒐𝒐𝒏_
 
 root.render(
     <BrowserRouter>
-        <RecoilRoot>
-            <ScrollToTop />
-            <RecoilizeDebugger root={app} />
-            <StyledEngineProvider injectFirst>
-                <HelmetProvider>
+        <ScrollToTop />
+
+        <StyledEngineProvider injectFirst>
+            <HelmetProvider>
+                <RecoilRoot>
                     <App />
-                </HelmetProvider>
-            </StyledEngineProvider>
-        </RecoilRoot>
+                    <RecoilizeDebugger root={app} />
+                </RecoilRoot>
+            </HelmetProvider>
+        </StyledEngineProvider>
     </BrowserRouter>,
 );
 
