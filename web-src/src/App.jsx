@@ -42,6 +42,23 @@ function App() {
     const setBoardCategory = useSetRecoilState(boardCategoryAtom);
 
     useEffect(() => {
+        const lng = navigator.language;
+
+        let defaultLanguage;
+
+        if (lng === "ko" || lng === "id" || lng === "en") {
+            defaultLanguage = lng;
+        } else {
+            defaultLanguage = "en";
+        }
+
+        console.log(defaultLanguage);
+
+        i18n.changeLanguage(defaultLanguage);
+        setGlobalLanguage(defaultLanguage);
+    }, []);
+
+    useEffect(() => {
         const handleLanguageChange = (lng) => {
             // console.log("Language changed to:", lng);
             // 언어 변경 시 수행할 작업 추가
