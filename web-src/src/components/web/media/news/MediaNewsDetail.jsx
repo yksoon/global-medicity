@@ -143,20 +143,22 @@ const MediaNewsDetail = (props) => {
                                 {boardInfo.subTitle === "영상" && (
                                     <tr>
                                         <td colSpan="3">
-                                            <ReactPlayer
-                                                className="react-player"
-                                                id="content"
-                                                url={boardInfo.email}
-                                                width="100%" // 플레이어 크기 (가로)
-                                                height="700px" // 플레이어 크기 (세로)
-                                                playing={false} // 자동 재생 on
-                                                muted={true} // 뮤트
-                                                controls={true} // 플레이어 컨트롤 노출 여부
-                                                // light={
-                                                //     modData.content_thumbnail_image_url_string
-                                                // } // 플레이어 초기 포스터 사진
-                                                pip={true} // pip 모드 설정 여부
-                                            />
+                                            <div className='player-wrapper'>
+                                                <ReactPlayer
+                                                    className="react-player"
+                                                    id="content"
+                                                    url={boardInfo.email}
+                                                    width="100%" // 플레이어 크기 (가로)
+                                                    height="100%" // 플레이어 크기 (세로)
+                                                    playing={false} // 자동 재생 on
+                                                    muted={true} // 뮤트
+                                                    controls={true} // 플레이어 컨트롤 노출 여부
+                                                    // light={
+                                                    //     modData.content_thumbnail_image_url_string
+                                                    // } // 플레이어 초기 포스터 사진
+                                                    pip={true} // pip 모드 설정 여부
+                                                />
+                                             </div>
                                         </td>
                                     </tr>
                                 )}
