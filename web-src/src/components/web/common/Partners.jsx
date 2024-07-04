@@ -76,6 +76,7 @@ const Partners = () => {
             path: "/img/web/partner/partner20.png",
         },
         { url: "https://www.rsui.com", path: "/img/web/partner/partner21.png" },
+        { url: "https://rsgm.unpad.ac.id/", path: "/img/web/partner/partner26.jpg" },
         {
             url: "https://www.ayana.com",
             path: "/img/web/partner/partner22.png",
