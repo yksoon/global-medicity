@@ -427,6 +427,8 @@ display: inline-block;margin: 0 0 40px;column-width: 480px;    width: calc((100%
 }
 .notice .list_box a.btn_main {margin: 0;}
 .notice .ql-editor {text-align: left; font-size: 16px;line-height: 28px;word-break: break-all;}
+.notice .player-wrapper {position: relative; padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */ }
+.notice .react-player {position: absolute;top: 0;left: 0; }
 
 /* BISINESS */
 .business {padding: 80px 20px 0;}
@@ -747,6 +749,8 @@ table.board_Vtable tfoot tr td{padding:13px 20px; text-align:left; border-bottom
 .boardW_btn a{display:block; float:left; background-color:#00148E; width:80px; border-radius:5px; text-align:center;display:block; color:#fff;}
 .boardW_btn a:hover{background-color:#f7f7f7; color:#333; border-radius:5px;}
 
+
+
 /* IE */
 select::-ms-expand { 
 	display: none;
@@ -830,7 +834,6 @@ select {
 	.section05 {padding: 0 20px 140px ;}
 	.section05 ul li a {padding: 0 20px;}
 	.section06 .sec_in {padding: 0 20px;}
-.kmedi .one .cont{}
 	#footer_content address {flex-direction: column;}
 	#footer_content address .f_logo {margin: 20px 0;}	
 	.weare #sec01 .flx_box > div {background: url('/img/web/sub/logo_top.png') no-repeat right bottom; padding: 0 0 50px 0; }
