@@ -46,6 +46,9 @@ const routerPath = {
     // 미디어 - 공지 - 상세
     web_media_notice_detail_url: `${base_url}${routerCategory.media}/notice/`,
 
+    // 미디어 - 공지 - 상세
+    web_manual_ebook_url: `${base_url}/manual/ebook`,
+
     // -----------------------------------------------
     // |                  admin                      |
     // -----------------------------------------------

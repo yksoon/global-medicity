@@ -17,6 +17,7 @@ import MediaNewsDetail from "components/web/media/news/MediaNewsDetail";
 import MediaNoticeDetail from "components/web/media/notice/MediaNoticeDetail";
 import Main from "components/web/Main";
 import { useLocation } from "react-router";
+import Ebook from "components/web/manual/Ebook";
 
 // Router
 const Router = () => {
@@ -100,6 +101,13 @@ const Router = () => {
                     <Route
                         path={`${routerPath.web_media_notice_detail_url}:boardIdx`}
                         element={<MediaNoticeDetail />}
+                    />
+
+                    {/* 미디어 - 공지 - 상세 */}
+                    {/* URL : /media/notice/{boardIdx} */}
+                    <Route
+                        path={routerPath.web_manual_ebook_url}
+                        element={<Ebook />}
                     />
 
                     {/* -------------------------------admin------------------------------- */}
