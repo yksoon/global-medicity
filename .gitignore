@@ -185,3 +185,5 @@ $RECYCLE.BIN/
 #test
 /publish_test/
 .idea/
+/web-src/public/ebook/
+/build/ebook/
